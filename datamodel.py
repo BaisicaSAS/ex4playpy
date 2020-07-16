@@ -97,17 +97,19 @@ class VideoJuego(db.Model):
     __tablename__ = 'videojuego'
 
     idVj = db.Column(db.Integer, Sequence('idvj_seq'), primary_key=True)
-    usuarioIdAct = db.Column(db.Integer, db.ForeignKey('usuario.idUsuario'), nullable=False)
-    clasifId = db.Column(db.Integer, db.ForeignKey('clasificacion.idClasifica'), nullable=False)
+    clasifId = db.Column(db.Integer, db.ForeignKey('clasificacion.idClasifica'), nullable=True)
     consolaId = db.Column(db.Integer, db.ForeignKey('consola.idConsola'), nullable=False)
     nombre = db.Column(db.String(200), nullable=False)
     imagen = db.Column(db.String(200), nullable=False)
     version = db.Column(db.String(100))
     complementosvj = db.Column(db.String(200))
-    urlresena =  db.Column(db.String(500))
+    urlresena = db.Column(db.String(500))
+    popularidad = db.Integer
+    obs = db.Column(db.String(500))
+    genero = db.Column(db.String(500))
+    imagen = db.Column(db.String(500))
     anioPublica = db.Column(db.String(10))
     fechacrea = db.Column(db.DateTime, default=datetime.datetime.now)
-    UsuVJ = db.relationship("Usuario", lazy=True)
     ClasiVJ = db.relationship("Clasificacion", lazy=True)
     ConsVJ = db.relationship("Consola", lazy=True)
 
