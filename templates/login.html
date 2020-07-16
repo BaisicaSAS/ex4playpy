@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ex4play : inicio</title>
+    <script>
+<!--        function validateLog() {
+           var x = document.forms["frmlogin"]["nick"].value;
+           var Y = document.forms["frmlogin"]["clave"].value;
+           if ( x == null || x == "" ) {
+              alert("Debe especificar el usuario");
+              return false;
+           }
+           if ( Y == null || Y == "" ) {
+              alert("Debe especificar la contraseña");
+              return false;
+           }
+        }
+-->
+        function validateReg() {
+           var X = document.forms["frmlogin"]["clave"].value;
+           var Y = document.forms["frmlogin"]["repetirclave"].value;
+           if ( x != Y ) {
+              alert("Las claves no son iguales");
+              return false;
+           }
+        }
+    </script>
+
+</head>
+<body>
+    <div>
+        <h1>{{ mensaje  }}</h1>
+    </div>
+    <table
+        <tr><td>
+            <div>
+                <h1>Ingresar</h1>
+                <form name="frmlogin" method="post" action=" {{url_for('login') }} " <!--onsubmit="return validateLog()-->
+                    <label for="nick">Usuario</label>
+                    <p><input name="nick" placeholder="Nickname" type="text" required></p>
+                    <label for="clave">Clave</label>
+                    <p><input name="clave" placeholder="Clave" type="password" required></p>
+                    <p><input type="submit" value="ingresar"></p>
+                </form>
+            </div>
+        </td>
+        <td width="20%">
+        </td>
+        <td>
+            <div>
+                <h1>Registro</h1>
+                <form name="frmregistro" method="post" action="{{url_for('registro') }}" onsubmit="return validateReg()"
+                    <label for="nombres">Nombres</label>
+                    <p><input name="nombres" placeholder="Nombre" type="text" required></p>
+                    <label for="apellidos">Apellidos</label>
+                    <p><input name="apellidos" placeholder="Apellidos" type="text" required></p>
+                    <label for="email">Email</label>
+                    <p><input name="email" placeholder="Email" type="email" required></p>
+                    <label for="clave">Clave</label>
+                    <p><input name="clave" placeholder="Clave" type="password" required></p>
+                    <label for="repetirclave">Repetir clave</label>
+                    <p><input name="repetirclave" placeholder="Repetir clave" type="password" required></p>
+                    <p><input type="submit" value="registrar"></p>
+                </form>
+            </div>
+        </td></tr>
+    </table>
+</body>
+</html>
