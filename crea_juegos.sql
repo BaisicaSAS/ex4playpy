@@ -1,3 +1,8 @@
+INSERT INTO ex4playdev.clasificacion (`idclasifica`, `clase`, `descripcion`, `valorPuntos`) VALUES
+(1, 'A', 'Alta', 50),
+(2, 'B', 'Media', 30),
+(3, 'C', 'MICROSOFT', 10);
+
 INSERT INTO ex4playdev.marca (`idMarca`, `nombre`, `comun`, `urlresena`, `fechacrea`) VALUES
 (1, 'No identificado', 'No identificado', NULL, NULL),
 (2, 'SONY', 'SONY', NULL, NULL),
