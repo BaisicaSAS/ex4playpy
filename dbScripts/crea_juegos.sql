@@ -1,15 +1,26 @@
+INSERT INTO ex4playdev.pais (`nombrePais`) VALUES ('COLOMBIA');
+
+INSERT INTO ex4playdev.ciudad (`nombreCiudad`, `paisId`) VALUES ('BOGOTÁ', '1');
+
 INSERT INTO ex4playdev.clasificacion (`idclasifica`, `clase`, `descripcion`, `valorPuntos`) VALUES
-(1, 'A', 'Alta', 50),
-(2, 'B', 'Media', 30),
-(3, 'C', 'MICROSOFT', 10);
+(1, 'A', 'Alta', 120),
+(2, 'B', 'Media', 80),
+(3, 'C', 'Baja', 60),
+(4, 'D', 'Mínima', 20);
 
 INSERT INTO ex4playdev.marca (`idMarca`, `nombre`, `comun`, `urlresena`, `fechacrea`) VALUES
 (1, 'No identificado', 'No identificado', NULL, NULL),
 (2, 'SONY', 'SONY', NULL, NULL),
-(3, 'MICROSOFT', 'MICROSOFT', NULL, NULL);
+(3, 'MICROSOFT', 'MICROSOFT', NULL, NULL),
+(4, 'NINTENDO', 'NINTENDO', NULL, NULL);
 
 
-INSERT INTO ex4playdev.consola (`idconsola`, `nombre`, `anio`, `marcaid`) VALUES (1, 'No identificada', '2018', 1), (2, 'PS3', '2018', 2), (3, 'PS4', '2018', 2), (4, 'Xbox 360', '2018', 3), (5, 'Xbox One', '2018', 3);
+INSERT INTO ex4playdev.consola (`idconsola`, `txnombreconsola`, `felanzamiento`, `consola_fabricante`) VALUES
+(1, 'No identificada', '2018-01-01 00:00:00', 1),
+(2, 'PS3', '2018-01-01 00:00:00', 2),
+(3, 'PS4', '2018-01-01 00:00:00', 2),
+(4, 'Xbox 360', '2018-01-01 00:00:00', 3),
+(5, 'Xbox One', '2018-01-01 00:00:00', 3);
 
 INSERT INTO ex4playdev.videojuego (`idvj`, `nombre`, `fechacrea`, `clasifid`, `popularidad`, `consolaid`, `urlresena`, `obs`, `genero`, `imagen`) VALUES
 (1, '007 Legends', '2012-10-19 00:00:00', 1, 0, 2, 'https://vandal.elespanol.com/juegos/ps3/007-legends/15850', 'NINGUNA', 'Acción', 'PENDIENTE'),

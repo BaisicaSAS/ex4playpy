@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}ex4play{% endblock %}
+
+{% block content %}
+    <h1 {{ mensaje }}</h1>
+        <div>
+            <h1>Reenviar</h1>
+            <section class="form-register">
+                <form name="frmreenviar" method="post" action="{{url_for('reenviarconf') }}">
+                    <label class="label" for="email">Mail para reenviar correo</label>
+                    <p><input class="controls" name="email" id="email" placeholder="Email" type="email" required></p>
+                    <p><input class="botons" type="submit" value="reenviar mail"></p>
+            </form>
+            </section>
+        </div>
+    </div>
+{% endblock %}

@@ -77,7 +77,8 @@ class ConexionUsuario(db.Model):
 
     idConxusuario = db.Column(db.Integer, Sequence('idconxusuario_seq'), primary_key=True)
     usuarioId = db.Column(db.Integer, db.ForeignKey('usuario.idUsuario'), nullable=False)
-    ipaddr = db.Column(db.Integer, default=57) #tipo: 1: Perfil ...despues podríamos usarlas para otros imagenes
+    ipaddr = db.Column(db.String(128), nullable=False)
+    tipo = db.Column(db.String(10), nullable=False, default="LOGIN")
     fechacrea = db.Column(db.DateTime, default=datetime.datetime.now)
     UsrCon = db.relationship("Usuario", lazy=True)
 
@@ -142,7 +143,6 @@ class VideoJuego(db.Model):
     clasifId = db.Column(db.Integer, db.ForeignKey('clasificacion.idClasifica'), nullable=True)
     consolaId = db.Column(db.Integer, db.ForeignKey('consola.idConsola'), nullable=False)
     nombre = db.Column(db.String(200), nullable=False)
-    imagen = db.Column(db.String(200), nullable=False)
     version = db.Column(db.String(100))
     complementosvj = db.Column(db.String(200))
     urlresena = db.Column(db.String(500))

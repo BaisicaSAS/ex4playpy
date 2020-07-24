@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}ex4play - Registro / Ingreso{% endblock %}
+{% block content %}
+<body>
+    <section type="form">
+        <form class="form-register" name="frmcargarEjemplar" method="post" action=" {{url_for('cargarEjemplar') }} ">
+            <h4>{{ mensaje }}</h4>
+            <input class="controls" type="search" name="ejemplar" id="ejemplar" placeholder="Título videojuego">
+            <label class="label" for="estado"> Estado del videojuego </label>
+            <input class="controls" type="range" min="1" max="10" value="1" name="estado" id="estado" placeholder="Estado del videojuego">
+            <input class="controls" type="text" name="comentario" id="comentario" placeholder="Cuentanos algo de tu videojuego, hace cuanto lo tienes, etc.">
+            <label class="label" for="publicar"> Publicar para cambio </label>
+            <input class="controls" type="checkbox" value="1" name="publicar" id="publicar" placeholder="Publicar para cambio">
+            <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+            <input class="botons" type="submit" value="Cargar">
+        </form>
+    </section>
+{% endblock %}
