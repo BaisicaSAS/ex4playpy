@@ -1,8 +1,44 @@
 {% extends "base.html" %}
-
 {% block title %}ex4play{% endblock %}
 
 {% block content %}
+    {% if logged == 0 %}
+    <a href= {{url_for('login') }} class="card-link">Iniciar sesion</a>
+    {% endif %}
     {{ mensaje }}
-    {{ num_vj }} videojuegos
+         {% set indice = namespace(cont=1) %}
+
+         {% for vj in videojuegos %}
+            {% if indice.cont == 1 %}
+                <div class="row" style="display: flex; align-items: center; justify-content: center;" >
+                <div class="card-deck">
+            {% endif %}
+                <div class="card" style="width: 18rem;display: flex; align-items: center; justify-content: center;">
+                      <!-- <img class="card-img-top" src=" {{ vj.urlresena }}#imagen1 " alt=" {{ vj.nombre }} "> -->
+                      <img class="card-img-top" height="50%" src="{{url_for('static', filename='defaultgame.png')}}" alt=" {{ vj.nombre }} ">
+
+                      <div class="card-body">
+                        <h5 class="card-title">{{ vj.nombre }}</h5>
+                        <p class="card-text">Videojuego que se trata de varias cosas.</p>
+                      </div>
+                      <!--<ul class="list-group list-group-flush">
+                        <li class="list-group-item">Genero: {{ vj.genero }}</li>
+                        <li class="list-group-item">otro dato</li>
+                      </ul>-->
+                      <div class="card-body">
+                        <a href="#" class="card-link">Un enlace</a>
+                        <a>  Genero: {{ vj.genero }} </a>
+                      </div>
+                      <div class="card-footer">
+                        <a href="#" class="card-link">Un enlace</a>
+                      </div>
+                </div>
+            {% if indice.cont is divisibleby 4 %}
+                </div>
+                </div>
+                {% set indice.cont = 1 %}
+            {% else %}
+                {% set indice.cont = indice.cont + 1 %}
+            {% endif %}
+        {% endfor %}
 {% endblock %}

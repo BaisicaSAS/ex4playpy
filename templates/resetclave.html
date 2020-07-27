@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}ex4play - Registro / Ingreso{% endblock %}
+{% block content %}
+
+  <div style="display: flex; align-items: center; justify-content: center;"> <h1>{{ mensaje }} </h1> </div>
+  <div class="container" style="display: flex; align-items: center; justify-content: center;">
+    <div class="card" style="width: 18rem; background-color=#e48568; display: flex; align-items: center; justify-content: center;">
+          <div class="card-body">
+            <h1>Cambiar clave</h1>
+            <section class="form-register">
+                <form name="frmresetclave" method="post" action=" {{url_for('resetclave') }} ">
+                    <label class="label" for="nick">Usuario</label>
+                    <p><input class="controls" name="nick" id="nick" placeholder="Nickname" type="text" required></p>
+                    <p><input class="botons" type="submit" value="enviar clave"></p>
+                </form>
+            </section>
+          </div>
+          <div class="card-footer">
+            <a href= {{url_for('registro') }} class="card-link">Crear cuenta</a>
+            <a href= {{url_for('login') }} class="card-link">Iniciar sesion</a>
+          </div>
+    </div>
+  </div>
+{% endblock %}

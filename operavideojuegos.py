@@ -21,19 +21,18 @@ def funCargarEjemplar(nick, idUsuario, VJ, estado, publicar, comentario):
         #Busca el videojuego para obtener el valor
         obVj = db.session.query(VideoJuego).filter_by(nombre=VJ).first()
         if obVj is None:
-            print("No existe")
+            app.logger.error("["+nick+"] CargarEjemplar: No existe el videojuego: ["+VJ+"]")
             mensaje = mensaje + "No existe el VJ: Lo crearemos "
             publicado = 0
             bloqueado = 1 #Se bloquea el ejemplar si no existe el videojuego
             valor = 0
-            print("Nombre:"+VJ)
+            #print("Nombre:"+VJ)
             obVj = VideoJuego(clasifId=1, consolaId=1, nombre=VJ, imagen="No identificada")
             db.session.add(obVj)
             obVj = db.session.query(VideoJuego).filter_by(nombre=VJ).one_or_none()
-            print("recupera el VJ creado " + obVj.nombre)
         else:
             clasif = db.session.query(Clasificacion).filter_by(idClasifica=obVj.clasifId).first()
-            print("Si existe")
+            app.logger.error("["+nick+"] CargarEjemplar: SI existe el videojuego: ["+VJ+"]")
             bloqueado = 0  # No bloqueado
             publicado = publicar
             mensaje = mensaje + "Publicamos tu videojuego "
@@ -44,6 +43,7 @@ def funCargarEjemplar(nick, idUsuario, VJ, estado, publicar, comentario):
                                 estado=estado, valor=valor, publicado=publicado, bloqueado=bloqueado)
 
         db.session.add(ejeUsuario)
+        app.logger.error("[" + nick + "] CargarEjemplar: Crea EjemplarUsuaro: [" + VJ + "]")
         print("Ejemplar Usuario")
 
         db.session.commit()

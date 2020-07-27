@@ -3,7 +3,7 @@ from flask_mail import Mail, Message
 from threading import Thread
 from flask import Flask, request, jsonify, render_template, redirect, url_for, session, current_app
 from config import DevelopmentConfig, Config
-from datamodel import db, Usuario, ConexionUsuario
+from datamodel import db, Usuario, ConexionUsuario, VideoJuego
 from operavideojuegos import funCargarEjemplar
 from passlib.hash import sha256_crypt
 import logging
@@ -21,8 +21,8 @@ app.config['MAIL_PASSWORD'] = 'JuSo2015@'
 mail = Mail(app)
 
 #C 0 N S T A N T E S
-ESTADO_USR_INACTIVO = 0
-ESTADO_USR_ACTIVO = 1
+ESTADO_USR_INACTIVO = 0 #Si el usuario está inactivo
+ESTADO_USR_ACTIVO = 1 #Si el usuario está activo
 USR_NONE = "NONE"
 CON_LOGOUT = "LOGOUT"
 ID_USR_NONE = 0
@@ -40,12 +40,20 @@ logging.basicConfig(filename=LOG_FILENAME, level=logging.DEBUG)
 @app.route('/')
 def index():
     app.logger.debug("[NO_USER] index: inicia index")
-    #if 'nombre' in session:
-    #    print("index: Hay una sesion")
-    #    return render_template('inicio.html', 334455)
-    #else:
-    #    print("index: No hay sesion")
-    return render_template('login.html', mensaje="Registrate o ingresa al sistema!" )
+
+    #Recupera listado de videojuegos
+    result = db.session.query(VideoJuego).filter_by().order_by(VideoJuego.idVj).limit(100)
+    lista = []
+    for reg in result:
+        lista.append(reg)
+    if not(session) or (session['nick'] is None):
+        app.logger.debug("[NO_USER] index: No hay sesion")
+
+        return render_template('inicio.html', mensaje="Registrate y disfruta!", videojuegos=lista, logged=0)
+    else:
+        app.logger.debug("["+session['nick']+"] index: Hay sesion")
+
+        return render_template('inicio.html', mensaje="Bienvenido "+session['nick'], videojuegos=lista, logged=1)
 
 
 # Funcion: login
@@ -68,10 +76,10 @@ def login():
 
             #if usuarioValido == True:
             if obUsuario is not None:
-                if not((not session) or (not nick in session['nick'])):
+                if not((not session) or (not nick in session['nick'])): #Si hay una sesion activa
                     # Si existe el usuario, pero es inactivo, debe remitirse al mail
                     if obUsuario.activo == ESTADO_USR_INACTIVO:
-                        return render_template('inicio.html', mensaje=nick+", debes confirmar tu registro en tu correo para poder ingresar!")
+                        return render_template('inicio.html', mensaje=nick+", debes confirmar tu registro en tu correo para poder ingresar!", logged=0)
                     else:
                         app.logger.debug("[" + nick + "] login: Hay una sesion")
                         app.logger.info("[" + nick + "] login: Usuario a ingresar con sesion recuperada: " + nick)
@@ -81,11 +89,16 @@ def login():
                         db.session.add(newConnUsuario)
                         db.session.commit()
 
-                        return render_template('inicio.html', mensaje="Ya estabas logueado " + nick)
+                        result = db.session.query(VideoJuego).filter_by().order_by(VideoJuego.idVj).limit(100)
+                        lista = []
+                        for reg in result:
+                            lista.append(reg)
+
+                        return render_template('inicio.html', mensaje="Ya estabas logueado " + nick, videojuegos=lista, logged=1)
                 else:
                     #Revisa si el usuario está activo o inactivo
                     if obUsuario.activo == ESTADO_USR_INACTIVO:
-                        return render_template('inicio.html', mensaje=nick+", debes confirmar tu registro en tu correo para poder ingresar! <a href="+URL_APP+"/reenviarconf>Reenvíar el correo de confirmación</a>")
+                        return render_template('inicio.html', mensaje=nick+", debes confirmar tu registro en tu correo para poder ingresar! <a href="+URL_APP+"/reenviarconf>Reenvíar el correo de confirmación</a>", logged=0)
                     else:
                         app.logger.debug("[" + nick + "] login: No hay sesion")
 
@@ -100,8 +113,12 @@ def login():
                         db.session.add(newConnUsuario)
                         db.session.commit()
 
-                        #app.logger.info("login: Sesion generada: " + nick + " " + idnick)
-                        return render_template('inicio.html', mensaje="Bienvenido al sistema "+nick+"!" )
+                        result = db.session.query(VideoJuego).filter_by().order_by(VideoJuego.idVj).limit(100)
+                        lista = []
+                        for reg in result:
+                            lista.append(reg)
+
+                        return render_template('inicio.html', mensaje="Bienvenido al sistema "+nick+"!", videojuegos = lista, logged=1 )
             else:
                 app.logger.info("[" + nick + "] Usuario o password inválido. Intenta de nuevo!")
                 return render_template('login.html', mensaje="Usuario o password inválido. Intenta de nuevo!" )
@@ -109,7 +126,7 @@ def login():
             raise
             app.logger.error("[" + nick + "] login: problema con usuario a ingresar: " + nick)
             return render_template('login.html', mensaje="Algo sucedió, intenta de nuevo !" )
-    return render_template('login.html', mensaje="Registrate o ingresa al sistema!" )
+    return render_template('login.html', mensaje="ingresa al sistema!" )
 
 # Funcion: logout
 @app.route("/logout", methods=["GET"])
@@ -161,12 +178,12 @@ def registro():
                 db.session.commit()
                 app.logger.debug("[" + nickname + "] registro: Usuario registrado: " + newUsuario.nombres + " - mail - " + newUsuario.email)
                 app.logger.debug("registro: Usuario registrado: " + newUsuario.nombres + " - mail - " + newUsuario.email + " " + clave + " " + pwdseguro)
-            return render_template('login.html', mensaje="Ya estás registrado " + newUsuario.nombres + ". Confirma en tu correo para finalizar!")
+            return render_template('registro.html', mensaje="Ya estás registrado " + newUsuario.nombres + ". Confirma en tu correo para finalizar!")
         except:
             raise
             app.logger.error("[" + email + "] registro: Usuario a registrar: " + nombres + " - mail - " + pwdseguro)
             return render_template('error.html', mensaje="Error en registro!")
-    return render_template('login.html', mensaje="Registrate o ingresa al sistema!" )
+    return render_template('registro.html', mensaje="Registrate en el sistema!" )
 
 # Funcion: reenviar correo confirmacion
 @app.route("/reenviarconf", methods=["POST", "GET"])
@@ -200,7 +217,7 @@ def reenviarconf():
 
 
 # Funcion: confirma
-@app.route("/confirma", methods=["GET"])
+@app.route("/confirma", methods=["GET", "POST"])
 def confirma():
     app.logger.debug("[NO_USER] confirma: inicia confirmación ")
     if request.method == "GET":
@@ -226,11 +243,13 @@ def confirma():
                 else:
                     return render_template('error.html', mensaje="Hubo un error " + obUsuario.nombres + ". Vuelve a intentarlo desde tu correo!")
             else:
-                return render_template('login.html',
+                return render_template('registro.html',
                                        mensaje="El usuario " + usr + ", no se encuentra registrado. Regístrate antes!")
         except:
             app.logger.error("[" + usr + "] confirma: Usuario a confirmar: " + usr)
             return render_template('error.html', mensaje="Error en confirmación!")
+    return render_template('login.html', mensaje= "Ingresa al sistema!")
+
 
 # Funcion: reset clave
 @app.route("/resetclave", methods=["POST", "GET"])
@@ -259,13 +278,15 @@ def resetclave():
                     app.logger.debug("[" + usr + "] confirma: Usuario activo: " + obUsuario.nombres + " - mail - " + obUsuario.email)
                     return render_template('login.html', mensaje="Ya estás activo " + obUsuario.nombres + ". Ingresa!")
                 else:
-                    return render_template('error.html', mensaje="Hubo un error " + obUsuario.nombres + ". Vuelve a intentarlo desde tu correo!")
+                    return render_template('resetclave.html', mensaje="Hubo un error " + obUsuario.nombres + ". Vuelve a intentarlo desde tu correo!")
             else:
-                return render_template('login.html',
+                return render_template('registro.html',
                                        mensaje="El usuario " + usr + ", no se encuentra registrado. Regístrate antes!")
         except:
             app.logger.error("[" + usr + "] confirma: Usuario a confirmar: " + usr)
             return render_template('error.html', mensaje="Error en confirmación!")
+    return render_template('resetclave.html', mensaje="Olvidaste la clave la clave")
+
 
 # Funcion: enviar_correo
 def enviar_correo(subject, sender, recipients, text_body,
@@ -300,9 +321,15 @@ def enviar_correo(subject, sender, recipients, text_body,
 # Funcion: cambiar clave
 @app.route("/cargarEjemplar", methods=["GET", "POST"])
 def cargarEjemplar():
+
+    result = db.session.query(VideoJuego.nombre).filter_by().order_by(VideoJuego.nombre).all()
+    lista = []
+    for reg in result:
+        lista.append(reg.nombre)
+
     if request.method == "POST":
         if session is not None:
-            nick = session["nick"]
+            nick = session['nick']
             print("nick:" + nick)
             obUsuario = db.session.query(Usuario).filter_by(nickName=nick).one_or_none()
             if obUsuario is not None:
@@ -319,13 +346,12 @@ def cargarEjemplar():
                 print("publicar:" + str(publicar))
 
                 msg = funCargarEjemplar(nick, usrid, vj, estado, publicar, comentario)
-                return render_template('inicio.html', mensaje=msg)
+                return render_template('inicio.html', mensaje=msg, logged=1)
             else:
                 return render_template('login.html', mensaje="oopppss...algo sucedió con tu sesión. Ingresa de nuevo!")
+        return render_template('cargarejemplar.html', mensaje="Carga tu ejemplar!", videojuegos = lista)
 
-        return render_template('cargarejemplar.html', mensaje="Carga tu ejemplar!")
-
-    return render_template('cargarejemplar.html', mensaje="Carga tu ejemplar!")
+    return render_template('cargarejemplar.html', mensaje="Carga tu ejemplar!", videojuegos = lista)
 
 def _send_async_email(app, msg):
     with app.app_context():
