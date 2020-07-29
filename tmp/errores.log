@@ -11083,3 +11083,221 @@ DEBUG:main:[NO_USER] main: Run aplicacion 8000
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 138-137-830
 INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 138-137-830
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 138-137-830
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 13:46:05] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 13:46:06] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 13:46:06] "[33mGET /docs/4.0/assets/img/favicons/favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 13:46:06] "[33mGET /docs/4.0/assets/img/favicons/favicon-32x32.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 13:46:06] "[33mGET /docs/4.0/assets/img/favicons/favicon-16x16.png HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4play\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 138-137-830
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 17:02:44] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 17:02:45] "[37mGET /static/defaultgame.png HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 138-137-830
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 23:26:09] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 23:26:09] "[37mGET /static/defaultgame.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 23:26:11] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [28/Jul/2020 11:27:54] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Jul/2020 11:27:54] "[36mGET /static/defaultgame.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4play\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 138-137-830
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4play\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 138-137-830
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [28/Jul/2020 14:26:20] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Jul/2020 14:26:21] "[36mGET /static/defaultgame.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/Jul/2020 14:26:22] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [28/Jul/2020 14:26:52] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Jul/2020 14:26:52] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 138-137-830
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 138-137-830
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [28/Jul/2020 17:38:19] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Jul/2020 17:38:20] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [28/Jul/2020 17:38:47] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Jul/2020 17:38:47] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: No hay sesion
+INFO:main:[alexviatela@gmail.com] login: Sesion generada: alexviatela@gmail.com
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: No hay sesion
+INFO:main:[alexviatela@gmail.com] login: Sesion generada: alexviatela@gmail.com
+INFO:werkzeug:127.0.0.1 - - [28/Jul/2020 17:39:01] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Jul/2020 17:39:01] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Jul/2020 17:39:01] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 09:29:16] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 09:29:17] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 138-137-830
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 15:55:01] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 15:55:03] "[36mGET /static/defaultgame.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 15:55:04] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 15:55:26] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 15:55:27] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 15:55:31] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 15:55:31] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 15:57:18] "[37mGET /logout HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 15:57:19] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: No hay sesion
+INFO:main:[alexviatela@gmail.com] login: Sesion generada: alexviatela@gmail.com
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 15:57:26] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 15:57:26] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] registro: inicia registro
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 15:57:34] "[37mGET /registro HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 15:57:35] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] registro: inicia registro
+DEBUG:main:[alexviatela@gmail.com] registro: Usuario adicionado a BD: Manuel Alexander - mail - alexviatela@gmail.com
+DEBUG:main:[alexviatela@gmail.com] registro: armó urlconfirma: http://127.0.0.1:8000/confirma?usr=alexviatela@gmail.com&id=$5$lnuyjask8790j22$ZdPW5cud0KIP5JDijlarqjrWUFxgB.Dz/El3ns.pCT5
+DEBUG:main:[alexviatela@gmail.com] registro: va a enviar correo
+DEBUG:main:[alexviatela@gmail.com] enviar_correo: Inicia 
+DEBUG:main:[alexviatela@gmail.com] va enviar_correo: SEND 
+DEBUG:main:[alexviatela@gmail.com] Si lo envió 
+DEBUG:main:[alexviatela@gmail.com] registro: envió mail a : Manuel Alexander - mail - alexviatela@gmail.com
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 15:57:52] "[35m[1mPOST /registro HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 15:57:52] "[37mGET /registro?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 15:57:52] "[37mGET /registro?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 15:57:53] "[37mGET /registro?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 15:57:53] "[37mGET /registro?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 15:57:53] "[37mGET /registro?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Jul/2020 15:57:54] "[37mGET /registro?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -

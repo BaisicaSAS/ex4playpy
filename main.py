@@ -11,6 +11,7 @@ import logging
 app = Flask(__name__)
 
 #mail= Mail(app)
+app.config.from_object("config.DevelopmentConfig")
 
 app.config['MAIL_SERVER'] = 'p3plcpnl1009.prod.phx3.secureserver.net'
 app.config['MAIL_PORT'] = 465
@@ -28,11 +29,19 @@ CON_LOGOUT = "LOGOUT"
 ID_USR_NONE = 0
 SUBJECT_REGISTRO = "Bienvenido a ex4play!"
 MAIL_REGISTRO = "registro@ex4read.co"
+
+#DESARROLLO
 URL_CONFIRMA = "http://127.0.0.1:8000/confirma?"
 URL_APP = "http://127.0.0.1:8000"
+#PRODUCCION
+#URL_CONFIRMA = "http://ex4play.pythonanywhere.com/confirma?"
+#URL_APP = "http://ex4play.pythonanywhere.com/"
 
+#PRODUCCION
 #LOG_FILENAME = 'tmp/errores.log'
+#DESARROLLO
 LOG_FILENAME = 'tmp\errores.log'
+
 logging.basicConfig(filename=LOG_FILENAME, level=logging.DEBUG)
 
 # Funcion: index

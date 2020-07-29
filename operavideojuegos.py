@@ -44,12 +44,8 @@ def funCargarEjemplar(nick, idUsuario, VJ, estado, publicar, comentario):
 
         db.session.add(ejeUsuario)
         app.logger.error("[" + nick + "] CargarEjemplar: Crea EjemplarUsuaro: [" + VJ + "]")
-        print("Ejemplar Usuario")
 
         db.session.commit()
-        print("Commit")
-
-        print("retornará: " + mensaje)
         return mensaje
     except:
         raise
