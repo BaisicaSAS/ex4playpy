@@ -1,29 +1,32 @@
-INSERT INTO dbmaster.pais (`nombrePais`) VALUES ('COLOMBIA');
+INSERT INTO ex4play$ex4playprod.pais (`nombrePais`) VALUES ('COLOMBIA');
 
-INSERT INTO dbmaster.ciudad (`nombreCiudad`, `paisId`) VALUES ('BOGOTÁ', '1');
+INSERT INTO ex4play$ex4playprod.ciudad (`nombreCiudad`, `paisId`) VALUES ('BOGOTÁ', '1');
 
-INSERT INTO dbmaster.clasificacion (`idclasifica`, `clase`, `descripcion`, `valorPuntos`) VALUES
-(1, 'A', 'Alta', 120),
-(2, 'B', 'Media', 80),
-(3, 'C', 'Baja', 60),
-(4, 'D', 'Muy baja', 40),
-(5, 'D', 'Mínima', 20);
+INSERT INTO ex4play$ex4playprod.clasificacion (`idclasifica`, `clase`, `descripcion`, `valorPuntos`) VALUES
+(1, 'A', 'Los que casi no se consiguen', 180),
+(2, 'B', 'Media', 150),
+(3, 'C', 'Baja', 100),
+(4, 'D', 'Muy baja', 80),
+(5, 'D', 'Muy baja', 60),
+(6, 'E', 'Mínima', 40),
+(7, 'F', 'Mínima', 20),
+(8, 'G', 'Bueno, exploremos algo diferente', 10);
 
-INSERT INTO dbmaster.marca (`idMarca`, `nombre`, `comun`, `urlresena`, `fechacrea`) VALUES
+INSERT INTO ex4play$ex4playprod.marca (`idMarca`, `nombre`, `comun`, `urlresena`, `fechacrea`) VALUES
 (1, 'No identificado', 'No identificado', NULL, NULL),
 (2, 'SONY', 'SONY', NULL, NULL),
 (3, 'MICROSOFT', 'MICROSOFT', NULL, NULL),
 (4, 'NINTENDO', 'NINTENDO', NULL, NULL);
 
 
-INSERT INTO dbmaster.consola (`idconsola`, `nombre`, `anio`, `marcaid`) VALUES
+INSERT INTO ex4play$ex4playprod.consola (`idconsola`, `nombre`, `anio`, `marcaid`) VALUES
 (1, 'No identificada', '2018', 1),
 (2, 'PS3', '2018', 2),
 (3, 'PS4', '2018', 2),
 (4, 'Xbox 360', '2018', 3),
 (5, 'Xbox One', '2018', 3);
 
-INSERT INTO dbmaster.videojuego (`idvj`, `nombre`, `fechacrea`, `clasifid`, `popularidad`, `consolaid`, `urlresena`, `obs`, `genero`, `imagen`) VALUES
+INSERT INTO ex4play$ex4playprod.videojuego (`idvj`, `nombre`, `fechacrea`, `clasifid`, `popularidad`, `consolaid`, `urlresena`, `obs`, `genero`, `imagen`) VALUES
 (1, '007 Legends', '2012-10-19 00:00:00', 1, 0, 2, 'https://vandal.elespanol.com/juegos/ps3/007-legends/15850', 'NINGUNA', 'Acción', 'PENDIENTE'),
 (2, '007: Quantum of Solace', '2008-11-07 00:00:00', 1, 0, 2, 'https://vandal.elespanol.com/juegos/ps3/007-quantum-of-solace/8401', 'NINGUNA', 'Acción', 'PENDIENTE'),
 (3, '10 Pin: Champions Alley PS2 Classics PSN', '2013-06-19 00:00:00', 1, 0, 2, 'https://vandal.elespanol.com/juegos/ps3/10-pin-champions-alley-ps2-classics-psn/24309', 'NINGUNA', 'Deportes', 'PENDIENTE'),
@@ -1148,7 +1151,9 @@ INSERT INTO dbmaster.videojuego (`idvj`, `nombre`, `fechacrea`, `clasifid`, `pop
 (1122, 'MAG: Massive Action Game', '2010-01-27 00:00:00', 1, 0, 2, 'https://vandal.elespanol.com/juegos/ps3/mag-massive-action-game/9217', 'NINGUNA', 'Acción / Multi Online', 'PENDIENTE'),
 (1123, 'Magic Orbz PSN', '2009-01-15 00:00:00', 1, 0, 2, 'https://vandal.elespanol.com/juegos/ps3/magic-orbz-psn/9924', 'NINGUNA', 'Acción / PS Network', 'PENDIENTE'),
 (1124, 'Magic The Gathering: Duels of the Planeswalkers 2013 PSN', '2012-06-20 00:00:00', 1, 0, 2, 'https://vandal.elespanol.com/juegos/ps3/magic-the-gathering-duels-of-the-planeswalkers-2013-psn/15819', 'NINGUNA', 'Estrategia', 'PENDIENTE'),
-(1125, 'Magic The Gathering: Duels of the Planeswalkers 2014 PSN', '2013-06-26 00:00:00', 1, 0, 2, 'https://vandal.elespanol.com/juegos/ps3/magic-the-gathering-duels-of-the-planeswalkers-2014-psn/20741', 'NINGUNA', 'Otros', 'PENDIENTE'),
+(1125, 'Magic The Gathering: Duels of the Planeswalkers 2014 PSN', '2013-06-26 00:00:00', 1, 0, 2, 'https://vandal.elespanol.com/juegos/ps3/magic-the-gathering-duels-of-the-planeswalkers-2014-psn/20741', 'NINGUNA', 'Otros', 'PENDIENTE');
+
+INSERT INTO ex4play$ex4playprod.videojuego (`idvj`, `nombre`, `fechacrea`, `clasifid`, `popularidad`, `consolaid`, `urlresena`, `obs`, `genero`, `imagen`) VALUES
 (1126, 'Magic: The Gathering - Duels of the Planeswalkers 2012 PSN', '2011-06-15 00:00:00', 1, 0, 2, 'https://vandal.elespanol.com/juegos/ps3/magic-the-gathering-duels-of-the-planeswalkers-2012-psn/14124', 'NINGUNA', 'PS Network / Otros / Rol', 'PENDIENTE'),
 (1127, 'Magic: The Gathering - Duels of the Planeswalkers PSN', '2010-11-01 00:00:00', 1, 0, 2, 'https://vandal.elespanol.com/juegos/ps3/magic-the-gathering-duels-of-the-planeswalkers-psn/29364', 'NINGUNA', 'Otros', 'PENDIENTE'),
 (1128, 'Magic: The Gathering - Tactics', '2010-09-01 00:00:00', 1, 0, 2, 'https://vandal.elespanol.com/juegos/ps3/magic-the-gathering-tactics/11633', 'NINGUNA', 'Estrategia / Multi Online', 'PENDIENTE'),
@@ -2843,7 +2848,9 @@ INSERT INTO dbmaster.videojuego (`idvj`, `nombre`, `fechacrea`, `clasifid`, `pop
 (2817, 'Dragon Ball FighterZ', '2018-01-26 00:00:00', 1, 0, 3, 'https://vandal.elespanol.com/juegos/ps4/dragon-ball-fighterz/49071', 'NINGUNA', 'Lucha', 'PENDIENTE'),
 (2818, 'Dragon Ball Xenoverse', '2015-02-27 00:00:00', 1, 0, 3, 'https://vandal.elespanol.com/juegos/ps4/dragon-ball-xenoverse/24456', 'NINGUNA', 'Lucha', 'PENDIENTE'),
 (2819, 'Dragon Ball Xenoverse 2', '2016-10-28 00:00:00', 1, 0, 3, 'https://vandal.elespanol.com/juegos/ps4/dragon-ball-xenoverse-2/39138', 'NINGUNA', 'Lucha', 'PENDIENTE'),
-(2820, 'Dragon Fang Z: The Rose & Dungeon of Time', '2018-01-01 00:00:00', 1, 0, 3, 'https://vandal.elespanol.com/juegos/ps4/dragon-fang-z-the-rose-dungeon-of-time/55307', 'NINGUNA', 'Aventura / Rol', 'PENDIENTE'),
+(2820, 'Dragon Fang Z: The Rose & Dungeon of Time', '2018-01-01 00:00:00', 1, 0, 3, 'https://vandal.elespanol.com/juegos/ps4/dragon-fang-z-the-rose-dungeon-of-time/55307', 'NINGUNA', 'Aventura / Rol', 'PENDIENTE');
+
+INSERT INTO ex4play$ex4playprod.videojuego (`idvj`, `nombre`, `fechacrea`, `clasifid`, `popularidad`, `consolaid`, `urlresena`, `obs`, `genero`, `imagen`) VALUES
 (2821, 'Dragon Fin Soup', '2015-11-03 00:00:00', 1, 0, 3, 'https://vandal.elespanol.com/juegos/ps4/dragon-fin-soup/23801', 'NINGUNA', 'PS Network / Rol', 'PENDIENTE'),
 (2822, 'Dragon Quest Builders', '2016-10-14 00:00:00', 1, 0, 3, 'https://vandal.elespanol.com/juegos/ps4/dragon-quest-builders/32073', 'NINGUNA', 'Aventura / Rol', 'PENDIENTE'),
 (2823, 'Dragon Quest Builders 2', '2018-01-01 00:00:00', 1, 0, 3, 'https://vandal.elespanol.com/juegos/ps4/dragon-quest-builders-2/50991', 'NINGUNA', 'Otros / Rol', 'PENDIENTE'),
@@ -4023,7 +4030,9 @@ INSERT INTO dbmaster.videojuego (`idvj`, `nombre`, `fechacrea`, `clasifid`, `pop
 (3997, 'Raven`s Cry', '2015-02-21 00:00:00', 1, 0, 3, 'https://vandal.elespanol.com/juegos/ps4/ravens-cry/23553', 'NINGUNA', 'Aventura', 'PENDIENTE'),
 (3998, 'Raw Data', '2017-10-17 00:00:00', 1, 0, 3, 'https://vandal.elespanol.com/juegos/ps4/raw-data/53613', 'NINGUNA', 'Acción', 'PENDIENTE'),
 (3999, 'Rayman Legends', '2014-02-20 00:00:00', 1, 0, 3, 'https://vandal.elespanol.com/juegos/ps4/rayman-legends/22791', 'NINGUNA', 'Plataformas', 'PENDIENTE'),
-(4000, 'Rayon Riddles - Rise of the Goblin King', '2017-03-21 00:00:00', 1, 0, 3, 'https://vandal.elespanol.com/juegos/ps4/rayon-riddles-rise-of-the-goblin-king/46712', 'NINGUNA', 'Aventura', 'PENDIENTE'),
+(4000, 'Rayon Riddles - Rise of the Goblin King', '2017-03-21 00:00:00', 1, 0, 3, 'https://vandal.elespanol.com/juegos/ps4/rayon-riddles-rise-of-the-goblin-king/46712', 'NINGUNA', 'Aventura', 'PENDIENTE');
+
+INSERT INTO ex4play$ex4playprod.videojuego (`idvj`, `nombre`, `fechacrea`, `clasifid`, `popularidad`, `consolaid`, `urlresena`, `obs`, `genero`, `imagen`) VALUES
 (4001, 'Ray`s the Dead', '2018-01-01 00:00:00', 1, 0, 3, 'https://vandal.elespanol.com/juegos/ps4/rays-the-dead/26038', 'NINGUNA', 'Acción / Aventura', 'PENDIENTE'),
 (4002, 'Re:Legend', '2018-01-01 00:00:00', 1, 0, 3, 'https://vandal.elespanol.com/juegos/ps4/relegend/51272', 'NINGUNA', 'Estrategia / Rol', 'PENDIENTE'),
 (4003, 'Reaching for Petals', '2018-01-01 00:00:00', 1, 0, 3, 'https://vandal.elespanol.com/juegos/ps4/reaching-for-petals/51324', 'NINGUNA', 'Aventura', 'PENDIENTE'),
@@ -6222,7 +6231,9 @@ INSERT INTO dbmaster.videojuego (`idvj`, `nombre`, `fechacrea`, `clasifid`, `pop
 (6196, 'Quake 2 XBLA', '2007-01-01 00:00:00', 1, 0, 4, 'https://vandal.elespanol.com/juegos/x360/quake-2-xbla/26699', 'NINGUNA', 'Acción', 'PENDIENTE'),
 (6197, 'Quake 4', '2005-12-02 00:00:00', 1, 0, 4, 'https://vandal.elespanol.com/juegos/x360/quake-4/4732', 'NINGUNA', 'Acción', 'PENDIENTE'),
 (6198, 'Quake Arena Arcade XBLA', '2010-12-15 00:00:00', 1, 0, 4, 'https://vandal.elespanol.com/juegos/x360/quake-arena-arcade-xbla/7631', 'NINGUNA', 'Xbox Live Arcade / Acción / Shooter', 'PENDIENTE'),
-(6199, 'Quantum Conundrum XBLA', '2012-07-11 00:00:00', 1, 0, 4, 'https://vandal.elespanol.com/juegos/x360/quantum-conundrum-xbla/14941', 'NINGUNA', 'Plataformas / Puzle', 'PENDIENTE'),
+(6199, 'Quantum Conundrum XBLA', '2012-07-11 00:00:00', 1, 0, 4, 'https://vandal.elespanol.com/juegos/x360/quantum-conundrum-xbla/14941', 'NINGUNA', 'Plataformas / Puzle', 'PENDIENTE');
+
+INSERT INTO ex4play$ex4playprod.videojuego (`idvj`, `nombre`, `fechacrea`, `clasifid`, `popularidad`, `consolaid`, `urlresena`, `obs`, `genero`, `imagen`) VALUES
 (6200, 'Quantum Theory', '2010-09-24 00:00:00', 1, 0, 4, 'https://vandal.elespanol.com/juegos/x360/quantum-theory/11786', 'NINGUNA', 'Shooter', 'PENDIENTE'),
 (6201, 'Quarrel XBLA', '2012-01-25 00:00:00', 1, 0, 4, 'https://vandal.elespanol.com/juegos/x360/quarrel-xbla/15491', 'NINGUNA', 'Estrategia / Xbox Live Arcade', 'PENDIENTE'),
 (6202, 'Quién Quiere Ser Millonario? Ediciones Especiales', '2011-11-08 00:00:00', 1, 0, 4, 'https://vandal.elespanol.com/juegos/x360/quien-quiere-ser-millonario-ediciones-especiales/27809', 'NINGUNA', '', 'PENDIENTE'),
@@ -7153,7 +7164,9 @@ INSERT INTO dbmaster.videojuego (`idvj`, `nombre`, `fechacrea`, `clasifid`, `pop
 (7127, 'Claire: Extended Cut', '2016-09-06 00:00:00', 1, 0, 5, 'https://vandal.elespanol.com/juegos/xbone/claire-extended-cut/41684', 'NINGUNA', 'Aventura', 'PENDIENTE'),
 (7128, 'Clash', '2015-08-21 00:00:00', 1, 0, 5, 'https://vandal.elespanol.com/juegos/xbone/clash/33003', 'NINGUNA', 'Acción', 'PENDIENTE'),
 (7129, 'Claybook', '2018-01-01 00:00:00', 1, 0, 5, 'https://vandal.elespanol.com/juegos/xbone/claybook/48343', 'NINGUNA', 'Puzle', 'PENDIENTE'),
-(7130, 'Clicker Heroes', '2017-03-07 00:00:00', 1, 0, 5, 'https://vandal.elespanol.com/juegos/xbone/clicker-heroes/46832', 'NINGUNA', 'Estrategia', 'PENDIENTE'),
+(7130, 'Clicker Heroes', '2017-03-07 00:00:00', 1, 0, 5, 'https://vandal.elespanol.com/juegos/xbone/clicker-heroes/46832', 'NINGUNA', 'Estrategia', 'PENDIENTE');
+
+INSERT INTO ex4play$ex4playprod.videojuego (`idvj`, `nombre`, `fechacrea`, `clasifid`, `popularidad`, `consolaid`, `urlresena`, `obs`, `genero`, `imagen`) VALUES
 (7131, 'Clockwork Tales: Of Glass and Ink', '2016-01-22 00:00:00', 1, 0, 5, 'https://vandal.elespanol.com/juegos/xbone/clockwork-tales-of-glass-and-ink/35739', 'NINGUNA', 'Aventura', 'PENDIENTE'),
 (7132, 'Clouds & Sheep 2', '2016-11-18 00:00:00', 1, 0, 5, 'https://vandal.elespanol.com/juegos/xbone/clouds-sheep-2/43782', 'NINGUNA', 'Acción', 'PENDIENTE'),
 (7133, 'ClusterPuck 99', '2015-09-09 00:00:00', 1, 0, 5, 'https://vandal.elespanol.com/juegos/xbone/clusterpuck-99/29856', 'NINGUNA', 'Deportes', 'PENDIENTE'),

@@ -1,0 +1,15 @@
+1. Revisar si podemos guardar como variable de entorno: (Según el video de configuración de python anywhere)
+
+class Config(object):
+    SECRET_KEY = 'eX-4-P-l-A-y-S-e-C-r-E-t-A'
+    SECRET_SALT = 'lnuyjask8790j22'
+
+******************************************************************************************************
+[OK] 2. VALIDAR UN MAIL QUE EXISTA EN REGISTRO: No se está manejando la excepcion
+******************************************************************************************************
+[OK] 3. Validar que los campos de clave y repetir clave en registro se estén validando
+******************************************************************************************************
+4. Adicionar Capcha en login, cambiar clave y registro por ahora
+******************************************************************************************************
+5. En Cargar ejemplar tambien se debe poner captcha
+******************************************************************************************************

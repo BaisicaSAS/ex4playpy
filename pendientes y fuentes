@@ -21,4 +21,29 @@ https://www.w3schools.com/howto/howto_js_autocomplete.asp
 Componente card bootstrap
 https://getbootstrap.com/docs/4.0/components/card/
 
+DESPLIEGUE EN PYTHONANYWHERE
+https://www.youtube.com/watch?v=v54FAicqKzU
+git clone https://github.com/BaisicaSAS/ex4playpy.git
+pip install  flask flask_bootstrap pandas numpy flask_SQLAlchemy flask_mail passlib flask-mysqldb
+MySQL Service
+Password: Ju$o2020+%px10n_env
+MySQL Password: Ju$o2020+%px10n_env
+Database host address:ex4play.mysql.pythonanywhere-services.com
+Username:ex4play
 
+ex4play$ex4playprod
+
+###Crear la base de datos desde linea de comandos
+workon flask
+python
+************************************************
+from flask import Flask
+from datamodel import db
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://ex4play:Ju$o2020+%px10n_env@ex4play.mysql.pythonanywhere-services.com/ex4play$ex4playprod'
+db.init_app(app)
+
+with app.app_context():
+    db.create_all()
+************************************************

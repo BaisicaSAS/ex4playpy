@@ -68,6 +68,7 @@ class CambioUsuario(db.Model):
     nombres = db.Column(db.String(100))
     apellidos = db.Column(db.String(100))
     celular = db.Column(db.String(100))
+    email = db.Column(db.String(100))
     fechacrea = db.Column(db.DateTime, default=datetime.datetime.now)
     UsrCam = db.relationship("Usuario", lazy=True)
 

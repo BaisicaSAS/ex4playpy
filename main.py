@@ -2,24 +2,19 @@ from smtplib import SMTPException
 from flask_mail import Mail, Message
 from threading import Thread
 from flask import Flask, request, jsonify, render_template, redirect, url_for, session, current_app
-from config import DevelopmentConfig, Config
-from datamodel import db, Usuario, ConexionUsuario, VideoJuego
+from config import ProductionConfig, DevelopmentConfig, Config
+from datamodel import db, Usuario, ConexionUsuario, VideoJuego, EjeUsuario
 from operavideojuegos import funCargarEjemplar
 from passlib.hash import sha256_crypt
 import logging
+from sqlalchemy.exc import IntegrityError
 
 app = Flask(__name__)
 
-#mail= Mail(app)
-app.config.from_object("config.DevelopmentConfig")
-
-app.config['MAIL_SERVER'] = 'p3plcpnl1009.prod.phx3.secureserver.net'
-app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'ex4play@baisica.co'
-app.config['MAIL_PASSWORD'] = 'JuSo2015@'
-#app.config['MAIL_USE_TLS'] = True
-#app.config['MAIL_USE_SSL'] = True
-mail = Mail(app)
+# DESARROLLO
+app.config.from_object(DevelopmentConfig)
+# PRODUCCION
+# app.config.from_object(ProductionConfig)
 
 #C 0 N S T A N T E S
 ESTADO_USR_INACTIVO = 0 #Si el usuario está inactivo
@@ -27,8 +22,7 @@ ESTADO_USR_ACTIVO = 1 #Si el usuario está activo
 USR_NONE = "NONE"
 CON_LOGOUT = "LOGOUT"
 ID_USR_NONE = 0
-SUBJECT_REGISTRO = "Bienvenido a ex4play!"
-MAIL_REGISTRO = "registro@ex4read.co"
+
 
 #DESARROLLO
 URL_CONFIRMA = "http://127.0.0.1:8000/confirma?"
@@ -38,9 +32,20 @@ URL_APP = "http://127.0.0.1:8000"
 #URL_APP = "http://ex4play.pythonanywhere.com/"
 
 #PRODUCCION
-#LOG_FILENAME = 'tmp/errores.log'
+#LOG_FILENAME = 'ex4playpy/tmp/errores.log'
 #DESARROLLO
 LOG_FILENAME = 'tmp\errores.log'
+
+app.config['MAIL_SERVER'] = 'p3plcpnl1009.prod.phx3.secureserver.net'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = "ex4play@baisica.co"
+app.config['MAIL_PASSWORD'] = 'JuSo2015@'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+SUBJECT_REGISTRO = "Bienvenido a ex4play {nick} !"
+
+
+mail = Mail(app)
 
 logging.basicConfig(filename=LOG_FILENAME, level=logging.DEBUG)
 
@@ -49,12 +54,13 @@ logging.basicConfig(filename=LOG_FILENAME, level=logging.DEBUG)
 @app.route('/')
 def index():
     app.logger.debug("[NO_USER] index: inicia index")
-
-    #Recupera listado de videojuegos
-    result = db.session.query(VideoJuego).filter_by().order_by(VideoJuego.idVj).limit(100)
     lista = []
-    for reg in result:
-        lista.append(reg)
+    if db.session is not None:
+        # Recupera listado de videojuegos
+        result = db.session.query(VideoJuego).filter_by().order_by(VideoJuego.idVj).limit(100)
+        for reg in result:
+            lista.append(reg)
+
     if not(session) or (session['nick'] is None):
         app.logger.debug("[NO_USER] index: No hay sesion")
 
@@ -62,7 +68,7 @@ def index():
     else:
         app.logger.debug("["+session['nick']+"] index: Hay sesion")
 
-        return render_template('inicio.html', mensaje="Bienvenido "+session['nick'], videojuegos=lista, logged=1)
+    return render_template('inicio.html', mensaje="Bienvenido "+session['nick'], videojuegos=lista, logged=1)
 
 
 # Funcion: login
@@ -155,7 +161,7 @@ def logout():
             else:
                 return render_template('login.html', mensaje="No hay sesion, intenta ingresar de nuevo")
         except:
-            raise
+            #raise
             app.logger.error("[NO_USER logout: problema con usuario al cerrar sesion")
             return render_template('login.html', mensaje="Algo sucedió, intenta de nuevo !" )
 
@@ -176,17 +182,37 @@ def registro():
             app.logger.debug("[" + nickname + "] registro: Usuario adicionado a BD: " + newUsuario.nombres + " - mail - " + newUsuario.email)
             urlconfirma = URL_CONFIRMA +"usr=" + nickname + "&id=" + sha256_crypt.using(salt=Config.SECRET_SALT, rounds=5000).hash(str(email+pwdseguro))
             app.logger.debug("[" + nickname + "] registro: armó urlconfirma: " + urlconfirma)
-            txbody = "<p>Hola, solo falta un paso para que empieces a intercambiar tus videojuegos. \n \n Confirma aquí: " + urlconfirma + " </p>"
+
 
             #commit temporal mientras se resuelve lo del mail
             #db.session.commit()
 
             app.logger.debug("[" + nickname + "] registro: va a enviar correo")
-            if enviar_correo(SUBJECT_REGISTRO, MAIL_REGISTRO, nickname, txbody, html_body=txbody) == 1:
+            subject = SUBJECT_REGISTRO.format(nick=nombres)
+
+
+            if enviar_correo(subject, app.config['MAIL_USERNAME'], nickname, text_body=None, template="mailbienvenida.html", nick=nickname, urlconfirma=urlconfirma) == 1:
                 app.logger.debug("[" + nickname + "] registro: envió mail a : " + newUsuario.nombres + " - mail - " + newUsuario.email)
-                db.session.commit()
-                app.logger.debug("[" + nickname + "] registro: Usuario registrado: " + newUsuario.nombres + " - mail - " + newUsuario.email)
-                app.logger.debug("registro: Usuario registrado: " + newUsuario.nombres + " - mail - " + newUsuario.email + " " + clave + " " + pwdseguro)
+
+                #***************************************
+                #Manejo de clave duplicada en la inserción del usuario
+                try:
+                    db.session.commit()
+                    app.logger.debug(
+                        "[" + nickname + "] registro: Usuario registrado: " + newUsuario.nombres + " - mail - " + newUsuario.email)
+                    app.logger.debug(
+                        "registro: Usuario registrado: " + newUsuario.nombres + " - mail - " + newUsuario.email + " " + clave + " " + pwdseguro)
+                except IntegrityError as e:
+
+                    app.logger.debug("[" + nickname + "] registro: Repetido")
+
+                    app.logger.info("%s Ya esta registrado.")
+                    app.logger.debug("[" + nickname + "] registro: %s Ya esta registrado." % e.params[0])
+                    db.session.rollback()
+                    return render_template('resetclave.html',
+                                       mensaje="Ya existe un registro para " + nickname + ". Recupera tu clave!")
+
+                #***************************************
             return render_template('registro.html', mensaje="Ya estás registrado " + newUsuario.nombres + ". Confirma en tu correo para finalizar!")
         except:
             raise
@@ -208,10 +234,11 @@ def reenviarconf():
                 app.logger.debug("[" + nickname + "] reenviar mail: Usuario adicionado a BD: " + obUsuario.nombres + " - mail - " + obUsuario.email)
                 urlconfirma = URL_CONFIRMA +"usr=" + nickname + "&id=" + sha256_crypt.using(salt=Config.SECRET_SALT, rounds=5000).hash(str(email+pwdseguro))
                 app.logger.debug("[" + nickname + "] reenviar mail: armó urlconfirma: " + urlconfirma)
-                txbody = "<p>Hola, solo falta un paso para que empieces a intercambiar tus videojuegos. \n \n Confirma aquí: " + urlconfirma + " </p>"
 
                 app.logger.debug("[" + nickname + "] reenviar mail: va a enviar correo")
-                if enviar_correo(SUBJECT_REGISTRO, MAIL_REGISTRO, nickname, txbody, html_body=txbody) == 1:
+                subject = SUBJECT_REGISTRO.format(nick=obUsuario.nombres)
+
+                if enviar_correo(subject, app.config['MAIL_USERNAME'], nickname, text_body=None, template="mailbienvenida.html", nick=nickname, urlconfirma=urlconfirma) == 1:
                     app.logger.debug("[" + nickname + "] reenviar mail: envió mail a : " + obUsuario.nombres + " - mail - " + obUsuario.email)
                     app.logger.debug("reenviar mail: Usuario registrado: " + obUsuario.nombres + " - mail - " + obUsuario.email + " " + pwdseguro)
                 return render_template('login.html', mensaje= "Correo reenviado a " + email + ". " + obUsuario.nombres + ". Confirma en tu correo para finalizar el registro!")
@@ -236,25 +263,31 @@ def confirma():
 
             #Busca el usuario para validar
             app.logger.debug("[NO_USER] confirma: Usuario a confirmar: " + usr)
-            obUsuario = db.session.query(Usuario.nickName).filter_by(nickName=usr).one_or_none()
+            obUsuario = db.session.query(Usuario).filter_by(nickName=usr).one_or_none()
 
             if obUsuario is not None:
-                pwd= obUsuario.pwd
-                app.logger.debug("[" + usr + "] confirma: Usuario recuperado: " + usr+pwd )
-
-                idvalida = sha256_crypt.using(salt=Config.SECRET_SALT, rounds=5000).hash(str(usr+pwd))
-
-                if idvalida==id:
-                    obUsuario.activo = ESTADO_USR_ACTIVO;
-                    db.session.commit()
-                    app.logger.debug("[" + usr + "] confirma: Usuario activo: " + obUsuario.nombres + " - mail - " + obUsuario.email)
-                    return render_template('login.html', mensaje="Ya estás activo " + obUsuario.nombres + ". Ingresa!")
+                if obUsuario.activo == ESTADO_USR_ACTIVO:
+                    app.logger.debug(
+                        "[" + usr + "] confirma: Usuario YA estaba activo: " + obUsuario.nombres + " - mail - " + obUsuario.email)
+                    return render_template('login.html', mensaje="El enlace ya no funciona, pero ya estás activo " + obUsuario.nombres + ". Ingresa!")
                 else:
-                    return render_template('error.html', mensaje="Hubo un error " + obUsuario.nombres + ". Vuelve a intentarlo desde tu correo!")
+                    pwd= obUsuario.pwd
+                    app.logger.debug("[" + usr + "] confirma: Usuario recuperado: " + usr+pwd )
+
+                    idvalida = sha256_crypt.using(salt=Config.SECRET_SALT, rounds=5000).hash(str(usr+pwd))
+
+                    if idvalida==id:
+                        obUsuario.activo = ESTADO_USR_ACTIVO;
+                        db.session.commit()
+                        app.logger.debug("[" + usr + "] confirma: Usuario activo: " + obUsuario.nombres + " - mail - " + obUsuario.email)
+                        return render_template('login.html', mensaje="Ya estás activo " + obUsuario.nombres + ". Ingresa!")
+                    else:
+                        return render_template('error.html', mensaje="Hubo un error " + obUsuario.nombres + ". Vuelve a intentarlo desde tu correo!")
             else:
                 return render_template('registro.html',
                                        mensaje="El usuario " + usr + ", no se encuentra registrado. Regístrate antes!")
         except:
+            raise
             app.logger.error("[" + usr + "] confirma: Usuario a confirmar: " + usr)
             return render_template('error.html', mensaje="Error en confirmación!")
     return render_template('login.html', mensaje= "Ingresa al sistema!")
@@ -299,26 +332,21 @@ def resetclave():
 
 # Funcion: enviar_correo
 def enviar_correo(subject, sender, recipients, text_body,
-                  cc=None, bcc=None, html_body=None):
+                  cc=None, bcc=None, html_body=None, template=None, **kwargs):
     app.logger.debug("[" + recipients + "] enviar_correo: Inicia ")
-    msg = Message(subject, sender=sender, recipients=recipients, cc=cc, bcc=bcc)
-    msg.body = text_body
-    if html_body:
-        msg.html = html_body
     try:
+        for key, value in kwargs.items():
+            print("The value of {} is {}".format(key, value))
+
         app.logger.debug("[" + recipients + "] va enviar_correo: SEND ")
-        app.config['MAIL_SERVER'] = 'p3plcpnl1009.prod.phx3.secureserver.net'
-        app.config['MAIL_PORT'] = 465
-        app.config['MAIL_USERNAME'] = 'ex4play@baisica.co'
-        app.config['MAIL_PASSWORD'] = 'JuSo2015@'
-        app.config['MAIL_USE_TLS'] = True
-        send_email(subject='Bienvenid@ al miniblog',
-                   sender=current_app.config['MAIL_USERNAME'],
-                   recipients=[recipients, ],
-                   text_body=f'Hola {recipients}, bienvenid@ al miniblog de Flask',
-                   html_body=f'<p>Hola <strong>{recipients}</strong>, bienvenid@ al miniblog de Flask</p>')
-        #mail.send(msg)
-        app.logger.debug("[" + recipients + "] Si lo envió ")
+
+        msg = Message(subject, sender=sender, recipients=[recipients, ], cc=cc, bcc=bcc)
+        msg.html = render_template(template , **kwargs)
+        msg.body = render_template(template , **kwargs)
+
+        Thread(target=_send_async_email, args=(current_app._get_current_object(), msg)).start()
+
+        app.logger.debug("[CORREO A: " + recipients[0].lower() + "] Generó tarea para enviar ")
         return 1
     except SMTPException:
         raise
@@ -326,6 +354,19 @@ def enviar_correo(subject, sender, recipients, text_body,
         logger.exception("Ocurrió un error al enviar el email")
         return 0
     #Thread(target=_send_async_email, args=(current_app._get_current_object(), msg)).start()
+
+# Funcion: Dar de Baja Usuario
+@app.route("/bajausuario", methods=["GET", "POST"])
+def bajausuario():
+    if request.method == "POST":
+        if session is not None:
+            nick = session['nick']
+            print("nick:" + nick)
+            #Recuperar usuario
+            obUsuario = db.session.query(Usuario).filter_by(nickName=nick).one_or_none()
+            obEjeUsuario = db.session.query(EjeUsuario).filter_by(nickName=nick).one_or_none()
+
+
 
 # Funcion: cambiar clave
 @app.route("/cargarEjemplar", methods=["GET", "POST"])
@@ -364,26 +405,15 @@ def cargarEjemplar():
 
 def _send_async_email(app, msg):
     with app.app_context():
-        try:    
+        try:
             mail.send(msg)
         except SMTPException:
             raise
             logger.exception("Ocurrió un error al enviar el email")
 
-
-def send_email(subject, sender, recipients, text_body,
-               cc=None, bcc=None, html_body=None):
-    msg = Message(subject, sender=sender, recipients=recipients, cc=cc, bcc=bcc)
-    msg.body = text_body
-    if html_body:
-        msg.html = html_body
-    Thread(target=_send_async_email, args=(current_app._get_current_object(), msg)).start()
-
-
 if __name__ == '__main__':
     app.logger.debug("[NO_USER] main: **************************************************")
     app.logger.debug("[NO_USER] main: Importa configuracion")
-    app.config.from_object(DevelopmentConfig)
     mail.init_app(app)
     app.logger.debug("[NO_USER] main: Inicializa DB")
     db.init_app(app)
@@ -392,5 +422,8 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.logger.debug("[NO_USER] main: Run aplicacion 8000")
+    #DESARROLLO
     app.run(port=8000)
+    #PRODUCCION
+    #app.run(port=80)
 

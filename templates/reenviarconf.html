@@ -3,16 +3,21 @@
 {% block title %}ex4play{% endblock %}
 
 {% block content %}
-    <h1 {{ mensaje }}</h1>
-        <div>
-            <h1>Reenviar</h1>
-            <section class="form-register">
-                <form name="frmreenviar" method="post" action="{{url_for('reenviarconf') }}">
-                    <label class="label" for="email">Mail para reenviar correo</label>
-                    <p><input class="controls" name="email" id="email" placeholder="Email" type="email" required></p>
-                    <p><input class="botons" type="submit" value="reenviar mail"></p>
+
+  <div style="display: flex; align-items: center; justify-content: center;"> <h1>{{ mensaje }} </h1> </div>
+  <div class="container" style="display: flex; align-items: center; justify-content: center; "">
+    <div class="card" style="width: 18rem; background-color=#e48568; display: flex; align-items: center; justify-content: center; ">
+      <div class="card-body">
+        <h1>Reenviar confirmación</h1>
+        <section class="form-register">
+            <form name="frmreenviar" method="post" action="{{ url_for('reenviarconf') }}">
+                <label class="label" for="email">Mail para reenviar correo</label>
+                <p><input class="controls" name="email" id="email" placeholder="Email" type="email" required></p>
+                <p><input class="botons" type="submit" value="reenviar mail"></p>
             </form>
-            </section>
-        </div>
+        </section>
+      </div>
     </div>
+  </div>
+
 {% endblock %}
