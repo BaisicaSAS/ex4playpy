@@ -4,12 +4,17 @@ from threading import Thread
 from flask import Flask, request, jsonify, render_template, redirect, url_for, session, current_app
 from config import ProductionConfig, DevelopmentConfig, Config
 from datamodel import db, Usuario, ConexionUsuario, VideoJuego, EjeUsuario
-from operavideojuegos import funCargarEjemplar
+from operavideojuegos import funCargarEjemplar, funListarEjemplaresUsuario
 from passlib.hash import sha256_crypt
 import logging
 from sqlalchemy.exc import IntegrityError
 
 app = Flask(__name__)
+
+#PRODUCCION - ESTE CODIGO SE HABILITA EN PRODUCCION
+mail = Mail(app)
+#mail.init_app(app)
+#db.init_app(app)
 
 # DESARROLLO
 app.config.from_object(DevelopmentConfig)
@@ -45,7 +50,6 @@ app.config['MAIL_USE_SSL'] = True
 SUBJECT_REGISTRO = "Bienvenido a ex4play {nick} !"
 
 
-mail = Mail(app)
 
 logging.basicConfig(filename=LOG_FILENAME, level=logging.DEBUG)
 
@@ -175,9 +179,11 @@ def registro():
             apellidos = request.form.get("apellidos")
             email = request.form.get("email")
             clave = request.form.get("clave")
+            aceptater = request.form.get("aceptat") #Acepta los términos
+            recibenot = request.form.get("recibir") #Acepta recibir notificaciones
             pwdseguro = sha256_crypt.using(salt=Config.SECRET_SALT, rounds=5000).hash(str(clave))
             nickname = email.lower()
-            newUsuario = Usuario(nombres=nombres, apellidos=apellidos, pwd=pwdseguro, email=email.lower(), nickName=nickname)
+            newUsuario = Usuario(nombres=nombres, apellidos=apellidos, pwd=pwdseguro, email=email.lower(), nickName=nickname, aceptater=aceptater, recibenot=recibenot)
             db.session.add(newUsuario)
             app.logger.debug("[" + nickname + "] registro: Usuario adicionado a BD: " + newUsuario.nombres + " - mail - " + newUsuario.email)
             urlconfirma = URL_CONFIRMA +"usr=" + nickname + "&id=" + sha256_crypt.using(salt=Config.SECRET_SALT, rounds=5000).hash(str(email+pwdseguro))
@@ -335,17 +341,23 @@ def enviar_correo(subject, sender, recipients, text_body,
                   cc=None, bcc=None, html_body=None, template=None, **kwargs):
     app.logger.debug("[" + recipients + "] enviar_correo: Inicia ")
     try:
-        for key, value in kwargs.items():
-            print("The value of {} is {}".format(key, value))
+        #for key, value in kwargs.items():
+        #    print("The value of {} is {}".format(key, value))
 
         app.logger.debug("[" + recipients + "] va enviar_correo: SEND ")
 
+        #envía copia al usuario que envía
         msg = Message(subject, sender=sender, recipients=[recipients, ], cc=cc, bcc=bcc)
-        msg.html = render_template(template , **kwargs)
-        msg.body = render_template(template , **kwargs)
+        msg.html = render_template(template, **kwargs)
+        msg.body = render_template(template, **kwargs)
 
         Thread(target=_send_async_email, args=(current_app._get_current_object(), msg)).start()
 
+        msg = Message(subject, sender=sender, recipients=[sender, ], cc=cc, bcc=bcc)
+        msg.html = render_template(template, **kwargs)
+        msg.body = render_template(template, **kwargs)
+
+        Thread(target=_send_async_email, args=(current_app._get_current_object(), msg)).start()
         app.logger.debug("[CORREO A: " + recipients[0].lower() + "] Generó tarea para enviar ")
         return 1
     except SMTPException:
@@ -384,8 +396,10 @@ def cargarEjemplar():
             obUsuario = db.session.query(Usuario).filter_by(nickName=nick).one_or_none()
             if obUsuario is not None:
                 usrid = obUsuario.idUsuario
+                imagen = request.files["imgInp"]
                 vj = request.form.get("ejemplar")
                 print("ej:" + vj)
+                #print("IMAGEN:" + imagen)
                 estado = request.form.get("estado")
                 #imagen = request.form.get("imagen")
                 comentario = request.form.get("comentario")
@@ -395,7 +409,7 @@ def cargarEjemplar():
                     publicar = 0
                 print("publicar:" + str(publicar))
 
-                msg = funCargarEjemplar(nick, usrid, vj, estado, publicar, comentario)
+                msg = funCargarEjemplar(nick, usrid, vj, estado, publicar, comentario, imagen)
                 return render_template('inicio.html', mensaje=msg, logged=1)
             else:
                 return render_template('login.html', mensaje="oopppss...algo sucedió con tu sesión. Ingresa de nuevo!")
@@ -410,6 +424,36 @@ def _send_async_email(app, msg):
         except SMTPException:
             raise
             logger.exception("Ocurrió un error al enviar el email")
+
+@app.route('/ejemplaresusuario', methods=["GET", "POST"])
+def ejemplaresusuario():
+    if request.method=="GET":
+        app.logger.debug("[NO_USER] index: inicia ejemplaresusuario")
+        lista = []
+        if not(session) or (session['nick'] is None):
+            app.logger.debug("[NO_USER] index: No hay sesion")
+
+            return render_template('ejemplaresusuario.html', mensaje="Registrate y disfruta!", videojuegos=lista, logged=0)
+        else:
+            if db.session is not None:
+                # Recupera listado de ejemplares
+                nick = session['nick']
+                usuario = db.session.query(Usuario).filter_by(nickName=nick).first()
+                lista = funListarEjemplaresUsuario(usuario.idUsuario)
+                app.logger.debug("["+nick+"] index: Hay sesion")
+                app.logger.debug("["+nick+"] Encontró "+len(lista).__str__()+" ejemplares para el usuario [" + nick + "]")
+                #print(lista)
+
+                return render_template('ejemplaresusuario.html', mensaje="Bienvenido "+nick, videojuegos=lista, logged=1)
+
+    return render_template('ejemplaresusuario.html', mensaje="Bienvenido "+session['nick'], videojuegos=lista, logged=0)
+
+
+# Funcion: terminos y condiciones
+@app.route("/terminos", methods=["GET"])
+def terminos():
+    return render_template('terminos.html')
+
 
 if __name__ == '__main__':
     app.logger.debug("[NO_USER] main: **************************************************")

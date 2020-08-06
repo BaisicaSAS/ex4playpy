@@ -1,21 +1,126 @@
 {% extends "base.html" %}
 {% block title %}
-ex4play - Registro / Ingreso
+ex4play - Publicar un ejemplar
 {% endblock %}
 {% block content %}
+<style>
+{
+  box-sizing: border-box;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #D3D3D3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #FF0000;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #FF0000;
+  cursor: pointer;
+}
+
+.sliderticks {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.sliderticks p {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 1px;
+  background: #D3D3D3;
+  height: 10px;
+  line-height: 40px;
+  margin: 0 0 20px 0;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+#img-upload{
+    width: 100%;
+}</style>
+
   <div style="display: flex; align-items: center; justify-content: center;"> <h1>{{ mensaje }} </h1> </div>
-  <div class="container" style="display: flex; align-items: center; justify-content: center; "">
-    <div class="card" style="width: 18rem; background-color=#e48568; display: flex; align-items: center; justify-content: center; ">
+  <div class="container" style="display: flex; align-items: center; justify-content: center; ">
+    <div class="card" style="width: 30rem; background-color=#e48568; display: flex; align-items: center; justify-content: center; ">
       <div class="card-body">
-        <section class="form-register">
-        <form class="form-register" autocomplete="off" name="frmcargarEjemplar" method="post" action=" {{url_for('cargarEjemplar') }} ">
-            <div class="autocomplete">
-                <input class="controls" type="text" name="ejemplar" id="ejemplar" placeholder="Título videojuego">
+       <section class="form-register">
+        <form class="form-register" autocomplete="off" name="frmcargarEjemplar" method="post" action=" {{url_for('cargarEjemplar') }} " enctype="multipart/form-data">
+            <div class="col-md-6" style="position: center"   >
+                <div class="form-group">
+                    <label>Cargar la imágen</label>
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <span class="btn btn-default btn-file">
+                                Buscar... <input type="file" id="imgInp" name="imgInp">
+                            </span>
+                        </span>
+                        <input type="text" class="form-control" readonly>
+                    </div>
+                    <img id='img-upload'/>
+                </div>
             </div>
-            <label class="label" for="estado"> Estado del videojuego </label>
-            <input class="controls" type="range" min="1" max="10" value="1" name="estado" id="estado" placeholder="Estado del videojuego">
-            <input class="controls" type="text" name="comentario" id="comentario" placeholder="Cuentanos algo de tu videojuego, hace cuanto lo tienes, etc.">
-            <label class="label"><input class="controls" type="checkbox" align=left value="1" name="publicar" id="publicar">Publicar</label>
+            <div class="autocomplete">
+                <input type="text" name="ejemplar" id="ejemplar" placeholder="Título videojuego">
+            </div>
+            <label for="estado"> Estado del videojuego </label>
+            <input type="range" min="1" max="10" value="1" name="estado" id="estado" step="1" class="slider" placeholder="Estado del videojuego">
+                <datalist id="sliderticks">
+                <option>"1"</option>
+                <option>"2"</option>
+                <option>"3"</option>
+                <option>"4"</option>
+                <option>"5"</option>
+                <option>"6"</option>
+                <option>"7"</option>
+                <option>"8"</option>
+                <option>"9"</option>
+                <option>"10"</option>
+                </datalist>
+            <textarea type="textarea" name="comentario" id="comentario" placeholder="Cuentanos algo de tu videojuego, hace cuanto lo tienes, etc."></textarea>
+            <label><input type="checkbox" align=left value="1" name="publicar" id="publicar">Publicar</label>
             <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
             <input class="botons" type="submit" value="Cargar">
         </form>
@@ -127,5 +232,42 @@ ex4play - Registro / Ingreso
         /*initiate the autocomplete function on the "ejemplar" element, and pass along the countries array as possible autocomplete values:*/
         autocomplete(document.getElementById("ejemplar"), countries);
 
+$(document).ready( function() {
+    	$(document).on('change', '.btn-file :file', function() {
+		var input = $(this),
+			label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+		input.trigger('fileselect', [label]);
+		});
+
+		$('.btn-file :file').on('fileselect', function(event, label) {
+
+		    var input = $(this).parents('.input-group').find(':text'),
+		        log = label;
+
+		    if( input.length ) {
+		        input.val(log);
+		    } else {
+		        if( log ) alert(log);
+		    }
+
+		});
+		function readURL(input) {
+		    if (input.files && input.files[0]) {
+		        var reader = new FileReader();
+
+		        reader.onload = function (e) {
+		            $('#img-upload').attr('src', e.target.result);
+		        }
+
+		        reader.readAsDataURL(input.files[0]);
+		    }
+		}
+
+		$("#imgInp").change(function(){
+		    readURL(this);
+		});
+	});
+
 </script>
+
 {% endblock %}

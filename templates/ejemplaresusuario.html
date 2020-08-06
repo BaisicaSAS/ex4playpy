@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}ex4play{% endblock %}
+
+{% block content %}
+    {% if logged == 0 %}
+    <a href= {{url_for('ejemplaresusuario') }} class="card-link">Iniciar sesion : Aquí están los ejemplares del usuario</a>
+    {% endif %}
+    {{ mensaje }}
+         {% set indice = namespace(cont=1) %}
+
+         {% for vj in videojuegos %}
+            {% if indice.cont == 1 %}
+                <div class="row" style="display: flex; align-items: center; justify-content: center;" >
+                <div class="card-deck">
+            {% endif %}
+                <div class="card" style="width: 18rem;display: flex; align-items: center; justify-content: center;">
+
+                      <div class="card-body">
+                        <h5 class="card-title">{{ vj[3] }}</h5>
+                        <img class="card-img-top" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
+                      </div>
+                      <!--<ul class="list-group list-group-flush">
+                        <li class="list-group-item">Genero: {{ vj.genero }}</li>
+                        <li class="list-group-item">otro dato</li>
+                      </ul>-->
+                      <div class="card-body">
+                        <a>  Genero: {{ vj[4] }} </a>
+                      </div>
+                      <div class="card-footer">
+                        <a href="#" class="card-link">Un enlace</a>
+                      </div>
+                </div>
+            {% if indice.cont is divisibleby 4 %}
+                </div>
+                </div>
+                {% set indice.cont = 1 %}
+            {% else %}
+                {% set indice.cont = indice.cont + 1 %}
+            {% endif %}
+        {% endfor %}
+{% endblock %}

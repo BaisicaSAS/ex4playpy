@@ -40,8 +40,9 @@ class Usuario(db.Model):
     fechanac = db.Column(db.DateTime)
     genero = db.Column(db.Integer) #0: M, 1: F, 2: Otro, 3: No dar info
     activo = db.Column(db.Integer, default=0) #0 Inactivo, #1 Activo
-    sancionado = db.Column(db.Integer, default=0)  #0 No, #1 Si
-    recibenot = db.Column(db.Integer, default=0) #0: No #1: Si
+    sancionado = db.Column(db.Integer, default=0)  #0 No, #1 Si - Si un usuario fue sancionado o no por su conducta o por intentar timar
+    aceptater = db.Column(db.Integer, default=0)  #0 No, #1 Si - Acepta terminos y condiciones: TOOS DEBERIA ESTAR EN SI
+    recibenot = db.Column(db.Integer, default=0) #0: No #1: Si - Recibe notificaciones
     fechacrea = db.Column(db.DateTime, default=datetime.datetime.now)
 
 #Tabla de Foto Usuario: Almacena todas las fotografias de perfil que el usuario cambie.
@@ -171,6 +172,18 @@ class EjeUsuario(db.Model):
     valor = db.Column(db.Float, default=1)  #Valor en puntos o barts, heredados de la tabla VJ en cada momento, pensando en la valorización / desvalorización
     UsrEjeU = db.relationship("Usuario", lazy=True)
     UsrEjeU = db.relationship("VideoJuego", lazy=True)
+
+#Tabla de Foto Ejemplar Usuario: Almacena todas las fotografias de un ejemplar->cada usuario debe cargar una sola fotografía del videojuego
+#Todas están activas, pero el registro de EjeUsuario, muestra la que corresponde a cada usuario
+class FotoEjeUsuario(db.Model):
+    __tablename__ = 'fotoejeusuario'
+
+    idFotoejeusuario = db.Column(db.Integer, Sequence('idfotoejeusuario_seq'), primary_key=True)
+    ejeUsuarioId = db.Column(db.Integer, db.ForeignKey('ejeusuario.idEjeUsuario'), nullable=False)
+    foto = db.Column(db.LargeBinary, nullable=False)
+    fechacrea = db.Column(db.DateTime, default=datetime.datetime.now)
+    activa = db.Column(db.Integer, default=1, nullable=False)  #0 No, #1 Si: Por ahora todas las imagenes están activas, pero solo se ve la del Ejeusuario Actual
+    UsrFot = db.relationship("EjeUsuario", lazy=True)
 
 #Tabla de trazabilidad de EjemplarUsuario: Cada vez que se modifica ejemplarUsuario,
 #se genera el registro con la información anterior. Aplica solo cuando cambia de dueño por transacción
@@ -339,6 +352,7 @@ class Saldos(db.Model):
     usuarioId = db.Column(db.Integer, db.ForeignKey('usuario.idUsuario'), unique=True)
     valorPagado = db.Column(db.Float, default=0)  # Valor total que ha pagado
     ValorCobrado = db.Column(db.Float, default=0)  # Valor total que ha cobrado
+    TotalPuntos = db.Column(db.Float, default=0)  # Valor total que tiene actualmente en puntos
     ejeRecibidos = db.Column(db.Integer, default=0)  #Cantidad Ejemplares recibidos
     ejeEntregados = db.Column(db.Integer, default=0)  #Cantidad Ejemplares recibidos
     ejePublicados = db.Column(db.Integer, default=0)  #Cantidad Ejemplares recibidos

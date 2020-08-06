@@ -1,24 +1,26 @@
 {% extends "base.html" %}
-{% block title %}ex4play - Registro / Ingreso{% endblock %}
+{% block title %}ex4play - Registro{% endblock %}
 {% block content %}
 
   <div style="display: flex; align-items: center; justify-content: center;"> <h1>{{ mensaje }} </h1> </div>
   <div class="container" style="display: flex; align-items: center; justify-content: center; "">
     <div class="card" style="width: 18rem; background-color=#e48568; display: flex; align-items: center; justify-content: center; ">
       <div class="card-body">
-        <h1>Registro</h1>
+        <h1>Registro</h1>   
         <section class="form-register">
             <form name="frmregistro" method="post" action="{{url_for('registro') }}" onsubmit="return validateReg()">
                 <label class="label" for="nombres">Nombres</label>
-                <p><input class="controls"  name="nombres" id="nombres" placeholder="Nombre" type="text" required></p>
+                <p><input name="nombres" id="nombres" placeholder="Nombre" type="text" required></p>
                 <label class="label" for="apellidos">Apellidos</label>
-                <p><input class="controls"  name="apellidos" id="apellidos" placeholder="Apellidos" type="text" required></p>
+                <p><input  name="apellidos" id="apellidos" placeholder="Apellidos" type="text" required></p>
                 <label class="label" for="email">Email</label>
-                <p><input class="controls" name="email" id="email" placeholder="Email" type="email" required></p>
+                <p><input name="email" id="email" placeholder="Email" type="email" required></p>
                 <label class="label" for="clave">Clave</label>
-                <p><input class="controls" id="clave" name="clave" placeholder="Clave" type="password" required></p>
+                <p><input id="clave" name="clave" placeholder="Clave" type="password" required></p>
                 <label class="label" for="repetirclave">Repetir clave</label>
-                <p><input class="controls" name="repetirclave" id="repetirclave" placeholder="Repetir clave" type="password" required></p>
+                <p><input name="repetirclave" id="repetirclave" placeholder="Repetir clave" type="password" required></p>
+                <label class="label"><input type="checkbox" align=left value="1" name="aceptat" id="aceptat" required><p> Acepta <a href="{{url_for('terminos') }}">Terminos y Condiciones</a></p> </label>
+                <label class="label"><input type="checkbox" align=left value="1" name="recibir" id="recibir"><p> Recibir noticias y promociones de ex4play </p> </label>
                 <p><input class="botons" type="submit" value="registrar"></p>
             </form>
         </section>
@@ -26,6 +28,9 @@
       <div class="card-footer">
         <a href= {{url_for('login') }} class="card-link">Iniciar sesion</a>
         <a href= {{url_for('resetclave') }} class="card-link">Olvidé mi clave</a>
+      </div>
+      <div class="card-footer">
+            <h2>Política de tratamiento de datos:</h2> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
       </div>
     </div>
   </div>
