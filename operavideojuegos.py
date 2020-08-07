@@ -62,7 +62,9 @@ def funListarEjemplaresUsuario(idUsuario):
         obEjeUsuario = db.session.query(EjeUsuario).filter_by(usuarioIdAct=idUsuario).all()
         usuario = db.session.query(Usuario).filter_by(idUsuario=idUsuario).first()
         nick = usuario.nickName
-        ejemplares = []
+        ejemplaresblk = []
+        ejemplarespub = []
+        ejemplaresnopub = []
         if obEjeUsuario is None:
             app.logger.error("["+nick+"] ListarEjemplaresUsuario: No hay ejemplares")
         else:
@@ -81,16 +83,40 @@ def funListarEjemplaresUsuario(idUsuario):
                 else:
                     foto = base64.b64encode(obFoto.foto).decode("utf-8")
 
-                ejemplares.append([ejemplar.idEjeUsuario, idUsuario, foto, obVideojuego.nombre, ejemplar.publicado])
+                #Si el ejemplar está bloqueado
+                if ejemplar.bloqueado == 1:
+                    ejemplaresblk.append([ejemplar.idEjeUsuario, idUsuario, foto, obVideojuego.nombre, ejemplar.publicado, ejemplar.bloqueado, ejemplar.valor, ejemplar.estado, ejemplar.comentario])
+                else:
+                    # Si el ejemplar no está publicado
+                    if ejemplar.publicado == 1:
+                        ejemplarespub.append([ejemplar.idEjeUsuario, idUsuario, foto, obVideojuego.nombre, ejemplar.publicado, ejemplar.bloqueado, ejemplar.valor, ejemplar.estado, ejemplar.comentario])
+                    else:
+                        ejemplaresnopub.append([ejemplar.idEjeUsuario, idUsuario, foto, obVideojuego.nombre, ejemplar.publicado, ejemplar.bloqueado, ejemplar.valor, ejemplar.estado, ejemplar.comentario])
                 #for campo in ejemplar:
                 #    print(campo)
-            app.logger.error("["+nick+"] ListarEjemplaresUsuario: hay "+ len(ejemplares).__str__()+" ejemplares")
+            totejemplares = len(ejemplaresblk) + len(ejemplarespub) + len(ejemplaresnopub)
+            app.logger.debug("["+nick+"] ListarEjemplaresUsuario: hay "+ totejemplares.__str__()+" ejemplares")
+            print("hay "+ len(ejemplaresblk).__str__()+" ejemplares bloqueados")
+            print("hay "+ len(ejemplarespub).__str__()+" ejemplares publicados")
+            print("hay "+ len(ejemplaresnopub).__str__()+" ejemplares no publicados")
             #print("hay "+ len(ejemplares).__str__()+" ejemplares")
             #for elm in ejemplares:
             #    print(ejemplares[0])
             #app.logger.error("[" + nick + "] ListaEjemplar: Crea EjemplarUsuaro: [" + obEjeUsuario['idEjeUsuario'].str() + "]")
 
-        return ejemplares
+        return ejemplaresblk, ejemplarespub, ejemplaresnopub
     except:
         raise
         app.logger.error("[" + nick + "] ListarEjemplarUsuario: Problemas al listar los ejemplares")
+
+
+# Funcion: marcar un ejemplar de usuario cómo publicado o no publicado {estado= 1 publicado, 0: no publicado}
+
+def funMarcarEjemplaresUsuario(nick, idEjeUsuario, estado):
+    try:
+        ejeusr = EjeUsuario.query.filter_by(idEjeUsuario=idEjeUsuario).update(dict(publicado=estado))
+        db.session.commit()
+    except:
+        raise
+        app.logger.error("[" + nick + "] funMarcarEjemplaresUsuario: Problemas al actualizar ejemplar usuario")
+

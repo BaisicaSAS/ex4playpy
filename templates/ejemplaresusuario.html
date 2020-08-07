@@ -3,39 +3,141 @@
 
 {% block content %}
     {% if logged == 0 %}
-    <a href= {{url_for('ejemplaresusuario') }} class="card-link">Iniciar sesion : Aquí están los ejemplares del usuario</a>
+        <a href={{url_for('ejemplaresusuario')}} class="card-link" xmlns="http://www.w3.org/1999/html">Iniciar sesion : Aquí están los ejemplares del usuario</a>
     {% endif %}
-    {{ mensaje }}
-         {% set indice = namespace(cont=1) %}
+         {{ mensaje }}
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" >
+            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Publicados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Bloqueados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">No publicados</a>
+          </li>
+        </ul>
 
-         {% for vj in videojuegos %}
-            {% if indice.cont == 1 %}
-                <div class="row" style="display: flex; align-items: center; justify-content: center;" >
-                <div class="card-deck">
-            {% endif %}
-                <div class="card" style="width: 18rem;display: flex; align-items: center; justify-content: center;">
+        <div class="tab-content container" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+             {% set indice = namespace(cont=1) %}
 
-                      <div class="card-body">
-                        <h5 class="card-title">{{ vj[3] }}</h5>
-                        <img class="card-img-top" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
-                      </div>
-                      <!--<ul class="list-group list-group-flush">
-                        <li class="list-group-item">Genero: {{ vj.genero }}</li>
-                        <li class="list-group-item">otro dato</li>
-                      </ul>-->
-                      <div class="card-body">
-                        <a>  Genero: {{ vj[4] }} </a>
-                      </div>
-                      <div class="card-footer">
-                        <a href="#" class="card-link">Un enlace</a>
-                      </div>
-                </div>
-            {% if indice.cont is divisibleby 4 %}
-                </div>
-                </div>
-                {% set indice.cont = 1 %}
-            {% else %}
-                {% set indice.cont = indice.cont + 1 %}
-            {% endif %}
-        {% endfor %}
+             {% for vj in vjpub %}
+                {% if indice.cont == 1 %}
+                    <div class="row" style="display: flex; align-items: center; justify-content: center;" >
+                    <div class="card-deck">
+                {% endif %}
+                    <form name="form" action="{{url_for('ejemplaresusuario')}}" method="post">
+                    <input value="{{vj[0]}}" type="hidden" name="idejemplar" />
+                    <div class="card" style="width: 15rem;display: flex; align-items: center; justify-content: center;">
+
+                          <div class="card-body">
+                            <h5 class="card-title" align="center">{{ vj[3] }}</h5>
+                            <img class="card-img-top" style="width: 15rem;display: flex;" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Puntos: {{ vj[6] }}</li>
+                            <li class="list-group-item">Estado: {{ vj[7] }} de 10</li>
+                            <li class="list-group-item">Comentario: {{ vj[8] }}</li>
+                          </ul>
+                          <div class="card-footer">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                      <button type="submit" name="btnejemplar" value="editar" class="btn btn-sm btn-outline-secondary">Editar</button>
+                                      <button type="submit" name="btnejemplar" value="despublicar" class="btn btn-sm btn-outline-secondary">Cancelar publicación</button>
+                                    </div>
+                                </div>
+                          </div>
+                    </div>
+                </form>
+                {% if indice.cont is divisibleby 4 or indice.cont == vjpub|count %}
+                    </div>
+                    </div>
+                    {% set indice.cont = 1 %}
+                {% else %}
+                    {% set indice.cont = indice.cont + 1 %}
+                {% endif %}
+            {% endfor %}
+
+          </div>
+          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+             {% set indice = namespace(cont=1) %}
+
+             {% for vj in vjblk %}
+                {% if indice.cont == 1 %}
+                    <div class="row" style="display: flex; align-items: center; justify-content: center;" >
+                    <div class="card-deck">
+                {% endif %}
+                    <form name="form" action="{{url_for('ejemplaresusuario')}}" method="post">
+                    <input value="{{vj[0]}}" type="hidden" name="idejemplar" />
+                    <div class="card" style="width: 15rem;display: flex; align-items: center; justify-content: center;">
+
+                          <div class="card-body">
+                            <h5 class="card-title" align="center">{{ vj[3] }}</h5>
+                            <img class="card-img-top" style="width: 15rem;display: flex;" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Puntos: {{ vj[6] }}</li>
+                            <li class="list-group-item">Estado: {{ vj[7] }} de 10</li>
+                            <li class="list-group-item">Comentario: {{ vj[8] }}</li>
+                          </ul>
+                          <div class="card-footer">
+                            <small class="text-muted" align="center">Ejemplar bloqueado, no se puede editar ni eliminar</small>
+                          </div>
+                    </div>
+                    </form>
+                {% if indice.cont is divisibleby 4 or indice.cont == vjblk|count  %}
+                    </div>
+                    </div>
+                    {% set indice.cont = 1 %}
+                {% else %}
+                    {% set indice.cont = indice.cont + 1 %}
+                {% endif %}
+            {% endfor %}
+
+          </div>
+          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+             {% set indice = namespace(cont=1) %}
+
+             {% for vj in vjnopub %}
+                {% if indice.cont == 1 %}
+                    <div class="row" style="display: flex; align-items: center; justify-content: center;" >
+                    <div class="card-deck">
+                {% endif %}
+                    <form name="form" action="{{url_for('ejemplaresusuario')}}"  method="post">
+                    <input value="{{vj[0]}}" type="hidden" name="idejemplar" />
+                    <div class="card" style="width: 15rem;display: flex; align-items: center; justify-content: center;">
+
+                          <div class="card-body">
+                            <h5 class="card-title" align="center">{{ vj[3] }}</h5>
+                            <img class="card-img-top" style="width: 15rem;display: flex;" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Puntos: {{ vj[6] }}</li>
+                            <li class="list-group-item">Estado: {{ vj[7] }} de 10</li>
+                            <li class="list-group-item">Comentario: {{ vj[8] }}</li>
+                          </ul>
+                          <div class="card-footer">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                      <button type="submit" name="btnejemplar" value="editar" class="btn btn-sm btn-outline-secondary">Editar</button>
+                                      <button type="submit" name="btnejemplar" value="publicar" class="btn btn-sm btn-outline-secondary">Publicar</button>
+                                    </div>
+                                </div>
+                          </div>
+                    </div>
+                    </form>
+                {% if indice.cont is divisibleby 4 or indice.cont == vjnopub|count %}
+                    </div>
+                    </div>
+                    {% set indice.cont = 1 %}
+                {% else %}
+                    {% set indice.cont = indice.cont + 1 %}
+                {% endif %}
+            {% endfor %}
+
+          </div>
+
+        </div>
+
 {% endblock %}

@@ -33,7 +33,7 @@
                         <a href="#" class="card-link">Un enlace</a>
                       </div>
                 </div>
-            {% if indice.cont is divisibleby 4 %}
+            {% if indice.cont is divisibleby 4  or indice.cont == videojuegos|count %}
                 </div>
                 </div>
                 {% set indice.cont = 1 %}

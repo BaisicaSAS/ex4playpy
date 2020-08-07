@@ -4,7 +4,7 @@ from threading import Thread
 from flask import Flask, request, jsonify, render_template, redirect, url_for, session, current_app
 from config import ProductionConfig, DevelopmentConfig, Config
 from datamodel import db, Usuario, ConexionUsuario, VideoJuego, EjeUsuario
-from operavideojuegos import funCargarEjemplar, funListarEjemplaresUsuario
+from operavideojuegos import funCargarEjemplar, funListarEjemplaresUsuario, funMarcarEjemplaresUsuario
 from passlib.hash import sha256_crypt
 import logging
 from sqlalchemy.exc import IntegrityError
@@ -427,26 +427,54 @@ def _send_async_email(app, msg):
 
 @app.route('/ejemplaresusuario', methods=["GET", "POST"])
 def ejemplaresusuario():
+    ejeblk = []
+    ejepub = []
+    ejenopub = []
     if request.method=="GET":
         app.logger.debug("[NO_USER] index: inicia ejemplaresusuario")
-        lista = []
         if not(session) or (session['nick'] is None):
             app.logger.debug("[NO_USER] index: No hay sesion")
 
-            return render_template('ejemplaresusuario.html', mensaje="Registrate y disfruta!", videojuegos=lista, logged=0)
+            return render_template('ejemplaresusuario.html', mensaje="Registrate y disfruta!", vjblk=ejeblk, vjpub=ejepub, vjnopub=ejenopub, logged=0)
         else:
             if db.session is not None:
                 # Recupera listado de ejemplares
                 nick = session['nick']
                 usuario = db.session.query(Usuario).filter_by(nickName=nick).first()
-                lista = funListarEjemplaresUsuario(usuario.idUsuario)
+                ejeblk, ejepub, ejenopub = funListarEjemplaresUsuario(usuario.idUsuario)
+                ejemplares = len(ejeblk) + len(ejepub) + len(ejenopub)
                 app.logger.debug("["+nick+"] index: Hay sesion")
-                app.logger.debug("["+nick+"] Encontró "+len(lista).__str__()+" ejemplares para el usuario [" + nick + "]")
+                app.logger.debug("["+nick+"] Encontró "+ejemplares.__str__()+" ejemplares para el usuario [" + nick + "]")
                 #print(lista)
 
-                return render_template('ejemplaresusuario.html', mensaje="Bienvenido "+nick, videojuegos=lista, logged=1)
+                return render_template('ejemplaresusuario.html', mensaje="Bienvenido "+nick, vjblk=ejeblk, vjpub=ejepub, vjnopub=ejenopub, logged=1)
 
-    return render_template('ejemplaresusuario.html', mensaje="Bienvenido "+session['nick'], videojuegos=lista, logged=0)
+    if request.method=="POST":
+        app.logger.debug("[NO_USER] index: inicia ejemplaresusuario")
+        if not(session) or (session['nick'] is None):
+            app.logger.debug("[NO_USER] index: No hay sesion")
+
+            return render_template('ejemplaresusuario.html', mensaje="Registrate y disfruta!", vjblk=ejeblk, vjpub=ejepub, vjnopub=ejenopub, logged=0)
+        else:
+            if db.session is not None:
+                # Recupera listado de ejemplares
+                nick = session['nick']
+                usuario = db.session.query(Usuario).filter_by(nickName=nick).first()
+
+                idejemplar = request.form.get('idejemplar')
+                print('ejemplar ' + idejemplar)
+                if request.form['btnejemplar'] == 'editar':
+                    print('editar ' + idejemplar)
+                elif request.form['btnejemplar'] == 'despublicar':
+                    funMarcarEjemplaresUsuario(nick,idejemplar,0)
+                    print('despublicar ' + idejemplar)
+                elif request.form['btnejemplar'] == 'publicar':
+                    funMarcarEjemplaresUsuario(nick,idejemplar,1)
+                    print('publicar ' + idejemplar)
+
+                ejeblk, ejepub, ejenopub = funListarEjemplaresUsuario(usuario.idUsuario)
+
+    return render_template('ejemplaresusuario.html', mensaje="Bienvenido "+session['nick'], vjblk=ejeblk, vjpub=ejepub, vjnopub=ejenopub, logged=0)
 
 
 # Funcion: terminos y condiciones
