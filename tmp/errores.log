@@ -18557,3 +18557,52 @@ INFO:werkzeug:127.0.0.1 - - [06/Aug/2020 20:16:46] "[37mPOST /ejemplaresusuario
 INFO:werkzeug:127.0.0.1 - - [06/Aug/2020 20:16:47] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
 INFO:werkzeug:127.0.0.1 - - [06/Aug/2020 20:16:47] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
 INFO:werkzeug:127.0.0.1 - - [06/Aug/2020 20:16:47] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:49:24] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:49:24] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:49:24] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:49:24] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:49:24] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:49:31] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:49:31] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:49:31] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:49:31] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:49:31] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[josgabrielr@gmail.com] login: Datos del usuario ingresado: nick[josgabrielr@gmail.com]
+DEBUG:main:[josgabrielr@gmail.com] login: No hay sesion
+INFO:main:[josgabrielr@gmail.com] login: Sesion generada: josgabrielr@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:49:40] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:49:40] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:49:40] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:49:40] "[36mGET /static/defaultgame.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:49:40] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:49:40] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -

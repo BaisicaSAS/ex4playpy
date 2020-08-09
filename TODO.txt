@@ -13,3 +13,9 @@ class Config(object):
 ******************************************************************************************************
 5. En Cargar ejemplar tambien se debe poner captcha
 ******************************************************************************************************
+6. Validar imagen cargada
+https://www.youtube.com/watch?v=6WruncSoCdI
+IMPRIMIR : https://www.youtube.com/watch?v=VvM-uAp9zW8
+
+DESCARGA IMAGENES DE UNA URL: https://www.youtube.com/watch?v=T2kvOGq7P18
+******************************************************************************************************
