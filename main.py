@@ -64,17 +64,16 @@ def index():
         result = db.session.query(VideoJuego).filter_by().order_by(VideoJuego.idVj).limit(100)
         for reg in result:
             videojuegos.append(reg)
-        nick = 'alexviatela@gmail.com'
-        obUsuario = db.session.query(Usuario).filter_by(nickName=nick).one_or_none()
+
         # Recupera listado de ejemplares existentes en la plataforma
-        result = funListarEjemplaresDisponibles(obUsuario.idUsuario)
+        result = funListarEjemplaresDisponibles()
         for reg in result:
             novedades.append(reg)
 
     if not(session) or (session['nick'] is None):
         app.logger.debug("[NO_USER] index: No hay sesion")
 
-        return render_template('inicio.html', mensaje="Registrate y disfruta!", videojuegos=videojuegos, novedades=novedades, logged=0)
+        return render_template('home_page.html', mensaje="Registrate y disfruta!", videojuegos=videojuegos, novedades=novedades, logged=0)
     else:
         app.logger.debug("["+session['nick']+"] index: Hay sesion")
 
@@ -119,7 +118,12 @@ def login():
                         for reg in result:
                             lista.append(reg)
 
-                        return render_template('inicio.html', mensaje="Ya estabas logueado " + nick, videojuegos=lista, logged=1)
+                        novedades = []
+                        # Recupera listado de ejemplares existentes en la plataforma
+                        result = funListarEjemplaresDisponibles()
+                        for reg in result:
+                            novedades.append(reg)
+                        return render_template('inicio.html', mensaje="Ya estabas logueado " + nick, videojuegos=lista, novedades=novedades, logged=1)
                 else:
                     #Revisa si el usuario está activo o inactivo
                     if obUsuario.activo == ESTADO_USR_INACTIVO:
@@ -143,7 +147,12 @@ def login():
                         for reg in result:
                             lista.append(reg)
 
-                        return render_template('inicio.html', mensaje="Bienvenido al sistema "+nick+"!", videojuegos = lista, logged=1 )
+                        novedades = []
+                        # Recupera listado de ejemplares existentes en la plataforma
+                        result = funListarEjemplaresDisponibles()
+                        for reg in result:
+                            novedades.append(reg)
+                        return render_template('inicio.html', mensaje="Bienvenido al sistema "+nick+"!", videojuegos = lista, novedades=novedades, logged=1 )
             else:
                 app.logger.info("[" + nick + "] Usuario o password inválido. Intenta de nuevo!")
                 return render_template('login.html', mensaje="Usuario o password inválido. Intenta de nuevo!" )
@@ -151,8 +160,7 @@ def login():
             raise
             app.logger.error("[" + nick + "] login: problema con usuario a ingresar: " + nick)
             return render_template('login.html', mensaje="Algo sucedió, intenta de nuevo !" )
-    return render_template('login.html', mensaje="ingresa al sistema!" )
-
+    return render_template('login.html', mensaje="" )
 
 
 # Funcion: logout
@@ -233,8 +241,7 @@ def registro():
             raise
             app.logger.error("[" + email + "] registro: Usuario a registrar: " + nombres + " - mail - " + pwdseguro)
             return render_template('error.html', mensaje="Error en registro!")
-    return render_template('registro.html', mensaje="Registrate en el sistema!" )
-
+    return render_template('registro.html', mensaje="" )
 
 # Funcion: reenviar correo confirmacion
 @app.route("/reenviarconf", methods=["POST", "GET"])
@@ -518,6 +525,11 @@ def solicitarejemplar():
 @app.route("/terminos", methods=["GET"])
 def terminos():
     return render_template('terminos.html')
+
+# Funcion: Actualizar datos usuario
+@app.route("/updateUser")
+def updateDataUser():
+    return render_template('act_datos_usuario.html')
 
 
 if __name__ == '__main__':

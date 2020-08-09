@@ -114,16 +114,13 @@ def funListarEjemplaresUsuario(idUsuario):
 
 
 # Funcion: lista todos los ejemplares disponibles en la plataforma : Publicados por los usuarios
-def funListarEjemplaresDisponibles(idUsuario):
+def funListarEjemplaresDisponibles():
     try:
-        #Busca el videojuego para obtener el valor
-        #obEjeUsuario = db.session.query(EjeUsuario).filter_by(fechacrea >= datetime.now()-1).all()
-        obEjeUsuario = db.session.query(EjeUsuario).filter_by().all()
-        usuario = db.session.query(Usuario).filter_by(idUsuario=idUsuario).first()
-        nick = usuario.nickName
+        #Busca los videojuegos NOVEDADES, que han sido cargados dentro de los 15 días anteriores
+        obEjeUsuario = db.session.query(EjeUsuario).filter(datetime.now()-EjeUsuario.fechacrea <= 15).all()
         ejemplarespub = []
         if obEjeUsuario is None:
-            app.logger.error("["+nick+"] ListarEjemplaresUsuario: No hay ejemplares")
+            app.logger.error("[no_user] ListarEjemplaresUsuario: No hay ejemplares")
         else:
             #SQL que se ejecutará en la consulta
             #print(SQL)
@@ -141,12 +138,12 @@ def funListarEjemplaresDisponibles(idUsuario):
                 if ejemplar.bloqueado == 0:
                     # Si el ejemplar no está publicado
                     if ejemplar.publicado == 1:
-                        ejemplarespub.append([ejemplar.idEjeUsuario, idUsuario, foto, obVideojuego.nombre, ejemplar.publicado, ejemplar.bloqueado, ejemplar.valor, ejemplar.estado, ejemplar.comentario])
+                        ejemplarespub.append([ejemplar.idEjeUsuario, ejemplar.usuarioIdAct, foto, obVideojuego.nombre, ejemplar.publicado, ejemplar.bloqueado, ejemplar.valor, ejemplar.estado, ejemplar.comentario])
 
                 #for campo in ejemplar:
                 #    print(campo)
             totejemplares = len(ejemplarespub)
-            app.logger.debug("["+nick+"] ListarEjemplaresDisponibles: hay "+ totejemplares.__str__()+" ejemplares disponibles")
+            app.logger.debug("[NO_USER] ListarEjemplaresDisponibles: hay "+ totejemplares.__str__()+" ejemplares disponibles")
             print("hay "+ len(ejemplarespub).__str__()+" ejemplares publicados")
             #print("hay "+ len(ejemplares).__str__()+" ejemplares")
             #for elm in ejemplares:
