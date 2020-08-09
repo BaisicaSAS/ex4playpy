@@ -147,6 +147,7 @@ def login():
             return render_template('login.html', mensaje="Algo sucedió, intenta de nuevo !" )
     return render_template('login.html', mensaje="" )
 
+
 # Funcion: logout
 @app.route("/logout", methods=["GET"])
 def logout():
