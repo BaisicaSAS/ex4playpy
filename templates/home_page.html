@@ -1,0 +1,217 @@
+{% extends "base.html" %}
+{% block title %}ex4play - Registro / Ingreso{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lemon">
+<style>
+    .jumbotron {
+        background-size: 100%;
+        color: #fff;
+        font-family: Montserrat, sans-serif;
+        height: 100%;
+        width: 100%;
+    }
+
+    .bgimg-1{
+      position: relative;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color:aquamarine;
+
+    }
+    .bgimg-1 {
+      background-image: url({{ url_for('static', filename='fondo.png') }});
+      min-height: 580px;
+    }    
+
+    .caption {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      text-align: center;
+      color: #000;
+    }
+
+    .caption span.border {
+      background-color: #111;
+      color: #fff;
+      padding: 18px;
+      font-size: 25px;
+      letter-spacing: 10px;
+    }
+    .w3-lobster {
+        font-family: "Lemon", serif;
+    }
+
+    #speed-title {
+        color: white;
+        font-weight: 700;
+        text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1);
+    }
+
+    #challenge-title {
+    color: #8f1d8a;
+    font-weight: 700;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1);
+    }
+
+
+
+    .pricingdiv{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-family: 'Source Sans Pro', Arial, sans-serif;
+    }
+
+    .pricingdiv ul.theplan{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      border-top-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      color: white;
+      background: #7c3ac9;
+      position: relative;
+      width: 250px; /* width of each table */
+      margin-right: 10px; /* spacing between tables */
+      margin-bottom: 1em;
+      transition: all .5s;
+    }
+
+    .pricingdiv ul.theplan:hover{ /* when mouse hover over pricing table */
+      transform: scale(1.05);
+      transition: all .5s;
+      z-index: 100;
+      box-shadow: 0 0 10px gray;
+    }
+
+    .pricingdiv ul.theplan li{
+      margin: 10px 20px;
+      position: relative;
+    }
+
+    .pricingdiv ul.theplan li.title{
+      font-size: 150%;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+      text-transform: uppercase;
+      border-bottom: 5px solid white;
+    }
+
+    .pricingdiv ul.theplan:nth-of-type(2){
+      background: #8f1d8a;
+    }
+
+    .pricingdiv ul.theplan:nth-of-type(3){
+      background: #2a2cc8;
+    }
+
+    .pricingdiv ul.theplan:last-of-type{ /* remove right margin in very last table */
+      margin-right: 0;
+    }
+
+    /*very last LI within each pricing UL */
+    .pricingdiv ul.theplan li:last-of-type{
+      text-align: center;
+      margin-top: auto; /*align last LI (price botton li) to the very bottom of UL */
+    }
+
+    .pricingdiv a.pricebutton{
+      background: white;
+      text-decoration: none;
+      padding: 10px;
+      display: inline-block;
+      margin: 10px auto;
+      border-radius: 5px;
+      color: navy;
+      text-transform: uppercase;
+    }
+
+    @media only screen and (max-width: 500px) {
+      .pricingdiv ul.theplan{
+        border-radius: 0;
+        width: 100%;
+        margin-right: 0;
+      }
+
+      .pricingdiv ul.theplan:hover{
+        transform: none;
+        box-shadow: none;
+      }
+
+      .pricingdiv a.pricebutton{
+        display: block;
+      }
+    }
+</style>
+
+
+<div>
+    <section >
+        <div class="bgimg-1">
+            <div class="container text-center">
+                <img  src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:65%">
+            </div>
+        </div>
+</section>
+</div>
+<div>
+    <div style="color:#212529;background-color:#5B56F8;text-align:center;padding:110px 100px;text-align: justify;font-size:25px;color: #f7f7f7;" class="w3-container w3-lobster text-center">
+        <p class="w3-xxxlarge text-center" id="speed-title">Que hacemos?:</p>
+        <div class="row">
+            <div class="col-20 text-truncate">
+                <h2>Somos la plataforma que conecta entre sí a Gamers, para crear la biblioteca de Videojuegos virtual más grande de todo el País.  Encuentra e intercambia tus videojuegos con otros usuarios, y lo mejor: sin que sus gustos y los tuyos coincidan (ver video). Gana Barts, participa y ofrece tus juegos. No tienes excusa para no jugar.</h2>
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='{{ url_for( 'registro') }}';">Registrate Ahora!</button>
+        </div>
+    </div>
+</div>
+<div>
+    <section>
+        <div class="bgimg-1">
+            <p class="w3-xxxlarge text-center" id="challenge-title">Planes</p>
+            <div class="pricingdiv" style="padding:50px 50px;">
+                <ul class="theplan">
+                    <li class="title"><b>Gratis</b></li>
+                    <li><b>Valor:</b> $50.000*</li>
+                    <li><b>Duración:</b> 1 año</li>
+                    <li><b>Número de intercambios permitidos:</b> 1 videojuego mensual</li>
+                    <li><b>Crédito:</b> 2 videojuegos</li>
+                    <li>Participación en eventos especiales</li>
+                    <li>Puedes acceder a Barts especiales</li>
+                    <li><a class="pricebutton" href="" target="_blank" rel="nofollow"><span class="icon-tag"></span> Comprar</a></li>
+                </ul>
+                <ul class="theplan">
+                    <li class="title"><span class="icon-trophy" style="color:yellow"></span> <b>SuperGamer</b></li>
+                    <li><b>Valor:</b> $120.000*</li>
+                    <li><b>Duración:</b> 1 año</li>
+                    <li><b>Número de intercambios permitidos:</b> Ilimitados</li>
+                    <li><b>Crédito:</b> 4 videojuegos</li>
+                    <li>Participación en eventos especiales</li>
+                    <li>Puedes acceder a Barts especiales</li>
+                    <li><a class="pricebutton" href="" target="_blank" rel="nofollow"><span class="icon-tag"></span> Comprar</a></li>
+                </ul>
+                <ul class="theplan">
+                    <li class="title"><b>Novato</b></li>
+                    <li><b>Valor:</b> $0*</li>
+                    <li><b>Duración:</b> Ilimitada, sin trucos</li>
+                    <li><b>Número de intercambios permitidos:</b> 1 videojuego cada 3 meses</li>
+                    <li><b>Crédito:</b> 1 videojuego</li>
+                    <li>Participación en eventos especiales</li>
+                    <li><a class="pricebutton" href="" target="_blank" rel="nofollow"><span class="icon-tag"></span> Comprar</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}
