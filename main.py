@@ -154,6 +154,7 @@ def login():
     return render_template('login.html', mensaje="ingresa al sistema!" )
 
 
+
 # Funcion: logout
 @app.route("/logout", methods=["GET"])
 def logout():
