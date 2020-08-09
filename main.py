@@ -68,7 +68,7 @@ def index():
     if not(session) or (session['nick'] is None):
         app.logger.debug("[NO_USER] index: No hay sesion")
 
-        return render_template('inicio.html', mensaje="Registrate y disfruta!", videojuegos=lista, logged=0)
+        return render_template('home_page.html', mensaje="Registrate y disfruta!", videojuegos=lista, logged=0)
     else:
         app.logger.debug("["+session['nick']+"] index: Hay sesion")
 
@@ -145,7 +145,7 @@ def login():
             raise
             app.logger.error("[" + nick + "] login: problema con usuario a ingresar: " + nick)
             return render_template('login.html', mensaje="Algo sucedió, intenta de nuevo !" )
-    return render_template('login.html', mensaje="ingresa al sistema!" )
+    return render_template('login.html', mensaje="" )
 
 # Funcion: logout
 @app.route("/logout", methods=["GET"])
@@ -224,7 +224,7 @@ def registro():
             raise
             app.logger.error("[" + email + "] registro: Usuario a registrar: " + nombres + " - mail - " + pwdseguro)
             return render_template('error.html', mensaje="Error en registro!")
-    return render_template('registro.html', mensaje="Registrate en el sistema!" )
+    return render_template('registro.html', mensaje="" )
 
 # Funcion: reenviar correo confirmacion
 @app.route("/reenviarconf", methods=["POST", "GET"])
@@ -333,7 +333,7 @@ def resetclave():
         except:
             app.logger.error("[" + usr + "] confirma: Usuario a confirmar: " + usr)
             return render_template('error.html', mensaje="Error en confirmación!")
-    return render_template('resetclave.html', mensaje="Olvidaste la clave la clave")
+    return render_template('resetclave.html', mensaje="")
 
 
 # Funcion: enviar_correo
@@ -481,6 +481,11 @@ def ejemplaresusuario():
 @app.route("/terminos", methods=["GET"])
 def terminos():
     return render_template('terminos.html')
+
+# Funcion: Actualizar datos usuario
+@app.route("/updateUser")
+def updateDataUser():
+    return render_template('act_datos_usuario.html')
 
 
 if __name__ == '__main__':
