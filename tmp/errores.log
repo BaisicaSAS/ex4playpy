@@ -18606,3 +18606,25 @@ INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:49:40] "[33mGET /docs/4.0/assets/cs
 INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:49:40] "[36mGET /static/defaultgame.png HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:49:40] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
 INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:49:40] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+DEBUG:main:[josgabrielr@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 16:24:32] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 16:24:32] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 16:24:32] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 16:24:32] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 16:24:32] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
