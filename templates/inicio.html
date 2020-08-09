@@ -6,6 +6,57 @@
     <a href= {{url_for('login') }} class="card-link">Iniciar sesion</a>
     {% endif %}
     {{ mensaje }}
+
+    <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="buscar">Buscar videojuegos</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Buscar videojuegos" aria-describedby="Buscar">
+    </div>
+
+    <div>
+        <h1>NOVEDADES</h1>
+             {% set indice = namespace(cont=1) %}
+
+             {% for vj in novedades %}
+                {% if indice.cont == 1 %}
+                    <div class="row" style="display: flex; align-items: center; justify-content: center;" >
+                    <div class="card-deck">
+                {% endif %}
+                    <form name="form" action="{{url_for('ejemplaresusuario')}}" method="post">
+                    <input value="{{vj[0]}}" type="hidden" name="idejemplar" />
+                    <div class="card" style="width: 15rem;display: flex; align-items: center; justify-content: center;">
+
+                          <div class="card-body">
+                            <h5 class="card-title" align="center">{{ vj[3] }}</h5>
+                            <img class="card-img-top" style="width: 15rem;display: flex;" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Puntos: {{ vj[6] }}</li>
+                            <li class="list-group-item">Estado: {{ vj[7] }} de 10</li>
+                            <li class="list-group-item">Comentario: {{ vj[8] }}</li>
+                          </ul>
+                          <div class="card-footer">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                      <button type="submit" name="btnejemplar" value="solicitar" class="btn btn-sm btn-outline-secondary">Quiero este juego!</button>
+                                    </div>
+                                </div>
+                          </div>
+                    </div>
+                </form>
+                {% if indice.cont is divisibleby 4 or indice.cont == vjpub|count %}
+                    </div>
+                    </div>
+                    {% set indice.cont = 1 %}
+                {% else %}
+                    {% set indice.cont = indice.cont + 1 %}
+                {% endif %}
+            {% endfor %}
+    </div>
+
+    <div>
+        <h1>VIDEOJUEGOS</h1>
          {% set indice = namespace(cont=1) %}
 
          {% for vj in videojuegos %}
@@ -13,7 +64,7 @@
                 <div class="row" style="display: flex; align-items: center; justify-content: center;" >
                 <div class="card-deck">
             {% endif %}
-                <div class="card" style="width: 18rem;display: flex; align-items: center; justify-content: center;">
+                <div class="card" style="width: 15rem;display: flex; align-items: center; justify-content: center;">
                       <!-- <img class="card-img-top" src=" {{ vj.urlresena }}#imagen1 " alt=" {{ vj.nombre }} "> -->
                       <img class="card-img-top" height="50%" src="{{url_for('static', filename='defaultgame.png')}}" alt=" {{ vj.nombre }} ">
 
@@ -41,4 +92,5 @@
                 {% set indice.cont = indice.cont + 1 %}
             {% endif %}
         {% endfor %}
+    </div>
 {% endblock %}

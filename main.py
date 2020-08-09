@@ -4,7 +4,7 @@ from threading import Thread
 from flask import Flask, request, jsonify, render_template, redirect, url_for, session, current_app
 from config import ProductionConfig, DevelopmentConfig, Config
 from datamodel import db, Usuario, ConexionUsuario, VideoJuego, EjeUsuario
-from operavideojuegos import funCargarEjemplar, funListarEjemplaresUsuario, funMarcarEjemplaresUsuario
+from operavideojuegos import funCargarEjemplar, funListarEjemplaresUsuario, funMarcarEjemplaresUsuario, funListarEjemplaresDisponibles
 from passlib.hash import sha256_crypt
 import logging
 from sqlalchemy.exc import IntegrityError
@@ -50,7 +50,6 @@ app.config['MAIL_USE_SSL'] = True
 SUBJECT_REGISTRO = "Bienvenido a ex4play {nick} !"
 
 
-
 logging.basicConfig(filename=LOG_FILENAME, level=logging.DEBUG)
 
 # Funcion: index
@@ -58,21 +57,28 @@ logging.basicConfig(filename=LOG_FILENAME, level=logging.DEBUG)
 @app.route('/')
 def index():
     app.logger.debug("[NO_USER] index: inicia index")
-    lista = []
+    videojuegos = []
+    novedades = []
     if db.session is not None:
-        # Recupera listado de videojuegos
+        # Recupera listado de videojuegos generales
         result = db.session.query(VideoJuego).filter_by().order_by(VideoJuego.idVj).limit(100)
         for reg in result:
-            lista.append(reg)
+            videojuegos.append(reg)
+        nick = 'alexviatela@gmail.com'
+        obUsuario = db.session.query(Usuario).filter_by(nickName=nick).one_or_none()
+        # Recupera listado de ejemplares existentes en la plataforma
+        result = funListarEjemplaresDisponibles(obUsuario.idUsuario)
+        for reg in result:
+            novedades.append(reg)
 
     if not(session) or (session['nick'] is None):
         app.logger.debug("[NO_USER] index: No hay sesion")
 
-        return render_template('inicio.html', mensaje="Registrate y disfruta!", videojuegos=lista, logged=0)
+        return render_template('inicio.html', mensaje="Registrate y disfruta!", videojuegos=videojuegos, novedades=novedades, logged=0)
     else:
         app.logger.debug("["+session['nick']+"] index: Hay sesion")
 
-    return render_template('inicio.html', mensaje="Bienvenido "+session['nick'], videojuegos=lista, logged=1)
+    return render_template('inicio.html', mensaje="Bienvenido "+session['nick'], videojuegos=videojuegos, novedades=novedades, logged=1)
 
 
 # Funcion: login
@@ -147,6 +153,7 @@ def login():
             return render_template('login.html', mensaje="Algo sucedió, intenta de nuevo !" )
     return render_template('login.html', mensaje="ingresa al sistema!" )
 
+
 # Funcion: logout
 @app.route("/logout", methods=["GET"])
 def logout():
@@ -168,6 +175,7 @@ def logout():
             #raise
             app.logger.error("[NO_USER logout: problema con usuario al cerrar sesion")
             return render_template('login.html', mensaje="Algo sucedió, intenta de nuevo !" )
+
 
 # Funcion: registro
 @app.route("/registro", methods=["POST", "GET"])
@@ -225,6 +233,7 @@ def registro():
             app.logger.error("[" + email + "] registro: Usuario a registrar: " + nombres + " - mail - " + pwdseguro)
             return render_template('error.html', mensaje="Error en registro!")
     return render_template('registro.html', mensaje="Registrate en el sistema!" )
+
 
 # Funcion: reenviar correo confirmacion
 @app.route("/reenviarconf", methods=["POST", "GET"])
@@ -367,6 +376,7 @@ def enviar_correo(subject, sender, recipients, text_body,
         return 0
     #Thread(target=_send_async_email, args=(current_app._get_current_object(), msg)).start()
 
+
 # Funcion: Dar de Baja Usuario
 @app.route("/bajausuario", methods=["GET", "POST"])
 def bajausuario():
@@ -377,7 +387,6 @@ def bajausuario():
             #Recuperar usuario
             obUsuario = db.session.query(Usuario).filter_by(nickName=nick).one_or_none()
             obEjeUsuario = db.session.query(EjeUsuario).filter_by(nickName=nick).one_or_none()
-
 
 
 # Funcion: cambiar clave
@@ -417,6 +426,7 @@ def cargarEjemplar():
 
     return render_template('cargarejemplar.html', mensaje="Carga tu ejemplar!", videojuegos = lista)
 
+
 def _send_async_email(app, msg):
     with app.app_context():
         try:
@@ -424,6 +434,7 @@ def _send_async_email(app, msg):
         except SMTPException:
             raise
             logger.exception("Ocurrió un error al enviar el email")
+
 
 @app.route('/ejemplaresusuario', methods=["GET", "POST"])
 def ejemplaresusuario():
@@ -475,6 +486,31 @@ def ejemplaresusuario():
                 ejeblk, ejepub, ejenopub = funListarEjemplaresUsuario(usuario.idUsuario)
 
     return render_template('ejemplaresusuario.html', mensaje="Bienvenido "+session['nick'], vjblk=ejeblk, vjpub=ejepub, vjnopub=ejenopub, logged=0)
+
+
+@app.route('/solicitarejemplar', methods=["GET", "POST"])
+def solicitarejemplar():
+    ejeblk = []
+    ejepub = []
+    ejenopub = []
+    if request.method=="GET":
+        app.logger.debug("[NO_USER] index: inicia ejemplaresusuario")
+        if not(session) or (session['nick'] is None):
+            app.logger.debug("[NO_USER] index: No hay sesion")
+
+            return render_template('ejemplaresusuario.html', mensaje="Registrate y disfruta!", vjblk=ejeblk, vjpub=ejepub, vjnopub=ejenopub, logged=0)
+        else:
+            if db.session is not None:
+                # Recupera listado de ejemplares
+                nick = session['nick']
+                usuario = db.session.query(Usuario).filter_by(nickName=nick).first()
+                ejeblk, ejepub, ejenopub = funListarEjemplaresUsuario(usuario.idUsuario)
+                ejemplares = len(ejeblk) + len(ejepub) + len(ejenopub)
+                app.logger.debug("["+nick+"] index: Hay sesion")
+                app.logger.debug("["+nick+"] Encontró "+ejemplares.__str__()+" ejemplares para el usuario [" + nick + "]")
+                #print(lista)
+
+                return render_template('ejemplaresusuario.html', mensaje="Bienvenido "+nick, vjblk=ejeblk, vjpub=ejepub, vjnopub=ejenopub, logged=1)
 
 
 # Funcion: terminos y condiciones
