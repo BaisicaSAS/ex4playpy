@@ -19444,3 +19444,2385 @@ INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:19:50] "[33mGET /docs/4.0/assets/cs
 INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:19:50] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
 INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:19:51] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
 INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:19:51] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:34:55] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:34:55] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:34:55] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:34:55] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:34:56] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:34:56] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:36:36] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:36:36] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:36:36] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:36:36] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:36:37] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:36:37] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:36:44] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:36:45] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:36:45] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:36:45] "[37mGET /static/logoFinal.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:36:45] "[37mGET /static/fondo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:36:45] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:36:49] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:36:49] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:36:49] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:36:49] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:36:49] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:36:50] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:22] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:22] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:22] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:22] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:23] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:23] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:29] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:29] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:29] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:29] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:36] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:36] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:36] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:37] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:37] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:37] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:43] "[37mGET /logout HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:43] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:43] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:43] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:56] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:56] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:56] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:56] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:57] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:57] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:51:57] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:53:09] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:53:09] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:53:09] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:53:09] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:53:09] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:53:14] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:54:04] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:54:05] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:54:05] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:54:05] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: No hay sesion
+INFO:main:[alexviatela@gmail.com] login: Sesion generada: alexviatela@gmail.com
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:54:09] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:54:09] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:54:09] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:54:10] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:54:10] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:54:10] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:57:19] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:57:19] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:57:19] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:57:19] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:57:19] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:57:20] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:57:22] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:57:22] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:57:22] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:57:23] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+WARNING:werkzeug: * Debugger is active!
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:58:26] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:58:26] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:58:26] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:58:26] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:58:27] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:58:27] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:58:29] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:58:30] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:58:30] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:58:30] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:59:13] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:59:13] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:59:13] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:59:13] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:59:14] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:59:14] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia index
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:59:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:59:17] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:59:17] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:59:17] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:59:17] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:59:17] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:59:18] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+WARNING:werkzeug: * Debugger is active!
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:01:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:01:42] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:01:42] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:01:43] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:01:43] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:01:43] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Debugger PIN: 711-331-600
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:02:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:02:51] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:02:51] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:02:51] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:02:52] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:02:52] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:03:46] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:03:46] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:03:46] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:03:46] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:03:47] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:03:47] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:04:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:04:17] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:04:17] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:04:18] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:04:18] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:04:18] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:05:14] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:05:14] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:05:14] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:05:15] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:05:15] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:05:16] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:03] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:03] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:03] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:03] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:03] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:04] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:08] "[37mGET /logout HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:09] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:09] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:09] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] registro: inicia registro
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:14] "[37mGET /registro HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:14] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:14] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:14] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:15] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:15] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] reset clave: inicia reset clave 
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:21] "[37mGET /resetclave HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:22] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:22] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:22] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:27] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:27] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:28] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:28] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:28] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:28] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: No hay sesion
+INFO:main:[alexviatela@gmail.com] login: Sesion generada: alexviatela@gmail.com
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:33] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:33] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:33] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:06:33] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:07:40] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:07:40] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:07:41] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:07:41] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:07:41] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:07:41] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:07:43] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:07:43] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:07:43] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:07:43] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Debugger PIN: 711-331-600
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Debugger PIN: 711-331-600
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Debugger PIN: 711-331-600
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:09:51] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:09:51] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:09:51] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:09:51] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:09:51] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:09:52] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:09:53] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:09:53] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:09:54] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:09:54] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:09:54] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 12:09:54] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:32:13] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:32:13] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:32:13] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:32:13] "[33mGET /docs/4.0/assets/img/favicons/favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:32:13] "[33mGET /docs/4.0/assets/img/favicons/favicon-32x32.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:32:13] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:32:13] "[33mGET /docs/4.0/assets/img/favicons/favicon-16x16.png HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:32:40] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:32:41] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:32:41] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:32:41] "[37mGET /static/logoFinal.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:32:41] "[37mGET /static/fondo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:32:41] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:32:56] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:32:56] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:32:56] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:32:57] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: No hay sesion
+INFO:main:[alexviatela@gmail.com] login: Sesion generada: alexviatela@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:33:00] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:33:00] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:33:00] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:33:00] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:33:00] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:33:00] "[37mGET /static/defaultgame.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:33:00] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:48:29] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:48:29] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:48:29] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:48:29] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:48:32] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:48:32] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:48:32] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:48:32] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:48:36] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:48:36] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:48:36] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:48:37] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:48:37] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:51:41] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:51:41] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:51:41] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:52:09] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:52:09] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:52:09] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:52:23] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:52:23] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:52:23] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:52:23] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:52:40] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:52:40] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:52:40] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:52:40] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:52:40] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:52:40] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:52:57] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:52:58] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:52:58] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:52:58] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:53:12] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:53:12] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:53:12] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:53:12] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:54:10] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:54:10] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:54:10] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:54:10] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:54:31] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:54:31] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:54:31] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:54:31] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:54:31] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:54:31] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:54:52] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:54:52] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:54:52] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:54:52] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:55:35] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:55:35] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:55:35] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:55:35] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:56:17] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:56:17] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:56:17] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:56:18] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:57:05] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:57:05] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:57:05] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:57:07] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:57:07] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:57:40] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:57:40] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:57:40] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:57:41] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:58:09] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:58:09] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:58:09] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:58:09] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:58:20] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:58:20] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:58:20] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:58:20] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:58:43] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:58:43] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:58:43] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:58:44] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:59:29] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:59:29] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:59:30] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 10:59:30] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:00:17] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:00:17] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:00:18] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:00:18] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:00:18] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:00:18] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:04:18] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:04:18] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:04:18] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:04:18] "[33mGET /docs/4.0/dist/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:04:19] "[33mGET /docs/4.0/assets/css/docs.min.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:04:19] "[33mGET /docs/4.0/assets/img/favicons/manifest.json HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:08:10] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:08:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:08:33] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:08:36] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:11:14] "[33mGET /inicio HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:11:17] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:11:36] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:12:13] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:12:16] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:12:19] "[37mPOST /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:15:54] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:16:03] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:16:07] "[33mGET /INICIO HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:16:09] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:16:18] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:16:21] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:16:35] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:24:06] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:24:24] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] funMarcarEjemplaresUsuario: ejemplar actualizadom por usuario alexviatela@gmail.com
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:24:31] "[37mPOST /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] funMarcarEjemplaresUsuario: ejemplar actualizadom por usuario alexviatela@gmail.com
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:24:39] "[37mPOST /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:38:35] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:39:49] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:39:53] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:49:05] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:49:33] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:49:36] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:49:41] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:49:44] "[37mPOST /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:50:19] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:50:19] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:50:20] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:50:20] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:50:20] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:50:20] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:50:20] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:51:50] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:51:57] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:52:00] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:52:01] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:52:03] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:52:03] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:52:06] "[37mPOST /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:52:08] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:52:34] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:52:38] "[37mPOST /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:52:40] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:52:41] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:52:43] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+WARNING:werkzeug: * Debugger is active!
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Debugger PIN: 711-331-600
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:54:05] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:54:08] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:54:14] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:54:16] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:54:21] "[37mPOST /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:54:29] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] funMarcarEjemplaresUsuario: ejemplar actualizadom por usuario alexviatela@gmail.com
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:54:37] "[37mPOST /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] funMarcarEjemplaresUsuario: ejemplar actualizadom por usuario alexviatela@gmail.com
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:54:47] "[37mPOST /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 11:54:53] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 12:20:55] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 12:27:03] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 12:27:21] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 12:33:26] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 12:59:41] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:00:04] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:00:25] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:05:11] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:11:11] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:11:27] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:11:31] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:19:14] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:19:18] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:19:26] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:20:23] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:21:32] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:32:10] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:32:20] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:32:28] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:32:40] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:33:20] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:33:38] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:33:47] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:37:56] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:42:16] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:42:26] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:42:29] "[33mGET /cargar%20ejemplar HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:42:42] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:45:33] "[35m[1mGET /ejemplaresusuario HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:45:33] "[37mGET /ejemplaresusuario?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:45:34] "[37mGET /ejemplaresusuario?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:45:34] "[37mGET /ejemplaresusuario?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:45:34] "[37mGET /ejemplaresusuario?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:45:34] "[37mGET /ejemplaresusuario?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:45:34] "[37mGET /ejemplaresusuario?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:47:00] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:47:35] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:47:56] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:49:33] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:50:04] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:50:06] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:50:09] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:50:16] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:50:21] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:50:22] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:50:29] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:56:44] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:58:19] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:58:28] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:58:30] "[37mPOST /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:58:33] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:58:40] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:58:43] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:58:49] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:59:07] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:59:17] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:59:18] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:59:20] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:59:22] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:59:24] "[37mGET /logout HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: No hay sesion
+INFO:main:[alexviatela@gmail.com] login: Sesion generada: alexviatela@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 13:59:30] "[37mPOST /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:02:58] "[37mPOST /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:04:41] "[37mPOST /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:04:51] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:04:53] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:05:01] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:05:20] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:05:24] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:05:27] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:05:33] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:05:46] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:05:48] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:05:54] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:06:26] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:06:30] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:08:02] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:08:07] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:08:10] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:08:18] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:08:32] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:08:38] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:08:41] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:08:44] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:13:53] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:22:25] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:22:30] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:22:38] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:22:43] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:22:52] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:22:55] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:26:48] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:27:15] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 5 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 5 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:28:29] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:28:33] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:32:39] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:32:50] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:42:52] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:44:49] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:46:52] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+ERROR:operavideojuegos:[alexviatela@gmail.com] CargarEjemplar: No existe el videojuego: [Animal Crossing]
+DEBUG:operavideojuegos:[alexviatela@gmail.com] funMarcarEjemplaresUsuario: ejemplar actualizado por usuario alexviatela@gmail.com
+ERROR:operavideojuegos:[alexviatela@gmail.com] CargarEjemplar: Crea EjemplarUsuaro: [Animal Crossing]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:47:37] "[37mPOST /cargarEjemplar HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 6 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 6 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:47:45] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 6 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 6 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:48:17] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:54:17] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 14:57:49] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+ERROR:operavideojuegos:[alexviatela@gmail.com] CargarEjemplar: No existe el videojuego: []
+DEBUG:operavideojuegos:[alexviatela@gmail.com] funMarcarEjemplaresUsuario: ejemplar actualizado por usuario alexviatela@gmail.com
+ERROR:operavideojuegos:[alexviatela@gmail.com] CargarEjemplar: Crea EjemplarUsuaro: []
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:02:37] "[37mPOST /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:02:52] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:04:43] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:05:15] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:06:23] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:10:06] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:12:04] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:14:16] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:16:59] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:17:47] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:19:55] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:20:12] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:28:16] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:29:43] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:32:49] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:33:11] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:34:12] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:35:50] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:37:37] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:37:58] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:39:36] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:40:28] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:40:58] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:41:23] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+ERROR:operavideojuegos:[alexviatela@gmail.com] CargarEjemplar: SI existe el videojuego: [G-Force [PS3]]
+DEBUG:operavideojuegos:[alexviatela@gmail.com] funMarcarEjemplaresUsuario: ejemplar actualizado por usuario alexviatela@gmail.com
+ERROR:operavideojuegos:[alexviatela@gmail.com] CargarEjemplar: Crea EjemplarUsuaro: [G-Force [PS3]]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:41:44] "[37mPOST /cargarEjemplar HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 8 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:41:51] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:41:59] "[37mPOST /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] funMarcarEjemplaresUsuario: ejemplar actualizadom por usuario alexviatela@gmail.com
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:42:07] "[37mPOST /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] funMarcarEjemplaresUsuario: ejemplar actualizadom por usuario alexviatela@gmail.com
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 15:57:02] "[37mPOST /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 8 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 16:00:59] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 8 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 17:23:11] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 17:23:12] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 17:23:45] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 8 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 17:23:49] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 17:41:33] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 17:41:37] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 8 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 17:42:17] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] funMarcarEjemplaresUsuario: ejemplar actualizadom por usuario alexviatela@gmail.com
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 17:43:56] "[37mPOST /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 2 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 17:44:17] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] funMarcarEjemplaresUsuario: ejemplar actualizadom por usuario alexviatela@gmail.com
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 17:44:31] "[37mPOST /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 17:44:38] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 17:44:57] "[37mPOST /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 17:45:28] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 17:48:58] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 8 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 17:49:08] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 17:49:11] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 19:40:16] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 19:40:16] "[37mGET /static/logoFinal.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 19:40:16] "[37mGET /static/fondo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 19:40:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 19:44:07] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 19:45:38] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 19:45:45] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: No hay sesion
+INFO:main:[alexviatela@gmail.com] login: Sesion generada: alexviatela@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 19:45:54] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 19:45:54] "[37mGET /static/defaultgame.png HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 19:47:09] "[37mPOST /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 19:47:15] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 19:48:25] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 19:48:28] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 8 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 19:48:42] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 19:55:16] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 8 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 19:55:22] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 19:55:26] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 19:55:31] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 8 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 19:55:40] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 19:55:43] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:01:23] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 8 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:01:25] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:01:28] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:01:31] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:02:25] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:13:32] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:14:39] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:15:17] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:16:20] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:16:24] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:17:35] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 8 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:17:54] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:18:02] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:18:05] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 8 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:18:07] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:18:12] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:18:14] "[37mGET /logout HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: No hay sesion
+INFO:main:[alexviatela@gmail.com] login: Sesion generada: alexviatela@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:18:20] "[37mPOST /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:19:54] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:19:56] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:19:58] "[37mPOST /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:20:16] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:20:20] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:20:24] "[37mGET /logout HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:20:26] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: No hay sesion
+INFO:main:[alexviatela@gmail.com] login: Sesion generada: alexviatela@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:20:28] "[37mPOST /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:20:34] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 8 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:20:37] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:20:39] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:20:42] "[37mGET /logout HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:20:44] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: No hay sesion
+INFO:main:[alexviatela@gmail.com] login: Sesion generada: alexviatela@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:20:46] "[37mPOST /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:22:21] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[alexviatela@gmail.com] login: Datos del usuario ingresado: nick[alexviatela@gmail.com]
+DEBUG:main:[alexviatela@gmail.com] login: Hay una sesion
+INFO:main:[alexviatela@gmail.com] login: Usuario a ingresar con sesion recuperada: alexviatela@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:22:23] "[37mPOST /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 8 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:22:33] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:22:35] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 3 ejemplares disponibles
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:22:39] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:22:47] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[alexviatela@gmail.com] ListarEjemplaresUsuario: hay 8 ejemplares
+DEBUG:main:[alexviatela@gmail.com] index: Hay sesion
+DEBUG:main:[alexviatela@gmail.com] Encontró 8 ejemplares para el usuario [alexviatela@gmail.com]
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:22:49] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:22:52] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:23:10] "[37mGET /updateUser HTTP/1.1[0m" 200 -
