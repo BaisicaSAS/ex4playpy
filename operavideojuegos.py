@@ -1,7 +1,7 @@
 from flask import Flask
 from datamodel import db, Usuario, EjeUsuario, VideoJuego, Clasificacion, FotoEjeUsuario, TraceEjemplar
-import base64
 from datetime import datetime
+import base64
 
 app = Flask(__name__)
 

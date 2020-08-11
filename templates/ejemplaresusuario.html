@@ -28,18 +28,18 @@
                     <div class="row" style="display: flex; align-items: center; justify-content: center;" >
                     <div class="card-deck">
                 {% endif %}
-                    <form name="form" action="{{url_for('ejemplaresusuario')}}" method="post">
+                    <form name="form" action="{{url_for('editarEjemplar',idejeusuario=vj[0])}}" method="get">
                     <input value="{{vj[0]}}" type="hidden" name="idejemplar" />
                     <div class="card" style="width: 15rem;display: flex; align-items: center; justify-content: center;">
 
                           <div class="card-body">
-                            <h5 class="card-title" align="center">{{ vj[3] }}</h5>
-                            <img class="card-img-top" style="width: 15rem;display: flex;" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
+                            <h5 class="card-title" align="center">{{vj[3]}}</h5>
+                            <img class="card-img-top" style="width: 15rem;display: flex;" src="data:image/jpeg;base64,{{vj[2]}} " alt=" {{vj[3]}} ">
                           </div>
                           <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Puntos: {{ vj[6] }}</li>
-                            <li class="list-group-item">Estado: {{ vj[7] }} de 10</li>
-                            <li class="list-group-item">Comentario: {{ vj[8] }}</li>
+                            <li class="list-group-item">Puntos: {{vj[6]}}</li>
+                            <li class="list-group-item">Estado: {{vj[7]}} de 10</li>
+                            <li class="list-group-item">Comentario: {{vj[8]}}</li>
                           </ul>
                           <div class="card-footer">
                                 <div class="d-flex justify-content-between align-items-center">
@@ -74,17 +74,17 @@
                     <div class="card" style="width: 15rem;display: flex; align-items: center; justify-content: center;">
 
                           <div class="card-body">
-                            <h5 class="card-title" align="center">{{ vj[3] }}</h5>
-                            <img class="card-img-top" style="width: 15rem;display: flex;" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
+                            <h5 class="card-title" align="center">{{vj[3]}}</h5>
+                            <img class="card-img-top" style="width: 15rem;display: flex;" src="data:image/jpeg;base64,{{vj[2]}} " alt=" {{ vj[3] }} ">
                           </div>
                           <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Puntos: {{ vj[6] }}</li>
-                            <li class="list-group-item">Estado: {{ vj[7] }} de 10</li>
-                            <li class="list-group-item">Comentario: {{ vj[8] }}</li>
+                            <li class="list-group-item">Puntos: {{vj[6]}}</li>
+                            <li class="list-group-item">Estado: {{vj[7]}} de 10</li>
+                            <li class="list-group-item">Comentario: {{vj[8]}}</li>
                           </ul>
                           <div class="card-footer">
-                            <small class="text-muted" align="center">Ejemplar en negociación, no se puede editar ni eliminar</small>
-                          </div>
+                            <small class="text-muted">Ejemplar en negociación, no se puede editar ni eliminar</small>
+                          </div>    
                     </div>
                     </form>
                 {% if indice.cont is divisibleby 4 or indice.cont == vjblk|count  %}
@@ -105,18 +105,18 @@
                     <div class="row" style="display: flex; align-items: center; justify-content: center;" >
                     <div class="card-deck">
                 {% endif %}
-                    <form name="form" action="{{url_for('ejemplaresusuario')}}"  method="post">
+                    <form name="form" action="{{url_for('editarEjemplar',idejeusuario=vj[0])}}"  method="get">
                     <input value="{{vj[0]}}" type="hidden" name="idejemplar" />
                     <div class="card" style="width: 15rem;display: flex; align-items: center; justify-content: center;">
 
                           <div class="card-body">
-                            <h5 class="card-title" align="center">{{ vj[3] }}</h5>
-                            <img class="card-img-top" style="width: 15rem;display: flex;" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
+                            <h5 class="card-title" align="center">{{vj[3]}}</h5>
+                            <img class="card-img-top" style="width: 15rem;display: flex;" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{vj[3]}} ">
                           </div>
                           <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Puntos: {{ vj[6] }}</li>
-                            <li class="list-group-item">Estado: {{ vj[7] }} de 10</li>
-                            <li class="list-group-item">Comentario: {{ vj[8] }}</li>
+                            <li class="list-group-item">Puntos: {{vj[6]}}</li>
+                            <li class="list-group-item">Estado: {{vj[7]}} de 10</li>
+                            <li class="list-group-item">Comentario: {{vj[8]}}</li>
                           </ul>
                           <div class="card-footer">
                                 <div class="d-flex justify-content-between align-items-center">

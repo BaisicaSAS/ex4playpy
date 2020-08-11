@@ -152,66 +152,108 @@
     }
 </style>
 
-
-<div>
     <section >
         <div class="bgimg-1">
             <div class="container text-center">
                 <img  src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:20%">
             </div>
         </div>
-</section>
-</div>
-<div>
-    <div style="color:#212529;background-color:#5B56F8;text-align:center;padding:110px 100px;text-align: justify;font-size:25px;color: #f7f7f7;" class="w3-container w3-lobster text-center">
-        <p class="w3-xxxlarge text-center" id="speed-title">Que hacemos?:</p>
-        <div class="row">
-            <div class="col-20 text-truncate">
-                <h2>Somos la plataforma que conecta entre sí a Gamers, para crear la biblioteca de Videojuegos virtual más grande de todo el País.  Encuentra e intercambia tus videojuegos con otros usuarios, y lo mejor: sin que sus gustos y los tuyos coincidan (ver video). Gana Barts, participa y ofrece tus juegos. No tienes excusa para no jugar.</h2>
-            </div>
-        </div>
-        <div class="text-center">
-            <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='{{ url_for( 'registro') }}';">Registrate Ahora!</button>
-        </div>
-    </div>
-</div>
-<div>
-    <section>
-        <div class="bgimg-1">
-            <p class="w3-xxxlarge text-center" id="challenge-title">Planes</p>
-            <div class="pricingdiv" style="padding:50px 50px;">
-                <ul class="theplan">
-                    <li class="title"><b>Gratis</b></li>
-                    <li><b>Valor:</b> $50.000*</li>
-                    <li><b>Duración:</b> 1 año</li>
-                    <li><b>Número de intercambios permitidos:</b> 1 videojuego mensual</li>
-                    <li><b>Crédito:</b> 2 videojuegos</li>
-                    <li>Participación en eventos especiales</li>
-                    <li>Puedes acceder a Barts especiales</li>
-                    <li><a class="pricebutton" href="" target="_blank" rel="nofollow"><span class="icon-tag"></span> Comprar</a></li>
-                </ul>
-                <ul class="theplan">
-                    <li class="title"><span class="icon-trophy" style="color:yellow"></span> <b>SuperGamer</b></li>
-                    <li><b>Valor:</b> $120.000*</li>
-                    <li><b>Duración:</b> 1 año</li>
-                    <li><b>Número de intercambios permitidos:</b> Ilimitados</li>
-                    <li><b>Crédito:</b> 4 videojuegos</li>
-                    <li>Participación en eventos especiales</li>
-                    <li>Puedes acceder a Barts especiales</li>
-                    <li><a class="pricebutton" href="" target="_blank" rel="nofollow"><span class="icon-tag"></span> Comprar</a></li>
-                </ul>
-                <ul class="theplan">
-                    <li class="title"><b>Novato</b></li>
-                    <li><b>Valor:</b> $0*</li>
-                    <li><b>Duración:</b> Ilimitada, sin trucos</li>
-                    <li><b>Número de intercambios permitidos:</b> 1 videojuego cada 3 meses</li>
-                    <li><b>Crédito:</b> 1 videojuego</li>
-                    <li>Participación en eventos especiales</li>
-                    <li><a class="pricebutton" href="" target="_blank" rel="nofollow"><span class="icon-tag"></span> Comprar</a></li>
-                </ul>
-            </div>
-        </div>
     </section>
-</div>
 
+    {% if logged == 0 %}
+    <!--<a href= {{url_for('login')}} class="card-link">Iniciar sesion</a> -->
+    {% endif %}
+
+    <div class="alert alert-info" role="alert">
+      <h5>{{ mensaje }}</h5>
+    </div>
+
+    <div class="input-group" align="center">
+        <div class="input-group-prepend">
+            <span class="input-group-text"  id="buscar">Buscar videojuegos</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Buscar videojuegos" aria-describedby="Buscar">
+    </div>
+
+    <div>
+        <div class="alert alert-info" role="alert">
+          <h3>NOVEDADES</h3>
+        </div>
+         {% set indice = namespace(cont=1) %}
+
+         {% for vj in novedades %}
+            {% if indice.cont == 1 %}
+                <div class="row" style="display: flex; align-items: center; justify-content: center;" >
+                <div class="card-deck">
+            {% endif %}
+                <form name="form" action="{{url_for('registro')}}" method="get">
+                <input value="{{vj[0]}}" type="hidden" name="idejemplar" />
+                <div class="card" style="width: 15rem;display: flex; align-items: center; justify-content: center;">
+
+                      <div class="card-body">
+                        <h5 class="card-title" align="center">{{ vj[3] }}</h5>
+                        <img class="card-img-top" style="width: 15rem;display: flex;" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Puntos: {{ vj[6] }}</li>
+                        <li class="list-group-item">Estado: {{ vj[7] }} de 10</li>
+                        <li class="list-group-item">Comentario: {{ vj[8] }}</li>
+                      </ul>
+                      <div class="card-footer">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                  <button type="submit" name="btnejemplar" value="solicitar" class="btn btn-sm btn-outline-secondary" href="{{url_for('registro')}}">Registrate para obtenerlo!</button>
+                                </div>
+                            </div>
+                      </div>
+                </div>
+            </form>
+            {% if indice.cont is divisibleby 4 or indice.cont == novedades|count %}
+                </div>
+                </div>
+                {% set indice.cont = 1 %}
+            {% else %}
+                {% set indice.cont = indice.cont + 1 %}
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <div>
+        <div class="alert alert-info" role="alert">
+          <h3>OTROS VIDEOJUEGOS</h3>
+        </div>
+         {% set indice = namespace(cont=1) %}
+
+         {% for vj in videojuegos %}
+            {% if indice.cont == 1 %}
+                <div class="row" style="display: flex; align-items: center; justify-content: center;" >
+                <div class="card-deck">
+            {% endif %}
+                <form name="form" action="{{url_for('ejemplaresusuario')}}" method="post">
+                <div class="card" style="width: 15rem;display: flex; align-items: center; justify-content: center;">
+                      <img class="card-img-top" height="50%" src="{{url_for('static', filename='defaultgame.png')}}" alt=" {{ vj.nombre }} ">
+
+                      <div class="card-body">
+                        <h5 class="card-title">{{ vj.nombre }}</h5>
+                        <p class="card-text">Videojuego que se trata de varias cosas.</p>
+                      </div>
+                      <div class="card-body">
+                        <a href="#" class="card-link">Un enlace</a>
+                        <a>  Genero: {{ vj.genero }} </a>
+                      </div>
+                      <div class="card-footer">
+                        <a href="#" class="card-link">Un enlace</a>
+                      </div>
+                </div>
+            </form>
+            {% if indice.cont is divisibleby 4  or indice.cont == videojuegos|count %}
+                </div>
+                </div>
+                {% set indice.cont = 1 %}
+            {% else %}
+                {% set indice.cont = indice.cont + 1 %}
+            {% endif %}
+        {% endfor %}
+    </div>
 {% endblock %}
+

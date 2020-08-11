@@ -163,14 +163,14 @@
     </section>
 
     {% if logged == 0 %}
-    <a href= {{url_for('login') }} class="card-link">Iniciar sesion</a>
+    <a href= {{url_for('login')}} class="card-link">Iniciar sesion</a>
     {% endif %}
 
     <div class="alert alert-info" role="alert">
       <h5>{{ mensaje }}</h5>
     </div>
 
-    <div class="input-group" width="50%" align="center">
+    <div class="input-group" align="center">
         <div class="input-group-prepend">
             <span class="input-group-text"  id="buscar">Buscar videojuegos</span>
         </div>
@@ -178,50 +178,49 @@
     </div>
 
     <div>
-            <div class="alert alert-info" role="alert">
-              <h3>NOVEDADES</h3>
-            </div>
-             {% set indice = namespace(cont=1) %}
-
-             {% for vj in novedades %}
-                {% if indice.cont == 1 %}
-                    <div class="row" style="display: flex; align-items: center; justify-content: center;" >
-                    <div class="card-deck">
-                {% endif %}
-                    <form name="form" action="{{url_for('ejemplaresusuario')}}" method="post">
-                    <input value="{{vj[0]}}" type="hidden" name="idejemplar" />
-                    <div class="card" style="width: 15rem;display: flex; align-items: center; justify-content: center;">
-
-                          <div class="card-body">
-                            <h5 class="card-title" align="center">{{ vj[3] }}</h5>
-                            <img class="card-img-top" style="width: 15rem;display: flex;" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
-                          </div>
-                          <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Puntos: {{ vj[6] }}</li>
-                            <li class="list-group-item">Estado: {{ vj[7] }} de 10</li>
-                            <li class="list-group-item">Comentario: {{ vj[8] }}</li>
-                          </ul>
-                          <div class="card-footer">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                      <button type="submit" name="btnejemplar" value="solicitar" class="btn btn-sm btn-outline-secondary">Quiero este juego!</button>
-                                    </div>
-                                </div>
-                          </div>
-                    </div>
-                </form>
-                {% if indice.cont is divisibleby 4 or indice.cont == vjpub|count %}
-                    </div>
-                    </div>
-                    {% set indice.cont = 1 %}
-                {% else %}
-                    {% set indice.cont = indice.cont + 1 %}
-                {% endif %}
-            {% endfor %}
-
+        <div class="alert alert-info" role="alert">
+          <h3>NOVEDADES</h3>
         </div>
+         {% set indice = namespace(cont=1) %}
 
-        <div>
+         {% for vj in novedades %}
+            {% if indice.cont == 1 %}
+                <div class="row" style="display: flex; align-items: center; justify-content: center;" >
+                <div class="card-deck">
+            {% endif %}
+                <form name="form" action="{{url_for('ejemplaresusuario')}}" method="post">
+                <input value="{{vj[0]}}" type="hidden" name="idejemplar" />
+                <div class="card" style="width: 15rem;display: flex; align-items: center; justify-content: center;">
+
+                      <div class="card-body">
+                        <h5 class="card-title" align="center">{{ vj[3] }}</h5>
+                        <img class="card-img-top" style="width: 15rem;display: flex;" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Puntos: {{ vj[6] }}</li>
+                        <li class="list-group-item">Estado: {{ vj[7] }} de 10</li>
+                        <li class="list-group-item">Comentario: {{ vj[8] }}</li>
+                      </ul>
+                      <div class="card-footer">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                  <button type="submit" name="btnejemplar" value="solicitar" class="btn btn-sm btn-outline-secondary">Quiero este juego!</button>
+                                </div>
+                            </div>
+                      </div>
+                </div>
+            </form>
+            {% if indice.cont is divisibleby 4 or indice.cont == novedades|count %}
+                </div>
+                </div>
+                {% set indice.cont = 1 %}
+            {% else %}
+                {% set indice.cont = indice.cont + 1 %}
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <div>
         <div class="alert alert-info" role="alert">
           <h3>OTROS VIDEOJUEGOS</h3>
         </div>
@@ -232,18 +231,14 @@
                 <div class="row" style="display: flex; align-items: center; justify-content: center;" >
                 <div class="card-deck">
             {% endif %}
+                <form name="form" action="{{url_for('ejemplaresusuario')}}" method="post">
                 <div class="card" style="width: 15rem;display: flex; align-items: center; justify-content: center;">
-                      <!-- <img class="card-img-top" src=" {{ vj.urlresena }}#imagen1 " alt=" {{ vj.nombre }} "> -->
                       <img class="card-img-top" height="50%" src="{{url_for('static', filename='defaultgame.png')}}" alt=" {{ vj.nombre }} ">
 
                       <div class="card-body">
                         <h5 class="card-title">{{ vj.nombre }}</h5>
                         <p class="card-text">Videojuego que se trata de varias cosas.</p>
                       </div>
-                      <!--<ul class="list-group list-group-flush">
-                        <li class="list-group-item">Genero: {{ vj.genero }}</li>
-                        <li class="list-group-item">otro dato</li>
-                      </ul>-->
                       <div class="card-body">
                         <a href="#" class="card-link">Un enlace</a>
                         <a>  Genero: {{ vj.genero }} </a>
@@ -252,6 +247,7 @@
                         <a href="#" class="card-link">Un enlace</a>
                       </div>
                 </div>
+            </form>
             {% if indice.cont is divisibleby 4  or indice.cont == videojuegos|count %}
                 </div>
                 </div>
