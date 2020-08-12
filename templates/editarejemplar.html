@@ -92,21 +92,22 @@ ex4play - Publicar un ejemplar
   <div class="container" style="display: flex; align-items: center; justify-content: center; ">
     <div class="card" style="width: 30rem; background-color=#e48568; display: flex; align-items: center; justify-content: center; ">
       <div class="card-body">
-        <form class="form-register" autocomplete="off" name="frmcargarEjemplar" method="post" action=" {{url_for('cargarEjemplar') }} " enctype="multipart/form-data">
+        <form class="form-register" autocomplete="off" name="frmeditarEjemplar" method="post" action=" {{url_for('editarEjemplar',idejeusuario=ejidejeusuario)}} " enctype="multipart/form-data">
+            <input value="{{ejidejeusuario}}" type="hidden" name="idejemplar" />
             <div class="col-md-6" style="position: center">
                 <input type="file" id="imgInp" name="imgInp" aria-label="Cargar imágen" aria-describedby="Cargar imágen">
-                    <img id='img-upload'/>
+                    <img id='img-upload' src="data:image/jpeg;base64,{{ejimagen}}"/>
             </div>
 
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text">Nombre del Videojuego</span>
               </div>
-              <textarea name="ejemplar" id="ejemplar" placeholder="Nombre del videojuego"></textarea>
+             <textarea class="form-control" name="ejemplar" id="ejemplar" disabled="True" value="{{ejnombre}}" placeholder="Nombre del videojuego">{{ejnombre}}</textarea>
             </div>
 
-            <label for="estado">Estado del videojuego </label>
-            <input type="range" min="1" max="10" value="1" name="estado" id="estado" step="1" class="slider" placeholder="Estado del videojuego">
+            <label for="estado">Estado del videojuego: {{ejestado}} de 10 </label>
+            <input type="range" min="1" max="10" value="{{ejestado}}" name="estado" id="estado" step="1" class="slider" placeholder="Estado del videojuego">
                 <datalist id="sliderticks"><option>"1"</option><option>"2"</option><option>"3"</option>
                 <option>"4"</option><option>"5"</option><option>"6"</option><option>"7"</option>
                 <option>"8"</option><option>"9"</option><option>"10"</option>
@@ -116,18 +117,24 @@ ex4play - Publicar un ejemplar
               <div class="input-group-prepend">
                 <span class="input-group-text">Comentario</span>
               </div>
-              <textarea class="form-control" aria-label="Comentario" name="comentario" id="comentario" placeholder="Cuentanos algo de tu videojuego, hace cuanto lo tienes, etc."></textarea>
+              <textarea class="form-control" aria-label="Comentario" value="{{ejcomentario}}" name="comentario" id="comentario" placeholder="Cuentanos algo de tu videojuego, hace cuanto lo tienes, etc.">{{ejcomentario}}</textarea>
             </div>
 
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox"  align=left value="1" name="publicar" id="publicar">
+<!--            <div class="form-check">
+              {% if ejpublicar == 0 %}
+                <input class="form-check-input" type="checkbox"  align=left value="{{ejpublicar}}" name="publicar" id="publicar">
+              {% else %}
+                <input class="form-check-input" type="checkbox"  align=left value="{{ejpublicar}}" name="publicar" id="publicar" checked>
+              {% endif %}
+
               <label class="form-check-label" for="publicar">
                 Publicar este ejemplar
               </label>
             </div>
-
             <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
-            <input class="btn btn-primary" type="submit" value="Cargar">
+-->
+            <input class="btn btn-primary" type="submit" value="modificar">
+            <input class="btn btn-primary" type="submit" value="cancelar">
         </form>
       </div>
     </div>
