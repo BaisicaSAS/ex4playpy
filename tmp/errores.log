@@ -21826,3 +21826,47 @@ DEBUG:main:[alexviatela@gmail.com] Encontró 8 ejemplares para el usuario [alexv
 INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:22:49] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:22:52] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 20:23:10] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 22:51:01] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 22:51:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 22:51:14] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[josgabrielr@gmail.com] login: Datos del usuario ingresado: nick[josgabrielr@gmail.com]
+DEBUG:main:[josgabrielr@gmail.com] login: No hay sesion
+INFO:main:[josgabrielr@gmail.com] login: Sesion generada: josgabrielr@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 22:51:24] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 22:51:24] "[36mGET /static/defaultgame.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 22:51:43] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+DEBUG:main:[josgabrielr@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 22:52:31] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+DEBUG:main:[josgabrielr@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 22:52:33] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+DEBUG:main:[josgabrielr@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 22:52:34] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 22:52:53] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 22:52:53] "[37mGET /static/logoFinal.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 22:52:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Aug/2020 22:52:53] "[36mGET /static/fondo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)

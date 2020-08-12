@@ -527,8 +527,13 @@ def terminos():
     return render_template('terminos.html')
 
 # Funcion: Actualizar datos usuario
-@app.route("/updateUser")
+@app.route("/updateUser", methods=["GET", "POST"])
 def updateDataUser():
+    if request.method == "GET":
+        if db.session is not None:
+            nick = session['nick']
+            usuario = db.session.query(Usuario).filter_by(nickName=nick).first()
+
     return render_template('act_datos_usuario.html')
 
 
