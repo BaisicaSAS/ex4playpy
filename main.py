@@ -72,44 +72,44 @@ def index():
         for reg in result:
             novedades.append(reg)
 
-    if not(session) or (session['nick'] is None):
+    if not(session) or (session['email'] is None):
         app.logger.debug("[NO_USER] index: No hay sesion")
 
         return render_template('home_page.html', mensaje="Registrate y disfruta!", videojuegos=videojuegos, novedades=novedades, logged=0)
     else:
-        app.logger.debug("["+session['nick']+"] index: Hay sesion")
+        app.logger.debug("["+session['email']+"] index: Hay sesion")
 
-    return render_template('inicio.html', mensaje="Bienvenido "+session['nick'], videojuegos=videojuegos, novedades=novedades, logged=1)
+    return render_template('inicio.html', mensaje="Bienvenido "+session['email'], videojuegos=videojuegos, novedades=novedades, logged=1)
 
 
 # Funcion: login
 @app.route("/login", methods=["POST","GET"])
 def login():
     app.logger.debug("[NO_USER] login: inicia login")
-    nick=""
+    email=""
     if request.method == "POST":
         try:
-            nick = str(request.form.get("nick"))
+            email = str(request.form.get("email"))
             pwdorig = str(request.form.get("clave"))
             idnick = sha256_crypt.using(salt=Config.SECRET_SALT, rounds=5000).hash(pwdorig)
-            app.logger.info("[" + nick + "] login: Datos del usuario ingresado: nick[" + nick + "]")
-            #app.logger.info("login: Datos del usuario ingresado: nick[" + nick + "], pwd[" + idnick + "], pwdorg["+pwdorig+"]")
-            #app.logger.info("[nick: " + nick + "] - [sesion: " + str(session['nick']) + "]")
+            app.logger.info("[" + email + "] login: Datos del usuario ingresado: email[" + email + "]")
+            #app.logger.info("login: Datos del usuario ingresado: email[" + email + "], pwd[" + idnick + "], pwdorg["+pwdorig+"]")
+            #app.logger.info("[email: " + email + "] - [sesion: " + str(session['email']) + "]")
 
-            #usuarioValido = db.session.query(Usuario.nickName, Usuario.pwd).filter_by(nickName=nick,
+            #usuarioValido = db.session.query(Usuario.email, Usuario.pwd).filter_by(email=email,
             #                                                                          pwd=idnick).scalar() is not None
 
-            obUsuario = db.session.query(Usuario).filter_by(nickName=nick, pwd=idnick).one_or_none()
+            obUsuario = db.session.query(Usuario).filter_by(email=email, pwd=idnick).one_or_none()
 
             #if usuarioValido == True:
             if obUsuario is not None:
-                if not((not session) or (not nick in session['nick'])): #Si hay una sesion activa
+                if not((not session) or (not email in session['email'])): #Si hay una sesion activa
                     # Si existe el usuario, pero es inactivo, debe remitirse al mail
                     if obUsuario.activo == ESTADO_USR_INACTIVO:
-                        return render_template('inicio.html', mensaje=nick+", debes confirmar tu registro en tu correo para poder ingresar!", logged=0)
+                        return render_template('inicio.html', mensaje=email+", debes confirmar tu registro en tu correo para poder ingresar!", logged=0)
                     else:
-                        app.logger.debug("[" + nick + "] login: Hay una sesion")
-                        app.logger.info("[" + nick + "] login: Usuario a ingresar con sesion recuperada: " + nick)
+                        app.logger.debug("[" + email + "] login: Hay una sesion")
+                        app.logger.info("[" + email + "] login: Usuario a ingresar con sesion recuperada: " + email)
 
                         #Crea el registro de seguimiento a las conexion - IP ConexionUsuario
                         newConnUsuario = ConexionUsuario(usuarioId=obUsuario.idUsuario, ipaddr=request.remote_addr)
@@ -126,18 +126,18 @@ def login():
                         result = funListarEjemplaresDisponibles()
                         for reg in result:
                             novedades.append(reg)
-                        return render_template('inicio.html', mensaje="Ya estabas logueado " + nick, videojuegos=lista, novedades=novedades, logged=1)
+                        return render_template('inicio.html', mensaje="Ya estabas logueado " + email, videojuegos=lista, novedades=novedades, logged=1)
                 else:
                     #Revisa si el usuario está activo o inactivo
                     if obUsuario.activo == ESTADO_USR_INACTIVO:
-                        return render_template('inicio.html', mensaje=nick+", debes confirmar tu registro en tu correo para poder ingresar! <a href="+URL_APP+"/reenviarconf>Reenvíar el correo de confirmación</a>", logged=0)
+                        return render_template('inicio.html', mensaje=email+", debes confirmar tu registro en tu correo para poder ingresar! <a href="+URL_APP+"/reenviarconf>Reenvíar el correo de confirmación</a>", logged=0)
                     else:
-                        app.logger.debug("[" + nick + "] login: No hay sesion")
+                        app.logger.debug("[" + email + "] login: No hay sesion")
 
-                        session['nick'] = nick
+                        session['email'] = email
                         session['idnick'] = idnick
 
-                        app.logger.info("[" + nick + "] login: Sesion generada: " + nick)
+                        app.logger.info("[" + email + "] login: Sesion generada: " + email)
 
                         # Crea el registro de seguimiento a las conexion - IP ConexionUsuario
                         newConnUsuario = ConexionUsuario(usuarioId=obUsuario.idUsuario, ipaddr=request.remote_addr)
@@ -155,12 +155,12 @@ def login():
                         result = funListarEjemplaresDisponibles()
                         for reg in result:
                             novedades.append(reg)
-                        return render_template('inicio.html', mensaje="Bienvenido al sistema "+nick+"!", videojuegos = lista, novedades=novedades, logged=1 )
+                        return render_template('inicio.html', mensaje="Bienvenido al sistema "+email+"!", videojuegos=lista, novedades=novedades, logged=1 )
             else:
-                app.logger.info("[" + nick + "] Usuario o password inválido. Intenta de nuevo!")
+                app.logger.info("[" + email + "] Usuario o password inválido. Intenta de nuevo!")
                 return render_template('login.html', mensaje="Usuario o password inválido. Intenta de nuevo!" )
         except:
-            app.logger.error("[" + nick + "] login: problema con usuario a ingresar: " + nick)
+            app.logger.error("[" + email + "] login: problema con usuario a ingresar: " + email)
             #return render_template('login.html', mensaje="Algo sucedió, intenta de nuevo !" )
             raise
     return render_template('login.html', mensaje="" )
@@ -171,8 +171,8 @@ def login():
 def logout():
     if request.method == "GET":
         try:
-            nick = session['nick']
-            obUsuario = db.session.query(Usuario.idUsuario).filter_by(nickName=nick).one_or_none()
+            email = session['email']
+            obUsuario = db.session.query(Usuario.idUsuario).filter_by(email=email).one_or_none()
             if obUsuario is not None:
                 v_id = obUsuario.idUsuario
                 session.clear()
@@ -198,26 +198,22 @@ def registro():
             nombres = request.form.get("nombres")
             apellidos = request.form.get("apellidos")
             email = request.form.get("email")
+            email = email.lower()
             clave = request.form.get("clave")
             aceptater = request.form.get("aceptat") # Acepta los términos
             recibenot = request.form.get("recibir") # Acepta recibir notificaciones
             pwdseguro = sha256_crypt.using(salt=Config.SECRET_SALT, rounds=5000).hash(str(clave))
-            nickname = email.lower()
-            newUsuario = Usuario(nombres=nombres, apellidos=apellidos, pwd=pwdseguro, email=email.lower(), nickName=nickname, aceptater=aceptater, recibenot=recibenot)
+            nickname = email
+            newUsuario = Usuario(nombres=nombres, apellidos=apellidos, pwd=pwdseguro, email=email, nickName=nickname, aceptater=aceptater, recibenot=recibenot)
             db.session.add(newUsuario)
-            app.logger.debug("[" + nickname + "] registro: Usuario adicionado a BD: " + newUsuario.nombres + " - mail - " + newUsuario.email)
-            urlconfirma = URL_CONFIRMA +"usr=" + nickname + "&id=" + sha256_crypt.using(salt=Config.SECRET_SALT, rounds=5000).hash(str(email+pwdseguro))
-            app.logger.debug("[" + nickname + "] registro: armó urlconfirma: " + urlconfirma)
+            app.logger.debug("[" + email + "] registro: Usuario adicionado a BD: " + newUsuario.nombres + " - mail - " + newUsuario.email)
+            urlconfirma = URL_CONFIRMA +"usr=" + email + "&id=" + sha256_crypt.using(salt=Config.SECRET_SALT, rounds=5000).hash(str(email+pwdseguro))
+            app.logger.debug("[" + email + "] registro: armó urlconfirma: " + urlconfirma)
 
-
-            #commit temporal mientras se resuelve lo del mail
-            #db.session.commit()
-
-            app.logger.debug("[" + nickname + "] registro: va a enviar correo")
+            app.logger.debug("[" + email + "] registro: va a enviar correo")
             subject = SUBJECT_REGISTRO.format(nick=nombres)
 
-
-            if enviar_correo(subject, app.config['MAIL_USERNAME'], nickname, text_body=None, template="mailbienvenida.html", nick=nickname, urlconfirma=urlconfirma) == 1:
+            if enviar_correo(subject, app.config['MAIL_USERNAME'], email, text_body=None, template="mailbienvenida.html", nick=email, urlconfirma=urlconfirma) == 1:
                 app.logger.debug("[" + nickname + "] registro: envió mail a : " + newUsuario.nombres + " - mail - " + newUsuario.email)
 
                 #***************************************
@@ -225,23 +221,23 @@ def registro():
                 try:
                     db.session.commit()
                     app.logger.debug(
-                        "[" + nickname + "] registro: Usuario registrado: " + newUsuario.nombres + " - mail - " + newUsuario.email)
+                        "[" + email + "] registro: Usuario registrado: " + newUsuario.nombres + " - mail - " + newUsuario.email)
                     app.logger.debug(
                         "registro: Usuario registrado: " + newUsuario.nombres + " - mail - " + newUsuario.email + " " + clave + " " + pwdseguro)
                 except IntegrityError as e:
 
-                    app.logger.debug("[" + nickname + "] registro: Repetido")
+                    app.logger.debug("[" + email + "] registro: Repetido")
 
                     app.logger.info("%s Ya esta registrado.")
-                    app.logger.debug("[" + nickname + "] registro: %s Ya esta registrado." % e.params[0])
+                    app.logger.debug("[" + email + "] registro: %s Ya esta registrado." % e.params[0])
                     db.session.rollback()
                     return render_template('resetclave.html',
-                                       mensaje="Ya existe un registro para " + nickname + ". Recupera tu clave!")
+                                       mensaje="Ya existe un registro para " + email + ". Recupera tu clave!")
 
                 #***************************************
             return render_template('registro.html', mensaje="Ya estás registrado " + newUsuario.nombres + ". Confirma en tu correo para finalizar!")
         except:
-            app.logger.error("[" + nickname + "] registro: Usuario a registrar: " + nombres + " - mail - " + pwdseguro)
+            app.logger.error("[" + email + "] registro: Usuario a registrar: " + nombres + " - mail - " + pwdseguro)
             raise
             #return render_template('error.html', mensaje="Error en registro!")
     return render_template('registro.html', mensaje="" )
@@ -250,7 +246,6 @@ def registro():
 @app.route("/reenviarconf", methods=["POST", "GET"])
 def reenviarconf():
     app.logger.debug("[NO_USER] reenviar mail: inicia reenviar mail confirmacion")
-    nickname = ""
     pwdseguro = ""
     email = ""
     if request.method == "POST":
@@ -258,24 +253,23 @@ def reenviarconf():
             email = request.form.get("email")
             obUsuario = db.session.query(Usuario).filter_by(email=email).one_or_none()
             if obUsuario is not None:
-                nickname = obUsuario.nickName
                 pwdseguro = obUsuario.pwd
-                app.logger.debug("[" + nickname + "] reenviar mail: Usuario adicionado a BD: " + obUsuario.nombres + " - mail - " + obUsuario.email)
-                urlconfirma = URL_CONFIRMA +"usr=" + nickname + "&id=" + sha256_crypt.using(salt=Config.SECRET_SALT, rounds=5000).hash(str(email+pwdseguro))
-                app.logger.debug("[" + nickname + "] reenviar mail: armó urlconfirma: " + urlconfirma)
+                app.logger.debug("[" + email + "] reenviar mail: Usuario adicionado a BD: " + obUsuario.nombres + " - mail - " + obUsuario.email)
+                urlconfirma = URL_CONFIRMA +"usr=" + email + "&id=" + sha256_crypt.using(salt=Config.SECRET_SALT, rounds=5000).hash(str(email+pwdseguro))
+                app.logger.debug("[" + email + "] reenviar mail: armó urlconfirma: " + urlconfirma)
 
-                app.logger.debug("[" + nickname + "] reenviar mail: va a enviar correo")
+                app.logger.debug("[" + email + "] reenviar mail: va a enviar correo")
                 subject = SUBJECT_REGISTRO.format(nick=obUsuario.nombres)
 
-                if enviar_correo(subject, app.config['MAIL_USERNAME'], nickname, text_body=None, template="mailbienvenida.html", nick=nickname, urlconfirma=urlconfirma) == 1:
-                    app.logger.debug("[" + nickname + "] reenviar mail: envió mail a : " + obUsuario.nombres + " - mail - " + obUsuario.email)
+                if enviar_correo(subject, app.config['MAIL_USERNAME'], email, text_body=None, template="mailbienvenida.html", nick=email, urlconfirma=urlconfirma) == 1:
+                    app.logger.debug("[" + email + "] reenviar mail: envió mail a : " + obUsuario.nombres + " - mail - " + obUsuario.email)
                     app.logger.debug("reenviar mail: Usuario registrado: " + obUsuario.nombres + " - mail - " + obUsuario.email + " " + pwdseguro)
                 return render_template('login.html', mensaje= "Correo reenviado a " + email + ". " + obUsuario.nombres + ". Confirma en tu correo para finalizar el registro!")
             else:
                 return render_template('login.html', mensaje="El usuaurio no ha realizado registro en ex4play " + email)
 
         except:
-            app.logger.error("[" + email + "] registro: Usuario a registrar: " + nickname + " - mail - " + pwdseguro)
+            app.logger.error("[" + email + "] registro: Usuario a registrar: " + email + " - mail - " + pwdseguro)
             raise
             #return render_template('error.html', mensaje="Error en registro!")
     return render_template('reenviarconf.html', mensaje="Reenviar correo de confirmación!" )
@@ -285,20 +279,20 @@ def reenviarconf():
 @app.route("/confirma", methods=["GET", "POST"])
 def confirma():
     app.logger.debug("[NO_USER] confirma: inicia confirmación ")
-    usr = ""
+    email = ""
     if request.method == "GET":
         try:
-            usr = request.args.get("usr").lower()
+            email = request.args.get("usr").lower()
             id = request.args.get("id")
 
             #Busca el usuario para validar
-            app.logger.debug("[NO_USER] confirma: Usuario a confirmar: " + usr)
-            obUsuario = db.session.query(Usuario).filter_by(nickName=usr).one_or_none()
+            app.logger.debug("[NO_USER] confirma: Usuario a confirmar: " + email)
+            obUsuario = db.session.query(Usuario).filter_by(email=email).one_or_none()
 
             if obUsuario is not None:
                 if obUsuario.activo == ESTADO_USR_ACTIVO:
                     app.logger.debug(
-                        "[" + usr + "] confirma: Usuario YA estaba activo: " + obUsuario.nombres + " - mail - " + obUsuario.email)
+                        "[" + email + "] confirma: Usuario YA estaba activo: " + obUsuario.nombres + " - mail - " + obUsuario.email)
                     return render_template('login.html', mensaje="El enlace ya no funciona, pero ya estás activo " + obUsuario.nombres + ". Ingresa!")
                 else:
                     pwd= obUsuario.pwd
@@ -327,38 +321,37 @@ def confirma():
 @app.route("/resetclave", methods=["POST", "GET"])
 def resetclave():
     app.logger.debug("[NO_USER] reset clave: inicia reset clave ")
-    usr = ""
+    #email = ""
     if request.method == "POST":
         try:
-            usr = request['nick']
+            email = request['email']
             claveactual = request.args.get("id")
             id = request.args.get("id")
 
-            obUsuario = db.session.query(Usuario.nickName).filter_by(nickName=usr).one_or_none()
-            #Busca el usuario para validar
-            app.logger.debug("[NO_USER] confirma: Usuario a confirmar: " + usr)
-            obUsuario = db.session.query(Usuario.nickName).filter_by(nickName=usr).one_or_none()
+            #Busca el usuario para validare
+            app.logger.debug("[NO_USER] confirma: Usuario a confirmar: " + email)
+            obUsuario = db.session.query(Usuario.email).filter_by(email=email).one_or_none()
 
             if obUsuario is not None:
-                pwd= obUsuario.pwd
-                app.logger.debug("[" + usr + "] confirma: Usuario recuperado: " + usr+pwd )
+                pwd=obUsuario.pwd
+                app.logger.debug("[" + email + "] confirma: Usuario recuperado: " + email+pwd )
 
-                idvalida = sha256_crypt.using(salt=Config.SECRET_SALT, rounds=5000).hash(str(usr+pwd))
+                idvalida = sha256_crypt.using(salt=Config.SECRET_SALT, rounds=5000).hash(str(email+pwd))
 
                 if idvalida==id:
                     obUsuario.activo = ESTADO_USR_ACTIVO
                     db.session.commit()
-                    app.logger.debug("[" + usr + "] confirma: Usuario activo: " + obUsuario.nombres + " - mail - " + obUsuario.email)
+                    app.logger.debug("[" + email + "] confirma: Usuario activo: " + obUsuario.nombres + " - mail - " + obUsuario.email)
                     return render_template('login.html', mensaje="Ya estás activo " + obUsuario.nombres + ". Ingresa!")
                 else:
                     return render_template('resetclave.html', mensaje="Hubo un error " + obUsuario.nombres + ". Vuelve a intentarlo desde tu correo!")
             else:
                 return render_template('registro.html',
-                                       mensaje="El usuario " + usr + ", no se encuentra registrado. Regístrate antes!")
+                                       mensaje="El usuario " + email + ", no se encuentra registrado. Regístrate antes!")
         except:
-            app.logger.error("[" + usr + "] confirma: Usuario a confirmar: " + usr)
+            app.logger.error("[" + email + "] confirma: Usuario a confirmar: " + email)
             return render_template('error.html', mensaje="Error en confirmación!")
-    return render_template('resetclave.html', mensaje="Olvidaste la clave la clave")
+    return render_template('resetclave.html', mensaje="")
 
 
 # Funcion: enviar_correo
@@ -397,11 +390,11 @@ def enviar_correo(subject, sender, recipients, text_body,
 def bajausuario():
     if request.method == "POST":
         if session is not None:
-            nick = session['nick']
-            print("nick:" + nick)
+            email = session['email']
+            print("email:" + email)
             #Recuperar usuario
-            obUsuario = db.session.query(Usuario).filter_by(nickName=nick).one_or_none()
-            obEjeUsuario = db.session.query(EjeUsuario).filter_by(nickName=nick).one_or_none()
+            obUsuario = db.session.query(Usuario).filter_by(email=email).one_or_none()
+            obEjeUsuario = db.session.query(EjeUsuario).filter_by(email=email).one_or_none()
 
 
 # Funcion: Cargar un ejemplar
@@ -415,9 +408,9 @@ def cargarEjemplar():
 
     if request.method == "POST":
         if session is not None:
-            nick = session['nick']
-            print("nick:" + nick)
-            obUsuario = db.session.query(Usuario).filter_by(nickName=nick).one_or_none()
+            email = session['email']
+            print("email:" + email)
+            obUsuario = db.session.query(Usuario).filter_by(email=email).one_or_none()
             if obUsuario is not None:
                 usrid = obUsuario.idUsuario
                 imagen = request.files["imgInp"]
@@ -433,13 +426,15 @@ def cargarEjemplar():
                     publicar = 0
                 print("publicar:" + str(publicar))
 
-                msg = funCargarEjemplar(nick, usrid, vj, estado, publicar, comentario, imagen)
-                return render_template('inicio.html', mensaje=msg, logged=1)
+                msg = funCargarEjemplar(email, usrid, vj, estado, publicar, comentario, imagen)
+                ejeblk, ejepub, ejenopub = funListarEjemplaresUsuario(usrid)
+                return render_template('ejemplaresusuario.html', mensaje="!", vjblk=ejeblk,
+                                       vjpub=ejepub, vjnopub=ejenopub, logged=0)
             else:
                 return render_template('login.html', mensaje="oopppss...algo sucedió con tu sesión. Ingresa de nuevo!")
-        return render_template('cargarejemplar.html', mensaje="Carga tu ejemplar!", videojuegos = lista)
+        return render_template('cargarejemplar.html', mensaje="Carga tu ejemplar!", videojuegos=lista)
 
-    return render_template('cargarejemplar.html', mensaje="Carga tu ejemplar!", videojuegos = lista)
+    return render_template('cargarejemplar.html', mensaje="Carga tu ejemplar!", videojuegos=lista)
 
 
 # Funcion: Editar un ejemplar
@@ -457,9 +452,9 @@ def editarEjemplar(idejeusuario):
 
     elif request.method == "POST":
         if session is not None:
-            if request.form['btnejemplar'] == 'modificar':
-                print("nick:" + nick)
-                obUsuario = db.session.query(Usuario).filter_by(nickName=nick).one_or_none()
+            if request.form['btnejemplar'] == 'Editar':
+                print("email:" + email)
+                obUsuario = db.session.query(Usuario).filter_by(email=email).one_or_none()
                 if obUsuario is not None:
                     usrid = obUsuario.idUsuario
                     imagen = request.files["imgInp"]
@@ -475,11 +470,11 @@ def editarEjemplar(idejeusuario):
                         publicar = 0
                     print("publicar:" + str(publicar))
 
-                    msg = funCargarEjemplar(nick, usrid, vj, estado, publicar, comentario, imagen)
+                    msg = funCargarEjemplar(email, usrid, vj, estado, publicar, comentario, imagen)
                     return render_template('inicio.html', mensaje=msg, logged=1)
                 else:
                     return render_template('login.html', mensaje="oopppss...algo sucedió con tu sesión. Ingresa de nuevo!")
-            if request.form['btnejemplar'] == 'cancelar':
+            if request.form['btnejemplar'] == 'Cancelar':
                 ejemplaresusuario()
 
 def _send_async_email(app, msg):
@@ -498,49 +493,49 @@ def ejemplaresusuario():
     ejenopub = []
     if request.method=="GET":
         app.logger.debug("[NO_USER] index: inicia ejemplaresusuario")
-        if not(session) or (session['nick'] is None):
+        if not(session) or (session['email'] is None):
             app.logger.debug("[NO_USER] index: No hay sesion")
 
             return render_template('ejemplaresusuario.html', mensaje="Registrate y disfruta!", vjblk=ejeblk, vjpub=ejepub, vjnopub=ejenopub, logged=0)
         else:
             if db.session is not None:
                 # Recupera listado de ejemplares
-                nick = session['nick']
-                usuario = db.session.query(Usuario).filter_by(nickName=nick).first()
+                email = session['email']
+                usuario = db.session.query(Usuario).filter_by(email=email).first()
                 ejeblk, ejepub, ejenopub = funListarEjemplaresUsuario(usuario.idUsuario)
                 ejemplares = len(ejeblk) + len(ejepub) + len(ejenopub)
-                app.logger.debug("["+nick+"] index: Hay sesion")
-                app.logger.debug("["+nick+"] Encontró "+ejemplares.__str__()+" ejemplares para el usuario [" + nick + "]")
+                app.logger.debug("["+email+"] index: Hay sesion")
+                app.logger.debug("["+email+"] Encontró "+ejemplares.__str__()+" ejemplares para el usuario [" + email + "]")
                 #print(lista)
 
-                return render_template('ejemplaresusuario.html', mensaje="Bienvenido "+nick, vjblk=ejeblk, vjpub=ejepub, vjnopub=ejenopub, logged=1)
+                return render_template('ejemplaresusuario.html', mensaje="Bienvenido "+email, vjblk=ejeblk, vjpub=ejepub, vjnopub=ejenopub, logged=1)
 
     if request.method=="POST":
         app.logger.debug("[NO_USER] index: inicia ejemplaresusuario")
-        if not(session) or (session['nick'] is None):
+        if not(session) or (session['email'] is None):
             app.logger.debug("[NO_USER] index: No hay sesion")
 
             return render_template('ejemplaresusuario.html', mensaje="Registrate y disfruta!", vjblk=ejeblk, vjpub=ejepub, vjnopub=ejenopub, logged=0)
         else:
             if db.session is not None:
                 # Recupera listado de ejemplares
-                nick = session['nick']
-                usuario = db.session.query(Usuario).filter_by(nickName=nick).first()
+                email = session['email']
+                usuario = db.session.query(Usuario).filter_by(email=email).first()
 
                 idejemplar = request.form.get('idejemplar')
                 print('ejemplar ' + idejemplar)
                 if request.form['btnejemplar'] == 'editar':
-                    print('editar ' + idejemplar)
+                    return render_template('editarejemplar.html', ejidejeusuario=idejemplar)
                 elif request.form['btnejemplar'] == 'despublicar':
-                    funMarcarEjemplaresUsuario(nick,idejemplar,0)
+                    funMarcarEjemplaresUsuario(email,idejemplar,0)
                     print('despublicar ' + idejemplar)
                 elif request.form['btnejemplar'] == 'publicar':
-                    funMarcarEjemplaresUsuario(nick,idejemplar,1)
+                    funMarcarEjemplaresUsuario(email,idejemplar,1)
                     print('publicar ' + idejemplar)
 
                 ejeblk, ejepub, ejenopub = funListarEjemplaresUsuario(usuario.idUsuario)
 
-    return render_template('ejemplaresusuario.html', mensaje="Bienvenido "+session['nick'], vjblk=ejeblk, vjpub=ejepub, vjnopub=ejenopub, logged=0)
+    return render_template('ejemplaresusuario.html', mensaje="Bienvenido "+session['email'], vjblk=ejeblk, vjpub=ejepub, vjnopub=ejenopub, logged=0)
 
 
 @app.route('/solicitarejemplar', methods=["GET", "POST"])
@@ -550,22 +545,22 @@ def solicitarejemplar():
     ejenopub = []
     if request.method=="GET":
         app.logger.debug("[NO_USER] index: inicia ejemplaresusuario")
-        if not(session) or (session['nick'] is None):
+        if not(session) or (session['email'] is None):
             app.logger.debug("[NO_USER] index: No hay sesion")
 
             return render_template('ejemplaresusuario.html', mensaje="Registrate y disfruta!", vjblk=ejeblk, vjpub=ejepub, vjnopub=ejenopub, logged=0)
         else:
             if db.session is not None:
                 # Recupera listado de ejemplares
-                nick = session['nick']
-                usuario = db.session.query(Usuario).filter_by(nickName=nick).first()
+                email = session['email']
+                usuario = db.session.query(Usuario).filter_by(email=email).first()
                 ejeblk, ejepub, ejenopub = funListarEjemplaresUsuario(usuario.idUsuario)
                 ejemplares = len(ejeblk) + len(ejepub) + len(ejenopub)
-                app.logger.debug("["+nick+"] index: Hay sesion")
-                app.logger.debug("["+nick+"] Encontró "+ejemplares.__str__()+" ejemplares para el usuario [" + nick + "]")
+                app.logger.debug("["+email+"] index: Hay sesion")
+                app.logger.debug("["+email+"] Encontró "+ejemplares.__str__()+" ejemplares para el usuario [" + email + "]")
                 #print(lista)
 
-                return render_template('ejemplaresusuario.html', mensaje="Bienvenido "+nick, vjblk=ejeblk, vjpub=ejepub, vjnopub=ejenopub, logged=1)
+                return render_template('ejemplaresusuario.html', mensaje="Bienvenido "+email, vjblk=ejeblk, vjpub=ejepub, vjnopub=ejenopub, logged=1)
 
 
 # Funcion: terminos y condiciones

@@ -83,63 +83,65 @@ ex4play - Publicar un ejemplar
 }
 </style>
 
- <div class="bgimg-1">
-  <div style="display: flex; align-items: center; justify-content: center;">
-    <div class="alert alert-info" role="alert">
-      <h3>{{ mensaje }}</h3>
+ <div class="bg-overlay">
+    <div style="">
+        <div class="alert alert-info" role="alert">
+          <h3>{{ mensaje }}</h3>
+        </div>
     </div>
-  </div>
-  <div class="container" style="display: flex; align-items: center; justify-content: center; ">
-    <div class="card" style="width: 30rem; background-color=#e48568; display: flex; align-items: center; justify-content: center; ">
-      <div class="card-body">
-        <form class="form-register" autocomplete="off" name="frmeditarEjemplar" method="post" action=" {{url_for('editarEjemplar',idejeusuario=ejidejeusuario)}} " enctype="multipart/form-data">
-            <input value="{{ejidejeusuario}}" type="hidden" name="idejemplar" />
-            <div class="col-md-6" style="position: center">
-                <input type="file" id="imgInp" name="imgInp" aria-label="Cargar imágen" aria-describedby="Cargar imágen">
-                    <img id='img-upload' src="data:image/jpeg;base64,{{ejimagen}}"/>
-            </div>
 
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text">Nombre del Videojuego</span>
-              </div>
-             <textarea class="form-control" name="ejemplar" id="ejemplar" disabled="True" value="{{ejnombre}}" placeholder="Nombre del videojuego">{{ejnombre}}</textarea>
-            </div>
+    <div class="container body-content">
+       <div class="header">
+          <h1><img src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:20%"></h1>
+      </div>
 
-            <label for="estado">Estado del videojuego: {{ejestado}} de 10 </label>
-            <input type="range" min="1" max="10" value="{{ejestado}}" name="estado" id="estado" step="1" class="slider" placeholder="Estado del videojuego">
-                <datalist id="sliderticks"><option>"1"</option><option>"2"</option><option>"3"</option>
-                <option>"4"</option><option>"5"</option><option>"6"</option><option>"7"</option>
-                <option>"8"</option><option>"9"</option><option>"10"</option>
-                </datalist>
+      <form class="form-signin" autocomplete="off" name="frmeditarEjemplar" method="post" action=" {{url_for('editarEjemplar',idejeusuario=ejidejeusuario)}} " enctype="multipart/form-data" style="align-items: center;padding-top: 40px;padding-bottom: 40px;background-color: #f5f5f5;">
+        <div class="col-md-6" style="position: center">
+            <input type="file" id="imgInp" name="imgInp" aria-label="Cargar imágen" aria-describedby="Cargar imágen">
+                <img style="align: center;justify-content: center;width:35%;" id='img-upload' src="data:image/jpeg;base64,{{ejimagen}}"/>
+        </div>
 
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text">Comentario</span>
-              </div>
-              <textarea class="form-control" aria-label="Comentario" value="{{ejcomentario}}" name="comentario" id="comentario" placeholder="Cuentanos algo de tu videojuego, hace cuanto lo tienes, etc.">{{ejcomentario}}</textarea>
-            </div>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Nombre del Videojuego</span>
+          </div>
+         <textarea class="form-control" name="ejemplar" id="ejemplar" disabled="True" value="{{ejnombre}}" placeholder="Nombre del videojuego">{{ejnombre}}</textarea>
+        </div>
+
+        <label for="estado">Estado del videojuego: {{ejestado}} de 10 </label>
+        <input type="range" min="1" max="10" value="{{ejestado}}" name="estado" id="estado" step="1" class="slider" placeholder="Estado del videojuego">
+            <datalist id="sliderticks"><option>"1"</option><option>"2"</option><option>"3"</option>
+            <option>"4"</option><option>"5"</option><option>"6"</option><option>"7"</option>
+            <option>"8"</option><option>"9"</option><option>"10"</option>
+            </datalist>
+
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Comentario</span>
+          </div>
+          <textarea class="form-control" aria-label="Comentario" value="{{ejcomentario}}" name="comentario" id="comentario" placeholder="Cuentanos algo de tu videojuego, hace cuanto lo tienes, etc.">{{ejcomentario}}</textarea>
+        </div>
 
 <!--            <div class="form-check">
-              {% if ejpublicar == 0 %}
-                <input class="form-check-input" type="checkbox"  align=left value="{{ejpublicar}}" name="publicar" id="publicar">
-              {% else %}
-                <input class="form-check-input" type="checkbox"  align=left value="{{ejpublicar}}" name="publicar" id="publicar" checked>
-              {% endif %}
+          {% if ejpublicar == 0 %}
+            <input class="form-check-input" type="checkbox"  align=left value="{{ejpublicar}}" name="publicar" id="publicar">
+          {% else %}
+            <input class="form-check-input" type="checkbox"  align=left value="{{ejpublicar}}" name="publicar" id="publicar" checked>
+          {% endif %}
 
-              <label class="form-check-label" for="publicar">
-                Publicar este ejemplar
-              </label>
-            </div>
-            <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+          <label class="form-check-label" for="publicar">
+            Publicar este ejemplar
+          </label>
+        </div>
+        <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
 -->
-            <input class="btn btn-primary" type="submit" value="modificar">
-            <input class="btn btn-primary" type="submit" value="cancelar">
-        </form>
-      </div>
+        <hr style="color:white;background-color:white">
+        <div class="input-group" style="align: center">
+          <input class="btn btn-primary" type="submit" value="Editar">
+          <input class="btn btn-primary" type="submit" value="Cancelar">
+        </div>
+      </form>
     </div>
-  </div>
- </div>
     <script>
         function autocomplete(inp, arr) {
           /*the autocomplete function takes two arguments,
