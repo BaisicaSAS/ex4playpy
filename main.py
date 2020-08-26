@@ -5,11 +5,13 @@ from flask import Flask, request, render_template, session, current_app
 from config import ProductionConfig, DevelopmentConfig, Config
 from datamodel import db, Usuario, ConexionUsuario, VideoJuego, EjeUsuario, FotoEjeUsuario
 from operavideojuegos import funCargarEjemplar, funListarEjemplaresUsuario, funMarcarEjemplaresUsuario, \
-    funListarEjemplaresDisponibles
+    funListarEjemplaresDisponibles, funObtenerDatosUsuario, funUpdateDatosUsuario
 from passlib.hash import sha256_crypt
 import logging
 from sqlalchemy.exc import IntegrityError
 import base64
+from flask_googlemaps import GoogleMaps, Map
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -17,6 +19,10 @@ app = Flask(__name__)
 mail = Mail(app)
 # mail.init_app(app)
 # db.init_app(app)
+
+#Google Maps
+# Initialize the extension
+GoogleMaps(app, key="AIzaSyC9YiF0Bqb2yA_Cb3WkWERvrSn59EhxmTs")
 
 # DESARROLLO
 app.config.from_object(DevelopmentConfig)
@@ -575,14 +581,51 @@ def terminos():
 
 # Funcion: Actualizar datos usuario
 @app.route("/updateUser", methods=["GET", "POST"])
-def updateDataUser():
+def updateUser():
+    # creating a map in the view
+    map = Map(
+        identifier="view-side",
+        lat=37.4419,
+        lng=-122.1419,
+        markers=[(37.4419, -122.1419)]
+    )
+
+    datosUsuario = None
     if request.method == "GET":
-        if db.session is not None:
-            nick = session['nick']
-            usuario = db.session.query(Usuario).filter_by(nickName=nick).first()
+        if not(session) or (session['nick'] is None):
+            app.logger.debug("[NO_USER] index: No hay sesion")
 
-    return render_template('act_datos_usuario.html')
+            return render_template('home_page.html', mensaje="Inicia Sesión o Registrate y disfruta!")
+        else:
+            if db.session is not None:
+                nick = session['nick']
+                usuario = db.session.query(Usuario).filter_by(nickName=nick).first()
+                datosUsuario = funObtenerDatosUsuario(usuario.idUsuario)
+                datosUsuario.fechanac = datosUsuario.fechanac.strftime("%Y-%m-%d")
 
+    if request.method == "POST":
+        if not(session) or (session['nick'] is None):
+            app.logger.debug("[NO_USER] index: No hay sesion")
+            return render_template('home_page.html', mensaje="Inicia Sesión o Registrate y disfruta!")
+        else:
+            if session is not None:
+                nick = session['nick']
+                print("nick:" + nick)
+                obUsuario = db.session.query(Usuario).filter_by(nickName=nick).one_or_none()
+                if obUsuario is not None:
+                    usrid = obUsuario.idUsuario
+                    imagen = request.files["imgInp"]
+                    nombres = request.form.get("nombres")
+                    apellidos = request.form.get("apellidos")
+                    edad = request.form.get("edad")
+                    genero = request.form.get("genero")
+                    fechanac = request.form.get("fecha")
+                    celular = request.form.get("celular")
+
+                    funUpdateDatosUsuario(usrid,nombres,apellidos,edad,fechanac,genero)
+
+
+    return render_template('act_datos_usuario.html', usuario=datosUsuario, map=map)
 
 if __name__ == '__main__':
     app.logger.debug("[NO_USER] main: **************************************************")

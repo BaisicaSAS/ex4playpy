@@ -4,7 +4,7 @@
 
 <style>
     .bg-overlay {
-        background: url("{{ url_for('static', filename='fondo.png') }}");
+        background: url("{{ url_for('static', filename='Dark.jpg') }}");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
@@ -44,12 +44,31 @@
 </style>
 
 <script>
-     $(function () {
-            $('#nav-profile-tab li:last-child a').tab('show')
-     })
-     $('#myDropdown').on('show.bs.dropdown', function () {
-        // do something...
-     })
+$(function () {
+    $('#nav-profile-tab li:last-child a').tab('show')
+})
+$('#myDropdown').on('show.bs.dropdown', function () {
+// do something...
+})
+
+$(document).ready( function() {
+    function readURL(input)
+    {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#imgUser').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+     $('#imgInp').change(function(){
+		    readURL(this);
+	  });
+});
+
 </script>
 
 <body class="bg-overlay">
@@ -75,45 +94,52 @@
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="form-signin">
                         <section class="form-register">
-                            <form>
+                            <form name="frmActUser" method="post" action=" {{url_for('updateUser') }} " enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="nickname"><b>Foto usuario:</b></label>
+                                    <img class="img-thumbnail" alt="Cinque Terre" style="width:50%" id='imgUser'/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="file" class="form-control-file" id="imgInp" name="imgInp" aria-label="Cargar imágen" aria-describedby="Cargar imágen">
+                                </div>
                                 <div class="form-group">
                                   <label for="nickname"><b>Nickname</b></label>
-                                  <input type="text" class="form-control" id="nickname" placeholder="Nickname del usuario">
+                                  <input type="text" class="form-control" id="nickname" placeholder="Nickname del usuario" value="{{usuario.nickName}}" disabled>
                                 </div>
                                 <div class="form-group">
                                     <label for="nombres"><b>Nombres</b></label>
-                                    <input type="text" class="form-control" id="nombres" placeholder="Nombres del usuario">
+                                    <input type="text" class="form-control" id="nombres" name="nombres" placeholder="Nombres del usuario" value="{{usuario.nombres}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="apellidos"><b>Apellidos</b></label>
-                                    <input type="text" class="form-control" id="apellidos" placeholder="Apellidos del usuario">
+                                    <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Apellidos del usuario" value="{{usuario.apellidos}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="email"><b>Email</b></label>
-                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="usuario@correo.com">
+                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="usuario@correo.com" value="{{usuario.email}}" disabled>
                                     <small id="emailHelp" class="form-text text-muted">Su correo no será compartido.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="edad"><b>Edad</b></label>
-                                    <input type="number" class="form-control" id="edad" placeholder="Edad" style="width:100px">
+                                    <input type="number" class="form-control" id="edad" name="edad" placeholder="Edad" style="width:100px" value="{{usuario.edad}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="genero"><b>Genero</b></label>
-                                    <select id="genero" class="form-control">
-                                        <option>Masculino</option>
-                                        <option>Femenino</option>
+                                    <select id="genero" class="form-control" name="genero" value="{{usuario.genero}}">
+                                        <option value="0">Masculino</option>
+                                        <option value="1">Femenino</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="fecha"><b>Fecha Nacimiento</b></label>
-                                    <input type="date" class="form-control" id="fecha">
+                                    <input type="date" class="form-control" id="fecha" name="fecha" value="{{usuario.fechanac}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="celular"><b>Celular</b></label>
-                                    <input type="number" class="form-control" id="celular">
+                                    <input type="number" class="form-control" id="celular" name="celular">
                                 </div>
                                 <div class="form-group">
-                                <div class="col-lg-4 col-lg-offset-4 col-md-10">
+                                <div >
                                     <input type="submit" value="Guardar" class="btn btn-lg btn-primary btn-block" style="margin:0px auto; display:block;"/>
                                 </div>
                             </div>
@@ -122,7 +148,28 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                <p>Nulla est ullamco ut irure incididunt nulla Lorem Lorem minim irure officia enim reprehenderit. Magna duis labore cillum sint adipisicing exercitation ipsum. Nostrud ut anim non exercitation velit laboris fugiat cupidatat. Commodo esse dolore fugiat sint velit ullamco magna consequat voluptate minim amet aliquip ipsum aute laboris nisi. Labore labore veniam irure irure ipsum pariatur mollit magna in cupidatat dolore magna irure esse tempor ad mollit. Dolore commodo nulla minim amet ipsum officia consectetur amet ullamco voluptate nisi commodo ea sit eu.</p>
+                    {{map.html}}{{map.js}}
+                    <br>
+                    <div class="form-signin">
+                        <section class="form-register">
+                             <div class="form-group">
+                                <label for="dir1"><b>Dirección Principal:</b></label>
+                                <input type="text" class="form-control" id="dir1" name="dir1" placeholder="Dirección Principal">
+                             </div>
+                            <div class="form-group">
+                                <label for="dir2"><b>Dirección 2:</b></label>
+                                <input type="text" class="form-control" id="dir2" name="dir2" placeholder="Dirección 2">
+                             </div>
+                            <div class="form-group">
+                                <label for="dir3"><b>Dirección 3:</b></label>
+                                <input type="text" class="form-control" id="dir3" name="dir3" placeholder="Dirección 3">
+                             </div>
+                            <div class="form-group">
+                                <label for="dir4"><b>Dirección 4:</b></label>
+                                <input type="text" class="form-control" id="dir4" name="dir4" placeholder="Dirección 4">
+                             </div>
+                        </section>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                 <p>Sint sit mollit irure quis est nostrud cillum consequat Lorem esse do quis dolor esse fugiat sunt do. Eu ex commodo veniam Lorem aliquip laborum occaecat qui Lorem esse mollit dolore anim cupidatat. Deserunt officia id Lorem nostrud aute id commodo elit eiusmod enim irure amet eiusmod qui reprehenderit nostrud tempor. Fugiat ipsum excepteur in aliqua non et quis aliquip ad irure in labore cillum elit enim. Consequat aliquip incididunt ipsum et minim laborum laborum laborum et cillum labore. Deserunt adipisicing cillum id nulla minim nostrud labore eiusmod et amet. Laboris consequat consequat commodo non ut non aliquip reprehenderit nulla anim occaecat. Sunt sit ullamco reprehenderit irure ea ullamco Lorem aute nostrud magna.</p>

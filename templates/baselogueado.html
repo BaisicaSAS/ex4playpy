@@ -86,17 +86,17 @@
         }
 
         .navbar li a, .navbar .navbar-brand {
-                color: #fff !important;
+                color: #000000 !important;
         }
 
         .navbar-nav li a:hover, .navbar-nav li.active a {
             color: #f4511e !important;
-            background-color: #fff !important;
+            background-color: #000000 !important;
         }
 
         .navbar-default .navbar-toggle {
             border-color: transparent;
-            color: #fff !important;
+            color: #000000 !important;
         }
     </style>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -252,7 +252,7 @@
 
 </head>
 <body>
-     <nav class="navbar navbar-default navbar-fixed-top">
+     <nav class="navbar navbar-default navbar-fixed-top navbar-light bg-light">
       <a class="navbar-brand" href= {{url_for('index')}}>ex4play</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -261,7 +261,7 @@
          <li><a href="{{url_for('ejemplaresusuario') }}">Mis videojuegos</a></li>
          <li><a href="{{url_for('cargarEjemplar') }}">Publicar un videojuego</a></li>
          <li><a href="#">Videojuegos negociados</a></li>
-         <li><a href="{{url_for('updateDataUser') }}">Perfil</a></li>
+         <li><a href="{{url_for('updateUser') }}">Perfil</a></li>
          <li><a href="{{url_for('logout') }}">Cerrar sesión</a></li>
       </ul>
     </nav>

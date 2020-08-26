@@ -21870,3 +21870,1567 @@ DEBUG:main:[NO_USER] main: Run aplicacion 8000
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 200-689-525
 INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:10:52] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:10:52] "[36mGET /static/logoFinal.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:10:52] "[36mGET /static/defaultgame.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:10:53] "[36mGET /static/fondo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:10:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:18:57] "[35m[1mGET /updateUser HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:18:57] "[35m[1mGET /updateUser HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:18:57] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:18:57] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:18:57] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:18:57] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:18:57] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:18:58] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:21:36] "[35m[1mGET /updateUser HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:21:36] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:21:36] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:21:36] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:21:36] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:21:36] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:25:37] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:26:19] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:32:26] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[josgabrielr@gmail.com] login: Datos del usuario ingresado: nick[josgabrielr@gmail.com]
+DEBUG:main:[josgabrielr@gmail.com] login: No hay sesion
+INFO:main:[josgabrielr@gmail.com] login: Sesion generada: josgabrielr@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:32:36] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:32:53] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:34:10] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:34:12] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:34:13] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 22:34:39] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 23:21:59] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 23:25:54] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 23:27:55] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 23:28:17] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 23:30:23] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 23:41:37] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 23:41:37] "[33mGET /url_for('static',%20filename='fondo.png') HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 23:42:24] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 23:43:04] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 23:43:14] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 23:44:43] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 23:45:09] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 23:45:37] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 23:45:49] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 23:46:06] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 23:47:01] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 23:49:43] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Aug/2020 23:49:45] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:02:25] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:02:25] "[36mGET /static/logoFinal.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:02:25] "[36mGET /static/defaultgame.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:02:25] "[36mGET /static/fondo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:02:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:04:25] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:04:29] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[josgabrielr@gmail.com] login: Datos del usuario ingresado: nick[josgabrielr@gmail.com]
+DEBUG:main:[josgabrielr@gmail.com] login: No hay sesion
+INFO:main:[josgabrielr@gmail.com] login: Sesion generada: josgabrielr@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:04:39] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:04:45] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:04:54] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:05:18] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:11:26] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:12:25] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:12:33] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:13:29] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:14:28] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:16:02] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:16:59] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:17:19] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:19:46] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:22:05] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:22:30] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:23:32] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:24:20] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:24:49] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:26:50] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:47:20] "[35m[1mGET /updateUser HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:47:20] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:47:20] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:47:20] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:47:20] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:47:20] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:47:20] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:49:00] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:51:14] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:51:53] "[37mGET /updateUser?imgInp= HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+DEBUG:main:[josgabrielr@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:53:31] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:53:50] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:53:50] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:53:50] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:53:50] "[37mGET /updateUser?imgInp= HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:54:21] "[35m[1mPOST /updateUser HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:54:21] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:54:21] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:54:21] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:54:21] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:54:21] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:54:22] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:55:20] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:58:35] "[35m[1mGET /updateUser HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:58:35] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:58:35] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:58:35] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:58:36] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:58:36] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:58:36] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [12/Aug/2020 23:59:06] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 00:02:33] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 00:04:45] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 00:07:16] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 00:08:07] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:29:31] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:29:32] "[36mGET /static/defaultgame.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:29:32] "[36mGET /static/logoFinal.png HTTP/1.1[0m" 304 -
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:29:36] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:29:36] "[36mGET /static/fondo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:29:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:29:39] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[josgabrielr@gmail.com] login: Datos del usuario ingresado: nick[josgabrielr@gmail.com]
+DEBUG:main:[josgabrielr@gmail.com] login: No hay sesion
+INFO:main:[josgabrielr@gmail.com] login: Sesion generada: josgabrielr@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+ERROR:main:[josgabrielr@gmail.com] login: problema con usuario a ingresar: josgabrielr@gmail.com
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:29:48] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:29:48] "[37mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:29:49] "[37mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:29:49] "[37mGET /login?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:29:49] "[37mGET /login?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:29:49] "[37mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:29:49] "[37mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:30:47] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:30:58] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:31:02] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[josgabrielr@gmail.com] login: Datos del usuario ingresado: nick[josgabrielr@gmail.com]
+DEBUG:main:[josgabrielr@gmail.com] login: No hay sesion
+INFO:main:[josgabrielr@gmail.com] login: Sesion generada: josgabrielr@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:31:10] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:31:16] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:32:42] "[35m[1mGET /updateUser HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:32:42] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:32:42] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:32:42] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:32:43] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:32:43] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:32:43] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:33:53] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 21:34:20] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 22:09:01] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 22:11:39] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 22:14:31] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 22:21:58] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 22:24:44] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 22:30:25] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 22:31:37] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 22:35:03] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 22:45:35] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 22:49:11] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [13/Aug/2020 23:00:36] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:07:15] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:07:32] "[35m[1mPOST /updateUser HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:07:32] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:07:32] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:07:32] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:07:32] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:07:32] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:07:32] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:10:03] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:10:16] "[35m[1mPOST /updateUser HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:10:16] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:10:16] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:10:16] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:10:16] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:10:16] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:10:16] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:11:57] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:12:08] "[37mPOST /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:13:19] "[37mPOST /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:13:23] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:16:25] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [14/Aug/2020 00:17:12] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:02:44] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:02:44] "[36mGET /static/logoFinal.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:02:44] "[36mGET /static/defaultgame.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:02:44] "[36mGET /static/fondo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:02:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:02:51] "[35m[1mGET /updateUser HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:02:52] "[35m[1mGET /updateUser HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:02:52] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:02:52] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:02:52] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:02:52] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:02:52] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:02:52] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:03:53] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:03:56] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:03:59] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[josgabrielr@gmail.com] login: Datos del usuario ingresado: nick[josgabrielr@gmail.com]
+DEBUG:main:[josgabrielr@gmail.com] login: No hay sesion
+INFO:main:[josgabrielr@gmail.com] login: Sesion generada: josgabrielr@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:04:10] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:04:15] "[35m[1mGET /updateUser HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:04:16] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:04:16] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:04:16] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:04:16] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:04:16] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:04:16] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:05:03] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:10:22] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:10:41] "[35m[1mGET /updateUser HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:10:41] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:10:41] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:10:41] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:10:42] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:10:42] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:10:42] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+DEBUG:main:[josgabrielr@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:14:31] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:14:37] "[35m[1mGET /updateUser HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:14:37] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:14:37] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:14:37] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:14:37] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:14:37] "[37mGET /updateUser?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 00:28:19] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 18:08:25] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 18:08:25] "[36mGET /static/logoFinal.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 18:08:25] "[36mGET /static/defaultgame.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 18:08:26] "[36mGET /static/fondo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 18:08:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 18:08:32] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 18:08:34] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[josgabrielr@gmail.com] login: Datos del usuario ingresado: nick[josgabrielr@gmail.com]
+DEBUG:main:[josgabrielr@gmail.com] login: No hay sesion
+INFO:main:[josgabrielr@gmail.com] login: Sesion generada: josgabrielr@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 18:08:45] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 18:08:56] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 18:10:20] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 18:10:49] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 18:16:31] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+DEBUG:main:[josgabrielr@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 18:16:45] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 18:17:24] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 18:36:28] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 18:43:03] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 21:40:06] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 21:40:18] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 21:40:18] "[33mGET /static/fondoDark.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 21:40:20] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 21:40:20] "[33mGET /static/fondoDark.png HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 21:40:42] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 21:40:43] "[37mGET /static/fondoDark.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 21:47:28] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 21:47:39] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 21:47:39] "[37mGET /static/Dark.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 21:52:45] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 21:52:56] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 21:52:57] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 21:53:34] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 21:54:53] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 21:54:55] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 21:55:03] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 21:57:26] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Aug/2020 21:57:37] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:13:28] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:13:28] "[36mGET /static/logoFinal.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:13:28] "[36mGET /static/defaultgame.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:13:28] "[36mGET /static/fondo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:13:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:13:32] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[josgabrielr@gmail.com] login: Datos del usuario ingresado: nick[josgabrielr@gmail.com]
+DEBUG:main:[josgabrielr@gmail.com] login: No hay sesion
+INFO:main:[josgabrielr@gmail.com] login: Sesion generada: josgabrielr@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:13:41] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:13:47] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:13:48] "[37mGET /static/Dark.jpg HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:14:49] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:19:31] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:21:30] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:22:06] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:22:08] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:22:22] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:22:55] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:22:56] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:22:56] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:22:56] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:22:56] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:22:56] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:22:57] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:22:57] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:22:57] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:23:39] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:24:31] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:24:32] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:24:33] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:24:33] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:24:33] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:24:33] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:24:33] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Documents\\2020\\Ex4Play\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [18/Aug/2020 23:24:59] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [19/Aug/2020 17:30:52] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Aug/2020 17:30:52] "[36mGET /static/logoFinal.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [19/Aug/2020 17:30:52] "[36mGET /static/defaultgame.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [19/Aug/2020 17:30:52] "[36mGET /static/fondo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [19/Aug/2020 17:30:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [19/Aug/2020 17:38:48] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[josgabrielr@gmail.com] login: Datos del usuario ingresado: nick[josgabrielr@gmail.com]
+DEBUG:main:[josgabrielr@gmail.com] login: No hay sesion
+INFO:main:[josgabrielr@gmail.com] login: Sesion generada: josgabrielr@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [19/Aug/2020 17:38:59] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Aug/2020 17:39:01] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Aug/2020 17:39:03] "[36mGET /static/Dark.jpg HTTP/1.1[0m" 304 -
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+DEBUG:main:[josgabrielr@gmail.com] index: Hay sesion
+INFO:werkzeug:127.0.0.1 - - [19/Aug/2020 17:41:14] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Aug/2020 17:41:18] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Aug/2020 17:48:55] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+DEBUG:main:[NO_USER] main: **************************************************
+DEBUG:main:[NO_USER] main: Importa configuracion
+DEBUG:main:[NO_USER] main: Inicializa DB
+DEBUG:main:[NO_USER] main: Crea la BD
+DEBUG:main:[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 200-689-525
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:main:[NO_USER] index: inicia index
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+DEBUG:main:[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [25/Aug/2020 22:31:19] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Aug/2020 22:31:19] "[37mGET /static/logoFinal.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Aug/2020 22:31:19] "[37mGET /static/defaultgame.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Aug/2020 22:31:20] "[37mGET /static/fondo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Aug/2020 22:31:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [25/Aug/2020 22:31:29] "[37mGET /login HTTP/1.1[0m" 200 -
+DEBUG:main:[NO_USER] login: inicia login
+INFO:main:[josgabrielr@gmail.com] login: Datos del usuario ingresado: nick[josgabrielr@gmail.com]
+DEBUG:main:[josgabrielr@gmail.com] login: No hay sesion
+INFO:main:[josgabrielr@gmail.com] login: Sesion generada: josgabrielr@gmail.com
+DEBUG:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+INFO:werkzeug:127.0.0.1 - - [25/Aug/2020 22:31:40] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Aug/2020 22:32:17] "[33mGET /baselogueado HTTP/1.1[0m" 404 -

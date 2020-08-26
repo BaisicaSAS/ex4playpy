@@ -180,3 +180,29 @@ def funMarcarEjemplaresUsuario(nick, idEjeUsuario, estado):
         raise
         app.logger.error("[" + nick + "] funMarcarEjemplaresUsuario: Problemas al actualizar ejemplar usuario")
 
+
+# Funcion: Obtener los datos del usuario
+def funObtenerDatosUsuario(idUsuario):
+    usuario = db.session.query(Usuario).filter_by(idUsuario=idUsuario).first()
+    nick = usuario.nickName
+
+    if usuario is None:
+        app.logger.error("[" + nick + "] funObtenerDatosUsuario: No se pudieron obtener los datos del usuario")
+    else:
+        return usuario
+
+
+def funUpdateDatosUsuario(idUsuario,nombres,apellidos,edad,fechanac,genero):
+    try:
+        # crea el ejemplar del videojuego
+        datosUsuario = Usuario.query.filter_by(idUsuario=idUsuario).update(dict(nombres=nombres, apellidos=apellidos, edad=edad,
+                                fechanac=fechanac, genero=genero))
+        db.session.commit()
+
+    except:
+        raise
+
+
+
+
+
