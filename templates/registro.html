@@ -2,99 +2,56 @@
 {% block title %}ex4play - Registro{% endblock %}
 {% block content %}
 
-<style>
-    .bg-overlay {
-        background: url("{{ url_for('static', filename='fondo.png') }}");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        color: #fff;
-        height: 450px;
-        background-attachment: fixed;
-    }
-    .header {
-        text-align: center;
-    }
-
-    .header h1 {
-        font-size: 50px;
-        color: #fff;
-        font-family: Montserrat, sans-serif;
-        letter-spacing: 3px;
-        margin: 0 auto;
-    }
-
-    .content {
-        background: rgba(91, 86, 248, 1); /* Black background with transparency */
-        color: #f1f1f1;
-        padding: 20px;
-        align-content: center;
-        justify-content: center; /* center horizontally */
-        align-items: center; /* center vertically */
-        margin: 0 auto;
-        width: 40%;
-        border-radius:10px;
-    }
-
-    h4, .h4 {
-        font-size: 18px;
-        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    }
-
-</style>
-<body class="bg-overlay">
+<body  class="bg-overlay">
   <div style="display: flex; align-items: center; justify-content: center;"> <h1>{{ mensaje }} </h1> </div>
   <div class="container body-content">
-      <div class="header">
-         <h1><img src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:35%"></h1>
-      </div>
-      <div class="content">
+        <div class="header">
+          <h1><img src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:20%"></h1>
+        </div>
+        <section class="form-signin"  style="align-items: center;padding-top: 40px;padding-bottom: 40px;background-color: #f5f5f5;">
+            <h4 align="center">Crear una nueva cuenta</h4>
+            <hr style="color:white;background-color:white">
+            <form name="frmregistro" method="post" action="{{url_for('registro') }}" onsubmit="return validateReg()">
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="nombres">Nombres</label>
+                    <div class="col-md-10">
+                        <p><input class="controls form-control" name="nombres" id="nombres" placeholder="Nombres" type="text" required></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="apellidos">Apellidos</label>
+                    <div class="col-md-10">
+                        <p><input class="controls form-control" name="apellidos" id="apellidos" placeholder="Apellidos" type="text" required></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="email">Email</label>
+                    <div class="col-md-10">
+                        <p><input class="controls form-control" name="email" id="email" placeholder="Email" type="email" required></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="clave">Clave</label>
+                    <div class="col-md-10">
+                        <p><input class="controls form-control" id="clave" name="clave" placeholder="Clave" type="password" required></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="repetirclave">Repetir Clave</label>
+                    <div class="col-md-10">
+                        <p><input class="controls form-control" name="repetirclave" id="repetirclave" placeholder="Repetir clave" type="password" required></p>
+                    </div>
+                </div>
 
-            <section class="form-register">
-                <h4 align="center">Crear una nueva cuenta</h4>
-                <hr style="color:white;background-color:white">
-                <form name="frmregistro" method="post" action="{{url_for('registro') }}" onsubmit="return validateReg()">
-                    <div class="form-group">
-                        <label class="col-md-2 control-label" for="nombres">Nombres</label>
-                        <div class="col-md-10">
-                            <p><input class="controls form-control" name="nombres" id="nombres" placeholder="Nombres" type="text" required></p>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label" for="apellidos">Apellidos</label>
-                        <div class="col-md-10">
-                            <p><input class="controls form-control" name="apellidos" id="apellidos" placeholder="Apellidos" type="text" required></p>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label" for="email">Email</label>
-                        <div class="col-md-10">
-                            <p><input class="controls form-control" name="email" id="email" placeholder="Email" type="email" required></p>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label" for="clave">Clave</label>
-                        <div class="col-md-10">
-                            <p><input class="controls form-control" id="clave" name="clave" placeholder="Clave" type="password" required></p>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="repetirclave">Repetir Clave</label>
-                        <div class="col-md-10">
-                            <p><input class="controls form-control" name="repetirclave" id="repetirclave" placeholder="Repetir clave" type="password" required></p>
-                        </div>
-                    </div>
+                <label class="label"><input type="checkbox" align=left value="1" name="aceptat" id="aceptat" required><p> Acepta <a href="{{url_for('terminos') }}">Terminos y Condiciones</a></p> </label>
+                <label class="label"><input type="checkbox" align=left value="1" name="recibir" id="recibir"><p> Recibir noticias y promociones de ex4play </p> </label>
 
-                    <label class="label"><input type="checkbox" align=left value="1" name="aceptat" id="aceptat" required><p> Acepta <a href="{{url_for('terminos') }}">Terminos y Condiciones</a></p> </label>
-                    <label class="label"><input type="checkbox" align=left value="1" name="recibir" id="recibir"><p> Recibir noticias y promociones de ex4play </p> </label>
-
-                    <div class="form-group">
-                        <div>
-                            <input type="submit" value="Registrar" class="btn btn-lg btn-primary btn-block" style="margin:0px auto; display:block;"/>
-                        </div>
+                <div class="form-group">
+                    <div>
+                        <input type="submit" value="Registrar" class="btn btn-lg btn-primary btn-block" style="margin:0px auto; display:block;"/>
                     </div>
-                </form>
-            </section>
+                </div>
+            </form>
             <div class="card text-center">
               <div class="card-footer">
                 <a href= {{url_for('login') }} class="card-link">Iniciar sesion</a>
@@ -105,8 +62,7 @@
           <div class="card-footer">
                 <h2>Política de tratamiento de datos:</h2> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
           </div>
-
-      </div>
+        </section>
   </div>
 </body>
 {% endblock %}

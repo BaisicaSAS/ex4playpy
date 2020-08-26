@@ -2,77 +2,36 @@
 {% block title %}ex4play - Registro / Ingreso{% endblock %}
 {% block content %}
 
-<style>
-    .bg-overlay {
-        background: url("{{ url_for('static', filename='fondo.png') }}");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        color: #fff;
-        height: 450px;
-        background-attachment: fixed;
-    }
-    .header {
-        text-align: center;
-    }
-
-    .header h1 {
-        font-size: 50px;
-        color: #fff;
-        font-family: Montserrat, sans-serif;
-        letter-spacing: 3px;
-        margin: 0 auto;
-    }
-
-    .content {
-        background: rgba(91, 86, 248, 1); /* Black background with transparency */
-        color: #f1f1f1;
-        padding: 20px;
-        align-content: center;
-        justify-content: center; /* center horizontally */
-        align-items: center; /* center vertically */
-        margin: 0 auto;
-        width: 40%;
-        border-radius:10px;
-    }
-
-    h4, .h4 {
-        font-size: 18px;
-        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    }
-
-</style>
 <body class="bg-overlay">
   <div style="display: flex; align-items: center; justify-content: center;"> <h1>{{ mensaje }} </h1> </div>
   <div class="container body-content">
-      <div class="header">
-         <h1><img src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:35%"></h1>
-      </div>
-      <div class="content">
-            <section class="form-register">
-                <h4 align="center">Cambiar Clave</h4>
-                <hr style="color:white;background-color:white">
-                <form name="frmresetclave" method="post" action=" {{url_for('resetclave') }} ">
-                    <div class="form-group">
-                        <label class="col-md-2 control-label" for="nick">Usuario</label>
-                        <div class="col-md-10">
-                            <p><input class="controls form-control" name="nick" id="nick" placeholder="Nickname" type="text" required></p>
-                        </div>
+        <div class="header">
+          <h1><img src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:20%"></h1>
+        </div>
+
+        <section class="form-signin"  style="align-items: center;padding-top: 40px;padding-bottom: 40px;background-color: #f5f5f5;">
+            <h4 align="center">Cambiar Clave</h4>
+            <hr style="color:white;background-color:white">
+            <form name="frmresetclave" method="post" action=" {{url_for('resetclave') }} ">
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="nick">Usuario</label>
+                    <div class="col-md-10">
+                        <p><input class="controls form-control" name="nick" id="nick" placeholder="Nickname" type="text" required></p>
                     </div>
                     <div class="form-group">
-                        <div class="col-lg-6 col-lg-offset-6 col-md-10">
+                        <div class="">
                             <input type="submit" value="Enviar Clave" class="btn btn-lg btn-primary btn-block" style="margin:0px auto; display:block;"/>
                         </div>
                     </div>
-                </form>
-            </section>
+                </div>
+            </form>
             <div class="card text-center">
               <div class="card-footer">
                 <a href= {{url_for('registro') }} class="card-link">Crear cuenta</a>
                 <a href= {{url_for('login') }} class="card-link">Iniciar sesion</a>
               </div>
             </div>
-      </div>
+        </section>
   </div>
 </body>
 {% endblock %}

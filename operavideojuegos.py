@@ -12,13 +12,13 @@ app = Flask(__name__)
 
 
 # Funcion: Cargar videojuego
-def funCargarEjemplar(nick, idUsuario, VJ, estado, publicar, comentario, imagen):
+def funCargarEjemplar(email, idUsuario, VJ, estado, publicar, comentario, imagen):
     try:
-        mensaje = nick + ", "
+        mensaje = email + ", "
         #Busca el videojuego para obtener el valor
         obVj = db.session.query(VideoJuego).filter_by(nombre=VJ).first()
         if obVj is None:
-            app.logger.error("["+nick+"] CargarEjemplar: No existe el videojuego: ["+VJ+"]")
+            app.logger.error("["+email+"] CargarEjemplar: No existe el videojuego: ["+VJ+"]")
             mensaje = mensaje + "No existe el VJ: Lo crearemos "
             publicado = 0
             bloqueado = 1 #Se bloquea el ejemplar si no existe el videojuego
@@ -29,7 +29,7 @@ def funCargarEjemplar(nick, idUsuario, VJ, estado, publicar, comentario, imagen)
             obVj = db.session.query(VideoJuego).filter_by(nombre=VJ).one_or_none()
         else:
             clasif = db.session.query(Clasificacion).filter_by(idClasifica=obVj.clasifId).first()
-            app.logger.error("["+nick+"] CargarEjemplar: SI existe el videojuego: ["+VJ+"]")
+            app.logger.error("["+email+"] CargarEjemplar: SI existe el videojuego: ["+VJ+"]")
             bloqueado = 0  # No bloqueado
             publicado = publicar
             mensaje = mensaje + "Publicamos tu videojuego "
@@ -47,15 +47,15 @@ def funCargarEjemplar(nick, idUsuario, VJ, estado, publicar, comentario, imagen)
 
         db.session.add(fotoEjemplar)
 
-        funRegistrarTraceEjemplar(ejeUsuario.idEjeUsuario, nick)
+        funRegistrarTraceEjemplar(ejeUsuario.idEjeUsuario, email)
 
-        app.logger.error("[" + nick + "] CargarEjemplar: Crea EjemplarUsuaro: [" + VJ + "]")
+        app.logger.error("[" + email + "] CargarEjemplar: Crea EjemplarUsuaro: [" + VJ + "]")
 
         db.session.commit()
         return mensaje
     except:
         raise
-        app.logger.error("[" + nick + "] publicarEjemplar: Usuario a confirmar: " + nick)
+        app.logger.error("[" + email + "] publicarEjemplar: Usuario a confirmar: " + email)
 
 
 # Funcion: lista todos los ejemplares que posee un usuario, con su estado
@@ -64,12 +64,12 @@ def funListarEjemplaresUsuario(idUsuario):
         #Busca el videojuego para obtener el valor
         obEjeUsuario = db.session.query(EjeUsuario).filter_by(usuarioIdAct=idUsuario).all()
         usuario = db.session.query(Usuario).filter_by(idUsuario=idUsuario).first()
-        nick = usuario.nickName
+        email = usuario.email
         ejemplaresblk = []
         ejemplarespub = []
         ejemplaresnopub = []
         if obEjeUsuario is None:
-            app.logger.error("["+nick+"] ListarEjemplaresUsuario: No hay ejemplares")
+            app.logger.error("["+email+"] ListarEjemplaresUsuario: No hay ejemplares")
         else:
             #SQL que se ejecutará en la consulta
             #SQL = db.session.query(EjeUsuario, FotoEjeUsuario, VideoJuego).filter_by(idEjeUsuario=idUsuario).join(FotoEjeUsuario, VideoJuego)
@@ -98,19 +98,19 @@ def funListarEjemplaresUsuario(idUsuario):
                 #for campo in ejemplar:
                 #    print(campo)
             totejemplares = len(ejemplaresblk) + len(ejemplarespub) + len(ejemplaresnopub)
-            app.logger.debug("["+nick+"] ListarEjemplaresUsuario: hay "+ totejemplares.__str__()+" ejemplares")
+            app.logger.debug("["+email+"] ListarEjemplaresUsuario: hay "+ totejemplares.__str__()+" ejemplares")
             print("hay "+ len(ejemplaresblk).__str__()+" ejemplares bloqueados")
             print("hay "+ len(ejemplarespub).__str__()+" ejemplares publicados")
             print("hay "+ len(ejemplaresnopub).__str__()+" ejemplares no publicados")
             #print("hay "+ len(ejemplares).__str__()+" ejemplares")
             #for elm in ejemplares:
             #    print(ejemplares[0])
-            #app.logger.error("[" + nick + "] ListaEjemplar: Crea EjemplarUsuaro: [" + obEjeUsuario['idEjeUsuario'].str() + "]")
+            #app.logger.error("[" + email + "] ListaEjemplar: Crea EjemplarUsuaro: [" + obEjeUsuario['idEjeUsuario'].str() + "]")
 
         return ejemplaresblk, ejemplarespub, ejemplaresnopub
     except:
         raise
-        app.logger.error("[" + nick + "] ListarEjemplarUsuario: Problemas al listar los ejemplares")
+        app.logger.error("[" + email + "] ListarEjemplarUsuario: Problemas al listar los ejemplares")
 
 
 # Funcion: lista todos los ejemplares disponibles en la plataforma : Publicados por los usuarios
@@ -136,49 +136,49 @@ def funListarEjemplaresDisponibles():
 
                 #Si el ejemplar NO está bloqueado
                 if ejemplar.bloqueado == 0:
-                    # Si el ejemplar no está publicado
+                    # Si el ejemplar está publicado
                     if ejemplar.publicado == 1:
                         ejemplarespub.append([ejemplar.idEjeUsuario, ejemplar.usuarioIdAct, foto, obVideojuego.nombre, ejemplar.publicado, ejemplar.bloqueado, ejemplar.valor, ejemplar.estado, ejemplar.comentario])
 
                 #for campo in ejemplar:
                 #    print(campo)
-            totejemplares = len(ejemplarespub)
-            app.logger.debug("[NO_USER] ListarEjemplaresDisponibles: hay "+ totejemplares.__str__()+" ejemplares disponibles")
+
+            app.logger.debug("[NO_USER] ListarEjemplaresDisponibles: hay "+ len(ejemplarespub).__str__()+" ejemplares disponibles")
             print("hay "+ len(ejemplarespub).__str__()+" ejemplares publicados")
             #print("hay "+ len(ejemplares).__str__()+" ejemplares")
             #for elm in ejemplares:
             #    print(ejemplares[0])
-            #app.logger.error("[" + nick + "] ListaEjemplar: Crea EjemplarUsuaro: [" + obEjeUsuario['idEjeUsuario'].str() + "]")
+            #app.logger.error("[" + email + "] ListaEjemplar: Crea EjemplarUsuaro: [" + obEjeUsuario['idEjeUsuario'].str() + "]")
 
         return ejemplarespub
     except:
         raise
-        app.logger.error("[" + nick + "] ListarEjemplaresDisponibles: Problemas al listar los ejemplares")
+        app.logger.error("[" + email + "] ListarEjemplaresDisponibles: Problemas al listar los ejemplares")
 
 #Cada vez que un ejemplar se actualiza, se crea un registro en el trace
-def funRegistrarTraceEjemplar(idEjeUsuario, nick):
+def funRegistrarTraceEjemplar(idEjeUsuario, email):
     try:
         obEjeUsuario = db.session.query(EjeUsuario).filter_by(idEjeUsuario=idEjeUsuario).first()
         obTraceEjemplar = TraceEjemplar(vjId=obEjeUsuario.vjId, ejeUsuarioId=obEjeUsuario.idEjeUsuario, usuarioId=obEjeUsuario.usuarioIdAct, comentario=obEjeUsuario.comentario, estado=obEjeUsuario.estado, valor=obEjeUsuario.valor,)
 
         db.session.add(obTraceEjemplar)
 
-        app.logger.debug("[" + nick + "] funMarcarEjemplaresUsuario: ejemplar actualizado por usuario "+nick)
+        app.logger.debug("[" + email + "] funMarcarEjemplaresUsuario: ejemplar actualizado por usuario "+email)
         db.session.commit()
     except:
         raise
-        app.logger.error("[" + nick + "] funMarcarEjemplaresUsuario: Problemas al actualizar ejemplar usuario")
+        app.logger.error("[" + email + "] funMarcarEjemplaresUsuario: Problemas al actualizar ejemplar usuario")
 
 
 # Funcion: marcar un ejemplar de usuario cómo publicado o no publicado {estado= 1 publicado, 0: no publicado}
-def funMarcarEjemplaresUsuario(nick, idEjeUsuario, estado):
+def funMarcarEjemplaresUsuario(email, idEjeUsuario, estado):
     try:
         ejeusr = EjeUsuario.query.filter_by(idEjeUsuario=idEjeUsuario).update(dict(publicado=estado))
-        app.logger.debug("[" + nick + "] funMarcarEjemplaresUsuario: ejemplar actualizadom por usuario "+nick)
+        app.logger.debug("[" + email + "] funMarcarEjemplaresUsuario: ejemplar actualizadom por usuario "+email)
         db.session.commit()
     except:
         raise
-        app.logger.error("[" + nick + "] funMarcarEjemplaresUsuario: Problemas al actualizar ejemplar usuario")
+        app.logger.error("[" + email + "] funMarcarEjemplaresUsuario: Problemas al actualizar ejemplar usuario")
 
 
 # Funcion: Obtener los datos del usuario

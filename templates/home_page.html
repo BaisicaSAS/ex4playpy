@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %}ex4play - Inicio{% endblock %}
 {% block content %}
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lemon">
 <style>
@@ -164,7 +165,7 @@
     <!--<a href= {{url_for('login')}} class="card-link">Iniciar sesion</a> -->
     {% endif %}
 
-    <div class="alert alert-info" role="alert">
+    <div class="alert alert-dark" role="alert">
       <h5>{{ mensaje }}</h5>
     </div>
 
@@ -175,57 +176,63 @@
         <input type="text" class="form-control" aria-label="Buscar videojuegos" aria-describedby="Buscar">
     </div>
 
-    <div>
-        <div class="alert alert-info" role="alert">
-          <h3>NOVEDADES</h3>
+    <div   style="background-color:#FFFFFF;">
+        <div class="alert alert-dark" role="alert">
+          <h5>NOVEDADES</h5>
         </div>
          {% set indice = namespace(cont=1) %}
+         {% set reinicia = namespace(cont=1) %}
 
          {% for vj in novedades %}
-            {% if indice.cont == 1 %}
-                <div class="row" style="display: flex; align-items: center; justify-content: center;" >
-                <div class="card-deck">
+            {% if reinicia.cont == 1 %}
+        <div class="card-deck">
             {% endif %}
-                <form name="form" action="{{url_for('registro')}}" method="get">
+            <form name="form" action="{{url_for('ejemplaresusuario')}}" method="post">
                 <input value="{{vj[0]}}" type="hidden" name="idejemplar" />
                 <div class="card" style="width: 15rem;display: flex; align-items: center; justify-content: center;">
 
-                      <div class="card-body">
+                    <div class="card-body">
                         <h5 class="card-title" align="center">{{ vj[3] }}</h5>
-                        <img class="card-img-top" style="width: 15rem;display: flex;" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
-                      </div>
-                      <ul class="list-group list-group-flush">
+                        <!--<div class="embed-responsive embed-responsive-16by9">-->
+                           <img class="card-img-top" style="display: block;margin-left: auto;margin-right: auto;width: 10rem;" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
+                           <!--<img class="card-img-top embed-responsive-item" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">-->
+                        <!--</div>-->
+                    </div>
+                    <ul class="list-group list-group-flush">
                         <li class="list-group-item">Puntos: {{ vj[6] }}</li>
                         <li class="list-group-item">Estado: {{ vj[7] }} de 10</li>
-                        <li class="list-group-item">Comentario: {{ vj[8] }}</li>
-                      </ul>
-                      <div class="card-footer">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                  <button type="submit" name="btnejemplar" value="solicitar" class="btn btn-sm btn-outline-secondary" href="{{url_for('registro')}}">Registrate para obtenerlo!</button>
-                                </div>
+                        <!--<li class="list-group-item">Comentario: {{ vj[8] }}</li>-->
+                    </ul>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="submit" name="btnejemplar" value="solicitar" class="btn btn-sm btn-outline-secondary">Quiero este juego!</button>
                             </div>
-                      </div>
+                        </div>
+                    </div>
                 </div>
             </form>
-            {% if indice.cont is divisibleby 4 or indice.cont == novedades|count %}
+            {% if indice.cont is divisibleby 5 or indice.cont == novedades|count %}
+        </div>
+        <div class="row" style="display: flex; align-items: center; justify-content: center;" >
                 </div>
-                </div>
-                {% set indice.cont = 1 %}
+                {% set reinicia.cont = 1 %}
             {% else %}
-                {% set indice.cont = indice.cont + 1 %}
+                {% set reinicia.cont = 0 %}
             {% endif %}
+            {% set indice.cont = indice.cont + 1 %}
         {% endfor %}
     </div>
 
     <div>
-        <div class="alert alert-info" role="alert">
-          <h3>OTROS VIDEOJUEGOS</h3>
+        <div class="alert alert-dark" role="alert">
+          <h5>OTROS VIDEOJUEGOS</h5>
         </div>
          {% set indice = namespace(cont=1) %}
+         {% set reinicia = namespace(cont=1) %}
 
          {% for vj in videojuegos %}
-            {% if indice.cont == 1 %}
+            {% if reinicia.cont == 1 %}
                 <div class="row" style="display: flex; align-items: center; justify-content: center;" >
                 <div class="card-deck">
             {% endif %}
@@ -246,14 +253,14 @@
                       </div>
                 </div>
             </form>
-            {% if indice.cont is divisibleby 4  or indice.cont == videojuegos|count %}
+            {% if indice.cont is divisibleby 5  or indice.cont == videojuegos|count %}
                 </div>
                 </div>
-                {% set indice.cont = 1 %}
+                {% set reinicia.cont = 1 %}
             {% else %}
-                {% set indice.cont = indice.cont + 1 %}
+                {% set reinicia.cont = 0 %}
             {% endif %}
+            {% set indice.cont = indice.cont + 1 %}
         {% endfor %}
     </div>
 {% endblock %}
-

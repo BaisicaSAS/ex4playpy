@@ -4,155 +4,6 @@
 {% block content %}
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lemon">
-<style>
-    .jumbotron {
-        background-size: 100%;
-        color: #fff;
-        font-family: Montserrat, sans-serif;
-        height: 100%;
-        width: 100%;
-    }
-
-    .bgimg-1{
-      position: relative;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      color:midnightblue;
-
-    }
-    .bgimg-1 {
-      background-image: url({{ url_for('static', filename='fondo.png') }});
-      height: 150px;
-    }
-
-    .caption {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      width: 100%;
-      text-align: center;
-      color: #000;
-    }
-
-    .caption span.border {
-      background-color: #111;
-      color: #fff;
-      padding: 18px;
-      font-size: 25px;
-      letter-spacing: 10px;
-    }
-    .w3-lobster {
-        font-family: "Lemon", serif;
-    }
-
-    #speed-title {
-        color: white;
-        font-weight: 700;
-        text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1);
-    }
-
-    #challenge-title {
-    color: #8f1d8a;
-    font-weight: 700;
-    text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1);
-    }
-
-
-
-    .pricingdiv{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
-    }
-
-    .pricingdiv ul.theplan{
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      border-top-left-radius: 50px;
-      border-bottom-right-radius: 50px;
-      color: white;
-      background: #7c3ac9;
-      position: relative;
-      width: 250px; /* width of each table */
-      margin-right: 10px; /* spacing between tables */
-      margin-bottom: 1em;
-      transition: all .5s;
-    }
-
-    .pricingdiv ul.theplan:hover{ /* when mouse hover over pricing table */
-      transform: scale(1.05);
-      transition: all .5s;
-      z-index: 100;
-      box-shadow: 0 0 10px gray;
-    }
-
-    .pricingdiv ul.theplan li{
-      margin: 10px 20px;
-      position: relative;
-    }
-
-    .pricingdiv ul.theplan li.title{
-      font-size: 150%;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 20px;
-      text-transform: uppercase;
-      border-bottom: 5px solid white;
-    }
-
-    .pricingdiv ul.theplan:nth-of-type(2){
-      background: #8f1d8a;
-    }
-
-    .pricingdiv ul.theplan:nth-of-type(3){
-      background: #2a2cc8;
-    }
-
-    .pricingdiv ul.theplan:last-of-type{ /* remove right margin in very last table */
-      margin-right: 0;
-    }
-
-    /*very last LI within each pricing UL */
-    .pricingdiv ul.theplan li:last-of-type{
-      text-align: center;
-      margin-top: auto; /*align last LI (price botton li) to the very bottom of UL */
-    }
-
-    .pricingdiv a.pricebutton{
-      background: white;
-      text-decoration: none;
-      padding: 10px;
-      display: inline-block;
-      margin: 10px auto;
-      border-radius: 5px;
-      color: navy;
-      text-transform: uppercase;
-    }
-
-    @media only screen and (max-width: 500px) {
-      .pricingdiv ul.theplan{
-        border-radius: 0;
-        width: 100%;
-        margin-right: 0;
-      }
-
-      .pricingdiv ul.theplan:hover{
-        transform: none;
-        box-shadow: none;
-      }
-
-      .pricingdiv a.pricebutton{
-        display: block;
-      }
-    }
-</style>
-
 
     <section >
         <div class="bgimg-1">
@@ -166,7 +17,7 @@
     <a href= {{url_for('login')}} class="card-link">Iniciar sesion</a>
     {% endif %}
 
-    <div class="alert alert-info" role="alert">
+    <div class="alert alert-dark" role="alert">
       <h5>{{ mensaje }}</h5>
     </div>
 
@@ -177,57 +28,69 @@
         <input type="text" class="form-control" aria-label="Buscar videojuegos" aria-describedby="Buscar">
     </div>
 
-    <div>
-        <div class="alert alert-info" role="alert">
-          <h3>NOVEDADES</h3>
+    <div style="background-color:#FFFFFF;">
+        <div class="alert alert-dark" role="alert">
+          <h5>NOVEDADES</h5>
         </div>
          {% set indice = namespace(cont=1) %}
+         {% set reinicia = namespace(cont=1) %}
 
          {% for vj in novedades %}
-            {% if indice.cont == 1 %}
+            {% if reinicia.cont == 1 %}
                 <div class="row" style="display: flex; align-items: center; justify-content: center;" >
-                <div class="card-deck">
+        <div class="card-deck">
             {% endif %}
-                <form name="form" action="{{url_for('ejemplaresusuario')}}" method="post">
+            <form name="form" action="{{url_for('ejemplaresusuario')}}" method="post">
                 <input value="{{vj[0]}}" type="hidden" name="idejemplar" />
                 <div class="card" style="width: 15rem;display: flex; align-items: center; justify-content: center;">
 
-                      <div class="card-body">
+                    <div class="card-body">
                         <h5 class="card-title" align="center">{{ vj[3] }}</h5>
-                        <img class="card-img-top" style="width: 15rem;display: flex;" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
-                      </div>
-                      <ul class="list-group list-group-flush">
+                        <!--<div class="embed-responsive embed-responsive-16by9">-->
+                           <img class="card-img-top" style="display: block;margin-left: auto;margin-right: auto;width: 10rem;" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
+                           <!--<img class="card-img-top embed-responsive-item" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">-->
+                        <!--</div>-->
+                    </div>
+                    <ul class="list-group list-group-flush">
                         <li class="list-group-item">Puntos: {{ vj[6] }}</li>
                         <li class="list-group-item">Estado: {{ vj[7] }} de 10</li>
-                        <li class="list-group-item">Comentario: {{ vj[8] }}</li>
-                      </ul>
-                      <div class="card-footer">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                  <button type="submit" name="btnejemplar" value="solicitar" class="btn btn-sm btn-outline-secondary">Quiero este juego!</button>
-                                </div>
+                        <!-- <li class="list-group-item">Comentario: {{ vj[8] }}</li> -->
+                    </ul>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="submit" name="btnejemplar" value="solicitar" class="btn btn-sm btn-outline-secondary">Quiero este juego!</button>
                             </div>
-                      </div>
+                        </div>
+                    </div>
                 </div>
             </form>
-            {% if indice.cont is divisibleby 4 or indice.cont == novedades|count %}
+            {% if indice.cont is divisibleby 5 or indice.cont == novedades|count %}
+        </div>
+        <div class="row" style="display: flex; align-items: center; justify-content: center;" >
                 </div>
                 </div>
-                {% set indice.cont = 1 %}
+                {% set reinicia.cont = 1 %}
             {% else %}
-                {% set indice.cont = indice.cont + 1 %}
+                {% set reinicia.cont = 0 %}
             {% endif %}
+            {% set indice.cont = indice.cont + 1 %}
         {% endfor %}
     </div>
 
     <div>
-        <div class="alert alert-info" role="alert">
-          <h3>OTROS VIDEOJUEGOS</h3>
+
+    </div>
+
+    <div>
+        <div class="alert alert-dark" role="alert">
+          <h5>OTROS VIDEOJUEGOS</h5>
         </div>
          {% set indice = namespace(cont=1) %}
+         {% set reinicia = namespace(cont=1) %}
 
          {% for vj in videojuegos %}
-            {% if indice.cont == 1 %}
+            {% if reinicia.cont == 1 %}
                 <div class="row" style="display: flex; align-items: center; justify-content: center;" >
                 <div class="card-deck">
             {% endif %}
@@ -248,13 +111,14 @@
                       </div>
                 </div>
             </form>
-            {% if indice.cont is divisibleby 4  or indice.cont == videojuegos|count %}
+            {% if indice.cont is divisibleby 5  or indice.cont == videojuegos|count %}
                 </div>
                 </div>
-                {% set indice.cont = 1 %}
+                {% set reinicia.cont = 1 %}
             {% else %}
-                {% set indice.cont = indice.cont + 1 %}
+                {% set reinicia.cont = 0 %}
             {% endif %}
+            {% set indice.cont = indice.cont + 1 %}
         {% endfor %}
     </div>
 {% endblock %}
