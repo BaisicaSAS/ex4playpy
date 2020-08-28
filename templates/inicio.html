@@ -15,22 +15,28 @@
 
     {% if logged == 0 %}
     <a href= {{url_for('login')}} class="card-link">Iniciar sesion</a>
+    <a href= {{url_for('registro')}} class="card-link">Crear cuenta</a>
     {% endif %}
 
     <div class="alert alert-dark" role="alert">
       <h5>{{ mensaje }}</h5>
     </div>
 
-    <div class="input-group" align="center">
-        <div class="input-group-prepend">
-            <span class="input-group-text"  id="buscar">Buscar videojuegos</span>
+    <form name="form" action="{{url_for('buscar')}}" method="post">
+        <div class="input-group" align="center">
+            <div class="input-group-prepend">
+                <span class="input-group-text"  id="buscar">Buscar juego</span>
+            </div>
+            <input type="text" class="form-control" id="busqueda" name="busqueda" aria-label="Buscar videojuegos" aria-describedby="Buscar">
+            <div class="input-group-append">
+               <button class="btn btn-outline-secondary" type="button">Buscar</button>
+            </div>
         </div>
-        <input type="text" class="form-control" aria-label="Buscar videojuegos" aria-describedby="Buscar">
-    </div>
+    </form>
 
     <div style="background-color:#FFFFFF;">
         <div class="alert alert-dark" role="alert">
-          <h5>NOVEDADES</h5>
+          <h5>Novedades</h5>
         </div>
          {% set indice = namespace(cont=1) %}
          {% set reinicia = namespace(cont=1) %}
@@ -84,7 +90,7 @@
 
     <div>
         <div class="alert alert-dark" role="alert">
-          <h5>OTROS VIDEOJUEGOS</h5>
+          <h5>...más videojuegos</h5>
         </div>
          {% set indice = namespace(cont=1) %}
          {% set reinicia = namespace(cont=1) %}
@@ -92,26 +98,36 @@
          {% for vj in videojuegos %}
             {% if reinicia.cont == 1 %}
                 <div class="row" style="display: flex; align-items: center; justify-content: center;" >
-                <div class="card-deck">
+        <div class="card-deck">
             {% endif %}
-                <form name="form" action="{{url_for('ejemplaresusuario')}}" method="post">
+            <form name="form" action="{{url_for('ejemplaresusuario')}}" method="post">
+                <input value="{{vj[0]}}" type="hidden" name="idejemplar" />
                 <div class="card" style="width: 15rem;display: flex; align-items: center; justify-content: center;">
-                      <img class="card-img-top" height="50%" src="{{url_for('static', filename='defaultgame.png')}}" alt=" {{ vj.nombre }} ">
 
-                      <div class="card-body">
-                        <h5 class="card-title">{{ vj.nombre }}</h5>
-                        <p class="card-text">Videojuego que se trata de varias cosas.</p>
-                      </div>
-                      <div class="card-body">
-                        <a href="#" class="card-link">Un enlace</a>
-                        <a>  Genero: {{ vj.genero }} </a>
-                      </div>
-                      <div class="card-footer">
-                        <a href="#" class="card-link">Un enlace</a>
-                      </div>
+                    <div class="card-body">
+                        <h5 class="card-title" align="center">{{ vj[3] }}</h5>
+                        <!--<div class="embed-responsive embed-responsive-16by9">-->
+                           <img class="card-img-top" style="display: block;margin-left: auto;margin-right: auto;width: 10rem;" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
+                           <!--<img class="card-img-top embed-responsive-item" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">-->
+                        <!--</div>-->
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Puntos: {{ vj[6] }}</li>
+                        <li class="list-group-item">Estado: {{ vj[7] }} de 10</li>
+                        <!--<li class="list-group-item">Comentario: {{ vj[8] }}</li>-->
+                    </ul>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="submit" name="btnejemplar" value="solicitar" class="btn btn-sm btn-outline-secondary">Quiero este juego!</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </form>
-            {% if indice.cont is divisibleby 5  or indice.cont == videojuegos|count %}
+            {% if indice.cont is divisibleby 5 or indice.cont == videojuegos|count %}
+        </div>
+        <div class="row" style="display: flex; align-items: center; justify-content: center;" >
                 </div>
                 </div>
                 {% set reinicia.cont = 1 %}

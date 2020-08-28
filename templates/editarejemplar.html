@@ -8,55 +8,6 @@ ex4play - Publicar un ejemplar
   box-sizing: border-box;
 }
 
-.slider {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 25px;
-  background: #D3D3D3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-}
-
-.slider:hover {
-  opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  background: #FF0000;
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: #FF0000;
-  cursor: pointer;
-}
-
-.sliderticks {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10px;
-}
-
-.sliderticks p {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  width: 1px;
-  background: #D3D3D3;
-  height: 10px;
-  line-height: 40px;
-  margin: 0 0 20px 0;
-}
 
 .btn-file {
     position: relative;
@@ -95,54 +46,63 @@ ex4play - Publicar un ejemplar
           <h1><img src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:20%"></h1>
       </div>
 
-      <form class="form-signin" autocomplete="off" name="frmeditarEjemplar" method="post" action=" {{url_for('editarEjemplar',idejeusuario=ejidejeusuario)}} " enctype="multipart/form-data" style="align-items: center;padding-top: 40px;padding-bottom: 40px;background-color: #f5f5f5;">
-        <div class="col-md-6" style="position: center">
-            <input type="file" id="imgInp" name="imgInp" aria-label="Cargar imágen" aria-describedby="Cargar imágen">
-                <img style="align: center;justify-content: center;width:35%;" id='img-upload' src="data:image/jpeg;base64,{{ejimagen}}"/>
-        </div>
+      {% if editar==1 %}
+         <form class="form-signin" autocomplete="off" name="frmeditarEjemplar" method="post" action=" {{url_for('editarEjemplar',idejeusuario=ejidejeusuario)}} " enctype="multipart/form-data" style="align-items: center;padding-top: 40px;padding-bottom: 40px;background-color: #f5f5f5;">
+      {% else %}
+         <form class="form-signin" autocomplete="off" name="frmeditarEjemplar" method="post" action="" enctype="multipart/form-data" style="align-items: center;padding-top: 40px;padding-bottom: 40px;background-color: #f5f5f5;">
+      {% endif %}
 
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Nombre del Videojuego</span>
-          </div>
-         <textarea class="form-control" name="ejemplar" id="ejemplar" disabled="True" value="{{ejnombre}}" placeholder="Nombre del videojuego">{{ejnombre}}</textarea>
-        </div>
+            <div class="form-group" style="position: center">
+                <div class="input-group">
+                    <input type="file" id="imgInp" name="imgInp" value="data:image/jpeg;base64,{{ejimagen}}" aria-label="Cargar imágen" aria-describedby="Cargar imágen">
+                </div>
+                {% if ejimagen=="" %}
+                  <img style="align: center;justify-content: center;width:100%;" id='img-upload' />
+                {% else %}
+                  <img style="align: center;justify-content: center;width:100%;" value="data:image/jpeg;base64,{{ejimagen}}" id='img-upload' src="data:image/jpeg;base64,{{ejimagen}}"/>
+                {% endif %}
+            </div>
 
-        <label for="estado">Estado del videojuego: {{ejestado}} de 10 </label>
-        <input type="range" min="1" max="10" value="{{ejestado}}" name="estado" id="estado" step="1" class="slider" placeholder="Estado del videojuego">
-            <datalist id="sliderticks"><option>"1"</option><option>"2"</option><option>"3"</option>
-            <option>"4"</option><option>"5"</option><option>"6"</option><option>"7"</option>
-            <option>"8"</option><option>"9"</option><option>"10"</option>
-            </datalist>
+            <div class="form-group" style="position: center">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Nombre</span>
+                  </div>
+                  <textarea class="form-control" rows="3" aria-label="Nombre del Videojuego" name="ejemplar" id="ejemplar" disabled >{{ejnombre}}</textarea>
+                </div>
+            </div>
 
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Comentario</span>
-          </div>
-          <textarea class="form-control" aria-label="Comentario" value="{{ejcomentario}}" name="comentario" id="comentario" placeholder="Cuentanos algo de tu videojuego, hace cuanto lo tienes, etc.">{{ejcomentario}}</textarea>
-        </div>
+            <div class="form-group" style="position: center">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Estado videojuego:</span>
+                </div>
+                <input type="number" min="1" max="10" value={{ejestado}} name="estado" id="estado" >
+                <div class="input-group-prepend">
+                  <span class="input-group-text">de 10</span>
+                </div>
+             </div>
+            </div>
 
-<!--            <div class="form-check">
-          {% if ejpublicar == 0 %}
-            <input class="form-check-input" type="checkbox"  align=left value="{{ejpublicar}}" name="publicar" id="publicar">
-          {% else %}
-            <input class="form-check-input" type="checkbox"  align=left value="{{ejpublicar}}" name="publicar" id="publicar" checked>
-          {% endif %}
+            <div class="form-group" style="position: center">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Comentario</span>
+                  </div>
+                  <textarea class="form-control" rows="5" aria-label="Comentario" name="comentario" id="comentario" placeholder="Cuentanos algo de tu videojuego, hace cuanto lo tienes, etc.">{{ejcomentario}}</textarea>
+                </div>
+            </div>
 
-          <label class="form-check-label" for="publicar">
-            Publicar este ejemplar
-          </label>
-        </div>
-        <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
--->
         <hr style="color:white;background-color:white">
         <div class="input-group" style="align: center">
-          <input class="btn btn-primary" type="submit" value="Editar">
-          <input class="btn btn-primary" type="submit" value="Cancelar">
+              <input class="btn btn-primary" type="submit" name="btnejemplar" value="Guardar">
+              <input class="btn btn-primary" type="submit" name="btnejemplar" value="Cancelar">
         </div>
       </form>
     </div>
-    <script>
+</div>
+
+<script>
         function autocomplete(inp, arr) {
           /*the autocomplete function takes two arguments,
           the text field element and an array of possible autocompleted values:*/

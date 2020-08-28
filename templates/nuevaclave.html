@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}ex4play - Registro / Ingreso{% endblock %}
+{% block title %}ex4play - Cambiar clave{% endblock %}
 {% block content %}
 
 <body class="bg-overlay">
@@ -10,17 +10,22 @@
         </div>
 
         <section class="form-signin"  style="align-items: center;padding-top: 40px;padding-bottom: 40px;background-color: #f5f5f5;">
-            <h4 align="center">Cambiar Clave</h4>
+            <h4 align="center">Asigna una nueva clave</h4>
             <hr style="color:white;background-color:white">
-            <form name="frmresetclave" method="post" action=" {{url_for('resetclave') }} ">
+            <form name="frmnuevaclave" method="post" action=" {{url_for('nuevaclave') }} " onsubmit="return validaNC()">
                 <div class="form-group">
-                    <label class="col-md-2 control-label" for="email">Usuario</label>
+                    <input value="{{ email }}" type="hidden" name="email" id="email">
+                    <label class="col-md-2 control-label" for="clave1">Clave</label>
                     <div class="col-md-10">
-                        <p><input class="controls form-control" name="email" id="email" placeholder="Correo electrónico" type="text" required></p>
+                        <p><input class="controls form-control" name="clave1" id="clave1" placeholder="Clave" type="password" required></p>
+                    </div>
+                    <label class="col-md-2 control-label" for="clave2">Repetir clave</label>
+                    <div class="col-md-10">
+                        <p><input class="controls form-control" name="clave2" id="clave2" placeholder="Repetir clave" type="password" required></p>
                     </div>
                     <div class="form-group">
                         <div class="">
-                            <input type="submit" value="Enviar Clave" class="btn btn-lg btn-primary btn-block" style="margin:0px auto; display:block;"/>
+                            <input type="submit" value="Cambiar Clave" class="btn btn-lg btn-primary btn-block" style="margin:0px auto; display:block;"/>
                         </div>
                     </div>
                 </div>
@@ -34,4 +39,5 @@
         </section>
   </div>
 </body>
+
 {% endblock %}

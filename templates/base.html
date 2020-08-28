@@ -12,13 +12,80 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
     <script>
-        function validateReg() {
-           var X = document.forms["frmregistro"]["clave"].value;
-           var Y = document.forms["frmregistro"]["repetirclave"].value;
-           if ( X != Y ) {
-              alert("Las claves no son iguales");
+        function validaNC() {
+
+            var clave = document.forms["frmnuevaclave"]["clave1"].value;
+            var rclave = document.forms["frmnuevaclave"]["clave2"].value;
+
+            if ( clave == rclave ) {
+                if(clave.length >= 8 && clave.length <= 12){
+                    var mayuscula = false;
+                    var minuscula = false;
+                    var numero = false;
+
+                    for(var i = 0;i<clave.length;i++){
+                        if(clave.charCodeAt(i) >= 65 && clave.charCodeAt(i) <= 90){
+                            mayuscula = true;
+                        }
+                        else if(clave.charCodeAt(i) >= 97 && clave.charCodeAt(i) <= 122){
+                            minuscula = true;
+                        }
+                        else if(clave.charCodeAt(i) >= 48 && clave.charCodeAt(i) <= 57){
+                            numero = true;
+                        }
+                    }
+
+                    if(mayuscula == true && minuscula == true && numero == true){
+                        return true;
+                    } else {
+                        alert("La clave debe contener por lo menos un número, una letra minúscula y una mayúscula");
+                        return false;
+                    }
+                } else {
+                    alert("La clave debe tener mínimo 8 caracteres y máximo 12 y formarse por lo menos con un número, una letra minúscula y una mayúscula");
+                    return false;
+                }
+            } else {
+              alert("Las claves deben ser iguales");
               return false;
-           }
+            }
+        }
+
+        function validateReg() {
+           var clave = document.forms["frmregistro"]["clave"].value;
+           var rclave = document.forms["frmregistro"]["repetirclave"].value;
+            if ( clave == rclave ) {
+                if(clave.length >= 8 && clave.length <= 12){
+                    var mayuscula = false;
+                    var minuscula = false;
+                    var numero = false;
+
+                    for(var i = 0;i<clave.length;i++){
+                        if(clave.charCodeAt(i) >= 65 && clave.charCodeAt(i) <= 90){
+                            mayuscula = true;
+                        }
+                        else if(clave.charCodeAt(i) >= 97 && clave.charCodeAt(i) <= 122){
+                            minuscula = true;
+                        }
+                        else if(clave.charCodeAt(i) >= 48 && clave.charCodeAt(i) <= 57){
+                            numero = true;
+                        }
+                    }
+
+                    if(mayuscula == true && minuscula == true && numero == true){
+                        return true;
+                    } else {
+                        alert("La clave debe contener por lo menos un número, una letra minúscula y una mayúscula");
+                        return false;
+                    }
+                } else {
+                    alert("La clave debe tener mínimo 8 caracteres y máximo 12 y formarse por lo menos con un número, una letra minúscula y una mayúscula");
+                    return false;
+                }
+            } else {
+              alert("Las claves deben ser iguales");
+              return false;
+            }
         }
 
         $(document).ready(function(){
@@ -56,6 +123,25 @@
           });
         })
     </script>
+<script type="text/javascript">
+function mostrarPassword(){
+		var cambio = document.getElementById("clave");
+		if(cambio.type == "password"){
+			cambio.type = "text";
+			$('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+		}else{
+			cambio.type = "password";
+			$('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+		}
+	}
+
+	$(document).ready(function () {
+	//CheckBox mostrar contraseña
+	$('#ShowPassword').click(function () {
+		$('#Password').attr('type', $(this).is(':checked') ? 'text' : 'password');
+	});
+});
+</script>
     <style type="text/css" >
        body {background-image: url("{{ url_for('static', filename='fondo.png') }}") background: #3c5b6d !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
     </style>
@@ -126,15 +212,24 @@
             color: #fff !important;
         }
     </style>
+
+    <script>
+      $( function() {
+        var availableTags = {{ lista }};
+        $( "#busqueda" ).autocomplete({
+          source: availableTags
+        });
+      } );
+    </script>
+
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href= {{url_for('index')}}>ex4play</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
       <ul class="nav navbar-nav navbar-right">
          <li><a href= {{url_for('login')}}>Iniciar Sesión</a></li>
+         <li><a href= {{url_for('registro')}}>Crear cuenta</a></li>
+         <li><a href= {{url_for('resetclave')}}>Olvidé mi clave</a></li>
       </ul>
     </nav>
 {% block content %} {% endblock %}

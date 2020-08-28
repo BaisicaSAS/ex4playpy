@@ -58,6 +58,16 @@ class FotoUsuario(db.Model):
     activa = db.Column(db.Integer, default=1, nullable=False)  #0 No, #1 Si
     UsrFot = db.relationship("Usuario", lazy=True)
 
+class BusquedaUsuario(db.Model):
+    __tablename__ = 'busquedausuario'
+
+    idBusquedausuario = db.Column(db.Integer, Sequence('idbusquedausuario_seq'), primary_key=True)
+    usuarioId = db.Column(db.Integer, db.ForeignKey('usuario.idUsuario'), nullable=False)
+    busqueda = db.Column(db.String(100), nullable=False) #string de busqueda
+    resultados = db.Column(db.Integer, nullable=False)
+    fechacrea = db.Column(db.DateTime, default=datetime.datetime.now)
+    UsrBus = db.relationship("Usuario", lazy=True)
+
 #Registra los cambios de nombre, telefono, apellidos, celular.
 #Cada vez que el usuario cambia se genera registro con los datos anteriores
 class CambioUsuario(db.Model):
@@ -168,7 +178,8 @@ class EjeUsuario(db.Model):
     estado = db.Column(db.Integer, default=1)  #1 - 10 Estado físico del VJ
     fechacrea = db.Column(db.DateTime, default=datetime.datetime.now)
     publicado = db.Column(db.Integer, default=1)  #1: S - 0: N
-    bloqueado = db.Column(db.Integer, default=1)  #1: S - 0: N - Se bloquea, mientras está en una transacción, o cuando un usuario cambio en "deuda", es decir subió, recibió puntos, y con esos puntos solicita un juego, allí se bloquean juegos para que no los pueda descargar
+    bloqueado = db.Column(db.Integer, default=0)  #1: S - 0: N - Se bloquea, mientras está en una transacción, o cuando un usuario cambio en "deuda", es decir subió, recibió puntos, y con esos puntos solicita un juego, allí se bloquean juegos para que no los pueda descargar
+    cuarentena = db.Column(db.Integer, default=0)  #1: S - 0: N - Se pone en cuarentena, mientras se crea el videojuego en caso de que no exista y se haya creado
     valor = db.Column(db.Float, default=1)  #Valor en puntos o barts, heredados de la tabla VJ en cada momento, pensando en la valorización / desvalorización
     UsrEjeU = db.relationship("Usuario", lazy=True)
     UsrEjeU = db.relationship("VideoJuego", lazy=True)
