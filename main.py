@@ -587,26 +587,26 @@ def updateUser():
 
     datosUsuario = None
     if request.method == "GET":
-        if not(session) or (session['nick'] is None):
+        if not(session) or (session['email'] is None):
             app.logger.debug("[NO_USER] index: No hay sesion")
 
             return render_template('home_page.html', mensaje="Inicia Sesión o Registrate y disfruta!")
         else:
             if db.session is not None:
-                nick = session['nick']
+                nick = session['email']
                 usuario = db.session.query(Usuario).filter_by(nickName=nick).first()
                 datosUsuario = funObtenerDatosUsuario(usuario.idUsuario)
                 datosUsuario.fechanac = datosUsuario.fechanac.strftime("%Y-%m-%d")
 
     if request.method == "POST":
-        if not(session) or (session['nick'] is None):
+        if not(session) or (session['email'] is None):
             app.logger.debug("[NO_USER] index: No hay sesion")
             return render_template('home_page.html', mensaje="Inicia Sesión o Registrate y disfruta!")
         else:
             if session is not None:
-                nick = session['nick']
-                print("nick:" + nick)
-                obUsuario = db.session.query(Usuario).filter_by(nickName=nick).one_or_none()
+                nick = session['email']
+                print("email:" + nick)
+                obUsuario = db.session.query(Usuario).filter_by(email=nick).one_or_none()
                 if obUsuario is not None:
                     usrid = obUsuario.idUsuario
                     imagen = request.files["imgInp"]

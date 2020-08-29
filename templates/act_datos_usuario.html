@@ -2,180 +2,147 @@
 {% block title %}ex4play - Actualizar Datos{% endblock %}
 {% block content %}
 
-<style>
-    .bg-overlay {
-        background: url("{{ url_for('static', filename='Dark.jpg') }}");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        color: #fff;
-        height: 450px;
-        background-attachment: fixed;
-    }
-    .header {
-        text-align: center;
-    }
+<html>
 
-    .header h1 {
-        font-size: 50px;
-        color: #fff;
-        font-family: Montserrat, sans-serif;
-        letter-spacing: 3px;
-        margin: 0 auto;
-    }
+    <head>
+    <title>Flask app</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
 
-    .content {
-        background: rgba(91, 86, 248, 1); /* Black background with transparency */
-        color: #f1f1f1;
-        padding: 20px;
-        align-content: center;
-        justify-content: center; /* center horizontally */
-        align-items: center; /* center vertically */
-        margin: 0 auto;
-        width: 50%;
-        border-radius:10px;
-    }
+    <script>
+    $(function () {
+        $('#nav-profile-tab li:last-child a').tab('show')
+    })
+    $('#myDropdown').on('show.bs.dropdown', function () {
+    // do something...
+    })
 
-    h4, .h4 {
-        font-size: 18px;
-        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    }
+    $(document).ready( function() {
+        function readURL(input)
+        {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
 
-</style>
+                reader.onload = function (e) {
+                    $('#imgUser').attr('src', e.target.result);
+                }
 
-<script>
-$(function () {
-    $('#nav-profile-tab li:last-child a').tab('show')
-})
-$('#myDropdown').on('show.bs.dropdown', function () {
-// do something...
-})
-
-$(document).ready( function() {
-    function readURL(input)
-    {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('#imgUser').attr('src', e.target.result);
+                reader.readAsDataURL(input.files[0]);
             }
-
-            reader.readAsDataURL(input.files[0]);
         }
-    }
-     $('#imgInp').change(function(){
-		    readURL(this);
-	  });
-});
+         $('#imgInp').change(function(){
+                readURL(this);
+          });
+    });
 
-</script>
+    </script>
 
-<body class="bg-overlay">
-        <div style="display: flex; align-items: center; justify-content: center;"> <h1>{{ mensaje }} </h1> </div>
-    <div class="container body-content">
-            <div class="header">
-                <h1><img src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:35%"></h1>
-            </div>
-        <div class="content">
-            <h2 style="text-align: center;">Actualizar Datos</h2>
-            <hr style="color:white;background-color:white">
-            <p>Utilice las siguientes opciones para actualizar y ver información referente a su usuario: </p>
-
-
-            <nav>
-                <div class="nav nav-pills mb-3" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Datos Generales</a>
-                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Direcciones</a>
-                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Puntos</a>
+    <body class="bg-overlay">
+            <div style="display: flex; align-items: center; justify-content: center;"> <h1>{{ mensaje }} </h1> </div>
+        <div class="container body-content">
+                <div class="header">
+                    <h1><img src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:35%"></h1>
                 </div>
-            </nav>
-            <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                    <div class="form-signin">
-                        <section class="form-register">
-                            <form name="frmActUser" method="post" action=" {{url_for('updateUser') }} " enctype="multipart/form-data">
-                                <div class="form-group">
-                                    <label for="nickname"><b>Foto usuario:</b></label>
-                                    <img class="img-thumbnail" alt="Cinque Terre" style="width:50%" id='imgUser'/>
-                                </div>
-                                <div class="form-group">
-                                    <input type="file" class="form-control-file" id="imgInp" name="imgInp" aria-label="Cargar imágen" aria-describedby="Cargar imágen">
-                                </div>
-                                <div class="form-group">
-                                  <label for="nickname"><b>Nickname</b></label>
-                                  <input type="text" class="form-control" id="nickname" placeholder="Nickname del usuario" value="{{usuario.nickName}}" disabled>
-                                </div>
-                                <div class="form-group">
-                                    <label for="nombres"><b>Nombres</b></label>
-                                    <input type="text" class="form-control" id="nombres" name="nombres" placeholder="Nombres del usuario" value="{{usuario.nombres}}">
-                                </div>
-                                <div class="form-group">
-                                    <label for="apellidos"><b>Apellidos</b></label>
-                                    <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Apellidos del usuario" value="{{usuario.apellidos}}">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email"><b>Email</b></label>
-                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="usuario@correo.com" value="{{usuario.email}}" disabled>
-                                    <small id="emailHelp" class="form-text text-muted">Su correo no será compartido.</small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="edad"><b>Edad</b></label>
-                                    <input type="number" class="form-control" id="edad" name="edad" placeholder="Edad" style="width:100px" value="{{usuario.edad}}">
-                                </div>
-                                <div class="form-group">
-                                    <label for="genero"><b>Genero</b></label>
-                                    <select id="genero" class="form-control" name="genero" value="{{usuario.genero}}">
-                                        <option value="0">Masculino</option>
-                                        <option value="1">Femenino</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="fecha"><b>Fecha Nacimiento</b></label>
-                                    <input type="date" class="form-control" id="fecha" name="fecha" value="{{usuario.fechanac}}">
-                                </div>
-                                <div class="form-group">
-                                    <label for="celular"><b>Celular</b></label>
-                                    <input type="number" class="form-control" id="celular" name="celular">
-                                </div>
-                                <div class="form-group">
-                                <div >
-                                    <input type="submit" value="Guardar" class="btn btn-lg btn-primary btn-block" style="margin:0px auto; display:block;"/>
-                                </div>
-                            </div>
-                            </form>
-                        </section>
+            <div class="content">
+                <h2 style="text-align: center;">Actualizar Datos</h2>
+                <hr style="color:white;background-color:white">
+                <p>Utilice las siguientes opciones para actualizar y ver información referente a su usuario: </p>
+
+
+                <nav>
+                    <div class="nav nav-pills mb-3" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Datos Generales</a>
+                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Direcciones</a>
+                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Puntos</a>
                     </div>
-                </div>
-                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                    {{map.html}}{{map.js}}
-                    <br>
-                    <div class="form-signin">
-                        <section class="form-register">
-                             <div class="form-group">
-                                <label for="dir1"><b>Dirección Principal:</b></label>
-                                <input type="text" class="form-control" id="dir1" name="dir1" placeholder="Dirección Principal">
-                             </div>
-                            <div class="form-group">
-                                <label for="dir2"><b>Dirección 2:</b></label>
-                                <input type="text" class="form-control" id="dir2" name="dir2" placeholder="Dirección 2">
-                             </div>
-                            <div class="form-group">
-                                <label for="dir3"><b>Dirección 3:</b></label>
-                                <input type="text" class="form-control" id="dir3" name="dir3" placeholder="Dirección 3">
-                             </div>
-                            <div class="form-group">
-                                <label for="dir4"><b>Dirección 4:</b></label>
-                                <input type="text" class="form-control" id="dir4" name="dir4" placeholder="Dirección 4">
-                             </div>
-                        </section>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <div class="form-signin">
+                            <section class="form-register">
+                                <form name="frmActUser" method="post" action=" {{url_for('updateUser') }} " enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <label for="nickname"><b>Foto usuario:</b></label>
+                                        <img class="img-thumbnail" alt="Cinque Terre" style="width:50%" id='imgUser'/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="file" class="form-control-file" id="imgInp" name="imgInp" aria-label="Cargar imágen" aria-describedby="Cargar imágen">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="nickname"><b>Nickname</b></label>
+                                      <input type="text" class="form-control" id="nickname" placeholder="Nickname del usuario" value="{{usuario.nickName}}" disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nombres"><b>Nombres</b></label>
+                                        <input type="text" class="form-control" id="nombres" name="nombres" placeholder="Nombres del usuario" value="{{usuario.nombres}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="apellidos"><b>Apellidos</b></label>
+                                        <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Apellidos del usuario" value="{{usuario.apellidos}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email"><b>Email</b></label>
+                                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="usuario@correo.com" value="{{usuario.email}}" disabled>
+                                        <small id="emailHelp" class="form-text text-muted">Su correo no será compartido.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="edad"><b>Edad</b></label>
+                                        <input type="number" class="form-control" id="edad" name="edad" placeholder="Edad" style="width:100px" value="{{usuario.edad}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="genero"><b>Genero</b></label>
+                                        <select id="genero" class="form-control" name="genero" value="{{usuario.genero}}">
+                                            <option value="0">Masculino</option>
+                                            <option value="1">Femenino</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="fecha"><b>Fecha Nacimiento</b></label>
+                                        <input type="date" class="form-control" id="fecha" name="fecha" value="{{usuario.fechanac}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="celular"><b>Celular</b></label>
+                                        <input type="number" class="form-control" id="celular" name="celular">
+                                    </div>
+                                    <div class="form-group">
+                                    <div >
+                                        <input type="submit" value="Guardar" class="btn btn-lg btn-primary btn-block" style="margin:0px auto; display:block;"/>
+                                    </div>
+                                </div>
+                                </form>
+                            </section>
+                        </div>
                     </div>
-                </div>
-                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                <p>Sint sit mollit irure quis est nostrud cillum consequat Lorem esse do quis dolor esse fugiat sunt do. Eu ex commodo veniam Lorem aliquip laborum occaecat qui Lorem esse mollit dolore anim cupidatat. Deserunt officia id Lorem nostrud aute id commodo elit eiusmod enim irure amet eiusmod qui reprehenderit nostrud tempor. Fugiat ipsum excepteur in aliqua non et quis aliquip ad irure in labore cillum elit enim. Consequat aliquip incididunt ipsum et minim laborum laborum laborum et cillum labore. Deserunt adipisicing cillum id nulla minim nostrud labore eiusmod et amet. Laboris consequat consequat commodo non ut non aliquip reprehenderit nulla anim occaecat. Sunt sit ullamco reprehenderit irure ea ullamco Lorem aute nostrud magna.</p>
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        {{map.html}}{{map.js}}
+                        <br>
+                        <div class="form-signin">
+                            <section class="form-register">
+                                 <div class="form-group">
+                                    <label for="dir1"><b>Dirección Principal:</b></label>
+                                    <input type="text" class="form-control" id="dir1" name="dir1" placeholder="Dirección Principal">
+                                 </div>
+                                <div class="form-group">
+                                    <label for="dir2"><b>Dirección 2:</b></label>
+                                    <input type="text" class="form-control" id="dir2" name="dir2" placeholder="Dirección 2">
+                                 </div>
+                                <div class="form-group">
+                                    <label for="dir3"><b>Dirección 3:</b></label>
+                                    <input type="text" class="form-control" id="dir3" name="dir3" placeholder="Dirección 3">
+                                 </div>
+                                <div class="form-group">
+                                    <label for="dir4"><b>Dirección 4:</b></label>
+                                    <input type="text" class="form-control" id="dir4" name="dir4" placeholder="Dirección 4">
+                                 </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <p>Sint sit mollit irure quis est nostrud cillum consequat Lorem esse do quis dolor esse fugiat sunt do. Eu ex commodo veniam Lorem aliquip laborum occaecat qui Lorem esse mollit dolore anim cupidatat. Deserunt officia id Lorem nostrud aute id commodo elit eiusmod enim irure amet eiusmod qui reprehenderit nostrud tempor. Fugiat ipsum excepteur in aliqua non et quis aliquip ad irure in labore cillum elit enim. Consequat aliquip incididunt ipsum et minim laborum laborum laborum et cillum labore. Deserunt adipisicing cillum id nulla minim nostrud labore eiusmod et amet. Laboris consequat consequat commodo non ut non aliquip reprehenderit nulla anim occaecat. Sunt sit ullamco reprehenderit irure ea ullamco Lorem aute nostrud magna.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
+</html>
 {% endblock %}

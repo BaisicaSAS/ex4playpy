@@ -1,0 +1,37 @@
+.bg-overlay {
+        background: url("../../static/Dark.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        color: #fff;
+        height: 450px;
+        background-attachment: fixed;
+    }
+    .header {
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 50px;
+        color: #fff;
+        font-family: Montserrat, sans-serif;
+        letter-spacing: 3px;
+        margin: 0 auto;
+    }
+
+    .content {
+        background: rgba(91, 86, 248, 1); /* Black background with transparency */
+        color: #f1f1f1;
+        padding: 20px;
+        align-content: center;
+        justify-content: center; /* center horizontally */
+        align-items: center; /* center vertically */
+        margin: 0 auto;
+        width: 50%;
+        border-radius:10px;
+    }
+
+    h4, .h4 {
+        font-size: 18px;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
