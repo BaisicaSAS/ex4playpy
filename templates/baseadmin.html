@@ -1,72 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}{% endblock %}</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-        <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-
-    <script>
-        function validateReg() {
-           var X = document.forms["frmregistro"]["clave"].value;
-           var Y = document.forms["frmregistro"]["repetirclave"].value;
-           if ( X != Y ) {
-              alert("Las claves no son iguales");
-              return false;
-           }
-        }
-
-        $(document).ready(function(){
-          // Add smooth scrolling to all links in navbar + footer link
-          $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-              // Prevent default anchor click behavior
-              event.preventDefault();
-
-              // Store hash
-              var hash = this.hash;
-
-              // Using jQuery's animate() method to add smooth page scroll
-              // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-              $('html, body').animate({
-                scrollTop: $(hash).offset().top
-              }, 900, function(){
-
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-              });
-            } // End if
-          });
-
-          $(window).scroll(function() {
-            $(".slideanim").each(function(){
-              var pos = $(this).offset().top;
-
-              var winTop = $(window).scrollTop();
-                if (pos < winTop + 600) {
-                  $(this).addClass("slide");
-                }
-            });
-          });
-        })
-    </script>
     <style type="text/css" >
        body {background-image: url("{{ url_for('static', filename='fondo.png') }}") background: #3c5b6d !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
-    </style>
-    <style>
+
+        .form-signin {
+          width: 100%;
+          max-width: 330px;
+          padding: 15px;
+          margin: auto;
+        }
+        .form-signin .checkbox {
+          font-weight: 400;
+        }
+        .form-signin .form-control {
+          position: relative;
+          box-sizing: border-box;
+          height: auto;
+          padding: 10px;
+          font-size: 16px;
+        }
+        .form-signin .form-control:focus {
+          z-index: 2;
+        }
+        .form-signin input[type="email"] {
+          margin-bottom: -1px;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+        .form-signin input[type="password"] {
+          margin-bottom: 10px;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+
         .container {
             width: 98%;
         }
@@ -155,8 +129,6 @@
     font-weight: 700;
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1);
     }
-
-
 
     .pricingdiv{
       display: flex;
@@ -250,15 +222,6 @@
     }
 </style>
 
-<script>
-  $( function() {
-    var availableTags = {{lista}};
-    $( "#busqueda" ).autocomplete({
-      source: availableTags
-    });
-  } );
-</script>
-
 </head>
 <body>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -268,10 +231,10 @@
     <nav class="navbar navbar-dark bg-dark ">
       <a class="navbar-brand" href= {{url_for('index')}}>ex4play</a>
       <ul class="nav navbar-nav navbar-right">
-         <li><a href="{{url_for('ejemplaresusuario') }}">Mis videojuegos</a></li>
-         <li><a href="{{url_for('cargarEjemplar') }}">Publicar un videojuego</a></li>
-         <li><a href="#">Videojuegos negociados</a></li>
-         <li><a href="{{url_for('updateUser') }}">Perfil</a></li>
+         <li><a href="{{url_for('videojuegosporcrear') }}">Videojuegos sin crear</a></li>
+         <li><a href="{{url_for('actividadusuarios') }}">Actividad de usuarios</a></li>
+         <li><a href="{{url_for('juegosmasbuscados') }}">Videojuegos más intercambiados / Palabras más buscadas</a></li>
+         <li><a href="{{url_for('usuariosmascambian') }}">Perfiles con más movimiento (Cambios de perfil, cambios de ubicación)</a></li>
          <li><a href="{{url_for('logout') }}">Cerrar sesión</a></li>
       </ul>
     </nav>

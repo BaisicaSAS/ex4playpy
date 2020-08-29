@@ -93,41 +93,55 @@ ex4play - Publicar un ejemplar
         </div>
 
         <form class="form-signin" autocomplete="off" name="frmcargarEjemplar" method="post" action=" {{url_for('cargarEjemplar')}} " enctype="multipart/form-data"  style="align-items: center;padding-top: 40px;padding-bottom: 40px;background-color: #f5f5f5;">
-            <div class="col-md-6" style="position: center;">
-                <input type="file" id="imgInp" name="imgInp" aria-label="Cargar imágen" aria-describedby="Cargar imágen">
-                    <img style="align: center;justify-content: center;width:45%;" id='img-upload'/>
+            <div class="form-group" style="position: center">
+                <div class="input-group">
+                    <input type="file" id="imgInp" name="imgInp" aria-label="Cargar imágen" aria-describedby="Cargar imágen">
+                </div>
+                <img style="align: center;justify-content: center;width:100%;" id='img-upload'/>
             </div>
 
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text">Nombre del Videojuego</span>
-              </div>
-              <textarea name="ejemplar" id="ejemplar" placeholder="Nombre del videojuego"></textarea>
+            <div class="form-group" style="position: center">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Nombre</span>
+                  </div>
+                  <textarea class="form-control" rows="3" aria-label="Nombre del Videojuego" name="ejemplar" id="ejemplar" placeholder="Nombre del videojuego"></textarea>
+                </div>
             </div>
 
-            <label for="estado">Estado del videojuego </label>
-            <input type="range" min="1" max="10" value="1" name="estado" id="estado" step="1" class="slider" placeholder="Estado del videojuego">
-                <datalist id="sliderticks"><option>"1"</option><option>"2"</option><option>"3"</option>
-                <option>"4"</option><option>"5"</option><option>"6"</option><option>"7"</option>
-                <option>"8"</option><option>"9"</option><option>"10"</option>
-                </datalist>
 
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text">Comentario</span>
-              </div>
-              <textarea class="form-control" aria-label="Comentario" name="comentario" id="comentario" placeholder="Cuentanos algo de tu videojuego, hace cuanto lo tienes, etc."></textarea>
+            <div class="form-group" style="position: center">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Estado videojuego:</span>
+                </div>
+                <input type="number" min="1" max="10" value="1" name="estado" id="estado" >
+                <div class="input-group-prepend">
+                  <span class="input-group-text">de 10</span>
+                </div>
+             </div>
             </div>
 
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox"  align=left value="1" name="publicar" id="publicar">
-              <label class="form-check-label" for="publicar">
-                 Publicar este ejemplar
-              </label>
+            <div class="form-group" style="position: center">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Comentario</span>
+                  </div>
+                  <textarea class="form-control" rows="5" aria-label="Comentario" name="comentario" id="comentario" placeholder="Cuentanos algo de tu videojuego, hace cuanto lo tienes, etc."></textarea>
+                </div>
             </div>
 
-            <p>Al publicarlo, estoy de acuerdo con los <a href="#">Terminos y Condiciones</a></p>
-            <input class="btn btn-primary" type="submit" value="Cargar">
+
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input"  align="right" value="1" name="publicar" id="publicar">
+                <label class="form-check-label" for="publicar">Publicar este ejemplar</label>
+            </div>
+
+            <div class="form-group" style="position: center">
+                <p>Al publicarlo, estoy de acuerdo con los <a href="#">Terminos y Condiciones</a></p>
+                <input class="btn btn-primary" type="submit" value="Cargar">
+            </div>
+
         </form>
     </div>
  </div>

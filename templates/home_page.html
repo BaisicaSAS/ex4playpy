@@ -19,9 +19,14 @@
                 <h1><img src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:65%"></h1>
             </div>
         </div>
-        {% if logged == 0 %}
-        <!--<a href= {{url_for('login')}} class="card-link">Iniciar sesion</a> -->
-        {% endif %}
+
+    {% if confirmarusr == 1 %}
+    <section >
+        <div class="alert alert-dark" align="center" role="alert">
+            <strong><h3><a href="{{url_confirma}}">{{accion}}</a></h3></strong>
+        </div>
+    </section>
+    {% endif %}
 
         <div style="background-color:#444;">
             <div class="alert alert-dark" role="alert">

@@ -2,7 +2,7 @@
 {% block title %}ex4play{% endblock %}
 
 {% block content %}
-    <div  style="background-color:#e6eaf7">
+    <div  style="background-color:#e6eaf7;align-items: center; justify-content: center;">
 
 
     {% if logged == 0 %}
@@ -28,16 +28,16 @@
 
              {% for vj in vjpub %}
                 {% if reinicia.cont == 1 %}
-                    <div class="row" style="display: flex; align-items: center; justify-content: center;" >
-                    <div class="card-deck" style="display: flex; justify-content: center;" >
+                    <div class="row" style="align-items: center; justify-content: center;" >
+                    <div class="card-deck" style="justify-content: center;" >
                 {% endif %}
                     <form name="form" action="{{url_for('ejemplaresusuario')}}" method="post">
                     <input value="{{vj[0]}}" type="hidden" name="idejemplar">
-                    <div class="card" style="width: 15rem;display: flex; align-items: center; justify-content: center;" >
+                    <div class="card" style="width: 15rem;align-items: center; justify-content: center;" >
 
                           <div class="card-body">
                             <h5 class="card-title" align="center">{{vj[3]}}</h5>
-                            <img class="card-img-top" style="display: block;margin-left: auto;margin-right: auto;width: 10rem;" src="data:image/jpeg;base64,{{vj[2]}} " alt=" {{vj[3]}} " >
+                            <img class="card-img-top" style="display: block;margin-left: auto;margin-right: auto;width: 15rem;" src="data:image/jpeg;base64,{{vj[2]}} " alt=" {{vj[3]}} " >
                           </div>
                           <ul class="list-group list-group-flush">
                             <li class="list-group-item">Puntos: {{vj[6]}}</li>
@@ -71,16 +71,16 @@
 
              {% for vj in vjnopub %}
                 {% if reinicia.cont == 1 %}
-                    <div class="row" style="display: flex; align-items: center; justify-content: center;" >
-                    <div class="card-deck"  style="display: flex; justify-content: center;" >
+                    <div class="row" style="align-items: center; justify-content: center;" >
+                    <div class="card-deck"  style="justify-content: center;" >
                 {% endif %}
                     <form name="form" action="{{url_for('ejemplaresusuario')}}"  method="post">
                     <input value="{{vj[0]}}" type="hidden" name="idejemplar">
-                    <div class="card" style="width: 15rem;display: flex; align-items: center; justify-content: center;">
+                    <div class="card" style="width: 15rem;align-items: center; justify-content: center;">
 
                           <div class="card-body">
                             <h5 class="card-title" align="center">{{vj[3]}}</h5>
-                            <img class="card-img-top" style="display: block;margin-left: auto;margin-right: auto;width: 10rem;" src="data:image/jpeg;base64,{{vj[2]}} " alt=" {{vj[3]}} " >
+                            <img class="card-img-top" style="display: block;margin-left: auto;margin-right: auto;width: 15rem;" src="data:image/jpeg;base64,{{vj[2]}} " alt=" {{vj[3]}} " >
                           </div>
                           <ul class="list-group list-group-flush">
                             <li class="list-group-item">Puntos: {{vj[6]}}</li>
@@ -114,16 +114,16 @@
 
              {% for vj in vjblk %}
                 {% if reinicia.cont == 1 %}
-                    <div class="row" style="display: flex; align-items: center; justify-content: center;" >
-                    <div class="card-deck"  style="display: flex; justify-content: center;" >
+                    <div class="row" style="align-items: center; justify-content: center;" >
+                    <div class="card-deck"  style="justify-content: center;" >
                 {% endif %}
                     <form name="form" action="{{url_for('ejemplaresusuario')}}" method="post">
                     <input value="{{vj[0]}}" type="hidden" name="idejemplar">
-                    <div class="card" style="width: 15rem;display: flex; align-items: center; justify-content: center;">
+                    <div class="card" style="width: 15rem;align-items: center; justify-content: center;">
 
                           <div class="card-body">
                             <h5 class="card-title" align="center">{{vj[3]}}</h5>
-                            <img class="card-img-top" style="display: block;margin-left: auto;margin-right: auto;width: 10rem;" src="data:image/jpeg;base64,{{vj[2]}} " alt=" {{vj[3]}} " >
+                            <img class="card-img-top" style="display: block;margin-left: auto;margin-right: auto;width: 15rem;" src="data:image/jpeg;base64,{{vj[2]}} " alt=" {{vj[3]}} " >
                           </div>
                           <ul class="list-group list-group-flush">
                             <li class="list-group-item">Puntos: {{vj[6]}}</li>
