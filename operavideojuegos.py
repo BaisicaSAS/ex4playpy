@@ -1,5 +1,6 @@
 from flask import Flask
-from datamodel import db, Usuario, EjeUsuario, VideoJuego, Clasificacion, FotoEjeUsuario, TraceEjemplar
+from datamodel import db, Usuario, EjeUsuario, VideoJuego, Clasificacion, FotoEjeUsuario, TraceEjemplar, \
+    Promo, DetalleValorOtros
 from datetime import datetime, timedelta
 import base64
 #from PIL import Image
@@ -9,6 +10,13 @@ app = Flask(__name__)
 # Constantes para las consultas de videojuegos: Cantidad de ideojuegos y tiempo en días para que sea novedad
 C_DIAS = 30
 C_CANTIDAD = 10
+# Constantes para los tipos de promocion
+C_REGISTRO = "RG"
+C_INTERCAMBIO = "IC"
+C_ENTREGAVJ = "EV"
+C_RESENA = "RS"
+C_CALIFICA = "CF"
+C_PROMOCION = 1
 
 ###
 ###Archivo que contiene todas las operaciones relacionadas con el
@@ -55,13 +63,39 @@ def funCargarEjemplar(email, idUsuario, VJ, estado, publicar, comentario, imagen
             mensaje = mensaje + "Publicamos tu videojuego "
             valor = clasif.valorPuntos
 
+        # Al cargar un ejemplar siempre revisa que sea el primero
+        obUsuario = db.session.query(Usuario).filter_by(email=email).first()
+        cantvj = db.session.query(EjeUsuario).filter_by(usuarioIdAct=obUsuario.idUsuario).count()
+        print("Cantidad de VJ :"+str(cantvj))
+        #Si es el primer videojuego --es decir no hay ninguno creado
+        if cantvj == 0:
+            print("Ingresa :" + str(cantvj))
+            # ...y tenga una promo activa de tipo RG
+            # Esta promo cargará los puntos de la promo gratis en la tabla DetalleValorOtros.
+            promo = db.session.query(Promo).filter_by(activa=1).filter_by(aplicasobre=C_REGISTRO).first()
+            puntos = promo.puntos
+
+            # Al publicarlo, el videojuego queda "comprometido"...no puede ser editado está en cuarentena
+            # pero debe ser publicado...ese estado
+
+            comprometido=1
+
+            obDeVaOtr = DetalleValorOtros(usuarioId=obUsuario.idUsuario, promoId=promo.idPromo, tipo=C_PROMOCION,\
+                                          valorCobra=puntos, comentario=promo.descripcion)
+            db.session.add(obDeVaOtr)
+
+            mensaje = obUsuario.nombres + ", lo hiciste!. Tienes tus primeros " +str(puntos)+ " puntos. Ya puedes obtener un videojuego!"
+        else:
+            comprometido=0
+
         #crea el ejemplar del videojuego
-        ejeUsuario = EjeUsuario(usuarioIdAct=idUsuario, vjId=obVj.idVj, comentario=comentario,
-                                estado=estado, valor=valor, publicado=publicado, cuarentena=cuarentena)
+        ejeUsuario = EjeUsuario(usuarioIdAct=idUsuario, vjId=obVj.idVj, comentario=comentario, estado=estado,
+                                valor=valor, publicado=publicado, cuarentena=cuarentena, comprometido=comprometido)
 
         db.session.add(ejeUsuario)
 
-        ejeUsuario = db.session.query(EjeUsuario).filter_by(usuarioIdAct=idUsuario, vjId=obVj.idVj, publicado=publicado, estado=estado).first()
+        ejeUsuario = db.session.query(EjeUsuario).filter_by(usuarioIdAct=idUsuario, vjId=obVj.idVj,\
+                                                            publicado=publicado, estado=estado).first()
 
         vfoto = imagen.read()
 
@@ -110,13 +144,13 @@ def funListarEjemplaresUsuario(idUsuario):
 
                 #Si el ejemplar está bloqueado
                 if (ejemplar.bloqueado == 1 or ejemplar.cuarentena == 1) :
-                    ejemplaresblk.append([ejemplar.idEjeUsuario, idUsuario, foto, obVideojuego.nombre, ejemplar.publicado, ejemplar.bloqueado, ejemplar.valor, ejemplar.estado, ejemplar.comentario])
+                    ejemplaresblk.append([ejemplar.idEjeUsuario, idUsuario, foto, obVideojuego.nombre, ejemplar.publicado, ejemplar.bloqueado, ejemplar.valor, ejemplar.estado, ejemplar.comentario, ejemplar.comprometido])
                 else:
                     # Si el ejemplar no está publicado
                     if ejemplar.publicado == 1:
-                        ejemplarespub.append([ejemplar.idEjeUsuario, idUsuario, foto, obVideojuego.nombre, ejemplar.publicado, ejemplar.bloqueado, ejemplar.valor, ejemplar.estado, ejemplar.comentario])
+                        ejemplarespub.append([ejemplar.idEjeUsuario, idUsuario, foto, obVideojuego.nombre, ejemplar.publicado, ejemplar.bloqueado, ejemplar.valor, ejemplar.estado, ejemplar.comentario, ejemplar.comprometido])
                     else:
-                        ejemplaresnopub.append([ejemplar.idEjeUsuario, idUsuario, foto, obVideojuego.nombre, ejemplar.publicado, ejemplar.bloqueado, ejemplar.valor, ejemplar.estado, ejemplar.comentario])
+                        ejemplaresnopub.append([ejemplar.idEjeUsuario, idUsuario, foto, obVideojuego.nombre, ejemplar.publicado, ejemplar.bloqueado, ejemplar.valor, ejemplar.estado, ejemplar.comentario, ejemplar.comprometido])
                 #for campo in ejemplar:
                 #    print(campo)
             totejemplares = len(ejemplaresblk) + len(ejemplarespub) + len(ejemplaresnopub)

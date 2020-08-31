@@ -5,7 +5,7 @@ from flask import Flask, request, redirect, render_template, session, current_ap
 from config import ProductionConfig, DevelopmentConfig, Config
 from datamodel import db, Usuario, ConexionUsuario, VideoJuego, EjeUsuario, FotoEjeUsuario, BusquedaUsuario
 from operavideojuegos import funCargarEjemplar, funListarEjemplaresUsuario, funMarcarEjemplaresUsuario, \
-    funListarEjemplaresDisponibles, funEditarEjemplar, funListarNombresVJ
+    funListarEjemplaresDisponibles, funEditarEjemplar, funListarNombresVJ, funObtenerDatosUsuario, funUpdateDatosUsuario
 from passlib.hash import sha256_crypt
 import logging
 from sqlalchemy.exc import IntegrityError
@@ -96,8 +96,9 @@ def index():
         else:
             app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S")+"["+session['email']+"] index: Hay sesion")
 
-        print("index: cantidad de registros de VJ" + str(len(g_nombres)))
-        return render_template('inicio.html', mensaje="Bienvenido "+session['email'], videojuegos=videojuegos, novedades=novedades, logged=1, lista=g_nombres)
+        print("index: cantidad de registros de VJ " + str(len(g_nombres)))
+        usuario = db.session.query(Usuario).filter_by(email=session['email']).first()
+        return render_template('inicio.html', usuario=usuario.nickName, mensaje="Bienvenido "+session['email'], videojuegos=videojuegos, novedades=novedades, logged=1, lista=g_nombres)
 
 
 # Funcion: buscar
@@ -133,7 +134,8 @@ def buscar():
             app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S")+"["+session['email']+"] index: Hay sesion")
 
         print("buscar: cantidad de registros de VJ" + str(len(g_nombres)))
-        return render_template('inicio.html', mensaje="Bienvenido "+session['email'], videojuegos=videojuegos, novedades=novedades, logged=1, lista=g_nombres)
+        usuario = db.session.query(Usuario).filter_by(email=session['email']).first()
+        return render_template('inicio.html', usuario=usuario.nickName, mensaje="Bienvenido "+session['email'], videojuegos=videojuegos, novedades=novedades, logged=1, lista=g_nombres)
 
 
 # Funcion: login
@@ -187,11 +189,12 @@ def login():
                             novedades.append(reg)
 
                         print("login: cantidad de registros de VJ" + str(len(g_nombres)))
-                        return render_template('inicio.html', mensaje="Ya estabas logueado " + email, videojuegos=videojuegos, novedades=novedades, logged=1, lista=g_nombres)
+                        usuario = db.session.query(Usuario).filter_by(email=session['email']).first()
+                        return render_template('inicio.html', usuario=usuario.nickName,mensaje="Ya estabas logueado " + email, videojuegos=videojuegos, novedades=novedades, logged=1, lista=g_nombres)
                 else:
                     #Revisa si el usuario está activo o inactivo
                     if obUsuario.activo == ESTADO_USR_INACTIVO:
-                        return render_template('home_page.html', confirmarusr=1, url_confirma=URL_APP+"/reenviarconf" ,accion=email+"No has confirmado tu correo, clic aquí para reenviarte el correo de registro! ", logged=0)
+                        return render_template('home_page.html', confirmarusr=1, url_confirma=URL_APP+"/reenviarconf" ,accion=email+", No has confirmado en tu correo, clic aquí para reenviarte el email de registro! ", logged=0)
                     else:
                         app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S")+"[" + email + "] login: No hay sesion")
 
@@ -221,7 +224,8 @@ def login():
                             novedades.append(reg)
 
                         print("login: cantidad de registros de VJ" + str(len(g_nombres)))
-                        return render_template('inicio.html', mensaje="Bienvenido al sistema "+email+"!", videojuegos=videojuegos, novedades=novedades, logged=1, lista=g_nombres)
+                        usuario = db.session.query(Usuario).filter_by(email=email).first()
+                        return render_template('inicio.html', usuario=usuario.nickName, mensaje="Bienvenido al sistema "+email+"!", videojuegos=videojuegos, novedades=novedades, logged=1, lista=g_nombres)
             else:
                 app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S")+"[" + email + "] Usuario o password inválido. Intenta de nuevo!")
                 return render_template('login.html', mensaje="Usuario o password inválido. Intenta de nuevo!" )
@@ -412,6 +416,7 @@ def resetclave():
             return render_template('error.html', mensaje="Error en confirmación!")
     return render_template('resetclave.html', mensaje="")
 
+
 # Funcion: nueva clave
 # En el correo de confirmación viene un enlace que lanza la pantalla de cambio de clave
 @app.route("/nuevaclave", methods=["POST", "GET"])
@@ -527,11 +532,7 @@ def bajausuario():
 # Funcion: Cargar un ejemplar
 @app.route("/cargarEjemplar", methods=["GET", "POST"])
 def cargarEjemplar():
-
-    result = db.session.query(VideoJuego.nombre).filter_by().order_by(VideoJuego.nombre).all()
-    lista = []
-    for reg in result:
-        lista.append(reg.nombre)
+    g_nombres = funListarNombresVJ()
 
     if request.method == "POST":
         if session is not None:
@@ -556,14 +557,20 @@ def cargarEjemplar():
                 print("publicar:" + str(publicar))
 
                 msg = funCargarEjemplar(email, usrid, vj, estado, publicar, comentario, imagen)
+
                 ejeblk, ejepub, ejenopub = funListarEjemplaresUsuario(usrid)
-                return render_template('ejemplaresusuario.html', mensaje="!", vjblk=ejeblk,
+                return render_template('ejemplaresusuario.html', usuario=obUsuario.nickName, mensaje=msg, vjblk=ejeblk,
                                        vjpub=ejepub, vjnopub=ejenopub, logged=0)
             else:
-                return render_template('login.html', mensaje="oopppss...algo sucedió con tu sesión. Ingresa de nuevo!")
-        return render_template('cargarejemplar.html', mensaje="Carga tu ejemplar!", videojuegos=lista)
+                return render_template('login.html', mensaje="oopppss...algo suce   dió con tu sesión. Ingresa de nuevo!")
 
-    return render_template('cargarejemplar.html', mensaje="Carga tu ejemplar!", videojuegos=lista)
+        print("Inicia carga de ejemplar: Cantidad videojuego " + str(len(g_nombres)))
+        usuario = db.session.query(Usuario).filter_by(email=session['email']).first()
+        return render_template('cargarejemplar.html', usuario=usuario.nickName, mensaje="Carga tu ejemplar!", lista=g_nombres)
+
+    print("Inicia carga de ejemplar: Cantidad videojuego " + str(len(g_nombres)))
+    usuario = db.session.query(Usuario).filter_by(email=session['email']).first()
+    return render_template('cargarejemplar.html', usuario=usuario.nickName, mensaje="Carga tu ejemplar!", lista=g_nombres)
 
 
 # Funcion: Editar un ejemplar
@@ -575,6 +582,7 @@ def editarEjemplar(idejeusuario):
     print("El metodo = " + request.method + " - email " + email)
 
     if request.method == "GET":
+        obUsuario =  db.session.query(Usuario).filter_by(email=email).first()
         obEjeUsuario = db.session.query(EjeUsuario).filter_by(idEjeUsuario=idejeusuario).first()
         obVideojuego = db.session.query(VideoJuego).filter_by(idVj=obEjeUsuario.vjId).first()
         obFoto = db.session.query(FotoEjeUsuario).filter_by(ejeUsuarioId=obEjeUsuario.idEjeUsuario, activa=1).first(),
@@ -582,7 +590,7 @@ def editarEjemplar(idejeusuario):
         foto = base64.b64encode(obFoto.foto).decode("utf-8")
 
         print("ejidejeusuario"+str(idejeusuario)+" -- ejimagen=" + foto + "--ejnombre=" + obVideojuego.nombre + "--ejestado= "+ str(obEjeUsuario.estado) + "--ejcomentario="+obEjeUsuario.comentario+"ejpublicar="+str(obEjeUsuario.publicado))
-        return render_template('editarejemplar.html', mensaje="Edita el videojuego!", ejidejeusuario=idejeusuario, ejimagen=foto, ejnombre=obVideojuego.nombre, ejestado=obEjeUsuario.estado, ejcomentario=obEjeUsuario.comentario, ejpublicar=obEjeUsuario.publicado, editar=1)
+        return render_template('editarejemplar.html', usuario=obUsuario.nickName, mensaje="Edita el videojuego!", ejidejeusuario=idejeusuario, ejimagen=foto, ejnombre=obVideojuego.nombre, ejestado=obEjeUsuario.estado, ejcomentario=obEjeUsuario.comentario, ejpublicar=obEjeUsuario.publicado, editar=1)
 
     elif request.method == "POST":
         print("Entra al POST: " + email)
@@ -634,7 +642,7 @@ def ejemplaresusuario():
                 app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S")+"["+email+"] Encontró "+ejemplares.__str__()+" ejemplares para el usuario [" + email + "]")
                 #print(lista)
 
-                return render_template('ejemplaresusuario.html', mensaje="Bienvenido "+email, vjblk=ejeblk, vjpub=ejepub, vjnopub=ejenopub, logged=1)
+                return render_template('ejemplaresusuario.html', usuario=usuario.nickName, mensaje="Bienvenido "+email, vjblk=ejeblk, vjpub=ejepub, vjnopub=ejenopub, logged=1)
 
     if request.method=="POST":
         app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S")+"[NO_USER] index: inicia ejemplaresusuario")
@@ -661,7 +669,7 @@ def ejemplaresusuario():
                     foto = base64.b64encode(obFoto.foto).decode("utf-8")
 
                     print("ejidejeusuario" + str(idejemplar) + " -- ejimagen=" + foto + "--ejnombre=" + obVideojuego.nombre + "--ejestado= " + str(obEjeUsuario.estado) + "--ejcomentario=" + obEjeUsuario.comentario + "ejpublicar=" + str(obEjeUsuario.publicado))
-                    return render_template('editarejemplar.html', mensaje="Edita el videojuego!",
+                    return render_template('editarejemplar.html', usuario=usuario.nickName, mensaje="Edita el videojuego!",
                                            ejidejeusuario=idejemplar, ejimagen=foto, ejnombre=obVideojuego.nombre,
                                            ejestado=obEjeUsuario.estado, ejcomentario=obEjeUsuario.comentario,
                                            ejpublicar=obEjeUsuario.publicado,editar=1)
@@ -674,7 +682,8 @@ def ejemplaresusuario():
 
                 ejeblk, ejepub, ejenopub = funListarEjemplaresUsuario(usuario.idUsuario)
 
-    return render_template('ejemplaresusuario.html', mensaje="Bienvenido "+session['email'], vjblk=ejeblk, vjpub=ejepub, vjnopub=ejenopub, logged=0)
+    usuario = db.session.query(Usuario).filter_by(email=session['email']).first()
+    return render_template('ejemplaresusuario.html', usuario=usuario.nickName, mensaje="Bienvenido "+session['email'], vjblk=ejeblk, vjpub=ejepub, vjnopub=ejenopub, logged=0)
 
 
 @app.route('/solicitarejemplar', methods=["GET", "POST"])
