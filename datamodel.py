@@ -290,7 +290,7 @@ class DetalleTrx(db.Model):
     idDetTrx = db.Column(db.Integer, Sequence('iddettrx_seq'), primary_key=True)
     trxId = db.Column(db.Integer, db.ForeignKey('transaccion.idTrx'), nullable=False)
     usuarioId = db.Column(db.Integer, db.ForeignKey('usuario.idUsuario'), nullable=False)
-    accion = db.Column(db.Integer, default=1)  #Identificar las acciones...
+    accion = db.Column(db.Integer, default=1)  #1: Solicita, 2: Acepta Solicitud, 3: Entrega, 4: Recibe, 5: Califica
     fechacrea = db.Column(db.DateTime, default=datetime.datetime.now)
     UsrDetTrx = db.relationship("Usuario", lazy=True)
     TrxDetTrx = db.relationship("Transaccion", lazy=True)
@@ -373,6 +373,7 @@ class QyA(db.Model):
     vjId = db.Column(db.Integer, db.ForeignKey('videojuego.idVj'), nullable=False)#referencia al videojuego
     ejeUsuarioId = db.Column(db.Integer, db.ForeignKey('ejeusuario.idEjeUsuario'), nullable=False)#referencia al ejemplar
     PregResp = db.Column(db.String(1500), nullable=False)#Lo que pregunta / responde...el mensaje
+    leido = db.Column(db.Integer, default=0)  # 0: No leido - 1: Leido
     fechacrea = db.Column(db.DateTime, default=datetime.datetime.now) #Fecha del mensaje automática
     QyAPadre = db.relationship("QyA", lazy=True)
     UsrQyAD = db.relationship("Usuario", lazy=True, foreign_keys=[usuarioIdDueno])

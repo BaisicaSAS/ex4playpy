@@ -52,7 +52,7 @@
                 {% if reinicia.cont == 1 %}
                 <div class="card-deck">
                 {% endif %}
-                <form name="form" action="{{url_for('ejemplaresusuario')}}" method="post">
+                <form name="form" action=" {{url_for('solicitarejemplar',idejeusuario=vj[0])}} " method="post">
                     <input value="{{vj[0]}}" type="hidden" name="idejemplar" />
                     <div class="card border-info mb-3" style="width: 15rem;max-width: 15rem;display: flex; align-items: center; justify-content: center;">
                         <br>

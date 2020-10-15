@@ -36,10 +36,12 @@
 
             {% for vj in novedades %}
                 {% if reinicia.cont == 1 %}
-                <div class="card-deck">
+                <div class="card-deck" >
                 {% endif %}
-                <form name="form" action="{{url_for('ejemplaresusuario')}}" method="post">
+                <form name="formjuego" action="{{url_for('solicitarejemplar',idejeusuario=vj[0])}}" method="get" onsubmit="return validatePuntos()">
                     <input value="{{vj[0]}}" type="hidden" name="idejemplar" />
+                    <input value="{{puntosusu}}" type="hidden" name="puntosusuario" id="puntosusuario" />
+                    <input value="{{ vj[6] }}" type="hidden" name="valorjuego" id="valorjuego" />
                     <div class="card border-info mb-3" style="width: 15rem;max-width: 15rem;display: flex; align-items: center; justify-content: center;">
                         <br>
                         <h5 class="card-header text-light" align="center" style="width= 100%">{{ vj[3] }}</h5>

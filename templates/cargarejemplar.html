@@ -11,25 +11,6 @@ ex4play - Publicar un ejemplar
         <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
 
     </head>
-
-        <script type="text/javascript">
-            function readURL(input) {
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
-
-                    reader.onload = function (e) {
-                        $('#img-upload').attr('src', e.target.result);
-                    }
-
-                    reader.readAsDataURL(input.files[0]);
-                }
-            }
-
-            $("#imgInp").change(function(){
-                readURL(this);
-            });
-
-        </script>
 <body class="bg-overlay">
 
 <!-- <div class="bg-overlay"  style="background-color:#444;align-items: center; justify-content: center;"> -->
@@ -46,10 +27,8 @@ ex4play - Publicar un ejemplar
     <div class="container border-info mb-3" body-content align="center">
         <form class="form-signin" autocomplete="off" name="frmcargarEjemplar" method="post" action=" {{url_for('cargarEjemplar')}} " enctype="multipart/form-data"  style="align-items: center;padding-top: 40px;padding-bottom: 40px;background-color: #444;width: 40rem;">
             <div class="form-group" style="position: center">
-                <div class="input-group">
                     <input type="file" id="imgInp" name="imgInp" aria-label="Cargar imágen" aria-describedby="Cargar imágen">
-                </div>
-                <img style="align: center;justify-content: center;width:100%;" id='img-upload'/>
+                    <img style="align: center;justify-content: center;width:100%;" id='img-upload'/>
             </div>
 
             <div class="form-group" style="position: center">
