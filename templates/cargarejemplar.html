@@ -1,111 +1,43 @@
 {% extends "baselogueado.html" %}
+
 {% block title %}
 ex4play - Publicar un ejemplar
 {% endblock %}
 {% block content %}
-<style>
+<html>
 
-.slider {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 25px;
-  background: #D3D3D3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-}
+    <head>
+        <title>ex4play</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
 
-.slider:hover {
-  opacity: 1;
-}
+    </head>
+<body class="bg-overlay">
 
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  background: #FF0000;
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: #FF0000;
-  cursor: pointer;
-}
-
-.sliderticks {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10px;
-}
-
-.sliderticks p {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  width: 1px;
-  background: #D3D3D3;
-  height: 10px;
-  line-height: 40px;
-  margin: 0 0 20px 0;
-}
-
-.btn-file {
-    position: relative;
-    overflow: hidden;
-}
-.btn-file input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    font-size: 100px;
-    text-align: right;
-    filter: alpha(opacity=0);
-    opacity: 0;
-    outline: none;
-    background: white;
-    cursor: inherit;
-    display: block;
-}
-
-#img-upload{
-    width: 100%;
-}
-</style>
-
- <div class="bg-overlay">
-    <div style="">
-        <div class="alert alert-info" role="alert">
-          <h3>{{ mensaje }}</h3>
-        </div>
-    </div>
-
+<!-- <div class="bg-overlay"  style="background-color:#444;align-items: center; justify-content: center;"> -->
     <div class="container body-content">
         <div class="header">
             <h1><img src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:20%"></h1>
         </div>
+    </div>
+    <div class="alert alert-dark" role="alert">
+      <h3>{{ mensaje }}</h3>
+    </div>
 
-        <form class="form-signin" autocomplete="off" name="frmcargarEjemplar" method="post" action=" {{url_for('cargarEjemplar')}} " enctype="multipart/form-data"  style="align-items: center;padding-top: 40px;padding-bottom: 40px;background-color: #f5f5f5;">
+
+    <div class="container border-info mb-3" body-content align="center">
+        <form class="form-signin" autocomplete="off" name="frmcargarEjemplar" method="post" action=" {{url_for('cargarEjemplar')}} " enctype="multipart/form-data"  style="align-items: center;padding-top: 40px;padding-bottom: 40px;background-color: #444;width: 40rem;">
             <div class="form-group" style="position: center">
-                <div class="input-group">
                     <input type="file" id="imgInp" name="imgInp" aria-label="Cargar imágen" aria-describedby="Cargar imágen">
-                </div>
-                <img style="align: center;justify-content: center;width:100%;" id='img-upload'/>
+                    <img style="align: center;justify-content: center;width:100%;" id='img-upload'/>
             </div>
 
             <div class="form-group" style="position: center">
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text">Nombre</span>
+                    <span class="input-group-text" id="nombre">Nombre</span>
                   </div>
-                  <textarea class="form-control" rows="3" aria-label="Nombre del Videojuego" name="ejemplar" id="ejemplar" placeholder="Nombre del videojuego"></textarea>
+
+                  <input type="textarea" rows="3" autocomplete="on" class="form-control" name="busqueda" id="busqueda" aria-label="Nombre del Videojuego" placeholder="Nombre del videojuego"  aria-describedby="nombre">
                 </div>
             </div>
 
@@ -138,151 +70,13 @@ ex4play - Publicar un ejemplar
             </div>
 
             <div class="form-group" style="position: center">
-                <p>Al publicarlo, estoy de acuerdo con los <a href="#">Terminos y Condiciones</a></p>
                 <input class="btn btn-primary" type="submit" value="Cargar">
             </div>
 
         </form>
     </div>
  </div>
-    <script>
-        function autocomplete(inp, arr) {
-          /*the autocomplete function takes two arguments,
-          the text field element and an array of possible autocompleted values:*/
-          var currentFocus;
-          /*execute a function when someone writes in the text field:*/
-          inp.addEventListener("input", function(e) {
-              var a, b, i, val = this.value;
-              /*close any already open lists of autocompleted values*/
-              closeAllLists();
-              if (!val) { return false;}
-              currentFocus = -1;
-              /*create a DIV element that will contain the items (values):*/
-              a = document.createElement("DIV");
-              a.setAttribute("id", this.id + "autocomplete-list");
-              a.setAttribute("class", "autocomplete-items");
-              /*append the DIV element as a child of the autocomplete container:*/
-              this.parentNode.appendChild(a);
-              /*for each item in the array...*/
-              for (i = 0; i < arr.length; i++) {
-                /*check if the item starts with the same letters as the text field value:*/
-                if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-                  /*create a DIV element for each matching element:*/
-                  b = document.createElement("DIV");
-                  /*make the matching letters bold:*/
-                  b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-                  b.innerHTML += arr[i].substr(val.length);
-                  /*insert a input field that will hold the current array item's value:*/
-                  b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-                  /*execute a function when someone clicks on the item value (DIV element):*/
-                  b.addEventListener("click", function(e) {
-                      /*insert the value for the autocomplete text field:*/
-                      inp.value = this.getElementsByTagName("input")[0].value;
-                      /*close the list of autocompleted values,
-                      (or any other open lists of autocompleted values:*/
-                      closeAllLists();
-                  });
-                  a.appendChild(b);
-                }
-              }
-          });
-          /*execute a function presses a key on the keyboard:*/
-          inp.addEventListener("keydown", function(e) {
-              var x = document.getElementById(this.id + "autocomplete-list");
-              if (x) x = x.getElementsByTagName("div");
-              if (e.keyCode == 40) {
-                /*If the arrow DOWN key is pressed,
-                increase the currentFocus variable:*/
-                currentFocus++;
-                /*and and make the current item more visible:*/
-                addActive(x);
-              } else if (e.keyCode == 38) { //up
-                /*If the arrow UP key is pressed,
-                decrease the currentFocus variable:*/
-                currentFocus--;
-                /*and and make the current item more visible:*/
-                addActive(x);
-              } else if (e.keyCode == 13) {
-                /*If the ENTER key is pressed, prevent the form from being submitted,*/
-                e.preventDefault();
-                if (currentFocus > -1) {
-                  /*and simulate a click on the "active" item:*/
-                  if (x) x[currentFocus].click();
-                }
-              }
-          });
-          function addActive(x) {
-            /*a function to classify an item as "active":*/
-            if (!x) return false;
-            /*start by removing the "active" class on all items:*/
-            removeActive(x);
-            if (currentFocus >= x.length) currentFocus = 0;
-            if (currentFocus < 0) currentFocus = (x.length - 1);
-            /*add class "autocomplete-active":*/
-            x[currentFocus].classList.add("autocomplete-active");
-          }
-          function removeActive(x) {
-            /*a function to remove the "active" class from all autocomplete items:*/
-            for (var i = 0; i < x.length; i++) {
-              x[i].classList.remove("autocomplete-active");
-            }
-          }
-          function closeAllLists(elmnt) {
-            /*close all autocomplete lists in the document,
-            except the one passed as an argument:*/
-            var x = document.getElementsByClassName("autocomplete-items");
-            for (var i = 0; i < x.length; i++) {
-              if (elmnt != x[i] && elmnt != inp) {
-                x[i].parentNode.removeChild(x[i]);
-              }
-            }
-          }
-          /*execute a function when someone clicks in the document:*/
-          document.addEventListener("click", function (e) {
-              closeAllLists(e.target);
-          });
-        }
 
-        var countries = {{ videojuegos|safe }};
 
-        autocomplete(document.getElementById("ejemplar"), countries);
-
-$(document).ready( function() {
-    	$(document).on('change', '.btn-file :file', function() {
-		var input = $(this),
-			label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-		input.trigger('fileselect', [label]);
-		});
-
-		$('.btn-file :file').on('fileselect', function(event, label) {
-
-		    var input = $(this).parents('.input-group').find(':text'),
-		        log = label;
-
-		    if( input.length ) {
-		        input.val(log);
-		    } else {
-		        if( log ) alert(log);
-		    }
-
-		});
-		function readURL(input) {
-		    if (input.files && input.files[0]) {
-		        var reader = new FileReader();
-
-		        reader.onload = function (e) {
-		            $('#img-upload').attr('src', e.target.result);
-		        }
-
-		        reader.readAsDataURL(input.files[0]);
-		    }
-		}
-
-		$("#imgInp").change(function(){
-		    readURL(this);
-		});
-	});
-
-</script>
-
+</body>
 {% endblock %}

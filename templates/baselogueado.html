@@ -16,6 +16,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<!-- CUATRO LINEAS DE AUTOCOMPLETE -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 
     <script>
@@ -24,6 +29,15 @@
            var Y = document.forms["frmregistro"]["repetirclave"].value;
            if ( X != Y ) {
               alert("Las claves no son iguales");
+              return false;
+           }
+        }
+
+        function validatePuntos() {
+           var punusuario = document.forms["formjuego"]["puntosusuario"].value;
+           var valjuego = document.forms["formjuego"]["valorjuego"].value;
+           if ( punusuario < valjuego ) {
+              alert("No tienes puntos suficientes para solicitar este juego. Publica más videojuegos para cambiar!");
               return false;
            }
         }
@@ -156,103 +170,11 @@
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1);
     }
 
-
-
-    .pricingdiv{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      font-family: 'Source Sans Pro', Arial, sans-serif;
-    }
-
-    .pricingdiv ul.theplan{
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      border-top-left-radius: 50px;
-      border-bottom-right-radius: 50px;
-      color: white;
-      background: #7c3ac9;
-      position: relative;
-      width: 250px; /* width of each table */
-      margin-right: 10px; /* spacing between tables */
-      margin-bottom: 1em;
-      transition: all .5s;
-    }
-
-    .pricingdiv ul.theplan:hover{ /* when mouse hover over pricing table */
-      transform: scale(1.05);
-      transition: all .5s;
-      z-index: 100;
-      box-shadow: 0 0 10px gray;
-    }
-
-    .pricingdiv ul.theplan li{
-      margin: 10px 20px;
-      position: relative;
-    }
-
-    .pricingdiv ul.theplan li.title{
-      font-size: 150%;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 20px;
-      text-transform: uppercase;
-      border-bottom: 5px solid white;
-    }
-
-    .pricingdiv ul.theplan:nth-of-type(2){
-      background: #8f1d8a;
-    }
-
-    .pricingdiv ul.theplan:nth-of-type(3){
-      background: #2a2cc8;
-    }
-
-    .pricingdiv ul.theplan:last-of-type{ /* remove right margin in very last table */
-      margin-right: 0;
-    }
-
-    /*very last LI within each pricing UL */
-    .pricingdiv ul.theplan li:last-of-type{
-      text-align: center;
-      margin-top: auto; /*align last LI (price botton li) to the very bottom of UL */
-    }
-
-    .pricingdiv a.pricebutton{
-      background: white;
-      text-decoration: none;
-      padding: 10px;
-      display: inline-block;
-      margin: 10px auto;
-      border-radius: 5px;
-      color: navy;
-      text-transform: uppercase;
-    }
-
-    @media only screen and (max-width: 500px) {
-      .pricingdiv ul.theplan{
-        border-radius: 0;
-        width: 100%;
-        margin-right: 0;
-      }
-
-      .pricingdiv ul.theplan:hover{
-        transform: none;
-        box-shadow: none;
-      }
-
-      .pricingdiv a.pricebutton{
-        display: block;
-      }
-    }
 </style>
 
-<script>
+<script type="text/javascript">
   $( function() {
-    var availableTags = {{lista}};
+    var availableTags = {{ lista|safe }};
     $( "#busqueda" ).autocomplete({
       source: availableTags
     });
@@ -261,16 +183,12 @@
 
 </head>
 <body>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
     <nav class="navbar navbar-dark bg-dark ">
-      <a class="navbar-brand" href= {{url_for('index')}}>ex4play</a>
+      <a class="navbar-brand" href= {{url_for('index')}}>ex4play - [usuario: {{usuario}}] </a>
       <ul class="nav navbar-nav navbar-right">
          <li><a href="{{url_for('ejemplaresusuario') }}">Mis videojuegos</a></li>
          <li><a href="{{url_for('cargarEjemplar') }}">Publicar un videojuego</a></li>
-         <li><a href="#">Videojuegos negociados</a></li>
+         <li><a href="{{url_for('transacciones') }}">Videojuegos negociados</a></li>
          <li><a href="{{url_for('updateUser') }}">Perfil</a></li>
          <li><a href="{{url_for('logout') }}">Cerrar sesión</a></li>
       </ul>

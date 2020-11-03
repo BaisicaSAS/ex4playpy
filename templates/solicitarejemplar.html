@@ -1,0 +1,94 @@
+{% extends "baselogueado.html" %}
+{% block title %}
+ex4play - Solicitar el videojuego
+{% endblock %}
+{% block content %}
+
+<html>
+
+    <head>
+    <title>ex4play</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+
+    </head>
+
+<body class="bg-overlay">
+
+    <div class="alert alert-dark" role="alert">
+      <h3>{{ mensaje }}</h3>
+    </div>
+
+    <div class="container  border-info mb-3 body-content"  align="center">
+       <div class="header">
+          <h1><img src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:20%"></h1>
+      </div>
+
+      {% if editar==1 %}
+         <form class="form-signin" autocomplete="off" name="frmsolicitarEjemplar" method="post" action=" {{url_for('solicitarejemplar',idejeusuario=idejeusuario)}} " enctype="multipart/form-data" style="align-items: center;padding-top: 40px;padding-bottom: 40px;background-color: #444;width: 40rem;">
+      {% else %}
+         <form class="form-signin" autocomplete="off" name="frmsolicitarEjemplar" method="post" action="" enctype="multipart/form-data" style="align-items: center;padding-top: 40px;padding-bottom: 40px;background-color: #444;width: 40rem;">
+      {% endif %}
+
+      <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="data:image/jpeg;base64,{{ejimagen}}" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                    <div class="form-group" style="position: center">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Nombre</span>
+                          </div>
+                          <textarea class="form-control" rows="3" aria-label="Nombre del Videojuego" name="ejemplar" id="ejemplar" disabled >{{ejnombre}}</textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="position: center">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Estado videojuego:</span>
+                        </div>
+                        <input type="number" min="1" max="10" value={{ejestado}} name="estado" id="estado" disabled >
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">de 10</span>
+                        </div>
+                     </div>
+                    </div>
+
+                    <div class="form-group" style="position: center">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Comentario</span>
+                          </div>
+                          <textarea class="form-control" rows="3" aria-label="Comentario" name="comentario" id="comentario" disabled>{{ejcomentario}}</textarea>
+                        </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr style="color:white;background-color:white">
+        <div class="form-group" style="position: center">
+            <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Mensaje para el dueño</span>
+                  </div>
+                  <textarea class="form-control" rows="2" aria-label="mensaje" name="mensaje" id="mensaje" placeholder="Hola, quiero tu videojuego!"></textarea>
+            </div>
+        </div>
+
+        <hr style="color:white;background-color:white">
+        <div class="input-group" style="position: center">
+              <input class="btn btn-primary" type="submit" name="btnejemplar" value="Solicitar">
+              <input class="btn btn-primary" type="submit" name="btnejemplar" value="Cancelar">
+        </div>
+      </form>
+    </div>
+</div>
+</body>
+</html>
+
+
+{% endblock %}

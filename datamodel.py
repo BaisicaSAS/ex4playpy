@@ -177,9 +177,17 @@ class EjeUsuario(db.Model):
     comentario = db.Column(db.String(500)) #Manipulable poe el dueño actual de un VJ
     estado = db.Column(db.Integer, default=1)  #1 - 10 Estado físico del VJ
     fechacrea = db.Column(db.DateTime, default=datetime.datetime.now)
-    publicado = db.Column(db.Integer, default=1)  #1: S - 0: N
-    bloqueado = db.Column(db.Integer, default=0)  #1: S - 0: N - Se bloquea, mientras está en una transacción, o cuando un usuario cambio en "deuda", es decir subió, recibió puntos, y con esos puntos solicita un juego, allí se bloquean juegos para que no los pueda descargar
-    cuarentena = db.Column(db.Integer, default=0)  #1: S - 0: N - Se pone en cuarentena, mientras se crea el videojuego en caso de que no exista y se haya creado
+    #Publicado 1: S - 0: N -- Ejemplar que está dispobible para los demás
+    publicado = db.Column(db.Integer, default=1)
+    #Bloqueado 1: S - 0: N - Se bloquea mientras está en una transacción (Solo cuando
+    #ya fue aceptado por los dos y no se ha finalizado la transacción
+    bloqueado = db.Column(db.Integer, default=0)
+    #Cuarentena 1: S - 0: N - Se pone en cuarentena, mientras se crea el videojuego en caso
+    #de que no exista y se haya creado
+    cuarentena = db.Column(db.Integer, default=0)
+    #Comprometido 1: S - 0: N - Está comprometido cuando el usuario lo ingresa y recibe una promoción
+    # ...no se puede despublicar, pero si editar...aparece en los publicados y en la oferta
+    comprometido = db.Column(db.Integer, default=0)
     valor = db.Column(db.Float, default=1)  #Valor en puntos o barts, heredados de la tabla VJ en cada momento, pensando en la valorización / desvalorización
     UsrEjeU = db.relationship("Usuario", lazy=True)
     UsrEjeU = db.relationship("VideoJuego", lazy=True)
@@ -266,6 +274,8 @@ class Promo(db.Model):
     idPromo = db.Column(db.Integer, Sequence('idpromo_seq'), primary_key=True)
     descripcion = db.Column(db.String(300), nullable=False) #descripcion de la promoción
     multiplicador = db.Column(db.Integer, default=1)  #Multiplicador de puntos en una promocion
+    puntos = db.Column(db.Integer, default=1)  #Cantidad de puntos en una promocion
+    aplicasobre = db.Column(db.String(2), default="IC")  #RG: Registro, IC: Intercambio, EV: Entrega VJ, RS: Reseña, CF: Califica
     activa = db.Column(db.Integer, default=0)  #0: inactiva 1: activa
     fechainicia = db.Column(db.DateTime, default=datetime.datetime.now) #Fecha de inicio de la promocion
     fechafinal = db.Column(db.DateTime, default=datetime.datetime.now) #Fecha de fin de la promocion
@@ -280,7 +290,7 @@ class DetalleTrx(db.Model):
     idDetTrx = db.Column(db.Integer, Sequence('iddettrx_seq'), primary_key=True)
     trxId = db.Column(db.Integer, db.ForeignKey('transaccion.idTrx'), nullable=False)
     usuarioId = db.Column(db.Integer, db.ForeignKey('usuario.idUsuario'), nullable=False)
-    accion = db.Column(db.Integer, default=1)  #Identificar las acciones...
+    accion = db.Column(db.Integer, default=1)  #1: Solicita, 2: Acepta Solicitud, 3: Entrega, 4: Recibe, 5: Califica
     fechacrea = db.Column(db.DateTime, default=datetime.datetime.now)
     UsrDetTrx = db.relationship("Usuario", lazy=True)
     TrxDetTrx = db.relationship("Transaccion", lazy=True)
@@ -321,12 +331,30 @@ class DetalleValor(db.Model):
     vigente = db.Column(db.Integer, default=1)  # 1: S - 0: N
     valorPaga = db.Column(db.Float, default=0)  # Valor que paga por la transacción
     valorCobra = db.Column(db.Float, default=0)  # Valor que cobra por la transacción
-    multiplicador = db.Column(db.Integer, default=1)  # Cuando haya promoción, los puntos de la transacción se multiplican, aqui se registr por cuanto fueron multiplicados lo que están registrados
+    multiplicador = db.Column(db.Float, default=1)  # Cuando haya promoción, los puntos de la transacción se multiplican, aqui se registr por cuanto fueron multiplicados lo que están registrados
+    comentario = db.Column(db.String(100), nullable=True) #Comentario
     fechacrea = db.Column(db.DateTime, default=datetime.datetime.now)
     PromoDetVal = db.relationship("Promo", lazy=True)
     UsrDetVal = db.relationship("Usuario", lazy=True)
     EjeUDetVal = db.relationship("EjeUsuario", lazy=True)
     TransDetVal = db.relationship("Transaccion", lazy=True)
+
+#Almacena la información de puntos de la transacción
+#Debe existir un detalle de valor para cada uno de los usuarios que participan en el trato
+class DetalleValorOtros(db.Model):
+    __tablename__ = 'detallevalorotros'
+
+    idDetValOtr = db.Column(db.Integer, Sequence('iddetvalotr_seq'), primary_key=True)
+    usuarioId = db.Column(db.Integer, db.ForeignKey('usuario.idUsuario'), nullable=True)
+    promoId = db.Column(db.Integer, db.ForeignKey('promo.idPromo'), nullable=False)
+    tipo = db.Column(db.Integer, default=1)  # Promocion, por entregar un juego, por reseñar, etc...
+    valorPaga = db.Column(db.Float, default=0)  # Valor que paga por la transacción
+    valorCobra = db.Column(db.Float, default=0)  # Valor que cobra por la transacción
+    multiplicador = db.Column(db.Float, default=1)  # Cuando haya promoción, los puntos de la transacción se multiplican, aqui se registr por cuanto fueron multiplicados lo que están registrados
+    comentario = db.Column(db.String(100), nullable=True) #Comentario
+    fechacrea = db.Column(db.DateTime, default=datetime.datetime.now)
+    PromoDetVal = db.relationship("Promo", lazy=True)
+    UsrDetVal = db.relationship("Usuario", lazy=True)
 
 #Preguntas y respuestas de una transacción. Cuando la transacción es creada por el usuario que solicita el VJ,
 # el sistema crea un registro de solicitud con un mensaje para que inicie la conversacion.
@@ -345,6 +373,7 @@ class QyA(db.Model):
     vjId = db.Column(db.Integer, db.ForeignKey('videojuego.idVj'), nullable=False)#referencia al videojuego
     ejeUsuarioId = db.Column(db.Integer, db.ForeignKey('ejeusuario.idEjeUsuario'), nullable=False)#referencia al ejemplar
     PregResp = db.Column(db.String(1500), nullable=False)#Lo que pregunta / responde...el mensaje
+    leido = db.Column(db.Integer, default=0)  # 0: No leido - 1: Leido
     fechacrea = db.Column(db.DateTime, default=datetime.datetime.now) #Fecha del mensaje automática
     QyAPadre = db.relationship("QyA", lazy=True)
     UsrQyAD = db.relationship("Usuario", lazy=True, foreign_keys=[usuarioIdDueno])

@@ -6,7 +6,7 @@
 <html>
 
     <head>
-    <title>Flask app</title>
+    <title>ex4play</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
     </head>
 
@@ -16,14 +16,14 @@
         </div>
         <div class="container body-content">
             <div class="header">
-                <h1><img src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:65%"></h1>
+                <h1><img src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:20%"></h1>
             </div>
         </div>
 
     {% if confirmarusr == 1 %}
     <section >
         <div class="alert alert-dark" align="center" role="alert">
-            <strong><h3><a href="{{url_confirma}}">{{accion}}</a></h3></strong>
+            <strong><a href="{{url_confirma}}">{{accion}}</a></strong>
         </div>
     </section>
     {% endif %}
@@ -32,20 +32,27 @@
             <div class="alert alert-dark" role="alert">
               <h5>NOVEDADES</h5>
             </div>
-             <div class="input-group" align="center">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"  id="buscar">Buscar videojuegos</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Buscar videojuegos" aria-describedby="Buscar">
-            </div>
-             {% set indice = namespace(cont=1) %}
-             {% set reinicia = namespace(cont=1) %}
 
-             {% for vj in novedades %}
+            <form name="form" action="{{url_for('buscar')}}" method="post">
+                <div class="input-group" align="center">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"  id="buscar">Buscar juego</span>
+                    </div>
+                    <input autocomplete="on" class="form-control" id="busqueda" name="busqueda" aria-label="Buscar videojuegos" aria-describedby="Buscar">
+                    <div class="input-group-append">
+                       <button class="btn btn-outline-secondary" type="button">Buscar</button>
+                    </div>
+                </div>
+            </form>
+
+            {% set indice = namespace(cont=1) %}
+            {% set reinicia = namespace(cont=1) %}
+
+            {% for vj in novedades %}
                 {% if reinicia.cont == 1 %}
-            <div class="card-deck">
+                <div class="card-deck">
                 {% endif %}
-                <form name="form" action="{{url_for('ejemplaresusuario')}}" method="post">
+                <form name="form" action=" {{url_for('solicitarejemplar',idejeusuario=vj[0])}} " method="post">
                     <input value="{{vj[0]}}" type="hidden" name="idejemplar" />
                     <div class="card border-info mb-3" style="width: 15rem;max-width: 15rem;display: flex; align-items: center; justify-content: center;">
                         <br>
