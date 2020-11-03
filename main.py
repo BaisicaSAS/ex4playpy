@@ -5,7 +5,7 @@ from flask import Flask, request, redirect, render_template, session, current_ap
 from config import ProductionConfig, DevelopmentConfig, Config
 from datamodel import db, Usuario, ConexionUsuario, VideoJuego, EjeUsuario, FotoEjeUsuario, BusquedaUsuario
 from operavideojuegos import funCargarEjemplar, funListarEjemplaresUsuario, funMarcarEjemplaresUsuario, \
-    funListarEjemplaresDisponibles, funEditarEjemplar, funListarNombresVJ
+    funListarEjemplaresDisponibles, funEditarEjemplar, funListarNombresVJ, funObtenerDatosUsuario, funUpdateDatosUsuario, funcObtenerCiudades
 from passlib.hash import sha256_crypt
 import logging
 from sqlalchemy.exc import IntegrityError
@@ -92,7 +92,7 @@ def index():
 
         if not(session) or (session['email'] is None):
             app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S")+"[NO_USER] index: No hay sesion")
-            return render_template('home_page.html', mensaje="Registrate y disfruta!", videojuegos=videojuegos, novedades=novedades, logged=0, lista=g_nombres)
+            return render_template('home_page_test.html', mensaje="Registrate y disfruta!", videojuegos=videojuegos, novedades=novedades, logged=0, lista=g_nombres)
         else:
             app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S")+"["+session['email']+"] index: Hay sesion")
 
@@ -710,15 +710,13 @@ def terminos():
 # Funcion: Actualizar datos usuario
 @app.route("/updateUser", methods=["GET", "POST"])
 def updateUser():
-    # creating a map in the view
-    map = Map(
-        identifier="view-side",
-        lat=37.4419,
-        lng=-122.1419,
-        markers=[(37.4419, -122.1419)]
-    )
-
     datosUsuario = None
+    ciudades = None
+    foto = None
+
+    if ciudades is None:
+        ciudades = funcObtenerCiudades()
+
     if request.method == "GET":
         if not(session) or (session['email'] is None):
             app.logger.debug("[NO_USER] index: No hay sesion")
@@ -728,7 +726,7 @@ def updateUser():
             if db.session is not None:
                 nick = session['email']
                 usuario = db.session.query(Usuario).filter_by(nickName=nick).first()
-                datosUsuario = funObtenerDatosUsuario(usuario.idUsuario)
+                datosUsuario, foto = funObtenerDatosUsuario(usuario.idUsuario)
                 datosUsuario.fechanac = datosUsuario.fechanac.strftime("%Y-%m-%d")
 
     if request.method == "POST":
@@ -750,10 +748,10 @@ def updateUser():
                     fechanac = request.form.get("fecha")
                     celular = request.form.get("celular")
 
-                    funUpdateDatosUsuario(usrid,nombres,apellidos,edad,fechanac,genero)
+                    funUpdateDatosUsuario(usrid,nombres,apellidos,edad,fechanac,genero,celular, imagen)
 
 
-    return render_template('act_datos_usuario.html', usuario=datosUsuario, map=map)
+    return render_template('act_datos_usuario.html', usuario=datosUsuario, ciudades=ciudades, foto=foto)
 
 if __name__ == '__main__':
     app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S")+"[NO_USER] main: **************************************************")

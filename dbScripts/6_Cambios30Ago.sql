@@ -1,0 +1,1 @@
+ALTER TABLE ex4playdev.usuario MODIFY COLUMN celular VARCHAR (20);
