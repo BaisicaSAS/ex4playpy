@@ -2,7 +2,7 @@ from flask import Flask
 from sqlalchemy import func
 from datamodel import db, Usuario, EjeUsuario, VideoJuego, Clasificacion, FotoEjeUsuario, TraceEjemplar, \
     Promo, DetalleValorOtros, DetalleValor, Transaccion, DetalleTrx, QyA
-from datamodel import db, Usuario, EjeUsuario, VideoJuego, Clasificacion, FotoEjeUsuario, TraceEjemplar, Ciudad, FotoUsuario
+from datamodel import db, Usuario, EjeUsuario, VideoJuego, Clasificacion, FotoEjeUsuario, TraceEjemplar, Ciudad, FotoUsuario, CambioUsuario, LugarUsuario
 from datetime import datetime, timedelta
 import base64
 
@@ -11,9 +11,9 @@ import base64
 app = Flask(__name__)
 
 # Constantes para las consultas de videojuegos: Cantidad de videojuegos y tiempo en días para que sea novedad
-C_DIAS = 90
+C_DIAS = 300
 # Constantes para las consultas de videojuegos: Cantidad de ideojuegos y tiempo en días para que sea novedad
-C_DIAS = 60
+C_DIAS = 300
 C_CANTIDAD = 10
 # Constantes para los tipos de promocion
 C_REGISTRO = "RG"
@@ -35,11 +35,16 @@ C_DETTRXACEPT = 2
 C_DETTRXENTRE = 3
 C_DETTRXRECIB = 4
 C_DETTRXCALIF = 5
+C_DETTRXCANCELAR = 6
 
 # Constantes para el tipo de QyA
 # 0: Question-pregunta - 1: Answer-respuesta
 C_QYAPREG = 0
 C_QYARESP = 1
+
+
+#Constantes ciudad, Bogotá es la única por el momento
+IDCIUDAD = 1
 
 ###Archivo que contiene todas las operaciones relacionadas con el
 ### tratamiento de los ejemplares que cargan los usuarios. Todas las rutas se invocan desde main.py
@@ -67,7 +72,7 @@ def funCargarEjemplar(email, idUsuario, VJ, estado, publicar, comentario, imagen
         #Busca el videojuego para obtener el valor
         obVj = db.session.query(VideoJuego).filter_by(nombre=VJ).first()
         if obVj is None:
-            app.logger.error("["+email+"] CargarEjemplar: No existe el videojuego: ["+VJ+"]")
+            #app.logger.error("["+email+"] CargarEjemplar: No existe el videojuego: ["+VJ+"]")
             mensaje = mensaje + "No existe el VJ: Lo crearemos "
             publicado = 0
             cuarentena = 1 #Se pone en cuarentena el ejemplar si no existe el videojuego
@@ -291,7 +296,8 @@ def funEditarEjemplar(idejeusuario, email, estado, comentario, imagen):
 # Funcion: Obtener los datos del usuario
 def funObtenerDatosUsuario(idUsuario):
     usuario = db.session.query(Usuario).filter_by(idUsuario=idUsuario).first()
-    obFoto = db.session.query(FotoUsuario).filter_by(usuarioId=idUsuario).first()
+    obFoto = db.session.query(FotoUsuario).filter_by(usuarioId=idUsuario, activa=1).first()
+    direcciones = db.session.query(LugarUsuario).filter_by(usuarioId=idUsuario, activa=1).all()
 
     nick = usuario.nickName
     if obFoto is None:
@@ -302,24 +308,44 @@ def funObtenerDatosUsuario(idUsuario):
     if usuario is None:
         app.logger.error("[" + nick + "] funObtenerDatosUsuario: No se pudieron obtener los datos del usuario")
     else:
-        return usuario, foto
+        return usuario, foto, direcciones
 
 
-def funUpdateDatosUsuario(idUsuario,nombres,apellidos,edad,fechanac,genero, celular, imagen):
+def funUpdateDatosUsuario(idUsuario,nombres,apellidos,edad,fechanac,genero, celular, nickname,email, imagen, direcciones,hoy, where):
     try:
-        # Actualiza los datos del usuario
-        datosUsuario = Usuario.query.filter_by(idUsuario=idUsuario).update(dict(nombres=nombres, apellidos=apellidos, edad=edad,
-                                fechanac=fechanac, genero=genero, celular=celular))
+        if where == 0:
+            # Actualiza los datos del usuario
+            datosUsuario = Usuario.query.filter_by(idUsuario=idUsuario).update(dict(nombres=nombres, apellidos=apellidos, edad=edad,
+                                    fechanac=fechanac, genero=genero, celular=celular, nickName=nickname ))
 
-        vfoto = imagen.read()
+            if imagen.filename != '':
+                fotoAnt = FotoUsuario.query.filter_by(usuarioId=idUsuario).update(dict(activa=0))
 
-        fotoUsuario = FotoUsuario(usuarioId=idUsuario, foto=vfoto)
+                vfoto = imagen.read()
+                fotoUsuario = FotoUsuario(usuarioId=idUsuario, foto=vfoto, activa=1)
+                db.session.add(fotoUsuario)
 
-        db.session.add(fotoUsuario)
+            cambioUsuario = CambioUsuario(usuarioId=idUsuario, nombres=nombres, apellidos=apellidos, celular=celular, nickName=nickname, email=email, fechacrea=hoy)
 
-        db.session.commit()
+            db.session.add(cambioUsuario)
+            db.session.commit()
+        else:
+            cont = 0
+            principal = 0
 
+            if len(direcciones) > 0:
+                direccionesAnt = LugarUsuario.query.filter_by(usuarioId=idUsuario).update(dict(activa=0))
+                for dir in direcciones:
+                    if cont == 0:
+                        principal = 1
+                    else:
+                        principal = 0
+                    cont+=1
+                    direccion = LugarUsuario(usuarioId=idUsuario, ciudadId = IDCIUDAD, direccion=dir, activa=1, principal=principal, fechacrea=hoy)
+                    db.session.add(direccion)
+                db.session.commit()
     except:
+        db.session.rollback()
         raise
 
 # Recupera los puntos que un usuario tiene disponibles para adquirir videojuegos
@@ -401,4 +427,37 @@ def funcObtenerCiudades():
         raise
 
     return result
+
+
+def funcCrearUpdateQA(idTrx, mensaje, idUsuario, where):
+    qya = db.session.query(QyA).filter_by(trxId=idTrx).first()
+    # Crea la QyA
+    obQyA = QyA(tipo=C_QYAPREG, trxId=idTrx, usuarioIdDueno=qya.usuarioIdDueno, usuarioIdSolic=qya.usuarioIdSolic,
+                usuarioIdMsg=idUsuario, vjId=qya.vjId, ejeUsuarioId=qya.ejeUsuarioId,PregResp=mensaje)
+
+    db.session.add(obQyA)
+
+    if where == 'cancelar':
+        obDetTrx = DetalleTrx(trxId=idTrx, usuarioId=idUsuario, accion=C_DETTRXCANCELAR)
+        db.session.add(obDetTrx)
+
+    db.session.commit()
+    qya = db.session.query(QyA).filter_by(trxId=idTrx).all()
+
+    return qya
+
+
+
+def funTransaccionTrato(idTrx,idusuario,idotrousuario, accion):
+    try:
+        obDetTrx = DetalleTrx(trxId=idTrx, usuarioId=idusuario, accion=C_DETTRXSOLIC)
+
+        db.session.add(obDetTrx)
+        db.session.commit()
+
+
+    except:
+        db.session.rollback()
+        #return resultado
+        raise
 

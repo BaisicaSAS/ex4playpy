@@ -50,6 +50,13 @@
             border-color: transparent;
             color: #fff !important;
         }
+
+        li {
+            margin-right: 40px;
+        }
+        .nav2 li {
+            margin-right: 10px;
+        }
     </style>
 
     <script>
@@ -61,14 +68,18 @@
     </script>
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark ">
-      <a class="navbar-brand" href= {{url_for('index')}}>ex4play - [usuario: {{usuario}}] </a>
+     <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+      <a href= {{url_for('index')}}>
+          <img src="{{url_for('static', filename='small.png')}}" alt="" style="width:150px;">
+      </a>
       <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
          <li><a href="{{url_for('ejemplaresusuario') }}">Mis videojuegos</a></li>
          <li><a href="{{url_for('cargarEjemplar') }}">Publicar un videojuego</a></li>
          <li><a href="{{url_for('transacciones') }}">Videojuegos negociados</a></li>
          <li><a href="{{url_for('updateUser') }}">Perfil</a></li>
          <li><a href="{{url_for('logout') }}">Cerrar sesión</a></li>
+        </li>
       </ul>
     </nav>
 {% block content %} {% endblock %}

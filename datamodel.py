@@ -30,7 +30,7 @@ class Usuario(db.Model):
 
     idUsuario = db.Column(db.Integer, Sequence('idusuario_seq'), primary_key=True)
     nickName = db.Column(db.String(50), nullable=False, unique=True)
-    celular = db.Column(db.Integer, unique=True) # celular
+    celular = db.Column(db.String(20), unique=True) # celular
     pwd = db.Column(db.String(256), nullable=False)
     paisIndic = db.Column(db.Integer, default=57) #Indicativo del pais
     email = db.Column(db.String(100), unique=True, nullable=False)
@@ -392,7 +392,7 @@ class Saldos(db.Model):
     usuarioId = db.Column(db.Integer, db.ForeignKey('usuario.idUsuario'), unique=True)
     valorPagado = db.Column(db.Float, default=0)  # Valor total que ha pagado
     ValorCobrado = db.Column(db.Float, default=0)  # Valor total que ha cobrado
-    TotalPuntos = db.Column(db.Float, default=0)  # Valor total que tiene actualmente en puntos
+    Saldos = db.Column(db.Float, default=0)  # Valor total que tiene actualmente en puntos
     ejeRecibidos = db.Column(db.Integer, default=0)  #Cantidad Ejemplares recibidos
     ejeEntregados = db.Column(db.Integer, default=0)  #Cantidad Ejemplares recibidos
     ejePublicados = db.Column(db.Integer, default=0)  #Cantidad Ejemplares recibidos
