@@ -1,0 +1,55 @@
+{% extends "baseadmin.html" %}
+{% block title %}Administrador - ex4play{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lemon">
+
+    <section >
+        <div class="bgimg-1">
+            <div class="container text-center">
+                <img  src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:20%">
+            </div>
+        </div>
+    </section>
+
+    <div class="alert alert-dark" role="alert">
+      <h5>{{ mensaje }}</h5>
+    </div>
+
+    <div class="container text-center">
+        <div>
+            clasificacion
+            [1-A	Máxima categoría	180]-
+            [2-B	Categoría superior	150]-
+            [3-C	Categoría muy alta	120]-
+            [4-D	Categoría alta	80]-
+            [5-E	Categoría media	50]-
+            [6-F	Categoría baja	30]-
+            [7-G	Categoría muy baja	20]-
+            [8-H	Categoría mínima	10]
+        </div>
+        <table style="border: black 2px solid">
+        <tr  style="border: black 2px solid; background-color:#6eba82;">
+            <td style="border: black 2px solid">Nombre juego</td>
+            <td style="border: black 2px solid">Clase</td>
+            <td style="border: black 2px solid">Valor</td>
+            <td style="border: black 2px solid">Reclasifica</td>
+        </tr>
+        {% for reg in juegos %}
+            <tr>
+                <td style="border: black 2px solid">{{reg[1]}}</td>
+                <td style="border: black 2px solid">{{reg[2]}} | {{reg[3]}} | {{reg[4]}}</td>
+                <td style="border: black 2px solid">{{reg[5]}}</td>
+                <td style="border: black 2px solid">
+                    <form method="post" action=" {{url_for('valoracionjuegos') }} ">
+                        <input value="{{reg[0]}}" type="hidden" name="idvj" />
+                        <input type="text" id="categ" name="categ" placeholder="categoría"/>
+                        <button type="submit" name="accion" value="reclasif">Reclasif. VJ</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+{% endblock %}

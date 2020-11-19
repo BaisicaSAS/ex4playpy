@@ -1,0 +1,78 @@
+{% extends "baseadmin.html" %}
+{% block title %}Administrador - ex4play{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lemon">
+
+    <section >
+        <div class="bgimg-1">
+            <div class="container text-center">
+                <img  src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:20%">
+            </div>
+        </div>
+    </section>
+
+    <div class="alert alert-dark" role="alert">
+      <h5>{{ mensaje }}</h5>
+    </div>
+
+    <div class="container text-center">
+        <table style="border: black 2px solid">
+        <tr  style="border: black 2px solid; background-color:#6eba82;">
+            <td style="border: black 2px solid">Nombre juego</td>
+            <td style="border: black 2px solid">Id Ejemplar</td>
+            <td style="border: black 2px solid">Puntos dueño</td>
+            <td style="border: black 2px solid">Dueño</td>
+            <td style="border: black 2px solid">No existe el juego</td>
+            <td style="border: black 2px solid">Existe el juego</td>
+        </tr>
+        {% for trx in juegos %}
+            <tr>
+                <td style="border: black 2px solid">{{trx[0]}}</td>
+                <td style="border: black 2px solid">{{trx[1]}}</td>
+                <td style="border: black 2px solid">{{trx[2]}}</td>
+                <td style="border: black 2px solid">{{trx[3]}}</td>
+                <td style="border: black 2px solid">
+                    <form method="post" action=" {{url_for('nuevosjuegos') }} ">
+                        <input value="{{trx[1]}}" type="hidden" name="ideje" />
+                        <input type="number" id="cpuntos" name="cpuntos" placeholder="puntos ejemplar"/>
+                        <input type="text" id="nnombre" name="nnombre" placeholder="nuevo nombre"/>
+                        <input type="text" id="categ" name="categ" placeholder="categoría"/>
+                        <input type="text" id="consola" name="consola" placeholder="id consola"/>
+                        <button type="submit" name="accion" value="updatevj">Upd. VJ</button>
+                    </form>
+                </td>
+                <td style="border: black 2px solid">
+                    <form method="post" action=" {{url_for('nuevosjuegos') }} ">
+                        <input value="{{trx[1]}}" type="hidden" name="ideje" />
+                        <input type="text" id="njuego" name="njuego" placeholder="nuevo id juego"/>
+                        <input type="number" id="npuntos" name="npuntos" placeholder="puntos ejemplar"/>
+                        <button type="submit" name="accion" value="otrovj">Otro VJ</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        </table>
+        <div>
+            consolas:
+            [1	No identificada]-
+            [2	PS3]-
+            [3	PS4]-
+            [4	Xbox 360]-
+            [5	Xbox One]-
+            [6	Switch]
+        </div>
+        <div>
+            clasificacion
+            [1	A	Máxima categoría	180]-
+            [2	B	Categoría superior	150]-
+            [3	C	Categoría muy alta	120]-
+            [4	D	Categoría alta	80]-
+            [5	E	Categoría media	50]-
+            [6	F	Categoría baja	30]-
+            [7	G	Categoría muy baja	20]-
+            [8	H	Categoría mínima	10]
+        </div>
+    </div>
+{% endblock %}

@@ -290,7 +290,7 @@ class DetalleTrx(db.Model):
     idDetTrx = db.Column(db.Integer, Sequence('iddettrx_seq'), primary_key=True)
     trxId = db.Column(db.Integer, db.ForeignKey('transaccion.idTrx'), nullable=False)
     usuarioId = db.Column(db.Integer, db.ForeignKey('usuario.idUsuario'), nullable=False)
-    accion = db.Column(db.Integer, default=1)  #1: Solicita, 2: Acepta Solicitud, 3: Entrega, 4: Recibe, 5: Califica
+    accion = db.Column(db.Integer, default=1)  #1: Solicita, 2: Acepta Solicitud, 3: Entrega, 4: Recibe, 5: Califica, 6: Cancela/rechaza trato
     fechacrea = db.Column(db.DateTime, default=datetime.datetime.now)
     UsrDetTrx = db.relationship("Usuario", lazy=True)
     TrxDetTrx = db.relationship("Transaccion", lazy=True)
@@ -325,14 +325,14 @@ class DetalleValor(db.Model):
     idDetVal = db.Column(db.Integer, Sequence('iddetval_seq'), primary_key=True)
     ejeUsuarioId = db.Column(db.Integer, db.ForeignKey('ejeusuario.idEjeUsuario'), nullable=False)
     trxId = db.Column(db.Integer, db.ForeignKey('transaccion.idTrx'), nullable=False)
-    promoId = db.Column(db.Integer, db.ForeignKey('promo.idPromo'), nullable=False)
+    promoId = db.Column(db.Integer, db.ForeignKey('promo.idPromo'), nullable=True)
     usuarioId = db.Column(db.Integer, db.ForeignKey('usuario.idUsuario'), nullable=True)
-    tipo = db.Column(db.Integer, default=1)  # Cambio, otros
+    tipo = db.Column(db.Integer, default=1)  # 1: Cambio, otros
     vigente = db.Column(db.Integer, default=1)  # 1: S - 0: N
     valorPaga = db.Column(db.Float, default=0)  # Valor que paga por la transacción
     valorCobra = db.Column(db.Float, default=0)  # Valor que cobra por la transacción
     multiplicador = db.Column(db.Float, default=1)  # Cuando haya promoción, los puntos de la transacción se multiplican, aqui se registr por cuanto fueron multiplicados lo que están registrados
-    comentario = db.Column(db.String(100), nullable=True) #Comentario
+    comentario = db.Column(db.String(500), nullable=True) #Comentario
     fechacrea = db.Column(db.DateTime, default=datetime.datetime.now)
     PromoDetVal = db.relationship("Promo", lazy=True)
     UsrDetVal = db.relationship("Usuario", lazy=True)
@@ -351,7 +351,7 @@ class DetalleValorOtros(db.Model):
     valorPaga = db.Column(db.Float, default=0)  # Valor que paga por la transacción
     valorCobra = db.Column(db.Float, default=0)  # Valor que cobra por la transacción
     multiplicador = db.Column(db.Float, default=1)  # Cuando haya promoción, los puntos de la transacción se multiplican, aqui se registr por cuanto fueron multiplicados lo que están registrados
-    comentario = db.Column(db.String(100), nullable=True) #Comentario
+    comentario = db.Column(db.String(500), nullable=True) #Comentario
     fechacrea = db.Column(db.DateTime, default=datetime.datetime.now)
     PromoDetVal = db.relationship("Promo", lazy=True)
     UsrDetVal = db.relationship("Usuario", lazy=True)

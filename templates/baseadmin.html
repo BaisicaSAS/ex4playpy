@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <style type="text/css" >
-       body {background-image: url("{{ url_for('static', filename='fondo.png') }}") background: #3c5b6d !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+           body {background-image: url("{{ url_for('static', filename='fondo.png') }}") background: #436d3c !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
 
         .form-signin {
           width: 100%;
@@ -231,10 +231,15 @@
     <nav class="navbar navbar-dark bg-dark ">
       <a class="navbar-brand" href= {{url_for('index')}}>ex4play</a>
       <ul class="nav navbar-nav navbar-right">
-         <li><a href="{{url_for('videojuegosporcrear') }}">Videojuegos sin crear</a></li>
-         <li><a href="{{url_for('actividadusuarios') }}">Actividad de usuarios</a></li>
-         <li><a href="{{url_for('juegosmasbuscados') }}">Videojuegos más intercambiados / Palabras más buscadas</a></li>
-         <li><a href="{{url_for('usuariosmascambian') }}">Perfiles con más movimiento (Cambios de perfil, cambios de ubicación)</a></li>
+         <li><a href="{{url_for('nuevosjuegos') }}">* Videojuegos sin crear (Mal digitados)</a></li>
+         <li><a href="{{url_for('nuevosusuarios') }}">* Administrar usuarios </a></li>
+         <li><a href="{{url_for('nuevostratos') }}">Nuevos tratos</a></li>
+         <li><a href="{{url_for('manejoenvios') }}">* Manejo de envíos</a></li>
+         <li><a href="{{url_for('saldosusuarios') }}">* Saldos usuarios</a></li>
+         <li><a href="{{url_for('valoracionjuegos') }}">* Revalorización de juegos</a></li>
+         <!--<li><a href="{{url_for('valoracionjuegos') }}">Videojuegos más intercambiados / Palabras más buscadas</a></li>
+         <li><a href="{{url_for('valoracionjuegos') }}">Perfiles con más movimiento (Cambios de perfil, cambios de ubicación)</a></li>
+         <li><a href="{{url_for('valoracionjuegos') }}">Auditar mensajes [que no correspondan a la politica]</a></li>-->
          <li><a href="{{url_for('logout') }}">Cerrar sesión</a></li>
       </ul>
     </nav>
