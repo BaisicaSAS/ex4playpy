@@ -12,8 +12,8 @@ ex4play - Publicar un ejemplar
 
     </head>
 <body class="bg-overlay">
-    <div class="alert alert-dark" role="alert">
-      <h3>{{ mensaje }}</h3>
+    <div class="alert alert-primary" role="alert">
+      <h5>{{ mensaje }}</h5>
     </div>
 
 <!-- <div class="bg-overlay"  style="background-color:#444;align-items: center; justify-content: center;"> -->
@@ -34,7 +34,7 @@ ex4play - Publicar un ejemplar
             <div class="form-group" style="position: center">
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text spanB" id="nombre">Nombre</span>
+                    <span class="input-group-text spanB" id="nombre"><b>Nombre</b></span>
                   </div>
                   <input type="textarea" rows="3" autocomplete="on" class="form-control" name="busqueda" id="busqueda" aria-label="Nombre del Videojuego" placeholder="Nombre del videojuego"  aria-describedby="nombre">
                 </div>
@@ -44,11 +44,11 @@ ex4play - Publicar un ejemplar
             <div class="form-group" style="position: center">
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <span class="input-group-text spanB">Estado videojuego:</span>
+                  <span class="input-group-text spanB"><b>Estado videojuego:</b></span>
                 </div>
                 <input type="number" min="1" max="10" value="1" name="estado" id="estado" >
                 <div class="input-group-prepend">
-                  <span class="input-group-text spanB">de 10</span>
+                  <span class="input-group-text spanB"><b>de 10</b></span>
                 </div>
              </div>
             </div>
@@ -56,7 +56,7 @@ ex4play - Publicar un ejemplar
             <div class="form-group" style="position: center">
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text spanB">Comentario</span>
+                    <span class="input-group-text spanB"><b>Comentario</b></span>
                   </div>
                   <textarea class="form-control" rows="5" aria-label="Comentario" name="comentario" id="comentario" placeholder="Cuentanos algo de tu videojuego, hace cuanto lo tienes, etc."></textarea>
                 </div>

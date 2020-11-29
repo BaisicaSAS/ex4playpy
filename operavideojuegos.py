@@ -440,6 +440,9 @@ def funcCrearUpdateQA(idTrx, mensaje, idUsuario, where):
     if where == 'cancelar':
         obDetTrx = DetalleTrx(trxId=idTrx, usuarioId=idUsuario, accion=C_DETTRXCANCELAR)
         db.session.add(obDetTrx)
+    if where == 'aceptar':
+        obDetTrx = DetalleTrx(trxId=idTrx, usuarioId=idUsuario, accion=C_DETTRXACEPT)
+        db.session.add(obDetTrx)
 
     db.session.commit()
     qya = db.session.query(QyA).filter_by(trxId=idTrx).all()
