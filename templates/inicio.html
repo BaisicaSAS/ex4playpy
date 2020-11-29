@@ -10,70 +10,112 @@
     </head>
 
     <body class="bg-overlay">
-        <div class="alert alert-dark" role="alert">
+        <div class="alert alert-primary" role="alert">
           <h5>{{ mensaje }}</h5>
         </div>
-        <div class="container body-content">
-            <div class="header">
-                <h1><img src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:20%"></h1>
+        <div class="container">
+            <div id="carouselExampleIndicators" class="carousel slide img-fluid" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <img src="{{url_for('static', filename='ex1.jpg')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="{{url_for('static', filename='ex2.jpg')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="{{url_for('static', filename='ex3.jpg')}}" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
         </div>
+        <br>
+        <div style="background-color:#444;">
+            <header class="bg-primary text-center py-3 mb-4">
+              <div class="container">
+                <h1 class="font-weight-light text-white">Novedades</h1>
+              </div>
+            </header>
+            <div class="container">
 
-            <form name="form" action="{{url_for('buscar')}}" method="post">
-                <div class="input-group" align="center">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"  id="buscar">Buscar juego</span>
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-10 col-lg-8">
+                            <form class="card card-sm" action="{{url_for('buscar')}}" method="post">
+                                <div class="card-body row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <i class="fas fa-search h4 text-body"></i>
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col">
+                                        <input autocomplete="on" class="form-control form-control-lg form-control-borderless" placeholder="Buscar videojuegos" id="busqueda" name="busqueda">
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col-auto">
+                                        <button id="buscar" class="btn btn-lg btn-success" type="submit">Buscar videojuegos</button>
+                                    </div>
+                                    <!--end of col-->
+                                </div>
+                            </form>
+                        </div>
+                        <!--end of col-->
                     </div>
-                    <input autocomplete="on" class="form-control" id="busqueda" name="busqueda" aria-label="Buscar videojuegos" aria-describedby="Buscar">
-                    <div class="input-group-append">
-                       <button class="btn btn-outline-secondary" type="button">Buscar</button>
-                    </div>
-                </div>
-            </form>
-
+            </div>
             {% set indice = namespace(cont=1) %}
             {% set reinicia = namespace(cont=1) %}
-
-            {% for vj in novedades %}
-                {% if reinicia.cont == 1 %}
-                <div class="card-deck" >
-                {% endif %}
-                <form name="formjuego" action="{{url_for('solicitarejemplar',idejeusuario=vj[0])}}" method="get" onsubmit="return validatePuntos()">
-                    <input value="{{vj[0]}}" type="hidden" name="idejemplar" />
-                    <input value="{{puntosusu}}" type="hidden" name="puntosusuario" id="puntosusuario" />
-                    <input value="{{ vj[6] }}" type="hidden" name="valorjuego" id="valorjuego" />
-                    <div class="card border-info mb-3" style="width: 15rem;max-width: 15rem;display: flex; align-items: center; justify-content: center;">
-                        <br>
-                        <h5 class="card-header text-light" align="center" style="width= 100%">{{ vj[3] }}</h5>
-                        <div class="card-body">
-                            <!--<div class="embed-responsive embed-responsive-16by9">-->
-                               <img class="card-img-top zoom" style="display: block;margin-left: auto;margin-right: auto;width: 10rem;" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
-                               <!--<img class="card-img-top embed-responsive-item" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">-->
-                            <!--</div>-->
-                        </div>
-                        <ul class="list-group list-group-flush" style="background-color:#4444;">
-                            <li class="list-group-item">Puntos: {{ vj[6] }}</li>
-                            <li class="list-group-item">Estado: {{ vj[7] }} de 10</li>
-                        </ul>
-                        <div class="card-footer text-light">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="submit" name="btnejemplar" value="solicitar" class="btn btn-sm btn-outline-secondary text-light" style="background-color:#0074a3;">Quiero este juego!</button>
+            <div class="gamesFondo">
+                {% for vj in novedades %}
+                    {% if reinicia.cont == 1 %}
+                    <div class="card-deck justify-content-center" >
+                    {% endif %}
+                    <form name="formjuego" action="{{url_for('solicitarejemplar',idejeusuario=vj[0])}}" method="get" onsubmit="return validatePuntos()">
+                        <input value="{{vj[0]}}" type="hidden" name="idejemplar" />
+                        <input value="{{puntosusu}}" type="hidden" name="puntosusuario" id="puntosusuario" />
+                        <input value="{{ vj[6] }}" type="hidden" name="valorjuego" id="valorjuego" />
+                        <div class="card border-info mb-3 border-primary" style="width: 15rem;max-width: 15rem;display: flex; align-items: center; justify-content: center;">
+                            <br>
+                            <h5 class="card-header text-light" align="center" style="width= 100%;border-radius: 15px 50px">{{ vj[3] }}</h5>
+                            <div class="card-body">
+                                <!--<div class="embed-responsive embed-responsive-16by9">-->
+                                   <img class="card-img-top zoom" style="display: block;margin-left: auto;margin-right: auto;width: 10rem;" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
+                                   <!--<img class="card-img-top embed-responsive-item" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">-->
+                                <!--</div>-->
+                            </div>
+                            <ul class="list-group list-group-flush" style="background-color:#4444;">
+                                <li class="list-group-item">Puntos: {{ vj[6] }}</li>
+                                <li class="list-group-item">Estado: {{ vj[7] }} de 10</li>
+                            </ul>
+                            <div class="card-footer text-light">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="submit" name="btnejemplar" value="solicitar" class="btn btn-sm btn-outline-secondary text-light" style="background-color:#0074a3;">Quiero este juego!</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </form>
-                {% if indice.cont is divisibleby 5 or indice.cont == novedades|count %}
+                    </form>
+                    {% if indice.cont is divisibleby 5 or indice.cont == novedades|count %}
+                </div>
+                <div class="row" style="display: flex; align-items: center; justify-content: center;" >
+                </div>
+                        {% set reinicia.cont = 1 %}
+                    {% else %}
+                        {% set reinicia.cont = 0 %}
+                    {% endif %}
+                    {% set indice.cont = indice.cont + 1 %}
+                {% endfor%}
             </div>
-            <div class="row" style="display: flex; align-items: center; justify-content: center;" >
-            </div>
-                    {% set reinicia.cont = 1 %}
-                {% else %}
-                    {% set reinicia.cont = 0 %}
-                {% endif %}
-                {% set indice.cont = indice.cont + 1 %}
-            {% endfor %}
         </div>
 
         <footer class="pt-4 my-md-5 pt-md-5 border-top" style="background-color:#444;">
@@ -81,6 +123,13 @@
               <div class="col-12 col-md">
                     <img class="mb-2" src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:40%">
                 <small class="d-block mb-3 text-muted">© 2020</small>
+                <!-- Page Content -->
+        <div class="container">
+
+            <!-- Team Member 1 -->
+            <div class="">
+              <div class="card border-primary shadow">
+                <img src="{{url_for('static', filename='manual.png')}}" class="card-img-top" alt="...">
               </div>
               <div class="col-6 col-md">
                 <h5>¿Como funciona ex4play?</h5>
@@ -97,6 +146,22 @@
                   <li><a class="text-muted" href="{{url_for('calidadvj')}}">Condiciones mínimas de calidad de los videojuegos</a></li>
                 </ul>
               </div>
+            </div>
+
+
+          <!-- /.row -->
+
+        </div>
+
+        <footer class="footer bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                        <p>Copyright © 2020.</p>
+                        <p class="h6">© Todos los derechos reservados.</p>
+                    </div>
+				<hr>
+			    </div>
             </div>
         </footer>
 

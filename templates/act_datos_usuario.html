@@ -10,30 +10,63 @@
     </head>
 
     <script>
-    $(function () {
-        $('#nav-profile-tab li:last-child a').tab('show')
-    })
-    $('#myDropdown').on('show.bs.dropdown', function () {
-    // do something...
-    })
 
-    $(document).ready( function() {
-        function readURL(input)
-        {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
+        $('#myDropdown').on('show.bs.dropdown', function () {
+        // do something...
+        });
 
-                reader.onload = function (e) {
-                    $('#imgUser').attr('src', e.target.result);
+        $(document).ready( function() {
+            function readURL(input)
+            {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#imgUser').attr('src', e.target.result);
+                    }
+
+                    reader.readAsDataURL(input.files[0]);
                 }
-
-                reader.readAsDataURL(input.files[0]);
             }
-        }
-         $('#imgInp').change(function(){
-                readURL(this);
-          });
-    });
+             $('#imgInp').change(function(){
+                    readURL(this);
+             });
+
+             $('#addAddress').click(function()
+             {
+                debugger;
+               if ( $("#divAd2").is(":hidden") ) {
+                 $("#divAd2").show();
+               } else if ( $("#divAd3").is(":hidden") ) {
+                 $("#divAd3").show();
+               }else if ( $("#divAd4").is(":hidden") ) {
+                 $("#divAd4").show();
+               }
+            });
+
+            $('#btnop1').click(function()
+             {
+                  if ( $("#divAd2").is(":visible") )
+                  {
+                    $("#divAd2").hide();
+                    $("#dir2").val('');
+                  }
+            });
+            $('#btnop2').click(function()
+             {
+                  if ( $("#divAd3").is(":visible") )
+                  {
+                    $("#divAd3").hide();
+                  }
+            });
+            $('#btnop3').click(function()
+             {
+                  if ( $("#divAd4").is(":visible") )
+                  {
+                    $("#divAd4").hide();
+                  }
+            });
+        });
 
     </script>
 
@@ -41,7 +74,7 @@
             <div style="display: flex; align-items: center; justify-content: center;"> <h1>{{ mensaje }} </h1> </div>
         <div class="container body-content">
                 <div class="header">
-                    <h1><img src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:35%"></h1>
+                    <h1><img src="{{url_for('static', filename='logoClaro.png')}}" alt="" style="width:30%"></h1>
                 </div>
             <div class="content">
                 <h2 style="text-align: center;">Actualizar Datos</h2>
@@ -63,14 +96,14 @@
                                 <form name="frmActUser" method="post" action=" {{url_for('updateUser') }} " enctype="multipart/form-data">
                                     <div class="form-group">
                                         <label for="nickname"><b>Foto usuario:</b></label>
-                                        <img class="img-thumbnail" alt="Cinque Terre" style="width:50%" id='imgUser'/>
+                                        <img class="img-thumbnail" alt="Cinque Terre" style="width:20%" id='imgUser' src="data:image/jpeg;base64,{{foto}} "/>
                                     </div>
                                     <div class="form-group">
                                         <input type="file" class="form-control-file" id="imgInp" name="imgInp" aria-label="Cargar imágen" aria-describedby="Cargar imágen">
                                     </div>
                                     <div class="form-group">
                                       <label for="nickname"><b>Nickname</b></label>
-                                      <input type="text" class="form-control" id="nickname" placeholder="Nickname del usuario" value="{{usuario.nickName}}" disabled>
+                                      <input type="text" class="form-control" id="nickname" name="nickname" placeholder="Nickname del usuario" value="{{usuario.nickName}}">
                                     </div>
                                     <div class="form-group">
                                         <label for="nombres"><b>Nombres</b></label>
@@ -102,11 +135,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="celular"><b>Celular</b></label>
-                                        <input type="number" class="form-control" id="celular" name="celular">
+                                        <input type="text" class="form-control" id="celular" name="celular" value="{{usuario.celular}}">
                                     </div>
                                     <div class="form-group">
                                     <div >
-                                        <input type="submit" value="Guardar" class="btn btn-lg btn-primary btn-block" style="margin:0px auto; display:block;"/>
+                                        <input id="saveDataUser" name="saveDataUser" type="submit" value="Guardar" class="btn btn-lg btn-primary btn-block" style="margin:0px auto; display:block;"/>
                                     </div>
                                 </div>
                                 </form>
@@ -114,31 +147,85 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                        {{map.html}}{{map.js}}
-                        <br>
                         <div class="form-signin">
                             <section class="form-register">
-                                 <div class="form-group">
-                                    <label for="dir1"><b>Dirección Principal:</b></label>
-                                    <input type="text" class="form-control" id="dir1" name="dir1" placeholder="Dirección Principal">
-                                 </div>
-                                <div class="form-group">
-                                    <label for="dir2"><b>Dirección 2:</b></label>
-                                    <input type="text" class="form-control" id="dir2" name="dir2" placeholder="Dirección 2">
-                                 </div>
-                                <div class="form-group">
-                                    <label for="dir3"><b>Dirección 3:</b></label>
-                                    <input type="text" class="form-control" id="dir3" name="dir3" placeholder="Dirección 3">
-                                 </div>
-                                <div class="form-group">
-                                    <label for="dir4"><b>Dirección 4:</b></label>
-                                    <input type="text" class="form-control" id="dir4" name="dir4" placeholder="Dirección 4">
-                                 </div>
+                                <form name="frmUserAddress" method="post" action=" {{url_for('updateUser') }} " enctype="multipart/form-data">
+                                    {%set showfield2 = none%}
+                                    {%set showfield3 = none%}
+                                    {%set showfield4 = none%}
+                                    <div class="form-group">
+                                        <label for="ciudad"><b>Ciudad</b></label>
+                                        <select id="ciudad" class="form-control" name="ciudad" value="{{ciudades.nombreCiudad}}" style="width:200px">
+                                            {% for c in ciudades %}
+                                                <option value={{c.idCiudad}}>{{c.nombreCiudad}}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                     <button id="addAddress" name="addAddress" type="button" class="btn btn-primary">+</button>
+                                     <div class="form-group">
+                                         <br>
+                                        <label for="dir1"><b>Dirección Principal:</b></label>
+                                        <input type="text" class="form-control" id="dir1" name="dir1" placeholder="Dirección Principal" value="{{dirP}}">
+                                     </div>
+                                     {% if dirOp2|length %}
+                                        {% set showfield2 = visible %}
+                                     {% endif %}
+                                    <div id="divAd2" class="form-group" style="display:{{showfield2}}">
+                                        <label for="dir2"><b>Dirección opcional:</b></label>
+                                        <input type="text" class="form-control" id="dir2" name="dir2" placeholder="Dirección opcional" value="{{dirOp2}}">
+                                        <button id="btnop1" name="addAddress" type="button" class="btn btn-primary" style="padding-top = 20px">-</button>
+                                     </div>
+
+                                    {% if dirOp3 |length%}
+                                        {% set showfield3 = visible %}
+                                    {% endif %}
+                                    <div id="divAd3" class="form-group" style="display:{{showfield3}}">
+                                        <label for="dir3"><b>Dirección opcional:</b></label>
+                                        <input type="text" class="form-control" id="dir3" name="dir3" placeholder="Dirección opcional" value="{{dirOp3}}">
+                                        <button id="btnop2" name="addAddress" type="button" class="btn btn-primary">-</button>
+                                     </div>
+
+                                    {% if dirOp4|length %}
+                                        {% set showfield4 = visible %}
+                                    {% endif %}
+                                    <div id="divAd4" class="form-group" style="display:{{showfield4}}">
+                                        <label for="dir4"><b>Dirección opcional:</b></label>
+                                        <input type="text" class="form-control" id="dir4" name="dir4" placeholder="Dirección opcional" value="{{dirOp4}}">
+                                        <button id="btnop3" name="addAddress" type="button" class="btn btn-primary">-</button>
+                                    </div>
+                                    <div class="form-group">
+                                        <div >
+                                            <input id="saveAddress" name="saveAddress" type="submit" value="Guardar" class="btn btn-lg btn-primary btn-block" style="margin:0px auto; display:block;"/>
+                                        </div>
+                                    </div>
+                                 </form>
                             </section>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                    <p>Sint sit mollit irure quis est nostrud cillum consequat Lorem esse do quis dolor esse fugiat sunt do. Eu ex commodo veniam Lorem aliquip laborum occaecat qui Lorem esse mollit dolore anim cupidatat. Deserunt officia id Lorem nostrud aute id commodo elit eiusmod enim irure amet eiusmod qui reprehenderit nostrud tempor. Fugiat ipsum excepteur in aliqua non et quis aliquip ad irure in labore cillum elit enim. Consequat aliquip incididunt ipsum et minim laborum laborum laborum et cillum labore. Deserunt adipisicing cillum id nulla minim nostrud labore eiusmod et amet. Laboris consequat consequat commodo non ut non aliquip reprehenderit nulla anim occaecat. Sunt sit ullamco reprehenderit irure ea ullamco Lorem aute nostrud magna.</p>
+                        <div class="form-signin">
+                            <table class="table table-hover table-dark text-center">
+                              <thead>
+                                <tr>
+                                  <th style="font-size: 12px;" scope="col">Saldos</th>
+                                  <th style="font-size: 12px;" scope="col">Valor Pagado</th>
+                                  <th style="font-size: 12px;" scope="col">Valor Cobrado</th>
+                                  <th style="font-size: 12px;" scope="col">Ejemplares recibidos</th>
+                                  <th style="font-size: 12px;" scope="col">Ejemplares entregados</th>
+                                  <th style="font-size: 12px;" scope="col">Ejemplares publicados</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>{{saldo.Saldos}}</td>
+                                      <td>{{saldo.valorPagado}}</td>
+                                      <td>{{saldo.ValorCobrado}}</td>
+                                      <td>{{saldo.ejeRecibidos}}</td>
+                                      <td>{{saldo.ejeEntregados}}</td>
+                                      <td>{{saldo.ejePublicados}}</td>
+                                  </tr>
+                              </tbody>
+                            </table>
                     </div>
                 </div>
             </div>

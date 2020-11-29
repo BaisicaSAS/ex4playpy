@@ -24,6 +24,16 @@
     background-attachment: fixed;
 }
 
+.bg-no-overlay {
+    background: url("../../static/ex1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    height: 450px;
+    padding-top: 50px;
+}
+
 .header {
     text-align: center;
 }
@@ -61,3 +71,25 @@ h4, .h4 {
     border: 1px solid rgba(0,0,0,.125);
 }
 
+.swiper-container {
+	width: 100%;
+	height: 100vh;
+}
+
+.gamesFondo {
+ background-image: url("../../static/fondogames.png");
+ background-position: center; /* Center the image */
+ background-size: cover;
+}
+
+.card {
+     border: 5px solid;
+     padding-bottom: 3%;
+ }
+
+
+.spanB{
+    background-color:#0276BB;
+    font-family: Andale Mono, monospace;
+    color:#FFFFFF;
+}

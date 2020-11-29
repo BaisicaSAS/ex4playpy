@@ -20,8 +20,8 @@
     }
 
     .content {
-        background: rgba(91, 86, 248, 1); /* Black background with transparency */
-        color: #f1f1f1;
+        background: #91D8F7; /* Black background with transparency */
+        color: #FFFF;
         padding: 20px;
         align-content: center;
         justify-content: center; /* center horizontally */
@@ -29,9 +29,11 @@
         margin: 0 auto;
         width: 50%;
         border-radius:10px;
+        text-shadow: 2px 2px 4px #000000;
     }
 
     h4, .h4 {
         font-size: 18px;
         font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     }
+

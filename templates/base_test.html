@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <link rel="stylesheet" href="/resources/demos/style.css">
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+        function validaNC() {
+
+            var clave = document.forms["frmnuevaclave"]["clave1"].value;
+            var rclave = document.forms["frmnuevaclave"]["clave2"].value;
+
+            if ( clave == rclave ) {
+                if(clave.length >= 8 && clave.length <= 12){
+                    var mayuscula = false;
+                    var minuscula = false;
+                    var numero = false;
+
+                    for(var i = 0;i<clave.length;i++){
+                        if(clave.charCodeAt(i) >= 65 && clave.charCodeAt(i) <= 90){
+                            mayuscula = true;
+                        }
+                        else if(clave.charCodeAt(i) >= 97 && clave.charCodeAt(i) <= 122){
+                            minuscula = true;
+                        }
+                        else if(clave.charCodeAt(i) >= 48 && clave.charCodeAt(i) <= 57){
+                            numero = true;
+                        }
+                    }
+
+                    if(mayuscula == true && minuscula == true && numero == true){
+                        return true;
+                    } else {
+                        alert("La clave debe contener por lo menos un número, una letra minúscula y una mayúscula");
+                        return false;
+                    }
+                } else {
+                    alert("La clave debe tener mínimo 8 caracteres y máximo 12 y formarse por lo menos con un número, una letra minúscula y una mayúscula");
+                    return false;
+                }
+            } else {
+              alert("Las claves deben ser iguales");
+              return false;
+            }
+        }
+
+        function validateReg() {
+           var clave = document.forms["frmregistro"]["clave"].value;
+           var rclave = document.forms["frmregistro"]["repetirclave"].value;
+            if ( clave == rclave ) {
+                if(clave.length >= 8 && clave.length <= 12){
+                    var mayuscula = false;
+                    var minuscula = false;
+                    var numero = false;
+
+                    for(var i = 0;i<clave.length;i++){
+                        if(clave.charCodeAt(i) >= 65 && clave.charCodeAt(i) <= 90){
+                            mayuscula = true;
+                        }
+                        else if(clave.charCodeAt(i) >= 97 && clave.charCodeAt(i) <= 122){
+                            minuscula = true;
+                        }
+                        else if(clave.charCodeAt(i) >= 48 && clave.charCodeAt(i) <= 57){
+                            numero = true;
+                        }
+                    }
+
+                    if(mayuscula == true && minuscula == true && numero == true){
+                        return true;
+                    } else {
+                        alert("La clave debe contener por lo menos un número, una letra minúscula y una mayúscula");
+                        return false;
+                    }
+                } else {
+                    alert("La clave debe tener mínimo 8 caracteres y máximo 12 y formarse por lo menos con un número, una letra minúscula y una mayúscula");
+                    return false;
+                }
+            } else {
+              alert("Las claves deben ser iguales");
+              return false;
+            }
+        }
+
+        $(document).ready(function(){
+          // Add smooth scrolling to all links in navbar + footer link
+          $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+
+              // Store hash
+              var hash = this.hash;
+
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 900, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+
+          $(window).scroll(function() {
+            $(".slideanim").each(function(){
+              var pos = $(this).offset().top;
+
+              var winTop = $(window).scrollTop();
+                if (pos < winTop + 600) {
+                  $(this).addClass("slide");
+                }
+            });
+          });
+        })
+    </script>
+<script type="text/javascript">
+function mostrarPassword(){
+		var cambio = document.getElementById("clave");
+		if(cambio.type == "password"){
+			cambio.type = "text";
+			$('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+		}else{
+			cambio.type = "password";
+			$('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+		}
+	}
+
+	$(document).ready(function () {
+	//CheckBox mostrar contraseña
+	$('#ShowPassword').click(function () {
+		$('#Password').attr('type', $(this).is(':checked') ? 'text' : 'password');
+	});
+});
+</script>
+    <style type="text/css" >
+       body {background-image: url("{{ url_for('static', filename='fondo.png') }}") background: #3c5b6d !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+    </style>
+    <style>
+        .navbar-custom {
+            background-color: #ff5500;
+        }
+
+        .form-signin {
+          width: 100%;
+          max-width: 330px;
+          padding: 15px;
+          margin: auto;
+        }
+        .form-signin .checkbox {
+          font-weight: 400;
+        }
+        .form-signin .form-control {
+          position: relative;
+          box-sizing: border-box;
+          height: auto;
+          padding: 10px;
+          font-size: 16px;
+        }
+        .form-signin .form-control:focus {
+          z-index: 2;
+        }
+        .form-signin input[type="email"] {
+          margin-bottom: -1px;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+        .form-signin input[type="password"] {
+          margin-bottom: 10px;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+
+        .container {
+            width: 100%;
+        }
+        .container-fluid {
+            padding: 60px 50px;
+        }
+        .navbar {
+            margin-bottom: 0;
+            background-color: #5B56F8;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .navbar li a, .navbar .navbar-brand {
+                color: #fff !important;
+        }
+
+        .navbar-nav li a:hover, .navbar-nav li.active a {
+            color: #f4511e !important;
+            background-color: #fff !important;
+        }
+
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+
+        li {
+            margin-right: 40px;
+        }
+        .nav2 li {
+            margin-right: 10px;
+        }
+    </style>
+
+    <script type="text/javascript">
+      $( function() {
+    var availableTags = {{ lista|safe }};
+    $( "#busqueda" ).autocomplete({
+      source: availableTags
+    });
+  } );
+    </script>
+
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+         <a href= {{url_for('index')}}>
+              <img src="{{url_for('static', filename='small.png')}}" alt="" style="width:150px;">
+          </a>
+          <ul class="nav navbar-nav navbar-right">
+              <li class="nav-item">
+                <li><a href= {{url_for('login')}}> Iniciar Sesión</a></li>
+                <li><a href= {{url_for('registro')}}>Crear cuenta</a></li>
+                <li><a href= {{url_for('resetclave')}}>Olvidé mi clave</a></li>
+              </li>
+          </ul>
+
+    </nav>
+{% block content %} {% endblock %}
+</body>
+</html>

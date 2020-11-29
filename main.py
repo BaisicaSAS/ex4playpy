@@ -1,23 +1,24 @@
+from passlib.hash import sha256_crypt
+import logging
+from sqlalchemy.exc import IntegrityError
+import base64
+from datetime import datetime, timedelta
 from smtplib import SMTPException
 from flask_mail import Mail, Message
 from threading import Thread
 from flask import Flask, request, redirect, render_template, session, current_app, url_for
 from config import ProductionConfig, DevelopmentConfig, Config
 from datamodel import db, Usuario, ConexionUsuario, VideoJuego, EjeUsuario, FotoEjeUsuario, BusquedaUsuario, \
-    Transaccion, DetalleTrx, QyA, FotoUsuario
+    Transaccion, DetalleTrx, DetalleLugar, DetalleValor, DetalleValorOtros, QyA, FotoUsuario, Saldos
 from operavideojuegos import funCargarEjemplar, funListarEjemplaresUsuario, funMarcarEjemplaresUsuario, \
     funListarEjemplaresDisponibles, funEditarEjemplar, funListarNombresVJ, funObtenerDatosUsuario, \
-    funUpdateDatosUsuario, funPuntosDisponiblesUsuario, funCrearTransaccion, funListarEnviosPendientes, \
-    funEntregaroRecibir, funListarSaldosUsuarios, funListarNuevosJuegos, funCambiarJuego, funListarJuegosValorizar, \
-    funReclasifica, C_TRXACTIVA, funListarUsuariosAdmin, funEditarUsuariosAdmin
+    funUpdateDatosUsuario, funPuntosDisponiblesUsuario, funCrearTransaccion, \
+    funListarSaldosUsuarios, funListarNuevosJuegos, funCambiarJuego, funListarJuegosValorizar, \
+    funReclasifica, C_TRXACTIVA, funListarUsuariosAdmin, funEditarUsuariosAdmin, funUpdateDatosUsuario, \
+    funPuntosDisponiblesUsuario, funCrearTransaccion, funcObtenerCiudades, funcCrearUpdateQA, funListarEnviosPendientes, \
+    funEntregaroRecibir
 
-
-
-from passlib.hash import sha256_crypt
-import logging
-from sqlalchemy.exc import IntegrityError
-import base64
-from datetime import datetime, timedelta
+from imagen import IMG_USR
 
 app = Flask(__name__)
 
@@ -596,6 +597,7 @@ def cargarEjemplar():
                 usrid = obUsuario.idUsuario
                 imagen = request.files["imgInp"]
 
+                #vj = request.form.get("ejemplar")
                 vj = request.form.get("busqueda")
                 #print("cargarEjemplar: ej:" + str(vj))
 
@@ -642,7 +644,7 @@ def editarEjemplar(idejeusuario):
         foto = base64.b64encode(obFoto.foto).decode("utf-8")
 
         #print("ejidejeusuario"+str(idejeusuario)+" -- ejimagen=" + foto + "--ejnombre=" + obVideojuego.nombre + "--ejestado= "+ str(obEjeUsuario.estado) + "--ejcomentario="+obEjeUsuario.comentario+"ejpublicar="+str(obEjeUsuario.publicado))
-        return render_template('editarejemplar.html', usuario=obUsuario.nickName, mensaje="Edita el videojuego!", ejidejeusuario=idejeusuario, ejimagen=foto, ejnombre=obVideojuego.nombre, ejestado=obEjeUsuario.estado, ejcomentario=obEjeUsuario.comentario, ejpublicar=obEjeUsuario.publicado, editar=1)
+        return render_template('editarejemplar.html', usuario=obUsuario.nickName, mensaje="Edita el videojuego!", ejidejeusuario=idejeusuario, ejimagen=foto, ejnombre=obVideojuego.nombre, ejestado=obEjeUsuario.estado, ejcomentario=obEjeUsuario.comentario, ejpublicar=obEjeUsuario.publicado)
 
     elif request.method == "POST":
         #print("Entra al POST: " + email)
@@ -662,6 +664,7 @@ def editarEjemplar(idejeusuario):
                 #imagen = request.form.get("imagen")
                 comentario = request.form.get("comentario")
 
+                #print("imagen:" + str(imagen))
                 msg = funEditarEjemplar(idejeusuario, email, estado, comentario, imagen)
                 #return render_template('ejemplaresusuario.html', mensaje=msg, logged=1)
                 return redirect(url_for('ejemplaresusuario'))
@@ -724,7 +727,7 @@ def ejemplaresusuario():
                     return render_template('editarejemplar.html', usuario=usuario.nickName, mensaje="Edita el videojuego!",
                                            ejidejeusuario=idejemplar, ejimagen=foto, ejnombre=obVideojuego.nombre,
                                            ejestado=obEjeUsuario.estado, ejcomentario=obEjeUsuario.comentario,
-                                           ejpublicar=obEjeUsuario.publicado,editar=1)
+                                           ejpublicar=obEjeUsuario.publicado)
                 elif request.form['btnejemplar'] == 'despublicar':
                     funMarcarEjemplaresUsuario(email,idejemplar,0)
                     #print('despublicar ' + idejemplar)
@@ -923,70 +926,81 @@ def detalletransacciones(idtrx):
             email = session['email']
             email = email.lower()
 
+
+        obUsuario =  db.session.query(Usuario).filter_by(email=email).first()
+        obTrx = db.session.query(Transaccion).filter_by(idTrx=idtrx).first()
+        # Si el usuario que solicitó es el logeado
+        if obTrx.usuarioIdSolic == obUsuario.idUsuario:
+            obUsuarioOtro = db.session.query(Usuario).filter_by(idUsuario=obTrx.usuarioIdDueno).first()
+        else:
+            obUsuarioOtro = db.session.query(Usuario).filter_by(idUsuario=obTrx.usuarioIdSolic).first()
+
+        obDetTrx = db.session.query(DetalleTrx).filter_by(trxId=idtrx).all()
+        #obDetVal = db.session.query(DetalleValor).filter_by(trxId=idtrx).all()
+
+        obEjeUsuario = db.session.query(EjeUsuario).filter_by(idEjeUsuario=obTrx.ejeUsuarioId).first()
+        obVideojuego = db.session.query(VideoJuego).filter_by(idVj=obEjeUsuario.vjId).first()
+
+        obFoto = db.session.query(FotoEjeUsuario).filter_by(ejeUsuarioId=obEjeUsuario.idEjeUsuario,
+                                                            activa=1).first()
+
+        fotoVj = base64.b64encode(obFoto.foto).decode("utf-8")
+        # Foto usuario
+        obFotoU = db.session.query(FotoUsuario).filter_by(usuarioId=obUsuario.idUsuario,
+                                                            activa=1).first()
+        if obFotoU is None:
+            fotousuario = IMG_USR
+        else:
+            fotousuario = base64.b64encode(obFotoU.foto).decode("utf-8")
+
+        # Foto usuario otro
+        obFotoO = db.session.query(FotoUsuario).filter_by(usuarioId=obUsuarioOtro.idUsuario,
+                                                            activa=1).first()
+        if obFotoO is None:
+            fotousuariootro = IMG_USR
+        else:
+            fotousuariootro = base64.b64encode(obFotoO.foto).decode("utf-8")
+
         if request.method == "GET":
-            obUsuario =  db.session.query(Usuario).filter_by(email=email).first()
-            obTrx = db.session.query(Transaccion).filter_by(idTrx=idtrx).first()
-            # Si el usuario que solicitó es el logeado
-            if obTrx.usuarioIdSolic == obUsuario.idUsuario:
-                obUsuarioOtro = db.session.query(Usuario).filter_by(idUsuario=obTrx.usuarioIdDueno).first()
-            else:
-                obUsuarioOtro = db.session.query(Usuario).filter_by(idUsuario=obTrx.usuarioIdSolic).first()
-
-            obDetTrx = db.session.query(DetalleTrx).filter_by(trxId=idtrx).all()
-            #obDetVal = db.session.query(DetalleValor).filter_by(trxId=idtrx).all()
             obQyA = db.session.query(QyA).filter_by(trxId=idtrx).all()
-            obEjeUsuario = db.session.query(EjeUsuario).filter_by(idEjeUsuario=obTrx.ejeUsuarioId).first()
-            obVideojuego = db.session.query(VideoJuego).filter_by(idVj=obEjeUsuario.vjId).first()
 
-            obFoto = db.session.query(FotoEjeUsuario).filter_by(ejeUsuarioId=obEjeUsuario.idEjeUsuario,
-                                                                activa=1).first()
-
-            fotoVj = base64.b64encode(obFoto.foto).decode("utf-8")
-            # Foto usuario
-            obFotoU = db.session.query(FotoUsuario).filter_by(usuarioId=obUsuario.idUsuario,
-                                                                activa=1).first()
-            if obFotoU is None:
-                fotousuario = ""
-            else:
-                fotousuario = base64.b64encode(obFotoU.foto).decode("utf-8")
-
-            # Foto usuario otro
-            obFotoO = db.session.query(FotoUsuario).filter_by(usuarioId=obUsuarioOtro.idUsuario,
-                                                                activa=1).first()
-            if obFotoO is None:
-                fotousuariootro = ""
-            else:
-                fotousuariootro = base64.b64encode(obFotoO.foto).decode("utf-8")
-
-            #print("Detalle Transaccion GET")
-
-            #print("ejidejeusuario"+str(idejeusuario)+" -- ejimagen=" + foto + "--ejnombre=" + obVideojuego.nombre + "--ejestado= "+ str(obEjeUsuario.estado) + "--ejcomentario="+obEjeUsuario.comentario+"ejpublicar="+str(obEjeUsuario.publicado))
+            print("Detalle Transaccion GET")
             app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S") + "[" + email + "]" +"GET::detalletransacciones: Detalle de la transaccion: " + str(idtrx)+"-"+obVideojuego.nombre)
             return render_template('detalletransacciones.html', usuario=obUsuario.nickName, mensaje="Mensajes!", qya=obQyA, usrlog=obUsuario, usrotro=obUsuarioOtro, fotousr=fotousuario,fotousrotro=fotousuariootro, videojuego=obVideojuego.nombre, fotovj=fotoVj)
 
-        if request.method=="POST":
+        if request.method == "POST":
+
             #print("dijo:" + mensaje)
             app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S")+"["+email+"] POST::detalletransacciones: inicia detalletransacciones")
             if not(session) or (session['email'] is None):
                 app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S")+"[NO_USER] detalletransacciones: No hay sesion")
-
                 return render_template('registro.html', mensaje="Regístrate para que puedas obtener este y otros videojuegos!", logged=0)
             else:
                 if db.session is not None:
                     email = session['email']
-
                     obUsuario = db.session.query(Usuario).filter_by(email=email).first()
+                    transaccion = db.session.query(DetalleTrx).filter_by(trxId=idtrx).all()
 
-                    mensaje=request.form.get("mensaje")
-                    #print("dijo:" + mensaje)
-                    idtrx=request.form.get("idtrx")
-                    app.logger.info(datetime.today().strftime(
-                        "%Y-%m-%d %H:%M:%S") + "[" + email + "] POST::detalletransacciones: Inicia la solicitud")
-                    #print("Detalle Transaccion POST")
-                    #return render_template('detalletransacciones.html', usuario=obUsuario.nickName, mensaje="Mensajes!", qya=obQyA, usrlog=obUsuario, usrotro=obUsuarioOtro, videojuego=obVideojuego.nombre)
-                    return render_template('detalletransacciones.html', usuario=obUsuario.nickName, mensaje="Mensajes!",
-                                       usrlog=obUsuario)
-                app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S")+"["+email+"] index: Hay sesion")
+                    if request.form['btnsend'] == 'Enviar':
+                        mensaje=request.form.get("mensaje")
+                        app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S") + "[" + email + "] POST::detalletransacciones: Inicia la solicitud")
+
+                        qya = funcCrearUpdateQA(idtrx, mensaje, obUsuario.idUsuario, 'qa')
+
+                    elif request.form['btnSiDeal'] == 'Si':
+                        print('Entre al trato si')
+
+                    elif request.form['btnSiCanc'] == 'No':
+                        print('Entre al cancelar trato')
+                        mensaje = 'Lamentablemente el trato no fue aceptado.'
+                        qya = funcCrearUpdateQA(idtrx, mensaje, obUsuario.idUsuario,'cancelar')
+
+                subject = SUBJECT_REGISTRO.format(nick=obUsuario.nombres)
+                correoEnviado = enviar_correo(subject, app.config['MAIL_USERNAME'], email, text_body=None,
+                                 template="mailmensajes.html", nick=email, urlconfirma=None,
+                                 urlapp=urlapp)
+
+                return render_template('detalletransacciones.html', usuario=obUsuario.nickName, mensaje="Mensajes!", qya=qya, usrlog=obUsuario, usrotro=obUsuarioOtro, fotousr=fotousuario,fotousrotro=fotousuariootro, videojuego=obVideojuego.nombre, fotovj=fotoVj)
     except:
         app.logger.error("[" + email + "] solicitarejemplar: error")
         #return render_template('error.html', mensaje="Error en la solicitud!")
@@ -996,15 +1010,19 @@ def detalletransacciones(idtrx):
 # Funcion: Actualizar datos usuario
 @app.route("/updateUser", methods=["GET", "POST"])
 def updateUser():
-    # creating a map in the view
-    map = Map(
-        identifier="view-side",
-        lat=37.4419,
-        lng=-122.1419,
-        markers=[(37.4419, -122.1419)]
-    )
-
     datosUsuario = None
+    ciudades = None
+    foto = None
+    saldo = None
+    direcciones = None
+    dirPrinc = ""
+    dirOp2 = ""
+    dirOp3 = ""
+    dirOp4 = ""
+
+    if ciudades is None:
+        ciudades = funcObtenerCiudades()
+
     if request.method == "GET":
         if not(session) or (session['email'] is None):
             app.logger.debug("[NO_USER] index: No hay sesion")
@@ -1013,9 +1031,34 @@ def updateUser():
         else:
             if db.session is not None:
                 nick = session['email']
-                usuario = db.session.query(Usuario).filter_by(nickName=nick).first()
-                datosUsuario = funObtenerDatosUsuario(usuario.idUsuario)
-                datosUsuario.fechanac = datosUsuario.fechanac.strftime("%Y-%m-%d")
+                usuario = db.session.query(Usuario).filter_by(email=nick).first()
+                datosUsuario, foto, direcciones = funObtenerDatosUsuario(usuario.idUsuario)
+
+                if datosUsuario.fechanac is not None:
+                    datosUsuario.fechanac = datosUsuario.fechanac.strftime("%Y-%m-%d")
+
+                if datosUsuario.genero is not None:
+                    datosUsuario.genero = str(datosUsuario.genero)
+
+                saldo = db.session.query(Saldos).filter_by(usuarioId=usuario.idUsuario).first()
+                saldo.TotalPuntos = int(saldo.TotalPuntos)
+                saldo.valorPagado = int(saldo.valorPagado)
+                saldo.ValorCobrado = int(saldo.ValorCobrado)
+
+                if len(direcciones) > 0:
+                    for dir in direcciones:
+                        if dir.principal == 1:
+                            dirPrinc = dir.direccion
+                        else:
+                            if dirOp2 == "":
+                                dirOp2 = dir.direccion
+                            else:
+                                if dirOp3 == "":
+                                    dirOp3 = dir.direccion
+                                else:
+                                    if dirOp4 == "":
+                                        dirOp4 = dir.direccion
+
 
     if request.method == "POST":
         if not(session) or (session['email'] is None):
@@ -1023,21 +1066,45 @@ def updateUser():
             return render_template('home_page.html', mensaje="Inicia Sesión o Registrate y disfruta!")
         else:
             if session is not None:
+                direc = []
                 nick = session['email']
-                #print("email:" + nick)
                 obUsuario = db.session.query(Usuario).filter_by(email=nick).one_or_none()
-                if obUsuario is not None:
-                    usrid = obUsuario.idUsuario
-                    imagen = request.files["imgInp"]
-                    nombres = request.form.get("nombres")
-                    apellidos = request.form.get("apellidos")
-                    edad = request.form.get("edad")
-                    genero = request.form.get("genero")
-                    fechanac = request.form.get("fecha")
-                    celular = request.form.get("celular")
 
-                    funUpdateDatosUsuario(usrid,nombres,apellidos,edad,fechanac,genero)
-    return render_template('act_datos_usuario.html', usuario=datosUsuario, map=map)
+                if 'saveDataUser' in request.form:
+                    if request.form['saveDataUser'] == 'Guardar':
+
+                        print("email:" + nick)
+
+                        if obUsuario is not None:
+                            usrid = obUsuario.idUsuario
+                            imagen = request.files["imgInp"]
+                            nombres = request.form.get("nombres")
+                            apellidos = request.form.get("apellidos")
+                            edad = request.form.get("edad")
+                            genero = request.form.get("genero")
+                            fechanac = request.form.get("fecha")
+                            celular = request.form.get("celular")
+                            nickname = request.form.get("nickname")
+
+                            funUpdateDatosUsuario(usrid,nombres,apellidos,edad,fechanac,genero,celular,nickname,nick, imagen, None, hoy, 0)
+
+                if 'saveAddress' in request.form:
+                    if request.form['saveAddress'] == 'Guardar':
+                        usrid = obUsuario.idUsuario
+
+                        if request.form['dir1'] != '':
+                            direc.append(request.form['dir1'])
+                        if request.form['dir2'] != '':
+                            direc.append(request.form['dir2'])
+                        if request.form['dir3'] != '':
+                            direc.append(request.form['dir3'])
+                        if request.form['dir4'] != '':
+                            direc.append(request.form['dir4'])
+
+                        funUpdateDatosUsuario(usrid,None,None,None,None,None,None,None,None, None, direc, hoy, 1)
+
+
+    return render_template('act_datos_usuario.html', usuario=datosUsuario, ciudades=ciudades, foto=foto, saldo=saldo, dirP=dirPrinc, dirOp2=dirOp2, dirOp3=dirOp3, dirOp4=dirOp4)
 
 # Funcion: Desplegar inicio
 def desplegarinicio():

@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base_test.html" %}
 {% block title %}ex4play -  Ingreso{% endblock %}
 {% block content %}
 
@@ -6,7 +6,7 @@
 
 <head>
     <title>ex4play</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body class="bg-overlay">
@@ -17,9 +17,9 @@
         </div>
         <div class="container body-content">
             <div class="header">
-                <h1><img src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:20%"></h1>
+                <h1><img src="{{url_for('static', filename='logoRojo.png')}}" alt="" style="width:20%"></h1>
             </div>
-            <div class="form-signin" style="align-items: center;padding-top: 40px;padding-bottom: 40px;background-color: #444;">
+            <div class="content">
                     <section class="form-register">
                         <h4 align="center">Ingrese sus credenciales</h4>
                         <hr style="color:white;background-color:white">
@@ -38,7 +38,7 @@
                             </div>
                             <div class="form-group">
                                 <div>
-                                    <input type="submit" value="Ingresar" class="btn btn-lg btn-primary btn-block" style="margin:0px auto; display:block;"/>
+                                    <input type="submit" value="Ingresar" class="btn btn-lg btn-success btn-block" style="margin:0px auto; display:block;"/>
                                 </div>
                             </div>
                         </form>
