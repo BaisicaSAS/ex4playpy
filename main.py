@@ -1001,29 +1001,29 @@ def detalletransacciones(idtrx):
                             mensaje=request.form.get("mensaje")
                             app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S") + "[" + email + "] POST::detalletransacciones: Inicia la solicitud")
 
-                            qya = funcCrearUpdateQA(idtrx, mensaje, usuario.idUsuario, 'qa')
+                            qya = funcCrearUpdateQA(idtrx, mensaje, obUsuario.idUsuario, 'qa')
                         qya = funcCrearUpdateQA(idtrx, mensaje, obUsuario.idUsuario, 'qa')
 
                     if 'btnSiDeal' in request.form:
                         if request.form['btnSiDeal'] == 'Si':
                             print('Entre al trato si')
                             transaccion = db.session.query(DetalleTrx).filter_by(trxId=idtrx,accion=2).all()
-                            direcciones = db.session.query(LugarUsuario).filter_by(usuarioId=usuario.idUsuario, activa=1, principal=1).first()
+                            direcciones = db.session.query(LugarUsuario).filter_by(usuarioId=obUsuario.idUsuario, activa=1, principal=1).first()
 
                             if direcciones is not None:
                                 if len(transaccion) == 0:
-                                    mensaje = '{usuario} aceptó el trato para el juego {juego}, por favor envíale una respuesta.'.format(usuario=usuario.nombres, juego=obVideojuego.nombre)
-                                    qya = funcCrearUpdateQA(idtrx, mensaje, usuario.idUsuario, 'aceptar')
+                                    mensaje = '{usuario} aceptó el trato para el juego {juego}, por favor envíale una respuesta.'.format(usuario=obUsuario.nombres, juego=obVideojuego.nombre)
+                                    qya = funcCrearUpdateQA(idtrx, mensaje, obUsuario.idUsuario, 'aceptar')
                     elif request.form['btnSiDeal'] == 'Si':
                         print('Entre al trato si')
 
-                                    habilitar = ''
-                                elif len(transaccion) == 1:
-                                    mensaje = 'Muy bien, se cerró el trato por el juego {juego}, nuestro equipo de logistica coordinará pronto para recogerlo/enviarlo..'.format(juego=obVideojuego.nombre)
-                                    qya = funcCrearUpdateQA(idtrx, mensaje, usuario.idUsuario, 'aceptar')
-                                    habilitar = 'disabled'
-                            else:
-                                mens = 'Debe asignar una dirección a su perfil antes de acpetar el trato...'
+                        habilitar = ''
+                    elif len(transaccion) == 1:
+                        mensaje = 'Muy bien, se cerró el trato por el juego {juego}, nuestro equipo de logistica coordinará pronto para recogerlo/enviarlo..'.format(juego=obVideojuego.nombre)
+                        qya = funcCrearUpdateQA(idtrx, mensaje, obUsuario.idUsuario, 'aceptar')
+                        habilitar = 'disabled'
+                    else:
+                        mens = 'Debe asignar una dirección a su perfil antes de acpetar el trato...'
                                 qya= db.session.query(QyA).filter_by(trxId=idtrx).all()
                                 habilitar = ''
 
@@ -1032,11 +1032,11 @@ def detalletransacciones(idtrx):
                         if request.form['btnSiCanc'] == 'Si':
                             print('Entre al cancelar trato')
                             mensaje = 'Lamentablemente el trato no fue aceptado.'
-                            qya = funcCrearUpdateQA(idtrx, mensaje, usuario.idUsuario,'cancelar')
+                            qya = funcCrearUpdateQA(idtrx, mensaje, obUsuario.idUsuario,'cancelar')
 
                             habilitar = 'disabled'
 
-                subject = SUBJECT_MENSAJE
+                        subject = SUBJECT_MENSAJE
                     elif request.form['btnSiCanc'] == 'No':
                         print('Entre al cancelar trato')
                         mensaje = 'Lamentablemente el trato no fue aceptado.'
