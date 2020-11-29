@@ -922,6 +922,7 @@ def transacciones():
 @app.route('/detalletransacciones/<int:idtrx>', methods=["GET", "POST"])
 def detalletransacciones(idtrx):
     mens = ''
+
     try:
         if not (session) or (session['email'] is None):
             email = ""
@@ -1009,7 +1010,7 @@ def detalletransacciones(idtrx):
                             transaccion = db.session.query(DetalleTrx).filter_by(trxId=idtrx,accion=2).all()
                             direcciones = db.session.query(LugarUsuario).filter_by(usuarioId=usuario.idUsuario, activa=1, principal=1).first()
 
-                            if direcciones > 0:
+                            if direcciones is not None:
                                 if len(transaccion) == 0:
                                     mensaje = '{usuario} aceptó el trato para el juego {juego}, por favor envíale una respuesta.'.format(usuario=usuario.nombres, juego=obVideojuego.nombre)
                                     qya = funcCrearUpdateQA(idtrx, mensaje, usuario.idUsuario, 'aceptar')
@@ -1023,6 +1024,8 @@ def detalletransacciones(idtrx):
                                     habilitar = 'disabled'
                             else:
                                 mens = 'Debe asignar una dirección a su perfil antes de acpetar el trato...'
+                                qya= db.session.query(QyA).filter_by(trxId=idtrx).all()
+                                habilitar = ''
 
 
                     if 'btnSiCanc' in request.form:
