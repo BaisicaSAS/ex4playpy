@@ -11,7 +11,7 @@
     <body class="bg-overlay">
         <div class="container body-content">
             <div class="header">
-                <h1><img src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:20%"></h1>
+                <h1><img src="{{url_for('static', filename='logoClaro.png')}}" alt="" style="width:30%"></h1>
             </div>
         </div>
 
@@ -32,52 +32,52 @@
               </li>
             </ul>
 
-            <div class="tab-content container" id="pills-tabContent">
-              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                {% set indice = namespace(cont=1) %}
-                {% set reinicia = namespace(cont=1) %}
+            <div class="tab-content gamesFondo" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    {% set indice = namespace(cont=1) %}
+                    {% set reinicia = namespace(cont=1) %}
 
-                {% for vj in vjpub %}
-                    {% if reinicia.cont == 1 %}
-                    <div class="card-deck">
-                    {% endif %}
-                    <form name="form" action="{{url_for('ejemplaresusuario')}}" method="post">
-                        <input value="{{vj[0]}}" type="hidden" name="idejemplar" />
-                        <div class="card border-info mb-3" style="width: 15rem;max-width: 15rem;display: flex; align-items: center; justify-content: center;">
-                            <br>
-                            <h5 class="card-header text-light" align="center" style="width= 100%">{{ vj[3] }}</h5>
-                            <div class="card-body">
-                                <!--<div class="embed-responsive embed-responsive-16by9">-->
-                                   <img class="card-img-top zoom" style="display: block;margin-left: auto;margin-right: auto;width: 10rem;" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
-                                   <!--<img class="card-img-top embed-responsive-item" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">-->
-                                <!--</div>-->
-                            </div>
-                            <ul class="list-group list-group-flush" style="background-color:#4444;">
-                                <li class="list-group-item">Puntos: {{ vj[6] }}</li>
-                                <li class="list-group-item">Estado: {{ vj[7] }} de 10</li>
-                            </ul>
-                            <div class="card-footer text-light">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                          <button type="submit" name="btnejemplar" value="editar" class="btn btn-sm btn-outline-secondary">Editar</button>
-                                          <button type="submit" name="btnejemplar" value="despublicar" class="btn btn-sm btn-outline-secondary">Cancelar Publicación</button>
+                    {% for vj in vjpub %}
+                        {% if reinicia.cont == 1 %}
+                        <div class="card-deck justify-content-center">
+                        {% endif %}
+                        <form name="form" action="{{url_for('ejemplaresusuario')}}" method="post">
+                            <input value="{{vj[0]}}" type="hidden" name="idejemplar" />
+                            <div class="card border-info mb-3" style="width: 15rem;max-width: 15rem;display: flex; align-items: center; justify-content: center;">
+                                <br>
+                                <h5 class="card-header text-light" align="center" style="width= 100%;border-radius: 15px 50px">{{ vj[3] }}</h5>
+                                <div class="card-body">
+                                    <!--<div class="embed-responsive embed-responsive-16by9">-->
+                                       <img class="card-img-top zoom" style="display: block;margin-left: auto;margin-right: auto;width: 10rem;" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">
+                                       <!--<img class="card-img-top embed-responsive-item" src="data:image/jpeg;base64,{{ vj[2] }} " alt=" {{ vj[3] }} ">-->
+                                    <!--</div>-->
+                                </div>
+                                <ul class="list-group list-group-flush" style="background-color:#4444;">
+                                    <li class="list-group-item">Puntos: {{ vj[6] }}</li>
+                                    <li class="list-group-item">Estado: {{ vj[7] }} de 10</li>
+                                </ul>
+                                <div class="card-footer text-light">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                              <button type="submit" name="btnejemplar" value="editar" class="btn btn-sm btn-outline-secondary">Editar</button>
+                                              <button type="submit" name="btnejemplar" value="despublicar" class="btn btn-sm btn-outline-secondary">Cancelar Publicación</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </form>
-                    {% if indice.cont is divisibleby 4 or indice.cont == vjpub|count %}
-                </div>
-                <div class="row" style="display: flex; align-items: center; justify-content: center;" >
-                </div>
-                        {% set reinicia.cont = 1 %}
-                    {% else %}
-                        {% set reinicia.cont = 0 %}
-                    {% endif %}
-                    {% set indice.cont = indice.cont + 1 %}
-                {% endfor %}
+                        </form>
+                        {% if indice.cont is divisibleby 4 or indice.cont == vjpub|count %}
+                    </div>
+                    <div class="row" style="display: flex; align-items: center; justify-content: center;" >
+                    </div>
+                            {% set reinicia.cont = 1 %}
+                        {% else %}
+                            {% set reinicia.cont = 0 %}
+                        {% endif %}
+                        {% set indice.cont = indice.cont + 1 %}
+                    {% endfor %}
 
-              </div>
+                  </div>
 
               <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                  {% set indice = namespace(cont=1) %}

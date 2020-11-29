@@ -9,7 +9,7 @@ from threading import Thread
 from flask import Flask, request, redirect, render_template, session, current_app, url_for
 from config import ProductionConfig, DevelopmentConfig, Config
 from datamodel import db, Usuario, ConexionUsuario, VideoJuego, EjeUsuario, FotoEjeUsuario, BusquedaUsuario, \
-    Transaccion, DetalleTrx, DetalleLugar, DetalleValor, DetalleValorOtros, QyA, FotoUsuario, Saldos
+    Transaccion, DetalleTrx, DetalleLugar, DetalleValor, DetalleValorOtros, QyA, FotoUsuario, Saldos, LugarUsuario
 from operavideojuegos import funCargarEjemplar, funListarEjemplaresUsuario, funMarcarEjemplaresUsuario, \
     funListarEjemplaresDisponibles, funEditarEjemplar, funListarNombresVJ, funObtenerDatosUsuario, \
     funUpdateDatosUsuario, funPuntosDisponiblesUsuario, funCrearTransaccion, \
@@ -60,9 +60,11 @@ app.config['MAIL_USERNAME'] = "ex4play@baisica.co"
 app.config['MAIL_PASSWORD'] = 'p3plcpnl1009@Ju$o2020@103466'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
+
 SUBJECT_REGISTRO = "Bienvenido a ex4play {nick} !"
 SUBJECT_CAMBIACLAVE = "Enlace para cambio de clave {nick} !"
 SUBJECT_CLAVECAMBIADA = "Tu clave se cambió con exito {nick} !"
+SUBJECT_MENSAJE = "Tienes un nuevo mensaje!"
 
 logging.basicConfig(filename=LOG_FILENAME, level=logging.DEBUG)
 
@@ -919,6 +921,7 @@ def transacciones():
 #Muestra toda la conversación que hay a nivel de una solicitud de ejemplar
 @app.route('/detalletransacciones/<int:idtrx>', methods=["GET", "POST"])
 def detalletransacciones(idtrx):
+    mens = ''
     try:
         if not (session) or (session['email'] is None):
             email = ""
@@ -966,7 +969,18 @@ def detalletransacciones(idtrx):
 
             print("Detalle Transaccion GET")
             app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S") + "[" + email + "]" +"GET::detalletransacciones: Detalle de la transaccion: " + str(idtrx)+"-"+obVideojuego.nombre)
-            return render_template('detalletransacciones.html', usuario=obUsuario.nickName, mensaje="Mensajes!", qya=obQyA, usrlog=obUsuario, usrotro=obUsuarioOtro, fotousr=fotousuario,fotousrotro=fotousuariootro, videojuego=obVideojuego.nombre, fotovj=fotoVj)
+
+            transaccion = db.session.query(DetalleTrx).filter_by(trxId=idtrx).all()
+            habilitar = ''
+
+            for tran in transaccion:
+                if tran.accion == 6:
+                    habilitar = 'disabled'
+                else:
+                    habilitar = ''
+
+            showLoader = 'none'
+            return render_template('detalletransacciones.html', usuario=obUsuario.nickName, mensaje="Mensajes!", qya=obQyA, usrlog=obUsuario, usrotro=obUsuarioOtro, fotousr=fotousuario,fotousrotro=fotousuariootro, videojuego=obVideojuego.nombre, fotovj=fotoVj, habilitar = habilitar, showLoader=showLoader)
 
         if request.method == "POST":
 
@@ -981,15 +995,45 @@ def detalletransacciones(idtrx):
                     obUsuario = db.session.query(Usuario).filter_by(email=email).first()
                     transaccion = db.session.query(DetalleTrx).filter_by(trxId=idtrx).all()
 
-                    if request.form['btnsend'] == 'Enviar':
-                        mensaje=request.form.get("mensaje")
-                        app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S") + "[" + email + "] POST::detalletransacciones: Inicia la solicitud")
+                    if 'btnsend' in request.form:
+                        if request.form['btnsend'] == 'Enviar':
+                            mensaje=request.form.get("mensaje")
+                            app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S") + "[" + email + "] POST::detalletransacciones: Inicia la solicitud")
 
+                            qya = funcCrearUpdateQA(idtrx, mensaje, usuario.idUsuario, 'qa')
                         qya = funcCrearUpdateQA(idtrx, mensaje, obUsuario.idUsuario, 'qa')
 
+                    if 'btnSiDeal' in request.form:
+                        if request.form['btnSiDeal'] == 'Si':
+                            print('Entre al trato si')
+                            transaccion = db.session.query(DetalleTrx).filter_by(trxId=idtrx,accion=2).all()
+                            direcciones = db.session.query(LugarUsuario).filter_by(usuarioId=usuario.idUsuario, activa=1, principal=1).first()
+
+                            if direcciones > 0:
+                                if len(transaccion) == 0:
+                                    mensaje = '{usuario} aceptó el trato para el juego {juego}, por favor envíale una respuesta.'.format(usuario=usuario.nombres, juego=obVideojuego.nombre)
+                                    qya = funcCrearUpdateQA(idtrx, mensaje, usuario.idUsuario, 'aceptar')
                     elif request.form['btnSiDeal'] == 'Si':
                         print('Entre al trato si')
 
+                                    habilitar = ''
+                                elif len(transaccion) == 1:
+                                    mensaje = 'Muy bien, se cerró el trato por el juego {juego}, nuestro equipo de logistica coordinará pronto para recogerlo/enviarlo..'.format(juego=obVideojuego.nombre)
+                                    qya = funcCrearUpdateQA(idtrx, mensaje, usuario.idUsuario, 'aceptar')
+                                    habilitar = 'disabled'
+                            else:
+                                mens = 'Debe asignar una dirección a su perfil antes de acpetar el trato...'
+
+
+                    if 'btnSiCanc' in request.form:
+                        if request.form['btnSiCanc'] == 'Si':
+                            print('Entre al cancelar trato')
+                            mensaje = 'Lamentablemente el trato no fue aceptado.'
+                            qya = funcCrearUpdateQA(idtrx, mensaje, usuario.idUsuario,'cancelar')
+
+                            habilitar = 'disabled'
+
+                subject = SUBJECT_MENSAJE
                     elif request.form['btnSiCanc'] == 'No':
                         print('Entre al cancelar trato')
                         mensaje = 'Lamentablemente el trato no fue aceptado.'
@@ -1000,7 +1044,9 @@ def detalletransacciones(idtrx):
                                  template="mailmensajes.html", nick=email, urlconfirma=None,
                                  urlapp=urlapp)
 
-                return render_template('detalletransacciones.html', usuario=obUsuario.nickName, mensaje="Mensajes!", qya=qya, usrlog=obUsuario, usrotro=obUsuarioOtro, fotousr=fotousuario,fotousrotro=fotousuariootro, videojuego=obVideojuego.nombre, fotovj=fotoVj)
+                showLoader = 'none'
+
+                return render_template('detalletransacciones.html', usuario=obUsuario.nickName, mensaje= mens, qya=qya, usrlog=obUsuario, usrotro=obUsuarioOtro, fotousr=fotousuario,fotousrotro=fotousuariootro, videojuego=obVideojuego.nombre, fotovj=fotoVj, habilitar = habilitar, showLoader=showLoader)
     except:
         app.logger.error("[" + email + "] solicitarejemplar: error")
         #return render_template('error.html', mensaje="Error en la solicitud!")
@@ -1102,6 +1148,51 @@ def updateUser():
                             direc.append(request.form['dir4'])
 
                         funUpdateDatosUsuario(usrid,None,None,None,None,None,None,None,None, None, direc, hoy, 1)
+
+    if ciudades is None:
+        ciudades = funcObtenerCiudades()
+
+    #if request.method == "GET":
+        if not (session) or (session['email'] is None):
+            app.logger.debug("[NO_USER] index: No hay sesion")
+
+            return render_template('home_page.html', mensaje="Inicia Sesión o Registrate y disfruta!")
+        else:
+            if db.session is not None:
+                nick = session['email']
+                usuario = db.session.query(Usuario).filter_by(nickName=nick).first()
+                datosUsuario, foto, direcciones = funObtenerDatosUsuario(usuario.idUsuario)
+
+                if datosUsuario.fechanac is not None:
+                    datosUsuario.fechanac = datosUsuario.fechanac.strftime("%Y-%m-%d")
+
+                if datosUsuario.genero is not None:
+                    datosUsuario.genero = str(datosUsuario.genero)
+
+                saldo = db.session.query(Saldos).filter_by(usuarioId=usuario.idUsuario).first()
+                if saldo is not None:
+                    saldo.Saldos = int(saldo.Saldos)
+                    saldo.valorPagado = int(saldo.valorPagado)
+                    saldo.ValorCobrado = int(saldo.ValorCobrado)
+                else:
+                    saldo['Saldos'] = 0
+                    saldo['valorPagado'] = 0
+                    saldo['ValorCobrado'] = 0
+
+
+                if len(direcciones) > 0:
+                    for dir in direcciones:
+                        if dir.principal == 1:
+                            dirPrinc = dir.direccion
+                        else:
+                            if dirOp2 == "":
+                                dirOp2 = dir.direccion
+                            else:
+                                if dirOp3 == "":
+                                    dirOp3 = dir.direccion
+                                else:
+                                    if dirOp4 == "":
+                                        dirOp4 = dir.direccion
 
 
     return render_template('act_datos_usuario.html', usuario=datosUsuario, ciudades=ciudades, foto=foto, saldo=saldo, dirP=dirPrinc, dirOp2=dirOp2, dirOp3=dirOp3, dirOp4=dirOp4)
