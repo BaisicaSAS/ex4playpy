@@ -959,6 +959,7 @@ def detalletransacciones(idtrx):
                             app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S") + "[" + email + "] POST::detalletransacciones: Inicia la solicitud")
 
                             qya = funcCrearUpdateQA(idtrx, mensaje, usuario.idUsuario, 'qa')
+                            habilitar = ''
 
                     if 'btnSiDeal' in request.form:
                         if request.form['btnSiDeal'] == 'Si':
