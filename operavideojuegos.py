@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 # Constantes para las consultas de videojuegos: Cantidad de ideojuegos y tiempo en días para que sea novedad
 C_DIAS = 300
-C_CANTIDAD = 10
+C_CANTIDAD = 1000
 # Constantes para los tipos de promocion
 C_REGISTRO = "RG"
 C_INTERCAMBIO = "IC"
@@ -93,7 +93,7 @@ def funListarEnviosPendientes():
                     dirdueno = detLug.direccionDueno+" - "+detLug.complem1Dueno+" - "+detLug.complem2Dueno+" - "+detLug.complem3Dueno
                     dirsolic = detLug.direccionSolic+" - "+detLug.complem1Solic+" - "+detLug.complem2Solic+" - "+detLug.complem3Solic
 
-                registro = [reg.idTrx, usrDue.nombres+" "+usrDue.apellidos, dirdueno, usrSol.nombres+" "+usrSol.apellidos, dirsolic, vj.nombre, regrecoge, regenvia]
+                registro = [reg.idTrx, usrDue.nombres+" "+usrDue.apellidos, dirdueno, usrDue.celular,  usrSol.nombres+" "+usrSol.apellidos, dirsolic, usrSol.celular, vj.nombre, regrecoge, regenvia]
                 transacciones.append(registro)
                 #print(transacciones)
 

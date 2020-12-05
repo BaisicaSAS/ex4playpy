@@ -23,8 +23,12 @@
             <td style="border: black 2px solid">idTrx</td>
             <td style="border: black 2px solid">De usuario</td>
             <td style="border: black 2px solid">Direccion origen</td>
+            <!--#MR 03122020 Adicioné celular -->
+            <td style="border: black 2px solid">Celular origen</td>
             <td style="border: black 2px solid">Para usuario</td>
             <td style="border: black 2px solid">Direccion destino</td>
+            <!--#MR 03122020 Adicioné celular -->
+            <td style="border: black 2px solid">Celular destino</td>
             <td style="border: black 2px solid">Videojuego</td>
             <td style="border: black 2px solid">Recoger</td>
             <td style="border: black 2px solid">Entregar</td>
@@ -34,9 +38,13 @@
                 <td style="border: black 2px solid">{{trx[0]}}</td>
                 <td style="border: black 2px solid">{{trx[1]}}</td>
                 <td style="border: black 2px solid">{{trx[2]}}</td>
+                <!--#MR 03122020 Adicioné celular -->
                 <td style="border: black 2px solid">{{trx[3]}}</td>
                 <td style="border: black 2px solid">{{trx[4]}}</td>
+                <!--#MR 03122020 Adicioné celular -->
                 <td style="border: black 2px solid">{{trx[5]}}</td>
+                <td style="border: black 2px solid">{{trx[6]}}</td>
+                <td style="border: black 2px solid">{{trx[7]}}</td>
                 <td style="border: black 2px solid">
                     <form method="post" action=" {{url_for('manejoenvios') }} ">
                         <input value="{{trx[0]}}" type="hidden" name="idtrx" />

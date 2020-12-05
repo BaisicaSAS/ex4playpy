@@ -374,6 +374,7 @@ class QyA(db.Model):
     ejeUsuarioId = db.Column(db.Integer, db.ForeignKey('ejeusuario.idEjeUsuario'), nullable=False)#referencia al ejemplar
     PregResp = db.Column(db.String(1500), nullable=False)#Lo que pregunta / responde...el mensaje
     leido = db.Column(db.Integer, default=0)  # 0: No leido - 1: Leido
+    enviado = db.Column(db.Integer, default=0)  # 0: No enviado - 1: Enviado
     fechacrea = db.Column(db.DateTime, default=datetime.datetime.now) #Fecha del mensaje automática
     QyAPadre = db.relationship("QyA", lazy=True)
     UsrQyAD = db.relationship("Usuario", lazy=True, foreign_keys=[usuarioIdDueno])
