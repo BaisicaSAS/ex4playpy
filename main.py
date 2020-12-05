@@ -940,6 +940,10 @@ def detalletransacciones(idtrx):
                 else:
                     habilitar = ''
 
+            transaccionAceptada = db.session.query(DetalleTrx).filter_by(trxId=idtrx, accion=2).all()
+            if len(transaccionAceptada) == 2:
+                habilitar = 'disabled'
+
             showLoader = 'none'
             return render_template('detalletransacciones.html', usuario=obUsuario.nickName, mensaje="Mensajes!", qya=obQyA, usrlog=obUsuario, usrotro=obUsuarioOtro, fotousr=fotousuario,fotousrotro=fotousuariootro, videojuego=obVideojuego.nombre, fotovj=fotoVj, habilitar = habilitar, showLoader=showLoader)
 
@@ -964,18 +968,49 @@ def detalletransacciones(idtrx):
                     if 'btnSiDeal' in request.form:
                         if request.form['btnSiDeal'] == 'Si':
                             print('Entre al trato si')
+                            userDue = None
+                            userSolic = None
+
                             transaccion = db.session.query(DetalleTrx).filter_by(trxId=idtrx,accion=2).all()
                             direcciones = db.session.query(LugarUsuario).filter_by(usuarioId=usuario.idUsuario, activa=1, principal=1).first()
+
+                            obUsuario = db.session.query(Usuario).filter_by(email=email).first()
+                            obTrx = db.session.query(Transaccion).filter_by(idTrx=idtrx).first()
+
+                            # Si el usuario que solicitó es el logeado
+                            if obTrx.usuarioIdSolic == obUsuario.idUsuario:
+                                userSolic = db.session.query(Usuario).filter_by(idUsuario=obTrx.usuarioIdSolic).first()
+                            else:
+                                userDue = db.session.query(Usuario).filter_by(idUsuario=obTrx.usuarioIdDueno).first()
 
                             if direcciones is not None:
                                 if len(transaccion) == 0:
                                     mensaje = '{usuario} aceptó el trato para el juego {juego}, por favor envíale una respuesta.'.format(usuario=usuario.nombres, juego=obVideojuego.nombre)
                                     qya = funcCrearUpdateQA(idtrx, mensaje, usuario.idUsuario, 'aceptar')
 
+                                    if userDue is not None:
+                                        dir = db.session.query(LugarUsuario).filter_by(usuarioId=userDue.idUsuario, activa=1, principal=1).first()
+                                        detalleLug = DetalleLugar(trxId=idtrx, ciudadIdDueno=dir.ciudadId, direccionDueno=dir.direccion, ciudadIdSolic=1,direccionSolic='')
+                                    else:
+                                        dir = db.session.query(LugarUsuario).filter_by(usuarioId=userSolic.idUsuario,activa=1, principal=1).first()
+                                        detalleLug = DetalleLugar(trxId=idtrx, ciudadIdSolic=dir.ciudadId,direccionSolic=dir.direccion, ciudadIdDueno=1, direccionDueno='')
+
+                                    db.session.add(detalleLug)
+                                    db.session.commit()
                                     habilitar = ''
+
                                 elif len(transaccion) == 1:
                                     mensaje = 'Muy bien, se cerró el trato por el juego {juego}, nuestro equipo de logistica coordinará pronto para recogerlo/enviarlo..'.format(juego=obVideojuego.nombre)
                                     qya = funcCrearUpdateQA(idtrx, mensaje, usuario.idUsuario, 'aceptar')
+
+                                    if userDue is not None:
+                                        dir = db.session.query(LugarUsuario).filter_by(usuarioId=userDue.idUsuario, activa=1, principal=1).first()
+                                        actDataLugar = db.session.query(DetalleLugar).filter_by(trxId=idtrx).update(dict(ciudadIdDueno=dir.ciudadId, direccionDueno=dir.direccion))
+                                    else:
+                                        dir = db.session.query(LugarUsuario).filter_by(usuarioId=userSolic.idUsuario,activa=1, principal=1).first()
+                                        actDataLugar = db.session.query(DetalleLugar).filter_by(trxId=idtrx).update(dict(ciudadIdSolic=dir.ciudadId,direccionSolic=dir.direccion))
+
+                                    db.session.commit()
                                     habilitar = 'disabled'
                             else:
                                 mens = 'Debe asignar una dirección a su perfil antes de acpetar el trato...'
@@ -1072,7 +1107,7 @@ def updateUser():
         else:
             if db.session is not None:
                 nick = session['email']
-                usuario = db.session.query(Usuario).filter_by(nickName=nick).first()
+                usuario = db.session.query(Usuario).filter_by(email=nick).first()
                 datosUsuario, foto, direcciones = funObtenerDatosUsuario(usuario.idUsuario)
 
                 if datosUsuario.fechanac is not None:
