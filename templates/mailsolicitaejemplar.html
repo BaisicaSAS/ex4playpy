@@ -7,9 +7,16 @@
 </head>
 <body align="center" style="background-image: url({{url_for('static', filename='logoFinal.png', )}});background-size: 40%; background-repeat: no-repeat; background-position: left top;">
   <div style="font-family:verdana;">
-    <h1 align="center"> Bienvenido a ex4play {{ nick }}</h1>
-    <h2><p align="center"> Hola, solo falta un paso para que empieces a intercambiar tus videojuegos. </p></h2>
-    <h2><p align="center"> Confirma aquí: {{ urlconfirma }} </p></h2>
+    {% if dueno == "S" %}
+        <h1 align="center"> Alguien solicitó tu videojuego {{nick}}</h1>
+        <h2><p align="center"> Hola, solicitaron tu videojuego "{{juego}}". </p></h2>
+        <h2><p align="center" href={{ urlapp }}> Ingresa a ex4play.com -> opción: Videojuegos negociados". </p></h2>
+    {% else %}
+        <h1 align="center"> {{nick}}, Enviamos tu solicitud de videojuego </h1>
+        <h2><p align="center"> Hola, enviamos tu mensaje al dueño del videojuego: "{{juego}}". </p></h2>
+        <h2><p align="center" href={{ urlapp }}> Espera noticias! Ingresa a ex4play.com -> opción: Videojuegos negociados". </p></h2>
+    {% endif %}
+
     <h2><p align="center"> ex4play © 2020 </p></h2>
     <h2><p align="center"> :: Otro producto ~ baisica ~ :: </p></h2>
     <h2><p align="center"> Este mensaje se ha enviado desde un formulario de contacto en ex4play :: Renueva tu juego!!! </p></h2>

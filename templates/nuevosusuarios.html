@@ -1,0 +1,66 @@
+{% extends "baseadmin.html" %}
+{% block title %}Administrador - ex4play{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lemon">
+
+    <section >
+        <div class="bgimg-1">
+            <div class="container text-center">
+                <img  src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:20%">
+            </div>
+        </div>
+    </section>
+
+    <div class="alert alert-dark" role="alert">
+      <h5>{{ mensaje }}</h5>
+    </div>
+
+    <div class="container text-center">
+        <table style="border: black 2px solid">
+        <tr  style="border: black 2px solid; background-color:#6eba82;">
+            <td style="border: black 2px solid">Id</td>
+            <td style="border: black 2px solid">Nombre</td>
+            <td style="border: black 2px solid">Nick</td>
+            <td style="border: black 2px solid">Celular</td>
+            <td style="border: black 2px solid">Email</td>
+            <td style="border: black 2px solid">Edad</td>
+            <td style="border: black 2px solid">Genero</td>
+            <td style="border: black 2px solid">Activo</td>
+            <td style="border: black 2px solid">Sancionado</td>
+        </tr>
+        {% for usr in usuarios %}
+            <tr>
+                <td style="border: black 2px solid">{{usr[0]}} [{{usr[10]}}]</td>
+                <td style="border: black 2px solid">{{usr[1]}} {{usr[2]}}</td>
+                <td style="border: black 2px solid">{{usr[3]}}</td>
+                <td style="border: black 2px solid">{{usr[4]}}</td>
+                <td style="border: black 2px solid">{{usr[5]}}</td>
+                <td style="border: black 2px solid">{{usr[6]}}</td>
+                <td style="border: black 2px solid">{{usr[7]}}</td>
+                <td style="border: black 2px solid">
+                    <form method="post" action=" {{url_for('nuevosusuarios') }} ">
+                        <input value="{{usr[0]}}" type="hidden" name="idusu" />
+                        {% if usr[8] == 1 %}
+                        <button type="submit" name="accion" value="inactivar">Inactivar</button>
+                        {% else %}
+                        <button type="submit" name="accion" value="activar">Activar</button>
+                        {% endif %}
+                    </form>
+                </td>
+                <td style="border: black 2px solid">
+                    <form method="post" action=" {{url_for('nuevosusuarios') }} ">
+                        <input value="{{usr[0]}}" type="hidden" name="idusu" />
+                        {% if usr[9] == 1 %}
+                        <button type="submit" name="accion" value="desancionar">Quitar Sanción</button>
+                        {% else %}
+                        <button type="submit" name="accion" value="sancionar">Sancionar</button>
+                        {% endif %}
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+{% endblock %}

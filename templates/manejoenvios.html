@@ -1,0 +1,72 @@
+{% extends "baseadmin.html" %}
+{% block title %}Administrador - ex4play{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lemon">
+
+    <section >
+        <div class="bgimg-1">
+            <div class="container text-center">
+                <img  src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:20%">
+            </div>
+        </div>
+    </section>
+
+    <div class="alert alert-dark" role="alert">
+      <h5>{{ mensaje }}</h5>
+    </div>
+
+    <div class="container text-center">
+        <table style="border: black 2px solid">
+        <tr  style="border: black 2px solid; background-color:#6eba82;">
+            <td style="border: black 2px solid">idTrx</td>
+            <td style="border: black 2px solid">De usuario</td>
+            <td style="border: black 2px solid">Direccion origen</td>
+            <!--#MR 03122020 Adicioné celular -->
+            <td style="border: black 2px solid">Celular origen</td>
+            <td style="border: black 2px solid">Para usuario</td>
+            <td style="border: black 2px solid">Direccion destino</td>
+            <!--#MR 03122020 Adicioné celular -->
+            <td style="border: black 2px solid">Celular destino</td>
+            <td style="border: black 2px solid">Videojuego</td>
+            <td style="border: black 2px solid">Recoger</td>
+            <td style="border: black 2px solid">Entregar</td>
+        </tr>
+        {% for trx in envios %}
+            <tr >
+                <td style="border: black 2px solid">{{trx[0]}}</td>
+                <td style="border: black 2px solid">{{trx[1]}}</td>
+                <td style="border: black 2px solid">{{trx[2]}}</td>
+                <!--#MR 03122020 Adicioné celular -->
+                <td style="border: black 2px solid">{{trx[3]}}</td>
+                <td style="border: black 2px solid">{{trx[4]}}</td>
+                <!--#MR 03122020 Adicioné celular -->
+                <td style="border: black 2px solid">{{trx[5]}}</td>
+                <td style="border: black 2px solid">{{trx[6]}}</td>
+                <td style="border: black 2px solid">{{trx[7]}}</td>
+                <td style="border: black 2px solid">
+                    <form method="post" action=" {{url_for('manejoenvios') }} ">
+                        <input value="{{trx[0]}}" type="hidden" name="idtrx" />
+                        {% if trx[6] == 0 %}
+                        <button type="submit" name="estadoenvio" value="entrega">Entrega (del origen)</button>
+                        {% else %}
+                        <button type="submit" name="estadoenvio" value="entrega" disabled>Entrega (del origen)</button>
+                        {% endif %}
+                    </form>
+                </td>
+                <td style="border: black 2px solid">
+                    <form method="post" action=" {{url_for('manejoenvios') }} ">
+                        <input value="{{trx[0]}}" type="hidden" name="idtrx" />
+                        {% if trx[7] == 0 %}
+                        <button type="submit" name="estadoenvio" value="recibe">Recibe (en el destino)</button>
+                        {% else %}
+                        <button type="submit" name="estadoenvio" value="recibe" disabled>Recibe (en el destino)</button>
+                        {% endif %}
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+{% endblock %}

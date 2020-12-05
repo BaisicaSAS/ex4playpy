@@ -2,10 +2,11 @@
 {% block title %}ex4play - Inicio{% endblock %}
 {% block content %}
 
+
 <html>
 
     <head>
-    <title>Ex4Play</title>
+    <title>ex4play</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
     </head>
 
@@ -129,6 +130,24 @@
             <div class="">
               <div class="card border-primary shadow">
                 <img src="{{url_for('static', filename='manual.png')}}" class="card-img-top" alt="...">
+        <footer class="pt-4 my-md-5 pt-md-5 border-top" style="background-color:#444;">
+            <div class="row">
+              <div class="col-12 col-md">
+                    <img class="mb-2" src="{{url_for('static', filename='logoFinal.png')}}" alt="" style="width:40%">
+                <small class="d-block mb-3 text-muted">© 2020</small>
+              </div>
+              <div class="col-6 col-md">
+                <h5>¿Como funciona ex4play?</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a class="text-muted" href="#">¿Cómo funciona?</a></li>
+                  <li><a class="text-muted" href="#">¿cómo cargar un videojuego?</a></li>
+                  <li><a class="text-muted" href="#">¿Cómo solicitar un videojuego?</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>Recursos</h5>
+                <ul class="list-unstyled text-small">
+                </ul>
               </div>
             </div>
 
