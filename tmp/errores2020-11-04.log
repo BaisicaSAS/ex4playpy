@@ -1,0 +1,222 @@
+INFO:main:2020-11-04 20:20:31[NO_USER] main: **************************************************
+INFO:main:2020-11-04 20:20:31[NO_USER] main: Importa configuracion
+INFO:main:2020-11-04 20:20:31[NO_USER] main: Inicializa DB
+INFO:main:2020-11-04 20:20:31[NO_USER] main: Crea la BD
+INFO:main:2020-11-04 20:20:31[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-11-04 20:20:32[NO_USER] main: **************************************************
+INFO:main:2020-11-04 20:20:32[NO_USER] main: Importa configuracion
+INFO:main:2020-11-04 20:20:32[NO_USER] main: Inicializa DB
+INFO:main:2020-11-04 20:20:32[NO_USER] main: Crea la BD
+INFO:main:2020-11-04 20:20:33[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-11-04 20:20:33[NO_USER] index: inicia index
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 9 ejemplares disponibles
+INFO:main:2020-11-04 20:20:33[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:20:33] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:20:33] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:20:33] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:20:34] "[36mGET /static/Dark.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:20:34] "[36mGET /static/logoFinal.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:20:34] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:20:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:main:2020-11-04 20:20:56[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:20:56] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:20:56] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-04 20:20:58[NO_USER] login: inicia login
+INFO:main:2020-11-04 20:20:58[alexviatela@gmail.com] login: Datos del usuario ingresado: email[alexviatela@gmail.com]
+INFO:main:2020-11-04 20:20:58[alexviatela@gmail.com] login: No hay sesion
+INFO:main:2020-11-04 20:20:58[alexviatela@gmail.com] login: Sesion generada: alexviatela@gmail.com
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+ERROR:operavideojuegos:[alexviatela@gmail.com] funPuntosDisponiblesUsuario: Puntos para : alexviatela@gmail.com- [420.0]
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:20:58] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:20:58] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-04 20:22:04[alexviatela@gmail.com] GET::solicitarejemplarCarga pantalla de solicitud de ejemplar: 26-DARKSOULS[SWITCH]
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:22:04] "[37mGET /solicitarejemplar/26?idejemplar=26&puntosusuario=420.0&valorjuego=150.0&btnejemplar=solicitar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:22:05] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-04 20:22:08[alexviatela@gmail.com] POST::solicitarjemplar: inicia solicitarejemplar
+INFO:main:2020-11-04 20:22:08[alexviatela@gmail.com] POST::solicitarejemplar: Inicia la solicitud
+ERROR:operavideojuegos:[alexviatela@gmail.com] funPuntosDisponiblesUsuario: Puntos para : alexviatela@gmail.com- [420.0]
+ERROR:main:[alexviatela@gmail.com] solicitarejemplar: Puntos usuario420.0
+ERROR:main:[alexviatela@gmail.com] solicitarejemplar: Si hay puntos suficientes
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+ERROR:operavideojuegos:[alexviatela@gmail.com] funPuntosDisponiblesUsuario: Puntos para : alexviatela@gmail.com- [420.0]
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:22:08] "[37mPOST /solicitarejemplar/26 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:22:08] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-04 20:22:14[alexviatela@gmail.com] GET::transacciones : Carga lista de transacciones
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:22:15] "[37mGET /transacciones HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:22:15] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+ERROR:operavideojuegos:[ADMIN] funListarNuevosJuegos: cantidad de juevos nuevos: 0
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:22:31] "[37mGET /nuevosjuegos HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:22:33] "[36mGET /static/fondo.png HTTP/1.1[0m" 304 -
+ERROR:operavideojuegos:[ADMIN] funListarNuevosJuegos: cantidad de juevos nuevos: 0
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:22:37] "[37mGET /nuevosjuegos HTTP/1.1[0m" 200 -
+ERROR:operavideojuegos:[ADMIN] funListarNuevosJuegos: cantidad de juevos nuevos: 0
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:23:33] "[37mGET /nuevosjuegos HTTP/1.1[0m" 200 -
+ERROR:operavideojuegos:[ADMIN] funListarNuevosJuegos: cantidad de juevos nuevos: 0
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:23:35] "[37mGET /nuevosjuegos HTTP/1.1[0m" 200 -
+ERROR:operavideojuegos:[ADMIN] funListarSaldosUsuarios: cantidad de envíos: 9
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:23:37] "[37mGET /saldosusuarios HTTP/1.1[0m" 200 -
+ERROR:operavideojuegos:[ADMIN] funListarEnviosPendientes: cantidad de envíos: 1
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:23:38] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+ERROR:operavideojuegos:[ADMIN] funListarEnviosPendientes: cantidad de envíos: 1
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:24:53] "[37mPOST /manejoenvios HTTP/1.1[0m" 200 -
+DEBUG:operavideojuegos:[ADMIN] funEntregaroRecibir Transaccion # 11 marcada cómo finalizada luego de entregar el juego
+ERROR:operavideojuegos:[ADMIN] funListarEnviosPendientes: cantidad de envíos: 0
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:25:32] "[37mPOST /manejoenvios HTTP/1.1[0m" 200 -
+INFO:main:2020-11-04 20:27:21[NO_USER] index: inicia index
+INFO:main:2020-11-04 20:27:21[alexviatela@gmail.com] index: Hay sesion
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+ERROR:operavideojuegos:[alexviatela@gmail.com] funPuntosDisponiblesUsuario: Puntos para : alexviatela@gmail.com- [270.0]
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:27:21] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:27:22] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-04 20:27:41[NO_USER] index: inicia index
+INFO:main:2020-11-04 20:27:41[alexviatela@gmail.com] index: Hay sesion
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+ERROR:operavideojuegos:[alexviatela@gmail.com] funPuntosDisponiblesUsuario: Puntos para : alexviatela@gmail.com- [270.0]
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:27:42] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:27:42] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:27:45] "[37mGET /logout HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:27:45] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-04 20:27:56[NO_USER] login: inicia login
+INFO:main:2020-11-04 20:27:56[alexviatela@gmail.com] login: Datos del usuario ingresado: email[alexviatela@gmail.com]
+INFO:main:2020-11-04 20:27:56[alexviatela@gmail.com] login: No hay sesion
+INFO:main:2020-11-04 20:27:56[alexviatela@gmail.com] login: Sesion generada: alexviatela@gmail.com
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+ERROR:operavideojuegos:[alexviatela@gmail.com] funPuntosDisponiblesUsuario: Puntos para : alexviatela@gmail.com- [270.0]
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:27:56] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:27:56] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:31:40] "[37mGET /logout HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:31:40] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-04 20:31:44[NO_USER] login: inicia login
+INFO:main:2020-11-04 20:31:44[juanmanuelramirez.jmrc@gmail.com] login: Datos del usuario ingresado: email[juanmanuelramirez.jmrc@gmail.com]
+INFO:main:2020-11-04 20:31:44[juanmanuelramirez.jmrc@gmail.com] login: No hay sesion
+INFO:main:2020-11-04 20:31:44[juanmanuelramirez.jmrc@gmail.com] login: Sesion generada: juanmanuelramirez.jmrc@gmail.com
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 8 ejemplares disponibles
+ERROR:operavideojuegos:[juanmanuelramirez.jmrc@gmail.com] funPuntosDisponiblesUsuario: Puntos para : juanmanuelramirez.jmrc@gmail.com- [210.0]
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:31:44] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:31:44] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-04 20:31:49[NO_USER] index: inicia index
+INFO:main:2020-11-04 20:31:49[juanmanuelramirez.jmrc@gmail.com] index: Hay sesion
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 8 ejemplares disponibles
+ERROR:operavideojuegos:[juanmanuelramirez.jmrc@gmail.com] funPuntosDisponiblesUsuario: Puntos para : juanmanuelramirez.jmrc@gmail.com- [210.0]
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:31:49] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:31:49] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-04 20:31:58[juanmanuelramirez.jmrc@gmail.com] GET::solicitarejemplarCarga pantalla de solicitud de ejemplar: 12-G-Force [Xbox 360]
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:31:58] "[37mGET /solicitarejemplar/12?idejemplar=12&puntosusuario=210.0&valorjuego=120.0&btnejemplar=solicitar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:31:58] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-04 20:32:38[juanmanuelramirez.jmrc@gmail.com] POST::solicitarjemplar: inicia solicitarejemplar
+INFO:main:2020-11-04 20:32:38[juanmanuelramirez.jmrc@gmail.com] POST::solicitarejemplar: Inicia la solicitud
+ERROR:operavideojuegos:[juanmanuelramirez.jmrc@gmail.com] funPuntosDisponiblesUsuario: Puntos para : juanmanuelramirez.jmrc@gmail.com- [210.0]
+ERROR:main:[juanmanuelramirez.jmrc@gmail.com] solicitarejemplar: Puntos usuario210.0
+ERROR:main:[juanmanuelramirez.jmrc@gmail.com] solicitarejemplar: Si hay puntos suficientes
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 8 ejemplares disponibles
+ERROR:operavideojuegos:[juanmanuelramirez.jmrc@gmail.com] funPuntosDisponiblesUsuario: Puntos para : juanmanuelramirez.jmrc@gmail.com- [210.0]
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:32:38] "[37mPOST /solicitarejemplar/12 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:32:38] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-04 20:38:05[juanmanuelramirez.jmrc@gmail.com] GET::transacciones : Carga lista de transacciones
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:38:05] "[37mGET /transacciones HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:38:05] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-04 20:38:23[juanmanuelramirez.jmrc@gmail.com]GET::detalletransacciones: Detalle de la transaccion: 12-G-Force [Xbox 360]
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:38:23] "[37mGET /detalletransacciones/12?transaccion=12&btnconversacion=btnconversacion HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:38:24] "[37mGET /static/css/chat.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-11-04 20:45:25[NO_USER] main: **************************************************
+INFO:main:2020-11-04 20:45:25[NO_USER] main: Importa configuracion
+INFO:main:2020-11-04 20:45:25[NO_USER] main: Inicializa DB
+INFO:main:2020-11-04 20:45:25[NO_USER] main: Crea la BD
+INFO:main:2020-11-04 20:45:25[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-11-04 20:50:04[juanmanuelramirez.jmrc@gmail.com] index: Hay sesion
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 8 ejemplares disponibles
+ERROR:operavideojuegos:[juanmanuelramirez.jmrc@gmail.com] funPuntosDisponiblesUsuario: Puntos para : juanmanuelramirez.jmrc@gmail.com- [210.0]
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:50:05] "[37mGET /nuevosjuegos HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:50:05] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-04 20:50:11[juanmanuelramirez.jmrc@gmail.com] index: Hay sesion
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 8 ejemplares disponibles
+ERROR:operavideojuegos:[juanmanuelramirez.jmrc@gmail.com] funPuntosDisponiblesUsuario: Puntos para : juanmanuelramirez.jmrc@gmail.com- [210.0]
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:50:12] "[37mGET /nuevosjuegos HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:50:12] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:50:17] "[37mGET /logout HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:50:18] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-04 20:50:21[NO_USER] login: inicia login
+INFO:main:2020-11-04 20:50:21[alexviatela@gmail.com] login: Datos del usuario ingresado: email[alexviatela@gmail.com]
+INFO:main:2020-11-04 20:50:21[alexviatela@gmail.com] login: No hay sesion
+INFO:main:2020-11-04 20:50:21[alexviatela@gmail.com] login: Sesion generada: alexviatela@gmail.com
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+ERROR:operavideojuegos:[alexviatela@gmail.com] funPuntosDisponiblesUsuario: Puntos para : alexviatela@gmail.com- [270.0]
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:50:21] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:50:21] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+ERROR:operavideojuegos:[ADMIN] funListarNuevosJuegos: cantidad de juevos nuevos: 0
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:50:27] "[37mGET /nuevosjuegos HTTP/1.1[0m" 200 -
+ERROR:operavideojuegos:[ADMIN] funListarEnviosPendientes: cantidad de envíos: 0
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:50:35] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+ERROR:operavideojuegos:[ADMIN] funListarSaldosUsuarios: cantidad de envíos: 9
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:50:43] "[37mGET /saldosusuarios HTTP/1.1[0m" 200 -
+ERROR:operavideojuegos:[ADMIN] funListarJuegosValorizar: cantidad de juevos nuevos: 491
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:50:55] "[37mGET /valoracionjuegos HTTP/1.1[0m" 200 -
+INFO:main:2020-11-04 20:52:25[NO_USER] index: inicia index
+INFO:main:2020-11-04 20:52:25[alexviatela@gmail.com] index: Hay sesion
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+ERROR:operavideojuegos:[alexviatela@gmail.com] funPuntosDisponiblesUsuario: Puntos para : alexviatela@gmail.com- [270.0]
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:52:25] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:52:26] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-04 20:52:27[alexviatela@gmail.com] GET::transacciones : Carga lista de transacciones
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:52:27] "[37mGET /transacciones HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:52:27] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-04 20:52:32[alexviatela@gmail.com]GET::detalletransacciones: Detalle de la transaccion: 4-Kick Ass PSN [PS3]
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2020 20:52:32] "[37mGET /detalletransacciones/4?transaccion=4&btnconversacion=btnconversacion HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat

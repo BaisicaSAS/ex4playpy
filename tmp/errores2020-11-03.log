@@ -1,0 +1,28 @@
+INFO:main:2020-11-03 07:48:39[NO_USER] main: **************************************************
+INFO:main:2020-11-03 07:48:39[NO_USER] main: Importa configuracion
+INFO:main:2020-11-03 07:48:39[NO_USER] main: Inicializa DB
+INFO:main:2020-11-03 07:48:39[NO_USER] main: Crea la BD
+INFO:main:2020-11-03 07:48:39[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-11-03 07:48:39[NO_USER] main: **************************************************
+INFO:main:2020-11-03 07:48:39[NO_USER] main: Importa configuracion
+INFO:main:2020-11-03 07:48:39[NO_USER] main: Inicializa DB
+INFO:main:2020-11-03 07:48:39[NO_USER] main: Crea la BD
+INFO:main:2020-11-03 07:48:39[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-11-03 07:48:40[NO_USER] main: **************************************************
+INFO:main:2020-11-03 07:48:40[NO_USER] main: Importa configuracion
+INFO:main:2020-11-03 07:48:40[NO_USER] main: Inicializa DB
+INFO:main:2020-11-03 07:48:40[NO_USER] main: Crea la BD
+INFO:main:2020-11-03 07:48:40[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-11-03 07:48:40[NO_USER] main: **************************************************
+INFO:main:2020-11-03 07:48:40[NO_USER] main: Importa configuracion
+INFO:main:2020-11-03 07:48:40[NO_USER] main: Inicializa DB
+INFO:main:2020-11-03 07:48:40[NO_USER] main: Crea la BD
+INFO:main:2020-11-03 07:48:40[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)

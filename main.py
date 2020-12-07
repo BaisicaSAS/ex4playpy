@@ -58,7 +58,7 @@ app.config['MAIL_SERVER'] = 'p3plcpnl1009.prod.phx3.secureserver.net'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = "ex4play@baisica.co"
 #github
-app.config['MAIL_PASSWORD'] = 'p3plcpnl1009@Ju$o2020@103466'
+app.config['MAIL_PASSWORD'] = 'datab@Ju$o2020@1034567890.'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
@@ -758,7 +758,7 @@ def solicitarejemplar(idejeusuario):
             email = email.lower()
 
         if request.method == "GET":
-            obUsuario =  db.session.query(Usuario).filter_by(email=email).first()
+            obUsuario = db.session.query(Usuario).filter_by(email=email).first()
             obEjeUsuario = db.session.query(EjeUsuario).filter_by(idEjeUsuario=idejeusuario).first()
             obVideojuego = db.session.query(VideoJuego).filter_by(idVj=obEjeUsuario.vjId).first()
             obFoto = db.session.query(FotoEjeUsuario).filter_by(ejeUsuarioId=obEjeUsuario.idEjeUsuario, activa=1).first()
@@ -767,7 +767,7 @@ def solicitarejemplar(idejeusuario):
 
             #print("ejidejeusuario"+str(idejeusuario)+" -- ejimagen=" + foto + "--ejnombre=" + obVideojuego.nombre + "--ejestado= "+ str(obEjeUsuario.estado) + "--ejcomentario="+obEjeUsuario.comentario+"ejpublicar="+str(obEjeUsuario.publicado))
             app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S") + "[" + email + "] GET::solicitarejemplarCarga pantalla de solicitud de ejemplar: " + str(idejeusuario)+"-"+obVideojuego.nombre)
-            return render_template('solicitarejemplar.html', usuario=obUsuario.nickName, mensaje="Edita el videojuego!", idejeusuario=idejeusuario, ejimagen=foto, ejnombre=obVideojuego.nombre, ejestado=obEjeUsuario.estado, ejcomentario=obEjeUsuario.comentario, editar=1)
+            return render_template('solicitarejemplar.html', usuario=obUsuario.nickName, mensaje="Solicita el juego!!", idejeusuario=idejeusuario, ejimagen=foto, ejnombre=obVideojuego.nombre, ejestado=obEjeUsuario.estado, ejcomentario=obEjeUsuario.comentario, editar=1)
 
         if request.method=="POST":
             app.logger.info(datetime.today().strftime("%Y-%m-%d %H:%M:%S")+"["+email+"] POST::solicitarjemplar: inicia solicitarejemplar")
@@ -803,10 +803,10 @@ def solicitarejemplar(idejeusuario):
                         else:
                             #Recupera los puntos que tiene el usuario
                             puntosusr = funPuntosDisponiblesUsuario(usuario.idUsuario)
-                            #print("puntos usuario" + str(puntosusr))
-                            app.logger.error("[" + email + "] solicitarejemplar: Puntos usuario"+str(puntosusr))
+                            print("puntos usuario" + str(puntosusr))
+                            app.logger.debug("[" + email + "] solicitarejemplar: Puntos usuario"+str(puntosusr))
                             if puntosusr >= ejemplar.valor:
-
+                                app.logger.debug("[" + email + "] solicitarejemplar: puntosusr >= ejemplar.valor"+str(ejemplar.valor))
                                 #Crea transacción
                                 inresp = funCrearTransaccion(idusuariosolic, idusuariodueno, ejemplar.idEjeUsuario, mensaje)
                                 #MR 03122020 Pone el ejemplar en negociaciacion para que no lo puedan tocar
@@ -1224,10 +1224,10 @@ def updateUser():
                     saldo.valorPagado = int(saldo.valorPagado)
                     saldo.ValorCobrado = int(saldo.ValorCobrado)
                 else:
-                    saldo['TotalPuntos'] = 0
-                    saldo['valorPagado'] = 0
-                    saldo['ValorCobrado'] = 0
-
+                    saldo = Saldos()
+                    saldo.TotalPuntos = 0
+                    saldo.valorPagado = 0
+                    saldo.ValorCobrado = 0
 
                 if len(direcciones) > 0:
                     for dir in direcciones:

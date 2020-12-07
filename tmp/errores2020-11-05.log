@@ -1,0 +1,332 @@
+INFO:main:2020-11-05 17:41:58[NO_USER] main: **************************************************
+INFO:main:2020-11-05 17:41:58[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 17:41:58[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 17:41:58[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 17:41:59[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:main:2020-11-05 18:46:08[NO_USER] main: **************************************************
+INFO:main:2020-11-05 18:46:08[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 18:46:08[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 18:46:08[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 18:46:08[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-11-05 18:46:09[NO_USER] main: **************************************************
+INFO:main:2020-11-05 18:46:09[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 18:46:09[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 18:46:09[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 18:46:09[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-11-05 18:47:23[NO_USER] main: **************************************************
+INFO:main:2020-11-05 18:47:23[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 18:47:23[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 18:47:23[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 18:47:23[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-11-05 18:47:24[NO_USER] main: **************************************************
+INFO:main:2020-11-05 18:47:24[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 18:47:24[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 18:47:24[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 18:47:24[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-11-05 18:47:31[NO_USER] main: **************************************************
+INFO:main:2020-11-05 18:47:31[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 18:47:31[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 18:47:31[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 18:47:31[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-11-05 18:47:32[NO_USER] main: **************************************************
+INFO:main:2020-11-05 18:47:32[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 18:47:32[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 18:47:32[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 18:47:33[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-11-05 18:47:40[NO_USER] index: inicia index
+INFO:main:2020-11-05 18:47:40[alexviatela@gmail.com] index: Hay sesion
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+ERROR:operavideojuegos:[alexviatela@gmail.com] funPuntosDisponiblesUsuario: Puntos para : alexviatela@gmail.com- [270.0]
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:47:40] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:47:40] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:47:40] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:47:41] "[36mGET /static/Dark.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:47:41] "[36mGET /static/logoFinal.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:47:45] "[37mGET /logout HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:47:45] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-05 18:47:49[NO_USER] login: inicia login
+INFO:main:2020-11-05 18:47:49[luzacifuentes@gmail.com] login: Datos del usuario ingresado: email[luzacifuentes@gmail.com]
+INFO:main:2020-11-05 18:47:49[luzacifuentes@gmail.com] login: No hay sesion
+INFO:main:2020-11-05 18:47:49[luzacifuentes@gmail.com] login: Sesion generada: luzacifuentes@gmail.com
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 8 ejemplares disponibles
+ERROR:operavideojuegos:[luzacifuentes@gmail.com] funPuntosDisponiblesUsuario: Puntos para : luzacifuentes@gmail.com- [420.0]
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:47:49] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:47:49] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-05 18:47:54[luzacifuentes@gmail.com] GET::solicitarejemplarCarga pantalla de solicitud de ejemplar: 27-RED DEAD REDEMPTION 2[PS3]
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:47:54] "[37mGET /solicitarejemplar/27?idejemplar=27&puntosusuario=420.0&valorjuego=180.0&btnejemplar=solicitar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:47:54] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-05 18:47:58[luzacifuentes@gmail.com] POST::solicitarjemplar: inicia solicitarejemplar
+INFO:main:2020-11-05 18:47:58[luzacifuentes@gmail.com] POST::solicitarejemplar: Inicia la solicitud
+ERROR:operavideojuegos:[luzacifuentes@gmail.com] funPuntosDisponiblesUsuario: Puntos para : luzacifuentes@gmail.com- [420.0]
+ERROR:main:[luzacifuentes@gmail.com] solicitarejemplar: Puntos usuario420.0
+INFO:main:2020-11-05 18:47:58[alexviatela@gmail.com] enviar_correo: Inicia 
+INFO:main:2020-11-05 18:47:58[alexviatela@gmail.com] va enviar_correo: SEND 
+ERROR:main:[luzacifuentes@gmail.com] solicitarejemplar: error
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:47:58] "[35m[1mPOST /solicitarejemplar/27 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:47:58] "[37mGET /solicitarejemplar/27?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:47:58] "[37mGET /solicitarejemplar/27?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:47:59] "[37mGET /solicitarejemplar/27?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:47:59] "[37mGET /solicitarejemplar/27?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:47:59] "[37mGET /solicitarejemplar/27?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:47:59] "[37mGET /solicitarejemplar/27?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:main:2020-11-05 18:48:16[NO_USER] main: **************************************************
+INFO:main:2020-11-05 18:48:16[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 18:48:16[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 18:48:16[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 18:48:16[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-11-05 18:48:17[NO_USER] main: **************************************************
+INFO:main:2020-11-05 18:48:17[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 18:48:17[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 18:48:17[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 18:48:17[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-11-05 18:48:26[NO_USER] main: **************************************************
+INFO:main:2020-11-05 18:48:26[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 18:48:26[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 18:48:26[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 18:48:26[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-11-05 18:48:27[NO_USER] main: **************************************************
+INFO:main:2020-11-05 18:48:27[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 18:48:27[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 18:48:27[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 18:48:28[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-11-05 18:48:28[luzacifuentes@gmail.com] GET::solicitarejemplarCarga pantalla de solicitud de ejemplar: 27-RED DEAD REDEMPTION 2[PS3]
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:48:28] "[37mGET /solicitarejemplar/27?idejemplar=27&puntosusuario=420.0&valorjuego=180.0&btnejemplar=solicitar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:48:28] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-05 18:50:22[NO_USER] main: **************************************************
+INFO:main:2020-11-05 18:50:22[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 18:50:22[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 18:50:22[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 18:50:22[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-11-05 18:50:25[NO_USER] main: **************************************************
+INFO:main:2020-11-05 18:50:25[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 18:50:25[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 18:50:25[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 18:50:25[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-11-05 18:50:27[NO_USER] main: **************************************************
+INFO:main:2020-11-05 18:50:27[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 18:50:27[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 18:50:27[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 18:50:28[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-11-05 18:50:33[NO_USER] main: **************************************************
+INFO:main:2020-11-05 18:50:33[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 18:50:33[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 18:50:33[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 18:50:33[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-11-05 18:50:35[NO_USER] main: **************************************************
+INFO:main:2020-11-05 18:50:35[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 18:50:35[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 18:50:35[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 18:50:35[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-11-05 18:50:35[NO_USER] main: **************************************************
+INFO:main:2020-11-05 18:50:35[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 18:50:35[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 18:50:35[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 18:50:35[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-11-05 18:50:36[NO_USER] main: **************************************************
+INFO:main:2020-11-05 18:50:36[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 18:50:36[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 18:50:36[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 18:50:37[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-11-05 18:50:44[luzacifuentes@gmail.com] GET::solicitarejemplarCarga pantalla de solicitud de ejemplar: 27-RED DEAD REDEMPTION 2[PS3]
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:50:44] "[37mGET /solicitarejemplar/27?idejemplar=27&puntosusuario=420.0&valorjuego=180.0&btnejemplar=solicitar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:50:44] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-05 18:50:46[luzacifuentes@gmail.com] POST::solicitarjemplar: inicia solicitarejemplar
+INFO:main:2020-11-05 18:50:46[luzacifuentes@gmail.com] POST::solicitarejemplar: Inicia la solicitud
+ERROR:operavideojuegos:[luzacifuentes@gmail.com] funPuntosDisponiblesUsuario: Puntos para : luzacifuentes@gmail.com- [420.0]
+ERROR:main:[luzacifuentes@gmail.com] solicitarejemplar: Puntos usuario420.0
+INFO:main:2020-11-05 18:50:46[alexviatela@gmail.com] enviar_correo: Inicia 
+INFO:main:2020-11-05 18:50:46[alexviatela@gmail.com] va enviar_correo: SEND 
+INFO:main:2020-11-05 18:50:55[CORREO A: alexviatela@gmail.com] Envió correo
+INFO:main:2020-11-05 18:51:04[CORREO A: alexviatela@gmail.com] Envió correo
+INFO:main:2020-11-05 18:51:04[luzacifuentes@gmail.com] enviar_correo: Inicia 
+INFO:main:2020-11-05 18:51:04[luzacifuentes@gmail.com] va enviar_correo: SEND 
+INFO:main:2020-11-05 18:51:13[CORREO A: luzacifuentes@gmail.com] Envió correo
+INFO:main:2020-11-05 18:51:22[CORREO A: luzacifuentes@gmail.com] Envió correo
+ERROR:main:[luzacifuentes@gmail.com] solicitarejemplar: Si hay puntos suficientes
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 8 ejemplares disponibles
+ERROR:operavideojuegos:[luzacifuentes@gmail.com] funPuntosDisponiblesUsuario: Puntos para : luzacifuentes@gmail.com- [420.0]
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:51:22] "[37mPOST /solicitarejemplar/27 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 18:51:22] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-05 18:52:43[NO_USER] main: **************************************************
+INFO:main:2020-11-05 18:52:43[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 18:52:43[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 18:52:43[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 18:52:43[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-11-05 18:52:44[NO_USER] main: **************************************************
+INFO:main:2020-11-05 18:52:44[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 18:52:44[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 18:52:44[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 18:52:45[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-11-05 19:01:30[luzacifuentes@gmail.com] GET::solicitarejemplarCarga pantalla de solicitud de ejemplar: 27-RED DEAD REDEMPTION 2[PS3]
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:01:30] "[37mGET /solicitarejemplar/27 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:01:30] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-05 19:01:33[NO_USER] index: inicia index
+INFO:main:2020-11-05 19:01:33[luzacifuentes@gmail.com] index: Hay sesion
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 8 ejemplares disponibles
+ERROR:operavideojuegos:[luzacifuentes@gmail.com] funPuntosDisponiblesUsuario: Puntos para : luzacifuentes@gmail.com- [420.0]
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:01:33] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:01:34] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-05 19:01:38[luzacifuentes@gmail.com] GET::solicitarejemplarCarga pantalla de solicitud de ejemplar: 11-G-Force [PS3]
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:01:38] "[37mGET /solicitarejemplar/11?idejemplar=11&puntosusuario=420.0&valorjuego=120.0&btnejemplar=solicitar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:01:38] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-05 19:01:42[luzacifuentes@gmail.com] POST::solicitarjemplar: inicia solicitarejemplar
+INFO:main:2020-11-05 19:01:42[luzacifuentes@gmail.com] POST::solicitarejemplar: Inicia la solicitud
+ERROR:operavideojuegos:[luzacifuentes@gmail.com] funPuntosDisponiblesUsuario: Puntos para : luzacifuentes@gmail.com- [420.0]
+ERROR:main:[luzacifuentes@gmail.com] solicitarejemplar: Puntos usuario420.0
+INFO:main:2020-11-05 19:01:42[alexviatela@gmail.com] enviar_correo: Inicia 
+INFO:main:2020-11-05 19:01:42[alexviatela@gmail.com] va enviar_correo: SEND 
+INFO:main:2020-11-05 19:01:51[CORREO A: alexviatela@gmail.com] Envió correo
+INFO:main:2020-11-05 19:02:00[CORREO A: alexviatela@gmail.com] Envió correo
+INFO:main:2020-11-05 19:02:00[luzacifuentes@gmail.com] enviar_correo: Inicia 
+INFO:main:2020-11-05 19:02:00[luzacifuentes@gmail.com] va enviar_correo: SEND 
+INFO:main:2020-11-05 19:02:08[CORREO A: luzacifuentes@gmail.com] Envió correo
+INFO:main:2020-11-05 19:02:18[CORREO A: luzacifuentes@gmail.com] Envió correo
+ERROR:main:[luzacifuentes@gmail.com] solicitarejemplar: Si hay puntos suficientes
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 8 ejemplares disponibles
+ERROR:operavideojuegos:[luzacifuentes@gmail.com] funPuntosDisponiblesUsuario: Puntos para : luzacifuentes@gmail.com- [420.0]
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:02:18] "[37mPOST /solicitarejemplar/11 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:02:18] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-05 19:16:01[NO_USER] main: **************************************************
+INFO:main:2020-11-05 19:16:01[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 19:16:01[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 19:16:01[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 19:16:01[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-11-05 19:16:03[NO_USER] main: **************************************************
+INFO:main:2020-11-05 19:16:03[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 19:16:03[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 19:16:03[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 19:16:03[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-11-05 19:51:42[NO_USER] main: **************************************************
+INFO:main:2020-11-05 19:51:42[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 19:51:42[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 19:51:42[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 19:51:42[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-11-05 19:51:43[NO_USER] main: **************************************************
+INFO:main:2020-11-05 19:51:43[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 19:51:43[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 19:51:43[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 19:51:43[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-11-05 19:55:07[NO_USER] main: **************************************************
+INFO:main:2020-11-05 19:55:07[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 19:55:07[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 19:55:07[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 19:55:07[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-11-05 19:55:09[NO_USER] main: **************************************************
+INFO:main:2020-11-05 19:55:09[NO_USER] main: Importa configuracion
+INFO:main:2020-11-05 19:55:09[NO_USER] main: Inicializa DB
+INFO:main:2020-11-05 19:55:09[NO_USER] main: Crea la BD
+INFO:main:2020-11-05 19:55:09[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-11-05 19:55:35[luzacifuentes@gmail.com] index: Hay sesion
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 2 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 7 ejemplares disponibles
+ERROR:operavideojuegos:[luzacifuentes@gmail.com] funPuntosDisponiblesUsuario: Puntos para : luzacifuentes@gmail.com- [420.0]
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:55:35] "[37mGET /nuevosjuegos HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:55:35] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-05 19:55:43[NO_USER] index: inicia index
+INFO:main:2020-11-05 19:55:43[luzacifuentes@gmail.com] index: Hay sesion
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 2 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 7 ejemplares disponibles
+ERROR:operavideojuegos:[luzacifuentes@gmail.com] funPuntosDisponiblesUsuario: Puntos para : luzacifuentes@gmail.com- [420.0]
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:55:44] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:55:44] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:55:45] "[37mGET /logout HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:55:45] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-05 19:55:53[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:55:53] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:55:53] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-11-05 19:56:00[NO_USER] login: inicia login
+INFO:main:2020-11-05 19:56:00[alexviatela@gmail.com] login: Datos del usuario ingresado: email[alexviatela@gmail.com]
+INFO:main:2020-11-05 19:56:00[alexviatela@gmail.com] login: No hay sesion
+INFO:main:2020-11-05 19:56:00[alexviatela@gmail.com] login: Sesion generada: alexviatela@gmail.com
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+ERROR:operavideojuegos:[alexviatela@gmail.com] funPuntosDisponiblesUsuario: Puntos para : alexviatela@gmail.com- [270.0]
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:56:01] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:56:01] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+ERROR:operavideojuegos:[ADMIN] funListarNuevosJuegos: cantidad de juevos nuevos: 0
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:56:06] "[37mGET /nuevosjuegos HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:56:06] "[36mGET /static/fondo.png HTTP/1.1[0m" 304 -
+ERROR:operavideojuegos:[ADMIN] funListarEnviosPendientes: cantidad de envíos: 0
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:56:25] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+ERROR:operavideojuegos:[ADMIN] funListarEnviosPendientes: cantidad de envíos: 0
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:56:29] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+ERROR:operavideojuegos:[ADMIN] funListarNuevosJuegos: cantidad de juevos nuevos: 0
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2020 19:58:07] "[37mGET /nuevosjuegos HTTP/1.1[0m" 200 -

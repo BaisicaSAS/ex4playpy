@@ -1,0 +1,76 @@
+INFO:main:2020-10-28 17:44:11[NO_USER] main: **************************************************
+INFO:main:2020-10-28 17:44:11[NO_USER] main: Importa configuracion
+INFO:main:2020-10-28 17:44:11[NO_USER] main: Inicializa DB
+INFO:main:2020-10-28 17:44:11[NO_USER] main: Crea la BD
+INFO:main:2020-10-28 17:44:12[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-28 17:44:13[NO_USER] main: **************************************************
+INFO:main:2020-10-28 17:44:13[NO_USER] main: Importa configuracion
+INFO:main:2020-10-28 17:44:13[NO_USER] main: Inicializa DB
+INFO:main:2020-10-28 17:44:13[NO_USER] main: Crea la BD
+INFO:main:2020-10-28 17:44:13[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-28 17:49:23[NO_USER] main: **************************************************
+INFO:main:2020-10-28 17:49:23[NO_USER] main: Importa configuracion
+INFO:main:2020-10-28 17:49:23[NO_USER] main: Inicializa DB
+INFO:main:2020-10-28 17:49:23[NO_USER] main: Crea la BD
+INFO:main:2020-10-28 17:49:23[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-28 17:50:30[NO_USER] main: **************************************************
+INFO:main:2020-10-28 17:50:30[NO_USER] main: Importa configuracion
+INFO:main:2020-10-28 17:50:30[NO_USER] main: Inicializa DB
+INFO:main:2020-10-28 17:50:30[NO_USER] main: Crea la BD
+INFO:main:2020-10-28 17:50:30[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-28 17:51:10[NO_USER] main: **************************************************
+INFO:main:2020-10-28 17:51:10[NO_USER] main: Importa configuracion
+INFO:main:2020-10-28 17:51:10[NO_USER] main: Inicializa DB
+INFO:main:2020-10-28 17:51:10[NO_USER] main: Crea la BD
+INFO:main:2020-10-28 17:51:10[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-28 17:51:56[NO_USER] main: **************************************************
+INFO:main:2020-10-28 17:51:56[NO_USER] main: Importa configuracion
+INFO:main:2020-10-28 17:51:56[NO_USER] main: Inicializa DB
+INFO:main:2020-10-28 17:51:56[NO_USER] main: Crea la BD
+INFO:main:2020-10-28 17:51:56[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-28 17:56:28[NO_USER] main: **************************************************
+INFO:main:2020-10-28 17:56:28[NO_USER] main: Importa configuracion
+INFO:main:2020-10-28 17:56:28[NO_USER] main: Inicializa DB
+INFO:main:2020-10-28 17:56:28[NO_USER] main: Crea la BD
+INFO:main:2020-10-28 17:56:28[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-28 20:48:01[NO_USER] main: **************************************************
+INFO:main:2020-10-28 20:48:01[NO_USER] main: Importa configuracion
+INFO:main:2020-10-28 20:48:01[NO_USER] main: Inicializa DB
+INFO:main:2020-10-28 20:48:01[NO_USER] main: Crea la BD
+INFO:main:2020-10-28 20:48:02[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat

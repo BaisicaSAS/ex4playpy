@@ -1,0 +1,1065 @@
+INFO:main:2020-10-26 15:00:15[NO_USER] main: **************************************************
+INFO:main:2020-10-26 15:00:15[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 15:00:15[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 15:00:15[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 15:00:19[NO_USER] main: **************************************************
+INFO:main:2020-10-26 15:00:19[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 15:00:19[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 15:00:19[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 15:00:19[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 15:00:20[NO_USER] main: **************************************************
+INFO:main:2020-10-26 15:00:20[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 15:00:20[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 15:00:20[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 15:00:20[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 15:00:33[NO_USER] index: inicia index
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 10 ejemplares disponibles
+INFO:main:2020-10-26 15:00:33[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 15:00:33] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 15:00:33] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 15:00:33] "[37mGET /static/css/home.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 15:00:33] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 15:00:33] "[37mGET /static/logoFinal.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 15:00:34] "[37mGET /static/Dark.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 15:00:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 16:27:56[NO_USER] main: **************************************************
+INFO:main:2020-10-26 16:27:56[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 16:27:56[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 16:27:56[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 16:27:57[NO_USER] main: **************************************************
+INFO:main:2020-10-26 16:27:57[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 16:27:57[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 16:27:57[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 16:27:57[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 16:27:57[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 16:28:03[NO_USER] main: **************************************************
+INFO:main:2020-10-26 16:28:03[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 16:28:03[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 16:28:03[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 16:28:03[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 16:28:05[NO_USER] main: **************************************************
+INFO:main:2020-10-26 16:28:05[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 16:28:05[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 16:28:05[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 16:28:05[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 16:28:14[NO_USER] index: inicia index
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 10 ejemplares disponibles
+INFO:main:2020-10-26 16:28:14[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 16:28:14] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 16:28:14] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 16:28:14] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 16:31:24[NO_USER] main: **************************************************
+INFO:main:2020-10-26 16:31:24[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 16:31:24[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 16:31:24[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 16:31:24[NO_USER] main: **************************************************
+INFO:main:2020-10-26 16:31:24[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 16:31:24[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 16:31:24[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 16:31:25[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 16:31:25[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 16:31:26[NO_USER] main: **************************************************
+INFO:main:2020-10-26 16:31:26[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 16:31:26[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 16:31:26[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 16:31:26[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 16:37:45[NO_USER] main: **************************************************
+INFO:main:2020-10-26 16:37:45[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 16:37:45[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 16:37:45[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 16:37:45[NO_USER] main: **************************************************
+INFO:main:2020-10-26 16:37:45[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 16:37:45[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 16:37:45[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 16:37:46[NO_USER] main: Run aplicacion 8000
+INFO:main:2020-10-26 16:37:46[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 16:43:47[NO_USER] main: **************************************************
+INFO:main:2020-10-26 16:43:47[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 16:43:47[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 16:43:47[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 16:43:47[NO_USER] main: **************************************************
+INFO:main:2020-10-26 16:43:47[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 16:43:47[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 16:43:47[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 16:43:47[NO_USER] main: **************************************************
+INFO:main:2020-10-26 16:43:47[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 16:43:47[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 16:43:47[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 16:43:47[NO_USER] main: Run aplicacion 8000
+INFO:main:2020-10-26 16:43:47[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 16:43:47[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 16:43:48[NO_USER] main: **************************************************
+INFO:main:2020-10-26 16:43:48[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 16:43:48[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 16:43:48[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 16:43:48[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 16:43:54[NO_USER] index: inicia index
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 10 ejemplares disponibles
+INFO:main:2020-10-26 16:43:54[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 16:43:54] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 16:43:54] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 16:43:55] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-10-26 16:44:06[NO_USER] index: inicia index
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 10 ejemplares disponibles
+INFO:main:2020-10-26 16:44:06[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 16:44:06] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 16:44:06] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 16:44:06] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-10-26 16:44:20[NO_USER] index: inicia index
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 10 ejemplares disponibles
+INFO:main:2020-10-26 16:44:20[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 16:44:20] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 16:44:20] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 16:44:20] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-10-26 21:48:51[NO_USER] index: inicia index
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 10 ejemplares disponibles
+INFO:main:2020-10-26 21:48:51[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 21:48:51] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 21:48:51] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 21:48:51] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-10-26 22:04:56[NO_USER] main: **************************************************
+INFO:main:2020-10-26 22:04:56[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 22:04:56[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 22:04:56[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 22:04:56[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 22:04:57[NO_USER] main: **************************************************
+INFO:main:2020-10-26 22:04:57[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 22:04:57[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 22:04:57[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 22:04:57[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 22:05:25[NO_USER] index: inicia index
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 10 ejemplares disponibles
+INFO:main:2020-10-26 22:05:25[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:05:25] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:05:25] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:05:25] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 22:17:35[NO_USER] main: **************************************************
+INFO:main:2020-10-26 22:17:35[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 22:17:35[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 22:17:35[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 22:17:35[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 22:20:40[NO_USER] main: **************************************************
+INFO:main:2020-10-26 22:20:40[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 22:20:40[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 22:20:40[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 22:20:40[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 22:23:55[NO_USER] main: **************************************************
+INFO:main:2020-10-26 22:23:55[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 22:23:55[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 22:23:55[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 22:23:55[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 22:24:03[NO_USER] index: inicia index
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 10 ejemplares disponibles
+INFO:main:2020-10-26 22:24:03[NO_USER] index: No hay sesion
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:24:03] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:24:03] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:24:03] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-10-26 22:24:07[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:24:07] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:24:07] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-10-26 22:24:23[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:24:23] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:24:23] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-10-26 22:24:26[NO_USER] login: inicia login
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:24:26] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:24:26] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-10-26 22:24:28[NO_USER] login: inicia login
+INFO:main:2020-10-26 22:24:28[luzacifuentes@gmail.com] login: Datos del usuario ingresado: email[luzacifuentes@gmail.com]
+INFO:main:2020-10-26 22:24:29[luzacifuentes@gmail.com] login: No hay sesion
+INFO:main:2020-10-26 22:24:29[luzacifuentes@gmail.com] login: Sesion generada: luzacifuentes@gmail.com
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 9 ejemplares disponibles
+ERROR:operavideojuegos:[luzacifuentes@gmail.com] funPuntosDisponiblesUsuario: Puntos para : luzacifuentes@gmail.com- [540.0]
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:24:29] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:24:29] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-10-26 22:24:52[luzacifuentes@gmail.com] index: Hay sesion
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 9 ejemplares disponibles
+ERROR:operavideojuegos:[luzacifuentes@gmail.com] funPuntosDisponiblesUsuario: Puntos para : luzacifuentes@gmail.com- [540.0]
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:24:52] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:24:52] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:24:58] "[37mGET /logout HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:24:58] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-10-26 22:25:06[NO_USER] login: inicia login
+INFO:main:2020-10-26 22:25:06[alexviatela@gmail.com] login: Datos del usuario ingresado: email[alexviatela@gmail.com]
+INFO:main:2020-10-26 22:25:06[alexviatela@gmail.com] login: No hay sesion
+INFO:main:2020-10-26 22:25:06[alexviatela@gmail.com] login: Sesion generada: alexviatela@gmail.com
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 1 ejemplares disponibles
+ERROR:operavideojuegos:[alexviatela@gmail.com] funPuntosDisponiblesUsuario: Puntos para : alexviatela@gmail.com- [180.0]
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:25:06] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:25:06] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:25:19] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:25:19] "[37mGET /static/fondo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:25:47] "[37mGET /admin4play HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:25:51] "[37mGET /nuevosjuegos HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:25:53] "[37mGET /nuevosjuegos HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:25:55] "[37mGET /nuevosusuarios HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:25:57] "[37mGET /nuevostratos HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:25:59] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:26:00] "[37mGET /valoracionjuegos HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:26:07] "[37mGET /nuevosjuegos HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:26:09] "[37mGET /nuevosjuegos HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:26:31] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:26:31] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 22:36:51[NO_USER] main: **************************************************
+INFO:main:2020-10-26 22:36:51[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 22:36:51[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 22:36:51[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 22:36:51[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:42:13] "[37mGET /nuevosjuegos HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:42:15] "[37mGET /nuevostratos HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:42:16] "[37mGET /nuevostratos HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:42:16] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:42:19] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 22:42:20] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\datamodel.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:16:08[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:16:08[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:16:08[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:16:08[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:16:08[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:16:09[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:16:09[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:16:09[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:16:09[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:16:09[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:16:25[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:16:25[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:16:25[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:16:25[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:16:25[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:16:26[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:16:26[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:16:26[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:16:26[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:16:26[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:38:27[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:38:27[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:38:27[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:38:27[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:38:27[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:38:28[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:38:28[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:38:28[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:38:28[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:38:28[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:38:34] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:40:23] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:40:25] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:40:27] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:41:14[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:41:14[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:41:14[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:41:14[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:41:14[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:41:14[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:41:14[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:41:14[NO_USER] main: Run aplicacion 8000
+INFO:main:2020-10-26 23:41:14[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:41:16[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:41:16[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:41:16[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:41:16[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:41:16[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:41:17[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:41:17[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:41:17[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:41:17[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:41:17[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:41:25[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:41:25[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:41:25[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:41:25[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:41:25[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:41:25[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:41:25[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:41:25[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:41:25[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:41:25[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:41:25[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:41:25[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:41:25[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:41:25[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:41:25[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:41:25[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:41:25[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:41:25[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:41:25[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:main:2020-10-26 23:41:25[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:41:26[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:41:26[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:41:26[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:41:26[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:41:26[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:41:33[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:41:33[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:41:33[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:41:33[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:41:34[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:41:34[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:41:34[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:41:34[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:41:34[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:41:34[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:41:38] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:42:48[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:42:48[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:42:48[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:42:48[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:42:48[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:main:2020-10-26 23:42:48[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:42:48[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:42:48[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:42:48[NO_USER] main: Crea la BD
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:42:48[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:42:49[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:42:49[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:42:49[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:42:49[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:42:49[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:42:55[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:42:55[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:42:55[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:42:55[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:42:55[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:42:56[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:42:56[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:42:56[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:42:56[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:42:56[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:42:59] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:43:01] "[37mGET /nuevostratos HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:43:02] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:43:04] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:43:04] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:44:52[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:44:52[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:44:52[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:44:52[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:44:52[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:44:52[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:44:52[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:44:52[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:44:52[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:44:52[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:44:53[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:44:53[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:44:53[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:44:53[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:44:53[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:44:57[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:44:57[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:44:57[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:44:57[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:44:57[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:44:58[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:44:58[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:44:58[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:44:58[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:44:58[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:45:01] "[37mGET /nuevosjuegos HTTP/1.1[0m" 200 -
+ERROR:operavideojuegos:[NOUSER] funListarEnviosPendientes: Error en lista
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:45:02] "[35m[1mGET /manejoenvios HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:45:02] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:45:02] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:45:02] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:45:03] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:45:03] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:45:03] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:47:13[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:47:13[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:47:13[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:47:13[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:47:13[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:47:14[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:47:14[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:47:14[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:47:14[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:47:14[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:47:14[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:47:14[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:47:14[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:47:14[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:47:14[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:47:17[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:47:17[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:47:17[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:47:17[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:47:17[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:47:18[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:47:18[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:47:18[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:47:18[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:47:18[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+ERROR:operavideojuegos:[NOUSER] funListarEnviosPendientes: Error en lista
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:47:24] "[35m[1mGET /manejoenvios HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:47:24] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:47:24] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:47:24] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:47:25] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:47:25] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+ERROR:operavideojuegos:[NOUSER] funListarEnviosPendientes: Error en lista
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:48:31] "[35m[1mGET /manejoenvios HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:48:31] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:48:31] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:48:31] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:48:31] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:48:31] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:49:13[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:49:13[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:49:13[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:49:13[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:49:13[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:49:14[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:49:14[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:49:14[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:49:14[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:49:14[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:49:14[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:49:14[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:49:14[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:49:14[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:49:14[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:49:14[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:49:14[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:49:14[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:49:14[NO_USER] main: Run aplicacion 8000
+INFO:main:2020-10-26 23:49:14[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:49:15[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:49:15[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:49:15[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:49:15[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:49:15[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+ERROR:operavideojuegos:[NOUSER] funListarEnviosPendientes: Error en lista
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:49:18] "[35m[1mGET /manejoenvios HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:49:18] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:49:18] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:49:19] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:49:19] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:49:19] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:49:37[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:49:37[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:49:37[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:49:37[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:49:37[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:49:37[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:49:37[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:49:37[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:49:37[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:49:37[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:49:37[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:49:37[NO_USER] main: Run aplicacion 8000
+INFO:main:2020-10-26 23:49:37[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:49:38[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:49:38[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:49:38[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:49:38[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:49:38[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:49:38[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:49:38[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:49:38[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:49:38[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:main:2020-10-26 23:49:38[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:49:41[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:49:41[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:49:41[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:49:41[NO_USER] main: Crea la BD
+ERROR:operavideojuegos:[NOUSER] funListarEnviosPendientes: Error en lista
+INFO:main:2020-10-26 23:49:41[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:49:42] "[35m[1mGET /manejoenvios HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:49:42] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:49:42] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:49:42] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:49:43] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:49:43] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:50:48[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:50:48[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:50:48[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:50:48[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:50:48[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:50:49[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:50:49[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:50:49[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:50:49[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:50:49[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:50:49[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:50:49[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:50:49[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:50:49[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:50:49[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:50:49[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:50:49[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:50:49[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:50:49[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:50:49[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:50:49[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:50:49[NO_USER] main: Run aplicacion 8000
+INFO:main:2020-10-26 23:50:49[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:main:2020-10-26 23:50:49[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+WARNING:werkzeug: * Debugger is active!
+INFO:main:2020-10-26 23:50:49[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:50:55[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:50:55[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:50:55[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:50:55[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:50:55[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:50:56[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:50:56[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:50:56[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:50:56[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:50:56[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+ERROR:operavideojuegos:[NOUSER] funListarEnviosPendientes: Error en lista
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:51:00] "[35m[1mGET /manejoenvios HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:51:00] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:51:00] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:51:00] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:51:00] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:51:00] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:51:36[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:51:36[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:51:36[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:51:36[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:51:36[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:51:37[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:51:37[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:51:37[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:51:37[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:51:37[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Run aplicacion 8000
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Run aplicacion 8000
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Run aplicacion 8000
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+WARNING:werkzeug: * Debugger is active!
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Debugger PIN: 711-331-600
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:51:37[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:51:37[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:51:37[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:51:38[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:51:42] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:main:2020-10-26 23:52:36[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:52:36[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:52:36[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:52:36[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:52:37[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:52:38[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:52:38[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:52:38[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:52:38[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:52:38[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:52:39] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:main:2020-10-26 23:53:09[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:53:09[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:53:09[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:53:09[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:53:09[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:53:10[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:53:10[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:53:10[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:53:10[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:53:10[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:53:13] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:main:2020-10-26 23:53:52[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:53:52[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:53:52[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:53:52[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:53:52[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:53:53[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:53:53[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:53:53[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:53:53[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:53:53[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:53:59] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:54:31[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:54:31[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:54:31[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:54:31[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:54:32[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:54:32[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:54:32[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:54:32[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:54:32[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:54:32[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:54:32[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:54:32[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:54:32[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:54:32[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:54:32[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:54:32[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:54:32[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:54:32[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:54:32[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:54:32[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:54:32[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:54:32[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:54:32[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:54:32[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:54:32[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:54:32[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:54:32[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:54:32[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:54:32[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:54:33[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:54:33[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:54:33[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:54:33[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:54:33[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:54:34[NO_USER] main: Run aplicacion 8000
+INFO:main:2020-10-26 23:54:34[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:main:2020-10-26 23:54:34[NO_USER] main: Run aplicacion 8000
+INFO:main:2020-10-26 23:54:34[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Debugger PIN: 711-331-600
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:main:2020-10-26 23:54:34[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:54:34[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:54:34[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:54:34[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:54:34[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:54:34[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:54:34[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:54:34[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:54:34[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:54:34[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:54:34[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:54:35[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:54:35[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:54:35[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:54:35[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:54:35[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:54:36[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:54:36[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:54:36[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:54:36[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:54:36[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:54:42] "[35m[1mGET /manejoenvios HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:54:42] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:54:42] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:54:42] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:54:43] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:54:43] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:54:43] "[37mGET /manejoenvios?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-10-26 23:54:58[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:54:58[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:54:58[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:54:58[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:54:58[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:54:58[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:54:58[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:54:58[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:54:58[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:54:58[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:54:58[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:54:58[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:54:58[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:main:2020-10-26 23:54:58[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-10-26 23:54:58[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [26/Oct/2020 23:55:01] "[37mGET /manejoenvios HTTP/1.1[0m" 200 -
+INFO:main:2020-10-26 23:55:04[NO_USER] main: **************************************************
+INFO:main:2020-10-26 23:55:04[NO_USER] main: Importa configuracion
+INFO:main:2020-10-26 23:55:04[NO_USER] main: Inicializa DB
+INFO:main:2020-10-26 23:55:04[NO_USER] main: Crea la BD
+INFO:main:2020-10-26 23:55:04[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat

@@ -48,7 +48,7 @@
                 <td style="border: black 2px solid">
                     <form method="post" action=" {{url_for('manejoenvios') }} ">
                         <input value="{{trx[0]}}" type="hidden" name="idtrx" />
-                        {% if trx[6] == 0 %}
+                        {% if trx[8] == 0 %}
                         <button type="submit" name="estadoenvio" value="entrega">Entrega (del origen)</button>
                         {% else %}
                         <button type="submit" name="estadoenvio" value="entrega" disabled>Entrega (del origen)</button>
@@ -58,7 +58,7 @@
                 <td style="border: black 2px solid">
                     <form method="post" action=" {{url_for('manejoenvios') }} ">
                         <input value="{{trx[0]}}" type="hidden" name="idtrx" />
-                        {% if trx[7] == 0 %}
+                        {% if trx[9] == 0 %}
                         <button type="submit" name="estadoenvio" value="recibe">Recibe (en el destino)</button>
                         {% else %}
                         <button type="submit" name="estadoenvio" value="recibe" disabled>Recibe (en el destino)</button>
