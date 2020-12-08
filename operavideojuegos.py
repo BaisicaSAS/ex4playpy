@@ -82,16 +82,18 @@ def funListarEnviosPendientes():
                 detLug = db.session.query(DetalleLugar).filter_by(trxId=reg.idTrx).first()
                 vj = db.session.query(VideoJuego).filter_by(idVj=reg.vjId).first()
                 #registro para identificar que el juego salió del domicilio del dueño
-                regrecoge = db.session.query(DetalleTrx).filter_by(trxId=reg.idTrx, accion=C_DETTRXENTRE, usuarioId=reg.usuarioIdDueno).count()
+                regrecoge = int(db.session.query(DetalleTrx).filter_by(trxId=reg.idTrx, accion=C_DETTRXENTRE, usuarioId=reg.usuarioIdDueno).count())
+                print("regrecoge="+str(regrecoge))
                 #registro para identificar que el juego llegó a su destino
-                regenvia =  db.session.query(DetalleTrx).filter_by(trxId=reg.idTrx, accion=C_DETTRXRECIB, usuarioId=reg.usuarioIdSolic).count()
+                regenvia =  int(db.session.query(DetalleTrx).filter_by(trxId=reg.idTrx, accion=C_DETTRXRECIB, usuarioId=reg.usuarioIdSolic).count())
+                print("regenvia="+str(regenvia))
                 #transacciones.append(trx=reg, detsol=detSol, detdue=detDue, usrsol=usrSol, usrdue=usrDue, detlug=detLug, vj=vj)
                 if detLug is None:
                     dirdueno = "NO REGISTRADA"
                     dirsolic = "NO REGISTRADA"
                 else:
-                    dirdueno = detLug.direccionDueno+" - "+detLug.complem1Dueno+" - "+detLug.complem2Dueno+" - "+detLug.complem3Dueno
-                    dirsolic = detLug.direccionSolic+" - "+detLug.complem1Solic+" - "+detLug.complem2Solic+" - "+detLug.complem3Solic
+                    dirdueno = str(detLug.direccionDueno)+" - "+str(detLug.complem1Dueno)+" - "+str(detLug.complem2Dueno)+" - "+str(detLug.complem3Dueno)
+                    dirsolic = str(detLug.direccionSolic)+" - "+str(detLug.complem1Solic)+" - "+str(detLug.complem2Solic)+" - "+str(detLug.complem3Solic)
 
                 registro = [reg.idTrx, usrDue.nombres+" "+usrDue.apellidos, dirdueno, usrDue.celular,  usrSol.nombres+" "+usrSol.apellidos, dirsolic, usrSol.celular, vj.nombre, regrecoge, regenvia]
                 transacciones.append(registro)
@@ -121,7 +123,7 @@ def funEntregaroRecibir(idtrx, entrec):
                 app.logger.debug("[ADMIN] funEntregaroRecibir Transaccion # " + str(idtrx) + " marcada cómo finalizada luego de entregar el juego")
 
                 #Se cambia la propiedad de los videojuegos (act ejeusuario: publicado=0, registro en traceejemplar para el nuevo propietario)
-                ejemu = EjeUsuario.query.filter_by(idEjeUsuario=trx.ejeUsuarioId).update(dict(usuarioIdAct=trx.usuarioIdSolic, publicado=0))
+                ejemu = EjeUsuario.query.filter_by(idEjeUsuario=trx.ejeUsuarioId).update(dict(usuarioIdAct=trx.usuarioIdSolic, publicado=0, bloqueado=0, comprometido=0))
                 trace = TraceEjemplar(vjId=trx.vjId, ejeUsuarioId=trx.ejeUsuarioId, usuarioId=trx.usuarioIdSolic,
                                       comentario=eje.comentario, estado=eje.estado, valor=eje.valor)
                 db.session.add(trace)
@@ -146,14 +148,14 @@ def funEntregaroRecibir(idtrx, entrec):
                                TotalPuntos=eje.valor, ejeRecibidos=0, ejeEntregados=1, ejePublicados=0)
                    db.session.add(sd)
                 else:
-                    sd = Saldos.query.filter_by(usuarioId=trx.usuarioIdDueno).update(dict(ValorCobrado=saldoD.ValorCobrado+eje.valor))
+                    sd = Saldos.query.filter_by(usuarioId=trx.usuarioIdDueno).update(dict(ValorCobrado=saldoD.ValorCobrado+eje.valor, TotalPuntos=saldoD.TotalPuntos+eje.valor))
 
                 if saldoS is None:
                    ss = Saldos(usuarioId=trx.usuarioIdSolic, valorPagado=eje.valor, ValorCobrado=0,
                                TotalPuntos=0-eje.valor, ejeRecibidos=1, ejeEntregados=0, ejePublicados=0)
                    db.session.add(ss)
                 else:
-                    sd = Saldos.query.filter_by(usuarioId=trx.usuarioIdSolic).update(dict(valorPagado=saldoS.valorPagado+eje.valor))
+                    sd = Saldos.query.filter_by(usuarioId=trx.usuarioIdSolic).update(dict(valorPagado=saldoS.valorPagado+eje.valor, TotalPuntos=saldoS.TotalPuntos-eje.valor))
 
                 #Se envían correos a los dos usuarios (y al admin)
 
@@ -212,8 +214,9 @@ def funCargarEjemplar(email, idUsuario, VJ, estado, publicar, comentario, imagen
                                           valorCobra=puntos, comentario=promo.descripcion)
             db.session.add(obDeVaOtr)
 
+            #MR05122020: TotalPuntos = puntos, a cambio de cero
             ss = Saldos(usuarioId=obUsuario.idUsuario, valorPagado=0, ValorCobrado=puntos,
-                        TotalPuntos=0, ejeRecibidos=0, ejeEntregados=0, ejePublicados=1)
+                        TotalPuntos=puntos, ejeRecibidos=0, ejeEntregados=0, ejePublicados=1)
             db.session.add(ss)
 
             mensaje = obUsuario.nombres + ", lo hiciste!. Tienes tus primeros " +str(puntos)+ " puntos. Ya puedes obtener un videojuego!"
@@ -340,6 +343,7 @@ def funListarEjemplaresDisponibles(maymen, idusuario=0, palabrabuscar=""):
                             foto = base64.b64encode(obFoto.foto).decode("utf-8")
                         #print("inserta ejemplar # " + str(ej))
                         ejemplarespub.append([ejemplar.idEjeUsuario, ejemplar.usuarioIdAct, foto, obVideojuego.nombre, ejemplar.publicado, ejemplar.bloqueado, ejemplar.valor, ejemplar.estado, ejemplar.comentario])
+                        app.logger.debug("[" + str(ejemplar.idEjeUsuario) + "] ListarEjemplaresDisponibles: Ejemplar: "+obVideojuego.nombre+"-valor:"+str(ejemplar.valor))
 
             app.logger.info("[NO_USER] ListarEjemplaresDisponibles: hay "+ len(ejemplarespub).__str__()+" ejemplares disponibles")
             #print("buscar = "+buscar+" -- hay "+ len(ejemplarespub).__str__()+" ejemplares publicados - maymen (1: May - 0: Men) " + str(maymen) )
@@ -466,7 +470,8 @@ def funPuntosDisponiblesUsuario(idusuario):
         for po in puntosotros:
             #print("Puntos otros : " + str(po.valorCobra-po.valorPaga))
             sum = sum + po.valorCobra - po.valorPaga
-        app.logger.error("[" + email + "] funPuntosDisponiblesUsuario: Puntos para : " + email + "- ["+str(sum)+"]")
+        #MR05122020 logger.error x debug
+        app.logger.debug("[" + email + "] funPuntosDisponiblesUsuario: Puntos para : " + email + " - ["+str(sum)+"]")
         #print("Puntos usuario : " + str(sum))
 
         return sum

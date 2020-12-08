@@ -1,0 +1,121 @@
+INFO:main:2020-12-04 21:37:48[NO_USER] main: **************************************************
+INFO:main:2020-12-04 21:37:48[NO_USER] main: Importa configuracion
+INFO:main:2020-12-04 21:37:48[NO_USER] main: Inicializa DB
+INFO:main:2020-12-04 21:37:48[NO_USER] main: Crea la BD
+INFO:main:2020-12-04 21:37:48[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-12-04 21:37:53[NO_USER] main: **************************************************
+INFO:main:2020-12-04 21:37:53[NO_USER] main: Importa configuracion
+INFO:main:2020-12-04 21:37:53[NO_USER] main: Inicializa DB
+INFO:main:2020-12-04 21:37:53[NO_USER] main: Crea la BD
+INFO:main:2020-12-04 21:37:53[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-12-04 21:37:54[NO_USER] main: **************************************************
+INFO:main:2020-12-04 21:37:54[NO_USER] main: Importa configuracion
+INFO:main:2020-12-04 21:37:54[NO_USER] main: Inicializa DB
+INFO:main:2020-12-04 21:37:54[NO_USER] main: Crea la BD
+INFO:main:2020-12-04 21:37:54[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-12-04 22:06:01[NO_USER] main: **************************************************
+INFO:main:2020-12-04 22:06:01[NO_USER] main: Importa configuracion
+INFO:main:2020-12-04 22:06:01[NO_USER] main: Inicializa DB
+INFO:main:2020-12-04 22:06:01[NO_USER] main: Crea la BD
+INFO:main:2020-12-04 22:06:01[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-12-04 22:06:03[NO_USER] main: **************************************************
+INFO:main:2020-12-04 22:06:03[NO_USER] main: Importa configuracion
+INFO:main:2020-12-04 22:06:03[NO_USER] main: Inicializa DB
+INFO:main:2020-12-04 22:06:03[NO_USER] main: Crea la BD
+INFO:main:2020-12-04 22:06:03[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-12-04 22:08:48[NO_USER] main: **************************************************
+INFO:main:2020-12-04 22:08:48[NO_USER] main: Importa configuracion
+INFO:main:2020-12-04 22:08:48[NO_USER] main: Inicializa DB
+INFO:main:2020-12-04 22:08:48[NO_USER] main: Crea la BD
+INFO:main:2020-12-04 22:08:48[NO_USER] main: Run aplicacion 8000
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-12-04 22:08:50[NO_USER] main: **************************************************
+INFO:main:2020-12-04 22:08:50[NO_USER] main: Importa configuracion
+INFO:main:2020-12-04 22:08:50[NO_USER] main: Inicializa DB
+INFO:main:2020-12-04 22:08:50[NO_USER] main: Crea la BD
+INFO:main:2020-12-04 22:08:50[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:main:2020-12-04 22:12:13[NO_USER] index: inicia index
+INFO:main:2020-12-04 22:12:13[luzacifuentes@grupoalyad.com.co] index: Hay sesion
+INFO:main:[NO_USER] GET::index inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 0 ejemplares disponibles
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: Inicia
+INFO:operavideojuegos:[NO_USER] ListarEjemplaresDisponibles: hay 7 ejemplares disponibles
+ERROR:operavideojuegos:[luzacifuentes@grupoalyad.com.co] funPuntosDisponiblesUsuario: Puntos para : luzacifuentes@grupoalyad.com.co- [180.0]
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:12:14] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:12:14] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:12:22] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:12:22] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:12:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:12:38] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:12:38] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-12-04 22:12:43[luzacifuentes@grupoalyad.com.co] GET::transacciones : Carga lista de transacciones
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:12:43] "[37mGET /transacciones HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:12:43] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-12-04 22:12:51[luzacifuentes@grupoalyad.com.co]GET::detalletransacciones: Detalle de la transaccion: 18-G Prime [Xbox One]
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:12:51] "[37mGET /detalletransacciones/18?transaccion=18&btnconversacion=btnconversacion HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:12:51] "[36mGET /static/css/chat.css HTTP/1.1[0m" 304 -
+INFO:main:2020-12-04 22:13:04[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[luzacifuentes@grupoalyad.com.co] ListarEjemplaresUsuario: hay 1 ejemplares
+INFO:main:2020-12-04 22:13:04[luzacifuentes@grupoalyad.com.co] index: Hay sesion
+INFO:main:2020-12-04 22:13:04[luzacifuentes@grupoalyad.com.co] Encontró 1 ejemplares para el usuario [luzacifuentes@grupoalyad.com.co]
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:13:04] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:13:04] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:13:07] "[37mGET /updateUser HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:13:07] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-12-04 22:13:13[luzacifuentes@grupoalyad.com.co] GET::transacciones : Carga lista de transacciones
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:13:13] "[37mGET /transacciones HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:13:14] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:13:53] "[37mGET /cargarEjemplar HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:13:53] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:main:2020-12-04 22:14:00[NO_USER] index: inicia ejemplaresusuario
+DEBUG:operavideojuegos:[luzacifuentes@grupoalyad.com.co] ListarEjemplaresUsuario: hay 1 ejemplares
+INFO:main:2020-12-04 22:14:00[luzacifuentes@grupoalyad.com.co] index: Hay sesion
+INFO:main:2020-12-04 22:14:00[luzacifuentes@grupoalyad.com.co] Encontró 1 ejemplares para el usuario [luzacifuentes@grupoalyad.com.co]
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:14:00] "[37mGET /ejemplaresusuario HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2020 22:14:00] "[33mGET /resources/demos/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-12-04 22:49:01[NO_USER] main: **************************************************
+INFO:main:2020-12-04 22:49:01[NO_USER] main: Importa configuracion
+INFO:main:2020-12-04 22:49:01[NO_USER] main: Inicializa DB
+INFO:main:2020-12-04 22:49:01[NO_USER] main: Crea la BD
+INFO:main:2020-12-04 22:49:01[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-12-04 22:59:11[NO_USER] main: **************************************************
+INFO:main:2020-12-04 22:59:11[NO_USER] main: Importa configuracion
+INFO:main:2020-12-04 22:59:11[NO_USER] main: Inicializa DB
+INFO:main:2020-12-04 22:59:11[NO_USER] main: Crea la BD
+INFO:main:2020-12-04 22:59:11[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:main:2020-12-04 23:01:27[NO_USER] main: **************************************************
+INFO:main:2020-12-04 23:01:27[NO_USER] main: Importa configuracion
+INFO:main:2020-12-04 23:01:27[NO_USER] main: Inicializa DB
+INFO:main:2020-12-04 23:01:27[NO_USER] main: Crea la BD
+INFO:main:2020-12-04 23:01:27[NO_USER] main: Run aplicacion 8000
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 711-331-600
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Proyectos\\ex4playpy\\operavideojuegos.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
